@@ -1,0 +1,40 @@
+extends ../../layout/main
+
+block content
+	.portlet.box.grey
+		.portlet-title
+			.caption
+				i.fa.fa-edit
+				| Invoice List
+			.tools
+				a.collapse(href="javascript:;")
+				a.config(href="#portlet-config", data-toggle="modal")
+				a.reload(href="/")
+				a.remove(href="javascript:;")
+		.portlet-body
+			.table-toolbar
+				.btn-group
+					a.btn.green(href="/customer/add")
+						| Add New
+						i.fa.fa-plus
+			table#orders_table.main.table.table-striped.table-hover.table-bordered
+				thead
+					tr
+						th SO Number
+						th Inventory Location
+						th Order Source
+						th Sales Executive
+						th Delivery Method
+						th Ordered By
+						th Customer
+						th 
+				tbody
+					tr
+						td
+						td
+						td
+						td
+						td
+						td
+						td
+						td

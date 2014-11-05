@@ -1,0 +1,41 @@
+li.dropdown.user
+	a.dropdown-toggle(href="#", data-toggle="dropdown", data-hover="dropdown", data-close-others="true")
+		img(alt="", src="/assets/img/avatar1_small.jpg")
+		span.username
+			| Bob Nilson
+		i.fa.fa-angle-down
+	ul.dropdown-menu
+		li
+			a(href="extra_profile.html")
+				i.fa.fa-user
+				| My Profile
+		li
+			a(href="page_calendar.html")
+				i.fa.fa-calendar
+				| My Calendar
+		li
+			a(href="inbox.html")
+				i.fa.fa-envelope
+				| My Inbox
+				span.badge.badge-danger
+					| 3
+		li
+			a(href="#")
+				i.fa.fa-tasks
+				| My Tasks
+				span.badge.badge-success
+					| 7
+		li.divider
+		li
+			a#trigger_fullscreen(href="javascript:;")
+				i.fa.fa-arrows
+				| Full Screen
+		li
+			a(href="extra_lock.html")
+				i.fa.fa-lock
+				| Lock Screen
+		li
+			a(href="login.html")
+				i.fa.fa-key
+				| Log Out
+// END USER LOGIN DROPDOWN

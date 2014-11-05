@@ -1,0 +1,71 @@
+li#header_inbox_bar.dropdown
+	a.dropdown-toggle(href="#", data-toggle="dropdown", data-hover="dropdown", data-close-others="true")
+		i.fa.fa-envelope
+		span.badge
+			| 5
+	ul.dropdown-menu.extended.inbox
+		li
+			p
+				| You have 12 new messages
+		li
+			ul.dropdown-menu-list.scroller(style="height: 250px;")
+				li
+					a(href="inbox.html?a=view")
+						span.photo
+							img(src="/assets/img/avatar2.jpg", alt="")
+						span.subject
+							span.from
+								| Lisa Wong
+							span.time
+								| Just Now
+						span.message
+							| Vivamus sed auctor nibh congue nibh. auctor nibh auctor nibh...
+				li
+					a(href="inbox.html?a=view")
+						span.photo
+							img(src="/assets/img/avatar3.jpg", alt="")
+						span.subject
+							span.from
+								| Richard Doe
+							span.time
+								| 16 mins
+						span.message
+							| Vivamus sed congue nibh auctor nibh congue nibh. auctor nibh auctor nibh...
+				li
+					a(href="inbox.html?a=view")
+						span.photo
+							img(src="/assets/img/avatar1.jpg", alt="")
+						span.subject
+							span.from
+								| Bob Nilson
+							span.time
+								| 2 hrs
+						span.message
+							| Vivamus sed nibh auctor nibh congue nibh. auctor nibh auctor nibh...
+				li
+					a(href="inbox.html?a=view")
+						span.photo
+							img(src="/assets/img/avatar2.jpg", alt="")
+						span.subject
+							span.from
+								| Lisa Wong
+							span.time
+								| 40 mins
+						span.message
+							| Vivamus sed auctor 40% nibh congue nibh...
+				li
+					a(href="inbox.html?a=view")
+						span.photo
+							img(src="/assets/img/avatar3.jpg", alt="")
+						span.subject
+							span.from
+								| Richard Doe
+							span.time
+								| 46 mins
+						span.message
+							| Vivamus sed congue nibh auctor nibh congue nibh. auctor nibh auctor nibh...
+		li.external
+			a(href="inbox.html")
+				| See all messages
+				i.m-icon-swapright
+// END INBOX DROPDOWN

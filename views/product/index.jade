@@ -1,0 +1,42 @@
+extends ../layout/main
+
+block content
+	.portlet.box.grey
+		.portlet-title
+			.caption
+				i.fa.fa-edit
+				| Product List
+			.tools
+				a.collapse(href="javascript:;")
+				a.config(href="#portlet-config", data-toggle="modal")
+				a.reload(href="/")
+				a.remove(href="javascript:;")
+		.portlet-body
+			.table-toolbar
+				.btn-group
+					a.btn.green(href="/product/add")
+						| Add New
+						i.fa.fa-plus
+			table#products_table.main.table.table-striped.table-hover.table-bordered
+				thead
+					tr
+						th Code
+						th Brand
+						th Name
+						th Size
+						th Description
+						th Product Movement
+						th Supplier
+						th Status
+						th 
+				tbody
+					tr
+						td
+						td
+						td
+						td
+						td
+						td
+						td
+						td
+						td

@@ -1,0 +1,275 @@
+extends ../layout/main
+
+block content
+	.portlet.box.grey
+		.portlet-title
+			.caption
+				i.fa.fa-reorder
+				| PRODUCT PROFILE
+			.tools
+				a.collapse(href="javascript:;")
+				a.config(href="#portlet-config", data-toggle="modal")
+				a.reload(href="javascript:;")
+				a.remove(href="javascript:;")
+		.portlet-body.form
+			form#product_add.form-horizontal(action="/product/add", method="post")
+				.form-body
+					.alert.alert-danger.display-hide
+						button.close(data-close="alert")
+						| You have some form errors. Please check below.
+					.alert.alert-success.display-hide
+						button.close(data-close="alert")
+						| Your form validation is successful!
+					.row
+						br
+						.col-md-6
+							.form-group
+								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+									input#productCode.form-control(type="text", name="productCode", value="")
+									span.col-md-12.control-label
+										| Item Code
+						.col-md-6
+							.form-group
+								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
+									input#productName.form-control(type="text", name="productName", value="")
+									span.col-md-12.control-label
+										| Name
+					.row
+						.col-md-12
+							.form-group
+								.col-md-2.col-lg-2
+								.col-md-8.col-xs-12.col-sm-12.col-lg-8
+									textarea#productDescription.form-control(name="productDescription", rows="1")
+									span.col-md-12.control-label
+										| Description
+								.col-md-2.col-lg-2
+					.row
+						.col-md-6
+							.form-group
+								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+									select#paymentTermId.select2me.form-control.select2-offscreen(name="paymentTerm[paymentTermId]", tabindex="-1", required="required")
+										option(value="")
+										option(value="1") Cash
+										option(value="2") 15 Days
+										option(value="3") 30 Days
+									span.col-md-12.control-label
+										| Payment Terms
+						.col-md-6
+							.form-group
+								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
+									input#partNumber.form-control(type="text", name="partNumber", value="")
+									span.col-md-12.control-label
+										| Part Number
+					.row
+						.col-md-6
+							.form-group
+								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+									input#blCode.form-control(type="text", name="blCode", value="")
+									span.col-md-12.control-label
+										| BL Code
+						.col-md-6
+							.form-group
+								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
+									select#brandId.select2me.form-control.select2-offscreen(name="brand[brandId]", tabindex="-1", required="required")
+										option(value="")
+										option(value="1") Ardell
+										option(value="2") China Glaze
+										option(value="3") Color Club
+										option(value="4") GiGi
+										option(value="5") Brazilian Blowout
+										option(value="6") Osmo
+									span.col-md-12.control-label
+										| Brand
+					.row
+						.col-md-6
+							.form-group
+								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+									select#classificationId.select2me.form-control.select2-offscreen(name="classification[classificationId]", tabindex="-1", required="required")
+										option(value="")
+										option(value="1") Product
+										option(value="2") Marketing
+									span.col-md-12.control-label
+										| Product Movement
+						.col-md-6
+							.form-group
+								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
+									input#size.form-control(type="text", name="size", value="")
+									span.col-md-12.control-label
+										| Size
+					.row
+						.col-md-6
+							.form-group
+								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+									select#supplierId.select2me.form-control.select2-offscreen(name="supplier[supplierId]", tabindex="-1", required="required")
+										option(value="")
+										option(value="1") American Internatioal Industries
+										option(value="2") Forsythe Cosmetic Group
+									span.col-md-12.control-label
+										| Supplier
+						.col-md-6
+							.form-group
+								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
+									select#productStatus.select2me.form-control.select2-offscreen(name="productStatus", tabindex="-1")
+										option(value="Active") Active
+										option(value="Inactive") Inactive
+										option(value="Discontinued") Discontinued
+										option(value="Cancelled") Cancelled
+									span.col-md-12.control-label
+										| Product Status
+					.portlet.box.grey
+						.portlet-title
+							.caption
+								i.fa.fa-reorder
+								| PRODUCT PACKAGE
+							.tools
+								a.collapse(href="javascript:;")
+								a.config(href="#portlet-config", data-toggle="modal")
+								a.reload(href="javascript:;")
+								a.remove(href="javascript:;")
+						.portlet-body.form
+							.form-body
+								.row
+									br
+									.col-md-2
+									.col-md-8
+										.col-xs-6.col-sm-6.col-md-6.col-md-6(style="padding-left: 0px;")
+											button.btn-sm.green.custom-left(type="button", data-toggle="modal", href="#bundleModal")
+												| Add New
+												i.fa.fa-plus
+										.col-xs-6.col-sm-6.col-md-6.col-md-6(style="padding-right: 0px;")
+									.col-md-2
+								.form-group
+									.col-md-2
+									.col-md-8
+										.row
+											br
+											.col-md-12
+												.portlet-body.flip-scroll
+													table#bundlesTable.table.table-bordered.table-condensed.flip-content
+														thead.flip-content.bg-grey
+															tr
+																th Items Included
+																th Quantity
+																th 
+														tbody
+									.col-md-2
+					.portlet.box.grey
+						.portlet-title
+							.caption
+								i.fa.fa-reorder
+								| UNIT
+							.tools
+								a.collapse(href="javascript:;")
+								a.config(href="#portlet-config", data-toggle="modal")
+								a.reload(href="javascript:;")
+								a.remove(href="javascript:;")
+						.portlet-body.form
+							.form-body
+								.row
+									br
+									.col-md-2
+									.col-md-8
+										.col-xs-6.col-sm-6.col-md-6.col-md-6(style="padding-left: 0px;")
+											button.btn-sm.green.custom-left(type="button", data-toggle="modal", href="#unitModal")
+												| Add New
+												i.fa.fa-plus
+										.col-xs-6.col-sm-6.col-md-6.col-md-6(style="padding-right: 0px;")
+									.col-md-2
+								.form-group
+									.col-md-2
+									.col-md-8
+										.row
+											br
+											.col-md-12
+												.portlet-body.flip-scroll
+													table#uomsTable.table.table-bordered.table-condensed.flip-content
+														thead.flip-content.bg-grey
+															tr
+																th Unit of Measurement
+																th Quantity
+																th 
+														tbody
+									.col-md-2
+					.portlet.box.grey
+						.portlet-title
+							.caption
+								i.fa.fa-reorder
+								| PRICE
+							.tools
+								a.collapse(href="javascript:;")
+								a.config(href="#portlet-config", data-toggle="modal")
+								a.reload(href="javascript:;")
+								a.remove(href="javascript:;")
+						.portlet-body.form
+							.form-body
+								.row
+									br
+									.col-md-2
+									.col-md-8
+										.col-xs-6.col-sm-6.col-md-6.col-md-6(style="padding-left: 0px;")
+											button.btn-sm.green.custom-left(type="button", data-toggle="modal", href="#priceModal")
+												| Add New
+												i.fa.fa-plus
+										.col-xs-6.col-sm-6.col-md-6.col-md-6(style="padding-right: 0px;")
+									.col-md-2
+								.form-group
+									.col-md-2
+									.col-md-8
+										.row
+											br
+											.col-md-12
+												.portlet-body.flip-scroll
+													table#priceTable.table.table-bordered.table-condensed.flip-content
+														thead.flip-content.bg-grey
+															tr
+																th Price Type
+																th Amount
+																th Currency
+																th 
+														tbody
+									.col-md-2
+					.portlet.box.grey
+						.portlet-title
+							.caption
+								i.fa.fa-reorder
+								| DOCUMENT
+							.tools
+								a.collapse(href="javascript:;")
+								a.config(href="#portlet-config", data-toggle="modal")
+								a.reload(href="javascript:;")
+								a.remove(href="javascript:;")
+						.portlet-body.form
+							.form-body
+								.row
+									br
+									.col-md-2
+									.col-md-8
+										.col-xs-6.col-sm-6.col-md-6.col-md-6(style="padding-left: 0px;")
+											button.btn-sm.green.custom-left(type="button", data-toggle="modal", href="#documentModal")
+												| Add New
+												i.fa.fa-plus
+										.col-xs-6.col-sm-6.col-md-6.col-md-6(style="padding-right: 0px;")
+									.col-md-2
+								.form-group
+									.col-md-2
+									.col-md-8
+										.row
+											br
+											.col-md-12
+												.portlet-body.flip-scroll
+													table#documentTable.table.table-bordered.table-condensed.flip-content
+														thead.flip-content.bg-grey
+															tr
+																th Type
+																th Filename
+																th Link
+																th 
+														tbody
+									.col-md-2
+				.form-actions.fluid
+					.row
+						.col-md-6
+							.col-md-offset-3.col-md-9
+								button.btn.green(type="submit") Submit
+								button.btn.default(type="button") Cancel
+						.col-md-6

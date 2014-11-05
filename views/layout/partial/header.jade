@@ -1,0 +1,19 @@
+.header.navbar.navbar-fixed-top
+	// BEGIN TOP NAVIGATION BAR
+	.header-inner
+		// BEGIN LOGO
+		a.navbar-brand(href="index.html")
+			img.img-responsive(src="/assets/img/logo.png", alt="logo")
+		// END LOGO
+		// BEGIN RESPONSIVE MENU TOGGLER
+		a.navbar-toggle(href="javascript:;", data-toggle="collapse", data-target=".navbar-collapse")
+			img(src="/assets/img/menu-toggler.png", alt="")
+		// END RESPONSIVE MENU TOGGLER
+		// BEGIN TOP NAVIGATION MENU
+		ul.nav.navbar-nav.pull-right
+			include notification
+			include inbox
+			include todo
+			include user
+		// END TOP NAVIGATION MENU
+	// END TOP NAVIGATION BAR

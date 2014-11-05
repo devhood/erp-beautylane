@@ -1,0 +1,41 @@
+extends ../layout/main
+
+block content
+	.portlet.box.grey
+		.portlet-title
+			.caption
+				i.fa.fa-edit
+				| User List
+			.tools
+				a.collapse(href="javascript:;")
+				a.config(href="#portlet-config", data-toggle="modal")
+				a.reload(href="/")
+				a.remove(href="javascript:;")
+		.portlet-body
+			.table-toolbar
+				.btn-group
+					a.btn.green(href="/user/add")
+						| Add New
+						i.fa.fa-plus
+			table#users_table.main.table.table-striped.table-hover.table-bordered
+				thead
+					tr
+						th ID
+						th Full Name
+						th Username
+						th Position
+						th Email
+						th Mobile
+						th Status
+						th Action
+				tbody
+					tr
+						td 
+						td 
+						td 
+						td 
+						td
+						td 
+						td 
+						td
+	

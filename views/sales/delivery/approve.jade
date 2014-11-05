@@ -1,0 +1,211 @@
+extends ../../layout/main
+
+block content
+	.portlet.box.grey
+		.portlet-title
+			.caption
+				i.fa.fa-reorder
+				| DELIVERY RECEIPT
+			.tools
+				a.collapse(href="javascript:;")
+				a.config(href="#portlet-config", data-toggle="modal")
+				a.reload(href="javascript:;")
+				a.remove(href="javascript:;")
+		.portlet-body.form
+			form#order_add.form-horizontal(action="/sales/order/add", method="post")
+				.form-body
+					.alert.alert-danger.display-hide
+						button.close(data-close="alert")
+						| You have some form errors. Please check below.
+					.alert.alert-success.display-hide
+						button.close(data-close="alert")
+						| Your form validation is successful!
+					h5
+					.row
+						.col-md-6
+							.form-group
+								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+									select#transactionTypeId.select2me.form-control.select2-offscreen(name="transactionType[transactionTypeId]", tabindex="-1", required="required")
+										option(value="")
+										option(value="1") Normal Sales
+										option(value="2") Consignment
+									span.col-md-12.control-label	Transaction Type 
+						.col-md-6
+							.form-group
+								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
+									input#sono.form-control(type="text", name="sono", readonly="readonly", value="")
+									span.col-md-12.control-label	SO Number 
+					.row
+						.col-md-6
+							.form-group
+								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+									select#inventoryLocationId.select2me.form-control.select2-offscreen(name="inventoryLocation[locationId]", tabindex="-1", required="required")
+										option(value="")
+									span.col-md-12.control-label	Inventory Location 
+						.col-md-6
+							.form-group
+								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
+						// /span
+					.row
+						.col-md-6
+							.form-group
+								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+									select#orderSourceId.select2me.form-control.select2-offscreen(name="orderSource[orderSourceId]", tabindex="-1", required="required")
+										option(value="")
+										option(value="1") email
+									span.col-md-12.control-label	Order Source 
+						.col-md-6
+							.form-group
+								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
+									select#userId.select2me.form-control.select2-offscreen(name="salesExecutive[userId]", tabindex="-1", required="required")
+										option(value="")
+										option(value="2") Lj sales
+									span.col-md-12.control-label	Sales Executive 
+					.row
+						.col-md-6
+							.form-group
+								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+									select#shippingModeId.select2me.form-control.select2-offscreen(name="shippingMode[shippingModeId]", tabindex="-1", required="required")
+										option(value="")
+										option(value="1") Walk-in
+										option(value="2") In-House Delivery
+									span.col-md-12.control-label	Delivery Method 
+						.col-md-6
+							.form-group
+								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
+									input#orderedBy.form-control(type="text", name="orderedBy", value="")
+									span.col-md-12.control-label	Ordered By 
+					.row
+						.col-md-12
+							.form-group
+								.col-md-2.col-lg-2
+								.col-md-8.col-xs-12.col-sm-12.col-lg-8
+									textarea#salesNotes.text-area.form-control(name="salesNotes", rows="1", required="required")
+									span.col-md-12.control-label	Special Instructions 
+								.col-md-2.col-lg-2
+					br
+					br
+					br
+					br
+					.row
+						.col-md-12
+							.form-group
+								.col-md-2.col-lg-2
+								.col-md-8.col-xs-12.col-sm-12.col-lg-8
+									select#customerId.select2me.form-control.select2-offscreen(name="customer[customerId]", tabindex="-1", required="required")
+										option(value="")
+										option(value="1") devhood
+									span.col-md-12.control-label	Customer 
+								.col-md-2.col-lg-2
+					.row
+						.col-md-12
+							.form-group
+								.col-md-2.col-lg-2
+								.col-md-8.col-xs-12.col-sm-12.col-lg-8
+									select#shippingAddressId.select2me.form-control.select2-offscreen(name="shippingAddress[addressId]", tabindex="-1", required="required")
+										option(value="")
+										option(value="1") street, Calamba, Laguna, Phillippines, 1234
+									span.col-md-12.control-label	Shipping Address 
+								.col-md-2.col-lg-2
+					.row
+						.col-md-12
+							.form-group
+								.col-md-2.col-lg-2
+								.col-md-8.col-xs-12.col-sm-12.col-lg-8
+									select#billingAddressId.select2me.form-control.select2-offscreen(name="billingAddress[addressId]", tabindex="-1", required="required")
+										option(value="")
+										option(value="1") street, Calamba, Laguna, Phillippines, 1234
+									span.col-md-12.control-label	Billing Address 
+								.col-md-2.col-lg-2
+					.portlet.box.grey
+						.portlet-title
+							.caption
+								i.fa.fa-reorder
+								| ORDERED ITEMS
+							.tools
+								a.collapse(href="javascript:;")
+								a.config(href="#portlet-config", data-toggle="modal")
+								a.reload(href="javascript:;")
+								a.remove(href="javascript:;")
+						.portlet-body.form
+							.form-body
+								.row
+									br
+									.col-md-2
+									.col-md-8
+										.col-xs-6.col-sm-6.col-md-6.col-md-6(style="padding-left: 0px;")
+											button.btn-sm.green.custom-left(type="button", data-toggle="modal", href="#itemsModal")
+												| Add New
+												i.fa.fa-plus
+										.col-xs-6.col-sm-6.col-md-6.col-md-6(style="padding-right: 0px;")
+									.col-md-2
+								.form-group
+									.col-md-2
+									.col-md-8
+										.row
+											br
+											.col-md-12
+												.portlet-body.flip-scroll
+													table#orderTable.table.table-bordered.table-condensed.flip-content
+														thead.flip-content.bg-grey
+															tr
+																th Code
+																th Product Order
+																th Quantity
+																th Unit Price
+																th Total
+																th 
+														tbody
+									.col-md-2
+					.row
+						.col-md-6
+							.form-group
+								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+						.col-md-6
+							.form-group
+								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
+									input#discount.form-control(type="text", name="discount", readonly="readonly", value="")
+									span.col-md-12.control-label	Discount 
+					.row
+						.col-md-6
+							.form-group
+								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+						.col-md-6
+							.form-group
+								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
+									input#totalVat.form-control(type="text", name="totalVat", readonly="readonly", value="")
+									span.col-md-12.control-label	VATable Sales 
+					.row
+						.col-md-6
+							.form-group
+								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+						.col-md-6
+							.form-group
+								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
+									input#totalVat.form-control(type="text", name="totalVat", readonly="readonly", value="")
+									span.col-md-12.control-label	VAT Exempt Sales 
+					.row
+						.col-md-6
+							.form-group
+								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+						.col-md-6
+							.form-group
+								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
+									input#totalVat.form-control(type="text", name="totalVat", readonly="readonly", value="")
+									span.col-md-12.control-label	Zero-Rated Sales 
+					.row
+						.col-md-6
+							.form-group
+								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+						.col-md-6
+							.form-group
+								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
+									input#totalSales.form-control(type="text", name="totalSales", readonly="readonly", value="")
+									span.col-md-12.control-label	TOTAL AMOUNT DUE 
+				.form-actions.fluid
+					.row
+						.col-xs-10.col-sm-10.col-md-11.col-lg-11
+							.custom-right
+								button.btn.default(type="button") Cancel
+								button.btn.green(type="submit") Approve &#38; Send
+						.col-md-6
