@@ -7,7 +7,7 @@ app.controller('userController', function(){
 
 var user = {
 	username:"Ace Besmonte",
-	photo:"assets/img/avatar1_small.jpg",
+	photo:"assets/img/ace.jpg",
 	profileUrl: "extra_profile.html",
 	calendarUrl: "page_calendar.html",
 	inboxUrl: "https://www.facebook.com/messages",
