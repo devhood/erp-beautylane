@@ -22,10 +22,27 @@ router.get('/invoice/approve', function(req, res) {
 	res.render('sales/invoice/approve');
 });
 
-router.get('/order', function(req, res) {
-	res.render('sales/reurn/index');
+router.get('/return', function(req, res) {
+	res.render('sales/return/index');
 });
 router.get('/return/add', function(req, res) {
 	res.render('sales/return/add');
+});
+
+router.get('/payment', function(req, res) {
+	res.render('sales/payment/index');
+});
+router.get('/payment/add', function(req, res) {
+	res.render('sales/payment/add');
+});
+router.get('/payment/approve', function(req, res) {
+	res.render('sales/payment/approve');
+});
+
+router.get('/credit', function(req, res) {
+	res.render('sales/credit/index');
+});
+router.get('/credit/add', function(req, res) {
+	res.render('sales/credit/add');
 });
 module.exports = router;

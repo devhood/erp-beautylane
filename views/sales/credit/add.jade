@@ -5,14 +5,14 @@ block content
 		.portlet-title
 			.caption
 				i.fa.fa-reorder
-				| DELIVERY RECEIPT
+				| CREDIT MEMO
 			.tools
 				a.collapse(href="javascript:;")
 				a.config(href="#portlet-config", data-toggle="modal")
 				a.reload(href="javascript:;")
 				a.remove(href="javascript:;")
 		.portlet-body.form
-			form#delivery_approve.form-horizontal(action="/sales/delivery/approve", method="post")
+			form#credit_add.form-horizontal(action="/sales/credit/add", method="post")
 				.form-body
 					.alert.alert-danger.display-hide
 						button.close(data-close="alert")
@@ -25,22 +25,24 @@ block content
 						.col-md-6
 							.form-group
 								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+									input#drno.form-control(type="text", name="drno", readonly="readonly", value="")
+									span.col-md-12.control-label	DR Number 
+						.col-md-6
+							.form-group
+								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
+									input#sino.form-control(type="text", name="sino", readonly="readonly", value="")
+									span.col-md-12.control-label	SI Number 
+					.row
+						.col-md-6
+							.form-group
+								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
 									input#sono.form-control(type="text", name="sono", readonly="readonly", value="")
 									span.col-md-12.control-label	SO Number 
 						.col-md-6
 							.form-group
 								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
-									input#drno.form-control(type="text", name="drno", readonly="readonly", value="")
-									span.col-md-12.control-label	DR Number 
-					.row
-						.col-md-6
-							.form-group
-								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
-									input#deliveryDate.form-control(type="text", name="deliveryDate", value="")
+									input#deliveryDate.form-control(type="text", name="deliveryDate", readonly="readonly", value="")
 									span.col-md-12.control-label	Delivery Date 
-						.col-md-6
-							.form-group
-								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
 					.row
 						.col-md-6
 							.form-group
@@ -144,6 +146,9 @@ block content
 									.col-md-2
 									.col-md-8
 										.col-xs-6.col-sm-6.col-md-6.col-md-6(style="padding-left: 0px;")
+											button.btn-sm.green.custom-left(type="button", data-toggle="modal", href="#itemsModal")
+												| Add New
+												i.fa.fa-plus
 										.col-xs-6.col-sm-6.col-md-6.col-md-6(style="padding-right: 0px;")
 									.col-md-2
 								.form-group
@@ -159,6 +164,7 @@ block content
 																th Code
 																th Product Order
 																th Quantity
+																th Returned Quantity
 																th Unit Price
 																th Total
 																th 
