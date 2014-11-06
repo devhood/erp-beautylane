@@ -17,7 +17,7 @@ li#header_notification_bar.dropdown(ng-controller="NotificationController as not
 							i.fa(class="{{notification.icon}}")
 						| {{notification.message}}
 						span.time
-							| {{notification.createdOn}}
+							| {{notification.createdOn | date: short}}
 		li.external
 			a(href="#")
 				| See all notifications
