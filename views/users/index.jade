@@ -13,7 +13,7 @@ block content
 					button(href="/users/add").tooltips(data-container="body", data-placement="top", data-html="true", data-original-title="Add new Record")
 						i.fa.fa-plus
 						
-			table#users_table.table.table-bordered.table-condensed.flip-content(ng-table)
+			table#users_table.table.table-bordered.table-condensed.flip-content(ng-table="tableParams")
 				thead.flip-content.bg-grey
 					tr
 						th Fullname
@@ -25,12 +25,12 @@ block content
 						th Action
 				tbody
 					tr(ng-repeat="user in users")
-						td(data-title="Fullname", sortable="'fullname'") {{user.fullname}}
-						td(data-title="Username", sortable="'username'") {{user.username}}
-						td(data-title="Position", sortable="'position'") {{user.position}}
-						td(data-title="Email", sortable="'email'") {{user.email}}
-						td(data-title="Mobile", sortable="'mobile'") {{user.mobile}}
-						td(data-title="Status", sortable="'status'") {{user.status}}
+						td(data-title="'Fullname'", sortable="'fullname'") {{user.fullname}}
+						td(data-title="'Username'", sortable="'username'") {{user.username}}
+						td(data-title="'Position'", sortable="'position'") {{user.position}}
+						td(data-title="'Email'", sortable="'email'") {{user.email}}
+						td(data-title="'Mobile'", sortable="'mobile'") {{user.mobile}}
+						td(data-title="'Status'", sortable="'status'") {{user.status}}
 						td
 							button.tooltips(data-container="body", data-placement="top", data-html="true", data-original-title="View Record")
 								i.fa.fa-eye
