@@ -22,7 +22,7 @@ angular.module('userApp.controllers',['ngTable'])
 
 }).controller('UserViewController',function($scope,$stateParams,User){
 
-    $scope.movie=User.get({id:$stateParams.id});
+    $scope.user=User.get({id:$stateParams.id});
 
 }).controller('UserCreateController',function($scope,$state,$stateParams,User){
 
