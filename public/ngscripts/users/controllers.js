@@ -1,5 +1,5 @@
 angular.module('userApp.controllers',[])
-.controller('UserListController',function($scope,$state,popupService,$window,User){
+.controller('UserListController',function($scope,$state,$filter,popupService,$window,User, ngTableParams){
 
 	$scope.users = [
 	                {fullname: "Moroni", username: 50, password: "Moroni", position: 50, email: "Moroni", mobile: 50,status: "Moroni"},
