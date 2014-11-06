@@ -14,12 +14,14 @@ block content
 		.portlet-body
 			.table-toolbar
 				.btn-group
-					a.btn.green(href="/customer/add")
+					a.btn.green(href="/sales/invoice/approve")
 						| Add New
 						i.fa.fa-plus
-			table#orders_table.main.table.table-striped.table-hover.table-bordered
+			table#invoice_table.main.table.table-striped.table-hover.table-bordered
 				thead
 					tr
+						th SI Number
+						th DR Number
 						th SO Number
 						th Inventory Location
 						th Order Source
@@ -30,6 +32,8 @@ block content
 						th 
 				tbody
 					tr
+						td
+						td
 						td
 						td
 						td
