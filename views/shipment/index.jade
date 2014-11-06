@@ -1,0 +1,40 @@
+extends ../layout/main
+
+block content
+	.portlet.box.grey
+		.portlet-title
+			.caption
+				i.fa.fa-edit
+				| Shipment List
+			.tools
+				a.collapse(href="javascript:;")
+				a.config(href="#portlet-config", data-toggle="modal")
+				a.reload(href="/")
+				a.remove(href="javascript:;")
+		.portlet-body
+			.table-toolbar
+				.btn-group
+					a.btn.green(href="/shipment/add")
+						| Add New
+						i.fa.fa-plus
+			table#shipment_table.main.table.table-striped.table-hover.table-bordered
+				thead
+					tr
+						th Supplier
+						th Reference Number
+						th Arrival Date
+						th Confirmed By
+						th Approved By
+						th Shipment Notes
+						th Shipment Status
+						th 
+				tbody
+					tr
+						td
+						td
+						td
+						td
+						td
+						td
+						td
+						td
