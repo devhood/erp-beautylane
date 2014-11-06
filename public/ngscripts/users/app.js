@@ -1,25 +1,24 @@
 var app = angular.module('userApp',['ngTable','ui.router','ngResource','userApp.controllers','userApp.services']);
 
-/*
+
 app.config(function($stateProvider,$httpProvider){
     $stateProvider.state('users',{
-        url:'/users',
-        templateUrl:'/users',
-        controller:'MovieListController'
+        url:'/users/list',
+        templateUrl:'/users/list',
+        controller:'UserListController'
     }).state('viewUser',{
-       url:'/users/:id/view',
-       templateUrl:'users/add',
-       controller:'MovieViewController'
+       url:'/users/view',
+       templateUrl:'users/view',
+       controller:'UserViewController'
     }).state('newUser',{
-        url:'/users/new',
+        url:'/users/add',
         templateUrl:'users/add',
-        controller:'MovieCreateController'
+        controller:'UserCreateController'
     }).state('editUser',{
-        url:'/users/:id/edit',
-        templateUrl:'users/add',
-        controller:'MovieEditController'
+        url:'/users/edit',
+        templateUrl:'users/edit',
+        controller:'UserEditController'
     });
 }).run(function($state){
    $state.go('users');
 });
-*/

@@ -12,7 +12,7 @@ angular.module('userApp.controllers',['ngTable'])
 	
 //  $scope.users=User.query();
 	
-    $scope.deleteUser=function(user){
+    $scope.deleteUser = function(user){
         if(popupService.showPopup('Really delete this?')){
             user.$delete(function(){
                 $window.location.href='';
@@ -34,7 +34,7 @@ angular.module('userApp.controllers',['ngTable'])
         });
     }
 
-}).controller('MovieEditController',function($scope,$state,$stateParams,User){
+}).controller('UserEditController',function($scope,$state,$stateParams,User){
 
     $scope.updateUser=function(){
         $scope.user.$update(function(){

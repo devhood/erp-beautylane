@@ -1,0 +1,40 @@
+extends ../layout/main
+block content
+	.portlet.box.grey
+		.portlet-title
+			.caption
+				i.fa.fa-edit
+				| User List
+			.tools
+				a.collapse(href="javascript:;")
+		.portlet-body(ng-controller="UserListController").flip-scroll
+			.table-toolbar
+				.btn-group
+					button(ui-sref="newUser").tooltips(data-container="body", data-placement="top", data-html="true", data-original-title="Add new Record")
+						i.fa.fa-plus
+						
+			table#users_table.table.table-bordered.table-condensed.flip-content(ng-table="tableParams")
+				thead.flip-content.bg-grey
+					tr
+						th Fullname
+						th Username
+						th Position
+						th Email
+						th Mobile
+						th Status
+						th Action
+				tbody
+					tr(ng-repeat="user in users")
+						td(data-title="'Fullname'", sortable="'fullname'") {{user.fullname}}
+						td(data-title="'Username'", sortable="'username'") {{user.username}}
+						td(data-title="'Position'", sortable="'position'") {{user.position}}
+						td(data-title="'Email'", sortable="'email'") {{user.email}}
+						td(data-title="'Mobile'", sortable="'mobile'") {{user.mobile}}
+						td(data-title="'Status'", sortable="'status'") {{user.status}}
+						td
+							button.tooltips(data-container="body", data-placement="top", data-html="true", data-original-title="View Record")
+								i.fa.fa-eye
+							button.tooltips(data-container="body", data-placement="top", data-html="true", data-original-title="Edit Record")
+								i.fa.fa-pencil
+							button.tooltips(data-container="body", data-placement="top", data-html="true", data-original-title="Delete Record")
+								i.fa.fa-trash-o
