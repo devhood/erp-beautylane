@@ -58,7 +58,7 @@ router.put('/:object/:id', function(req, res) {
         res.json(400,err);
     }); 
 });
-router.delete('/:object/:id', function(req, res) {
+router['delete']('/:object/:id', function(req, res) {
     var id = mongoq.mongodb.BSONPure.ObjectID.createFromHexString(req.params.id);
     var filter = req.query.filter || {};
     filter._id = id;
