@@ -38,6 +38,7 @@ block content
 						td(data-title="Mobile") {{user.mobile}}
 						td(data-title="Status") {{user.status}}
 						td
-							a.btn.green.small(ui-sref="viewUser({id:user._id})") View
+							a.btn.green.small(ui-sref="viewUser({id:user._id})") 
+								i.fa.fa-pencil
 							a.btn.blue.small(ui-sref="editUser({id:user._id})") Edit
 							a.btn.yellow.small(ui-sref="deleteUser(user)") Delete
