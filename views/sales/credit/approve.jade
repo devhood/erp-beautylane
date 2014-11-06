@@ -5,14 +5,14 @@ block content
 		.portlet-title
 			.caption
 				i.fa.fa-reorder
-				| PAYMENT
+				| CREDIT MEMO
 			.tools
 				a.collapse(href="javascript:;")
 				a.config(href="#portlet-config", data-toggle="modal")
 				a.reload(href="javascript:;")
 				a.remove(href="javascript:;")
 		.portlet-body.form
-			form#payment_add.form-horizontal(action="/sales/payment/add", method="post")
+			form#credit_add.form-horizontal(action="/sales/credit/add", method="post")
 				.form-body
 					.alert.alert-danger.display-hide
 						button.close(data-close="alert")
@@ -21,17 +21,6 @@ block content
 						button.close(data-close="alert")
 						| Your form validation is successful!
 					h5
-					.row
-						.col-md-6
-							.form-group
-								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
-									input#rmrno.form-control(type="text", name="rmrno", readonly="readonly", value="")
-									span.col-md-12.control-label	RMR Number 
-						.col-md-6
-							.form-group
-								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
-									input#cmno.form-control(type="text", name="cmno", readonly="readonly", value="")
-									span.col-md-12.control-label	CM Number 
 					.row
 						.col-md-6
 							.form-group
@@ -172,6 +161,7 @@ block content
 																th Code
 																th Product Order
 																th Quantity
+																th Returned Quantity
 																th Unit Price
 																th Total
 																th 
@@ -228,60 +218,6 @@ block content
 								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
 									input#totalSales.form-control(type="text", name="totalSales", readonly="readonly", value="")
 									span.col-md-12.control-label	TOTAL AMOUNT DUE 
-					.portlet.box.grey
-						.portlet-title
-							.caption
-								i.fa.fa-reorder
-								| PAYMENT DETAIL
-							.tools
-								a.collapse(href="javascript:;")
-								a.config(href="#portlet-config", data-toggle="modal")
-								a.reload(href="javascript:;")
-								a.remove(href="javascript:;")
-						.portlet-body.form
-							.form-body
-								.row
-									br
-									.col-md-2
-									.col-md-8
-										.col-xs-6.col-sm-6.col-md-6.col-md-6(style="padding-left: 0px;")
-											button.btn-sm.green.custom-left(type="button", data-toggle="modal", href="#itemsModal")
-												| Add New
-												i.fa.fa-plus
-										.col-xs-6.col-sm-6.col-md-6.col-md-6(style="padding-right: 0px;")
-									.col-md-2
-								.form-group
-									.col-md-2
-									.col-md-8
-										.row
-											br
-											.col-md-12
-												.portlet-body.flip-scroll
-													table#orderTable.table.table-bordered.table-condensed.flip-content
-														thead.flip-content.bg-grey
-															tr
-																th Type
-																th Date
-																th Check No.
-																th Check Date
-																th Bank
-																th Branch
-																th Amount
-																th Deposit
-																th 
-														tbody
-									.col-md-2
-					.row
-						.col-md-6
-							.form-group
-								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
-									input#orno.form-control(type="text", name="orno", value="")
-									span.col-md-12.control-label	OR Number 
-						.col-md-6
-							.form-group
-								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
-									input#prno.form-control(type="text", name="prno", value="")
-									span.col-md-12.control-label	PR Number
 				.form-actions.fluid
 					.row
 						.col-xs-10.col-sm-10.col-md-11.col-lg-11

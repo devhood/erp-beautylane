@@ -42,7 +42,7 @@ router.get('/payment/approve', function(req, res) {
 router.get('/credit', function(req, res) {
 	res.render('sales/credit/index');
 });
-router.get('/credit/add', function(req, res) {
-	res.render('sales/credit/add');
+router.get('/credit/approve', function(req, res) {
+	res.render('sales/credit/approve');
 });
 module.exports = router;
