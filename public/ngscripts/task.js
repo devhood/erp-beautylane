@@ -37,10 +37,10 @@ app.controller('TaskController', function(){
 	link: "#",
 	task: "Return fix",
 	description: "Returned Merchandise",
-	percent: "10%", 
+	percent: "1%", 
 	progress:{
 				status:"progress-bar-danger",
-	           width: "100%",
+	           width: "1%",
 	           valuenow:"40",
 	           valuemax:"100",
 			},

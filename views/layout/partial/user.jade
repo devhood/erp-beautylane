@@ -1,26 +1,26 @@
-li.dropdown.user
+li.dropdown.user(ng-controller="userController as userCtrl" )
 	a.dropdown-toggle(href="#", data-toggle="dropdown", data-hover="dropdown", data-close-others="true")
-		img(alt="", src="/assets/img/avatar1_small.jpg")
+		img(alt="", src="{{userCtrl.user.photo}}")
 		span.username
-			| Bob Nilson
+			| {{userCtrl.user.username}}
 		i.fa.fa-angle-down
 	ul.dropdown-menu
 		li
-			a(href="extra_profile.html")
+			a(href="{{userCtrl.user.profileUrl}}")
 				i.fa.fa-user
 				| My Profile
 		li
-			a(href="page_calendar.html")
+			a(href="{{userCtrl.user.calendarUrl}}")
 				i.fa.fa-calendar
 				| My Calendar
 		li
-			a(href="inbox.html")
+			a(href="{{userCtrl.user.inboxUrl}}")
 				i.fa.fa-envelope
 				| My Inbox
 				span.badge.badge-danger
 					| 3
 		li
-			a(href="#")
+			a(href="{{userCtrl.user.taskUrl}}")
 				i.fa.fa-tasks
 				| My Tasks
 				span.badge.badge-success
@@ -31,11 +31,11 @@ li.dropdown.user
 				i.fa.fa-arrows
 				| Full Screen
 		li
-			a(href="extra_lock.html")
+			a(href="{{userCtrl.user.lockScreen}}")
 				i.fa.fa-lock
 				| Lock Screen
 		li
-			a(href="login.html")
+			a(href="{{userCtrl.user.logout}}")
 				i.fa.fa-key
 				| Log Out
 // END USER LOGIN DROPDOWN

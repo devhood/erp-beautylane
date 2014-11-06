@@ -17,7 +17,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/user', require('./routes/users'));
+app.use('/api', require('./routes/api'));
+app.use('/users', require('./routes/users'));
 app.use('/sales', require('./routes/sales'));
 app.use('/customer', require('./routes/customer'));
 app.use('/product', require('./routes/product'));
