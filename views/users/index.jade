@@ -11,28 +11,33 @@ block content
 				a.config(href="#portlet-config", data-toggle="modal")
 				a.reload(href="/")
 				a.remove(href="javascript:;")
-		.portlet-body
+		.portlet-body(ng-controller="UserListController")
 			.table-toolbar
 				.btn-group
-					a.btn.green(href="/user/add")
+					a.btn.green(href="/users/add")
 						| Add New
 						i.fa.fa-plus
-			table#users_table.main.table.table-striped.table-hover.table-bordered
+			table#users_table.main.table.table-striped.table-hover.table-bordered(ng-table)
 				thead
 					tr
-						th Full Name
+						th Fullname
 						th Username
 						th Position
+						th Password
 						th Email
 						th Mobile
 						th Status
-						th 
+						th Action
 				tbody
-					tr
+					tr(ng-repeat="user in users")
+						td(data-title="Fullname") {{user.fullname}}
+						td(data-title="Username") {{user.username}}
+						td(data-title="Position") {{user.position}}
+						td(data-title="Password") {{user.password}}
+						td(data-title="Email") {{user.email}}
+						td(data-title="Mobile") {{user.mobile}}
+						td(data-title="Status") {{user.status}}
 						td
-						td
-						td
-						td
-						td
-						td
-						td
+							a.btn.green.small(ui-sref="viewUser({id:user._id})") View
+							a.btn.blue.small(ui-sref="editUser({id:user._id})") Edit
+							a.btn.yellow.small(ui-sref="deleteUser(user)") Delete

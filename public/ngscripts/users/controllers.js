@@ -1,7 +1,12 @@
 angular.module('userApp.controllers',[])
 .controller('UserListController',function($scope,$state,popupService,$window,User){
 
-    $scope.users=User.query();
+	$scope.users = [
+	                {fullname: "Moroni", username: 50, password: "Moroni", position: 50, email: "Moroni", mobile: 50,status: "Moroni"},
+	                {fullname: "Tiancum", username: 43, password: "Moroni", position: 50, email: "Moroni", mobile: 50,status: "Moroni"},
+	                {fullname: "Tiancum", username: 43, password: "Moroni", position: 50, email: "Moroni", mobile: 50,status: "Moroni"},
+	            ]
+  //  $scope.users=User.query();
 
     $scope.deleteUser=function(user){
         if(popupService.showPopup('Really delete this?')){

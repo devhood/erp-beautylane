@@ -1,3 +1,3 @@
 (function(){
-	var app = angular.module('erp',['menu','notification']);
+	var app = angular.module('erp',['menu','notification','userApp']);
 })();

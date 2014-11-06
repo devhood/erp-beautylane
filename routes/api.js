@@ -4,7 +4,7 @@ var router = express.Router();
 var mongoq = require('mongoq');
 config = require('../config.local.js');
 
-var db = mongoq(config.MONGO_URL);
+var db = mongoq(config.mongo_url);
 
 
 router.get('/:object', function(req, res) {
@@ -12,10 +12,11 @@ router.get('/:object', function(req, res) {
     .find(req.query.filter || {},req.query.columns || {})
     .sort(req.query.sorting || {}).skip(req.query.page || 0)
     .limit(req.query.rows || 0).toArray()
-    .done(function(result){   
+    .done(function(data){   
         res.json(200,data);
     })
     .fail( function( err ) { 
+    	console.log(err);
         res.json(400,err);
     });  
 	
@@ -23,7 +24,7 @@ router.get('/:object', function(req, res) {
 router.post('/:object', function(req, res) {
     db.collection(req.params.object)
     .insert(req.body, {safe: true})
-    .done(function(result){   
+    .done(function(data){   
         res.json(200,data);
     })
     .fail( function( err ) { 
@@ -38,7 +39,7 @@ router.get('/:object/:id', function(req, res) {
     .find(filter,req.query.columns || {})
     .sort(req.query.sorting || {}).skip(req.query.page || 0)
     .limit(req.query.rows || 0)
-    .done(function(result){   
+    .done(function(data){   
         res.json(200,data);
     })
     .fail( function( err ) { 
@@ -51,7 +52,7 @@ router.put('/:object/:id', function(req, res) {
     filter._id = id;
 	db.collection(req.params.object)
     .update(filter, req.body, {safe: true})
-    .done(function(result){   
+    .done(function(data){   
         res.json(200,data);
     })
     .fail( function( err ) { 
@@ -64,7 +65,7 @@ router['delete']('/:object/:id', function(req, res) {
     filter._id = id;
     db.collection(req.params.object)
     .remove(filter, {safe: true})
-    .done(function(result){   
+    .done(function(data){   
         res.json(200,data);
     })
     .fail( function( err ) { 
