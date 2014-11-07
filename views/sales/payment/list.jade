@@ -2,18 +2,21 @@
 	.portlet-title
 		.caption
 			i.fa.fa-edit
-			| ORDER LIST
+			| PAYMENT LIST
 		.tools
 			a.collapse(href="javascript:;")
 	.portlet-body.flip-scroll
 		.table-toolbar
 			.btn-group
-				button(ui-sref="newOrder").tooltips(data-container="body", data-placement="top", data-html="true", data-original-title="Add new Record")
+				button(ui-sref="newPayment").tooltips(data-container="body", data-placement="top", data-html="true", data-original-title="Add new Record")
 					i.fa.fa-plus
 					
 		table#orders_table.table.table-bordered.table-condensed.flip-content(ng-table="tableParams")
 			thead.flip-content.bg-grey
 				tr
+					th PM Number
+					th RMR Number
+					th CM Number
 					th SO Number
 					th Inventory Location
 					th Order Source
@@ -21,19 +24,22 @@
 					th Delivery Method
 					th Ordered By
 					th Customer
-					th Action
 			tbody
 				tr(ng-repeat="order in orders")
+					td(data-title="'PM Number'", sortable="'sono'") {{order.pmno}}
+					td(data-title="'RMR Number'", sortable="'sono'") {{order.rmrno}}
+					td(data-title="'CM Number'", sortable="'sono'") {{order.cmno}}
 					td(data-title="'SO Number'", sortable="'sono'") {{order.sono}}
 					td(data-title="'Inventory Location'", sortable="'inventory_location'") {{order.inventory_location}}
 					td(data-title="'Order Source'", sortable="'order_source'") {{order.order_source}}
 					td(data-title="'Sales Executive'", sortable="'sales_executive'") {{order.sales_executive}}
 					td(data-title="'Delivery Method'", sortable="'delivery_method'") {{order.delivery_method}}
 					td(data-title="'Ordered By'", sortable="'odered_by'") {{order.odered_by}}
+					td(data-title="'Customer'", sortable="'customer'") {{order.customer}}
 					td
-						button(type="button", ui-sref="viewOrder({id:order._id})").tooltips(data-container="body", data-placement="top", data-html="true", data-original-title="View Record")
+						button(type="button", ui-sref="viewPayment({id:order._id})").tooltips(data-container="body", data-placement="top", data-html="true", data-original-title="View Record")
 							i.fa.fa-eye
-						button(type="button", ui-sref="editOrder").tooltips(data-container="body", data-placement="top", data-html="true", data-original-title="Edit Record")
+						button(type="button", ui-sref="editPayment").tooltips(data-container="body", data-placement="top", data-html="true", data-original-title="Edit Record")
 							i.fa.fa-pencil
-						button(type="button", ng-click="deleteOrder(order)").tooltips(data-container="body", data-placement="top", data-html="true", data-original-title="Delete Record")
+						button(type="button", ng-click="deletePayment(order)").tooltips(data-container="body", data-placement="top", data-html="true", data-original-title="Delete Record")
 							i.fa.fa-trash-o
