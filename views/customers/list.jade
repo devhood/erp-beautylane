@@ -1,0 +1,62 @@
+.portlet.box.grey
+    .portlet-title
+        .caption
+            i.fa.fa-edit
+            | CUSTOMER LIST
+        .tools
+            a.collapse(href="javascript:;")
+    .portlet-body.flip-scroll
+        .table-toolbar
+            .btn-group
+                button(ui-sref="newCustomer").tooltips(data-container="body", data-placement="top", data-html="true", data-original-title="Add new Record")
+                    i.fa.fa-plus
+                    
+        table#customers_table.table.table-bordered.table-condensed.flip-content(ng-table="tableParams")
+            thead.flip-content.bg-grey
+                tr
+                    th Category
+                    th Type
+                    th Name
+                    th Trade Name
+                    th Branch
+                    th TIN
+                    th Phone
+                    th Email
+                    th Website
+                    th SEC No
+                    th Credit Limit
+                    th Transaction Limit
+                    th Payment Term
+                    th Shipping Mode
+                    th Commission
+                    th Sales Executive
+                    th Price Type
+                    th Status
+                    th Action
+            tbody
+                tr(ng-repeat="customer in customers")
+                    td(data-title="'Category'", sortable="'category'") {{customer.category}}
+                    td(data-title="'Type'", sortable="'type'") {{customer.type}}
+                    td(data-title="'Name'", sortable="'name'") {{customer.name}}
+                    td(data-title="'TradeName'", sortable="'tradeName'") {{customer.tradename}}
+                    td(data-title="'Branch'", sortable="'branch'") {{customer.branch}}
+                    td(data-title="'TIN'", sortable="'tin'") {{customer.tin}}
+                    td(data-title="'Phone'", sortable="'phone'") {{customer.phone}}
+                    td(data-title="'Website'", sortable="'website'") {{customer.website}}
+                    td(data-title="'Email'", sortable="'email'") {{customer.email}}
+                    td(data-title="'SECNo'", sortable="'sec'") {{customer.sec}}
+                    td(data-title="'CreditLimit'", sortable="'creditLimit'") {{customer.creditLimit}}
+                    td(data-title="'TransactionLimit'", sortable="'transactionLimit'") {{customer.transactionLimit}}
+                    td(data-title="'PaymentTerm'", sortable="'paymentTerm'") {{customer.paymentTerm}}
+                    td(data-title="'ShippingMode'", sortable="'shippingMode'") {{customer.shippingMode}}
+                    td(data-title="'Commission'", sortable="'commission'") {{customer.commission}}
+                    td(data-title="'SalesExecutive'", sortable="'salesExecutive'") {{customer.priceType}}
+                    td(data-title="'PriceType'", sortable="'priceType'") {{customer.tin}}
+                    td(data-title="'Status'", sortable="'status'") {{customer.status}}
+                    td
+                        button(type="button", ui-sref="viewcustomer").tooltips(data-container="body", data-placement="top", data-html="true", data-original-title="View Record")
+                            i.fa.fa-eye
+                        button(type="button", ui-sref="editcustomer").tooltips(data-container="body", data-placement="top", data-html="true", data-original-title="Edit Record")
+                            i.fa.fa-pencil
+                        button(type="button", ng-click="deletecustomer(customer)").tooltips(data-container="body", data-placement="top", data-html="true", data-original-title="Delete Record")
+                            i.fa.fa-trash-o

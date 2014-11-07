@@ -1,0 +1,320 @@
+extends ../layout/main
+
+block content
+	.portlet.box.grey
+		.portlet-title
+			.caption
+				i.fa.fa-reorder
+				| CUSTOMER PROFILE
+			.tools
+				a.collapse(href="javascript:;")
+				a.config(href="#portlet-config", data-toggle="modal")
+				a.reload(href="javascript:;")
+				a.remove(href="javascript:;")
+		.portlet-body.form
+			form#customer_add.form-horizontal(action="/customer/add", method="post")
+				.form-body
+					.alert.alert-danger.display-hide
+						button.close(data-close="alert")
+						| You have some form errors. Please check below.
+					.alert.alert-success.display-hide
+						button.close(data-close="alert")
+						| Your form validation is successful!
+					.row
+						br
+						.col-md-6
+							.form-group
+								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+									select#categoryId.select2me.form-control.select2-offscreen(name="category[categoryId]", tabindex="-1", required="required")
+										option(value="")
+										option(value="1") Corporate
+										option(value="2") Individual
+										option(value="3") Product Category
+										option(value="4") Category
+									span.col-md-12.control-label	Category 
+						.col-md-6
+							.form-group
+								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
+									select#customerTypeId.select2me.form-control.select2-offscreen(name="customerType[customerTypeId]", tabindex="-1", required="required")
+										option(value="")
+										option(value="1") Professional
+										option(value="2") Retail
+									span.col-md-12.control-label	Type 
+					.row
+						.col-md-6
+							.form-group
+								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+									input#companyName.form-control(type="text", name="companyName", value="")
+									span.col-md-12.control-label	Company Name 
+						.col-md-6
+							.form-group
+								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
+									input#branch.form-control(type="text", name="branch", value="")
+									span.col-md-12.control-label	Branch Location 
+					.row
+						.col-md-6
+							.form-group
+								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+									input#tradeName.form-control(type="text", name="tradeName", value="")
+									span.col-md-12.control-label	Trade Name 
+						.col-md-6
+							.form-group
+								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
+									input#tinNumber.form-control(type="text", name="tin", value="")
+									span.col-md-12.control-label	TIN 
+					.row
+						.col-md-6
+							.form-group
+								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+									input#phone.form-control(type="text", name="phone", value="")
+									span.col-md-12.control-label	Phone 
+						.col-md-6
+							.form-group
+								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
+									input#email.form-control(type="text", name="email", value="")
+									span.col-md-12.control-label	Email 
+					.row
+						.col-md-6
+							.form-group
+								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+									input#website.form-control(type="text", name="website", value="")
+									span.col-md-12.control-label	Website 
+						// /span
+						.col-md-6
+							.form-group
+								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
+									input#secNo.form-control(type="text", name="secNo", value="")
+									span.col-md-12.control-label	SEC Number 
+					.row
+						.col-md-6
+							.form-group
+								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+									label.checkbox
+										input#consignee.form-control(type="checkbox", name="consignee", value="1")
+										| Consignee
+						.col-md-6
+							.form-group
+								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
+									label.checkbox
+										input#franchise.form-control(type="checkbox", name="franchise", value="1")
+										| Franchise
+					.row
+						.col-md-6
+							.form-group
+								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+									input#creditLimit.form-control(type="text", name="creditLimit", value="")
+									span.col-md-12.control-label	Credit Limit 
+						.col-md-6
+							.form-group
+								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left.select
+									input#transactionLimit.form-control(type="text", name="transactionLimit", value="")
+									span.col-md-12.control-label
+										| Unpaid Transaction Limit
+					.row
+						.col-md-6
+							.form-group
+								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+									select#paymentTermId.select2me.form-control.select2-offscreen(name="paymentTerm[paymentTermId]", tabindex="-1", required="required")
+										option(value="")
+										option(value="1") Cash
+										option(value="2") 15 Days
+										option(value="3") 30 Days
+										option(value="4") 40 Days
+									span.col-md-12.control-label	Payment Terms 
+						.col-md-6
+							.form-group
+								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left.select
+									input#permanentDiscount.form-control(type="text", name="permanentDiscount", value="")
+									span.col-md-12.control-label	Permanent Discount 
+					.row
+						.col-md-6
+							.form-group
+								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+									select#shippingModeId.select2me.form-control.select2-offscreen(name="shippingMode[shippingModeId]", tabindex="-1")
+										option(value="")
+										option(value="1") Walk-in
+										option(value="2") In-House Delivery
+									span.col-md-12.control-label	Shipping Mode 
+						.col-md-6
+							.form-group
+								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left.select
+									select#userId.select2me.form-control.select2-offscreen(name="salesExecutive[userId]", tabindex="-1", required="required")
+										option(value="")
+										option(value="2") Lj sales
+									span.col-md-12.control-label	Sales Executive 
+					.row
+						.col-md-6
+							.form-group
+								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+									select#priceTypeId.select2me.form-control.select2-offscreen(name="priceType[priceTypeId]", tabindex="-1", required="required")
+										option(value="")  
+										option(value="1") Retail
+										option(value="2") Professional
+										option(value="3") Rustans
+									span.col-md-12.control-label	Price Type 
+						.col-md-6
+							.form-group
+								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left.select
+									select#customerStatus.select2me.form-control.select2-offscreen(name="customerStatus", tabindex="-1", required="required")
+										option(value="0") Active
+										option(value="1") Inactive
+										option(value="2") Suspended
+										option(value="3") Block
+									span.col-md-12.control-label	Customer Status 
+					.portlet.box.grey
+						.portlet-title
+							.caption
+								i.fa.fa-reorder
+								| ADDRESS
+							.tools
+								a.collapse(href="javascript:;")
+								a.config(href="#portlet-config", data-toggle="modal")
+								a.reload(href="javascript:;")
+								a.remove(href="javascript:;")
+						.portlet-body.form
+							.row
+								br
+								.col-md-6
+									// <div class="form-group">
+									.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
+										h3.inline Shipping Address
+									// </div>
+								.col-md-6
+									.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
+							.row
+								.col-md-6
+									.form-group
+										.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+								.col-md-6
+									.form-group
+										.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
+											input#streetLandmark.form-control(type="text", name="streetLandmark", placeholder="Enter Street Landmark", value="")
+											span.col-md-12.control-label	Street/Landmark 
+							.row
+								.col-md-6
+									.form-group
+										.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
+											select#cityId.select2me.form-control.select2-offscreen(name="city[cityId]", tabindex="-1")
+												option(value="")
+												option(value="1") Calamba
+											span.col-md-12.control-label	City 
+								.col-md-6
+									.form-group
+										.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
+											select#provinceId.select2me.form-control.select2-offscreen(name="province[provinceId]", tabindex="-1")
+												option(value="")
+												option(value="1") Laguna
+											span.col-md-12.control-label	Province 
+							.row
+								.col-md-6
+									.form-group
+										.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
+											select#countryId.select2me.form-control.select2-offscreen(name="country[countryId]", tabindex="-1")
+												option(value="")
+												option(value="1") Phillippines
+											span.col-md-12.control-label	Country 
+								.col-md-6
+									.form-group
+										.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
+											input#zipcode.form-control(type="text", name="zipcode", placeholder="Enter Zipcode", value="")
+											span.col-md-12.control-label	Zipcode 
+							.row
+								.col-md-6
+									.form-group
+										.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
+								.col-md-6
+									.form-group
+										.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
+											label.checkbox
+												input#billing.form-control(type="checkbox", name="billing", value="1")
+												| Use as Billing Address
+							.row
+								br
+								.col-md-6
+									.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
+										h3.inline Billing Address
+								.col-md-6
+									.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
+							.row
+								.col-md-6
+									.form-group
+										.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+								.col-md-6
+									.form-group
+										.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
+											input#streetLandmark.form-control(type="text", name="streetLandmark", placeholder="Enter Street Landmark", value="")
+											span.col-md-12.control-label	Street/Landmark 
+							.row
+								.col-md-6
+									.form-group
+										.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
+											select#cityId.select2me.form-control.select2-offscreen(name="city[cityId]", tabindex="-1")
+												option(value="")
+												option(value="1") Calamba
+											span.col-md-12.control-label	City 
+								.col-md-6
+									.form-group
+										.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
+											select#provinceId.select2me.form-control.select2-offscreen(name="province[provinceId]", tabindex="-1")
+												option(value="")
+												option(value="1") Laguna
+											span.col-md-12.control-label	Province 
+							.row
+								.col-md-6
+									.form-group
+										.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
+											select#countryId.select2me.form-control.select2-offscreen(name="country[countryId]", tabindex="-1")
+												option(value="")
+												option(value="1") Phillippines
+											span.col-md-12.control-label	Country 
+								.col-md-6
+									.form-group
+										.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
+											input#zipcode.form-control(type="text", name="zipcode", placeholder="Enter Zipcode", value="")
+											span.col-md-12.control-label	Zipcode 
+					.portlet.box.grey
+						.portlet-title
+							.caption
+								i.fa.fa-reorder
+								| CONTACT PERSONS
+							.tools
+								a.collapse(href="javascript:;")
+								a.config(href="#portlet-config", data-toggle="modal")
+								a.reload(href="javascript:;")
+								a.remove(href="javascript:;")
+						.portlet-body.form
+							.form-body
+								.row
+									br
+									.col-md-2
+									.col-md-8
+										.col-xs-6.col-sm-6.col-md-6.col-md-6(style="padding-left: 0px;")
+											button.btn-sm.green.custom-left(type="button", data-toggle="modal", href="#contactModal")
+												| Add New
+												i.fa.fa-plus
+										.col-xs-6.col-sm-6.col-md-6.col-md-6(style="padding-right: 0px;")
+									.col-md-2
+								.form-group
+									.col-md-2
+									.col-md-8
+										.row
+											br
+											.col-md-12
+												.portlet-body.flip-scroll
+													table#contactTable.table.table-bordered.table-condensed.flip-content
+														thead.flip-content.bg-grey
+															tr
+																th Name
+																th Position
+																th Mobile
+																th Email
+																th(width="12%")
+														tbody
+									.col-md-2
+				.form-actions.fluid
+					.row
+						.col-md-6
+							.col-md-offset-3.col-md-9
+								button.btn.green(type="submit") Submit
+								button.btn.default(type="button") Cancel
+						.col-md-6

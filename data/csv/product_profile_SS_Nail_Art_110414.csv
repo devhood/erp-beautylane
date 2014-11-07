@@ -1,0 +1,29 @@
+part_number,supplier_code,bl_code,brand,item_name,size,color,payment_term,status,uom,movement,description,supplier,currency,international_cost,professional_price,retail_price
+SSSTKPNO1,---,STK.C,Salon Solutions,Nail Sticker,---,---,Cash,For Cancellation,piece,C,NO FURTHER DISCOUNT!,Various,USD,0.19,30,30
+SSSTKPNO2,---,STKP.C,Salon Solutions,Nail Sticker Big Pad,---,---,Cash,For Cancellation,piece,C,NO FURTHER DISCOUNT!,Supernail,USD,---,330,330
+SSSTKPNO3,---,STKT.C,Salon Solutions,Nail Art Stickersfor Nail Tips,---,---,Cash,For Cancellation,piece,C,NO FURTHER DISCOUNT!,Supernail,USD,0.24,30,30
+SSSTKPNO4,---,STKW.C,Salon Solutions,Nail Art Stickers/Full Nail,---,---,Cash,For Cancellation,piece,C,NO FURTHER DISCOUNT!,Supernail,USD,0.33,50,50
+SSSTKPNO5,NA588,LCET.C,Salon Solutions,Lace/Flower Nail Art Tape,---,---,Cash,For Cancellation,piece,C,NO FURTHER DISCOUNT!,Qianse,USD,0.58,50,50
+SSCHMSNO1,NA578,CHMS1.C,Salon Solutions,Assorted Aloy Nail Charms 12pc Tray,---,---,Cash,For Cancellation,piece,C,NO FURTHER DISCOUNT!,Qianse,USD,2.6,300,300
+SSCHMSNO2,NA993,CHMS2.C,Salon Solutions,Assorted Aloy Nail Charms 12pc Wheel,---,---,Cash,For Cancellation,piece,C,NO FURTHER DISCOUNT!,Qianse,USD,3.1,300,300
+SSCHMSNO3,NA994,CHMS3.C,Salon Solutions,Assorted Aloy Nail Charms 12pc Wheel,---,---,Cash,For Cancellation,piece,C,NO FURTHER DISCOUNT!,Qianse,USD,3.1,300,300
+SSCHPSPNO1,NA480,CHPS1.C,Salon Solutions,Acrylic Bows & Flowers 60/box,---,---,Cash,For Cancellation,piece,C,NO FURTHER DISCOUNT!,Lyn Weichu,USD,2.5,280,280
+SSCHPPNO1,---,CHP2.C,Salon Solutions,Black Acrylic 3D Nail Charms,---,---,Cash,For Cancellation,piece,C,NO FURTHER DISCOUNT!,Lyn Weichu,USD,1.2,110,110
+SSFMO1,NA943,FMO1.C,Salon Solutions,Sliced FIMO Smiley Face Set in Wheel,---,---,Cash,For Cancellation,piece,C,NO FURTHER DISCOUNT!,Qianse,USD,1,110,110
+SSFMOSPNO1,NA303C,FMOS.C,Salon Solutions,"3D Polymer Clay FIMO Rods, 20pk Assorted Designs",---,---,Cash,For Cancellation,piece,C,NO FURTHER DISCOUNT!,Qianse,USD,0.772,120,120
+SSFMOC1,NA042,FMOC.C,Salon Solutions,FIMO Knife Blade ,---,---,Cash,For Cancellation,piece,C,NO FURTHER DISCOUNT!,Qianse,USD,0.2,30,30
+SS3DPENSPNO1,---,3DPENS.C,Salon Solutions,3D Nail Art Pen Set 12pcs,---,---,Cash,For Cancellation,piece,C,NO FURTHER DISCOUNT!,Lyn Weichu,USD,8.75,600,600
+SS3DMOPNO1,---,3DMO.C,Salon Solutions,3D Nail Art Mold,---,---,Cash,For Cancellation,piece,C,NO FURTHER DISCOUNT!,Lyn Weichu,USD,1.1,80,80
+SSNADPNO1,NAD-40,NAD1.C,Salon Solutions,Nail Art Display Stems  10/Set,---,---,Cash,For Cancellation,piece,C,NO FURTHER DISCOUNT!,Auparis,USD,0.5,45,45
+SSNADPNO2,NAD-24,NAD2.C,Salon Solutions,Nail Art Display w/ Stand 32 Stems,---,---,Cash,For Cancellation,piece,C,NO FURTHER DISCOUNT!,Auparis,USD,1.7,150,150
+SSDFLSPNO1,---,DFLS1.C,Salon Solutions,Dried Flowers Set 12 Jars,---,---,Cash,For Cancellation,piece,C,NO FURTHER DISCOUNT!,---,USD,---,150,150
+SSDFLSPNO2,---,DFLS2.C,Salon Solutions,Dried Flowers Set 12 Jars,---,---,Cash,For Cancellation,piece,C,NO FURTHER DISCOUNT!,---,USD,---,150,150
+SSDFLSPNO3,---,DFLS3.C,Salon Solutions,Dried Flowers Set 12 Jars,---,---,Cash,For Cancellation,piece,C,NO FURTHER DISCOUNT!,---,USD,---,150,150
+SSDFLSPNO4,---,DFLS4.C,Salon Solutions,Dried Flowers Set 12 Jars,---,---,Cash,For Cancellation,piece,C,NO FURTHER DISCOUNT!,---,USD,---,150,150
+SSDFLSPNO5,---,DFLS5.C,Salon Solutions,Dried Flowers Set 12 Jars,---,---,Cash,For Cancellation,piece,C,NO FURTHER DISCOUNT!,---,USD,---,150,150
+SSCSHSPNO,---,CSHS.C,Salon Solutions,Crushed Shell Set,---,---,Cash,For Cancellation,piece,C,NO FURTHER DISCOUNT!,---,USD,---,150,150
+SSMBDSPNO1,---,MBDS.C,Salon Solutions,Micro Beads Set,---,---,Cash,For Cancellation,piece,C,NO FURTHER DISCOUNT!,---,USD,---,150,150
+SSGLTPNO1,---,GLT.C,Salon Solutions,Nail Glitter Set (Round),---,---,Cash,For Cancellation,piece,C,NO FURTHER DISCOUNT!,---,USD,---,150,150
+SSGLTSSPNO1,---,GLTSS.C,Salon Solutions,Glitter Strings Set,---,---,Cash,For Cancellation,piece,C,NO FURTHER DISCOUNT!,---,USD,---,150,150
+SSGLFSPNO1,---,GLFS.C,Salon Solutions,Glitter Flakes Set,---,---,Cash,For Cancellation,piece,C,NO FURTHER DISCOUNT!,---,USD,---,150,150
+SSTWZPNO1,---,TWZ1.C,Salon Solutions,Stainless Nail Art Tweezers,---,---,Cash,For Cancellation,piece,C,NO FURTHER DISCOUNT!,Lyn Weichu,USD,1.4,120,120

@@ -20,7 +20,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api', require('./routes/api'));
 app.use('/users', require('./routes/users'));
 app.use('/sales', require('./routes/sales'));
-app.use('/customer', require('./routes/customer'));
+app.use('/customers', require('./routes/customers'));
 app.use('/product', require('./routes/product'));
 app.use('/purchase', require('./routes/purchase'));
 app.use('/shipment', require('./routes/shipment'));
