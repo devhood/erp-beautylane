@@ -1,4 +1,4 @@
-angular.module('customerApp.services',[]).factory('customer',function($resource){
+angular.module('customerApp.services',[]).factory('Customer',function($resource){
     return $resource('/api/customers/:id',{id:'@_id'},{
         update: {
             method: 'PUT'

@@ -1,11 +1,8 @@
 angular.module('customerApp.controllers',['ngTable'])
-.controller('customerListController',function($scope,$state,popupService,$window,customer,ngTableParams, $filter){
+.controller('customerListController',function($scope,$state,popupService,$window,Customer,ngTableParams, $filter){
 
 	
-	$scope.customers = data;
-		
-	
-  $scope.customers=customer.query();
+  $scope.customers=Customer.query() || [];
 	
     $scope.deleteCustomer = function(customer){
         if(popupService.showPopup('Really delete this?')){
@@ -15,13 +12,13 @@ angular.module('customerApp.controllers',['ngTable'])
         }
     };
 
-}).controller('customerViewController',function($scope,$stateParams,customer){
+}).controller('customerViewController',function($scope,$stateParams,Customer){
 
-    $scope.customer=customer.get({id:$stateParams.id});
+    $scope.customer=Customer.get({id:$stateParams.id});
 
-}).controller('customerCreateController',function($scope,$state,$stateParams,customer){
+}).controller('customerCreateController',function($scope,$state,$stateParams,Customer){
 
-    $scope.customer=new customer();
+    $scope.customer=new Customer();
 
     $scope.addCustomer=function(){
         $scope.customer.$save(function(){
@@ -29,7 +26,7 @@ angular.module('customerApp.controllers',['ngTable'])
         });
     }
 
-}).controller('customerEditController',function($scope,$state,$stateParams,customer){
+}).controller('customerEditController',function($scope,$state,$stateParams,Customer){
 
     $scope.updateCustomer=function(){
         $scope.customer.$update(function(){
@@ -38,7 +35,7 @@ angular.module('customerApp.controllers',['ngTable'])
     };
 
     $scope.loadCustomer=function(){
-        $scope.customer=customer.get({id:$stateParams.id});
+        $scope.customer=Customer.get({id:$stateParams.id});
     };
 
     $scope.loadCustomer();
