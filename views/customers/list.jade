@@ -16,7 +16,7 @@
                 tr
                     th Category
                     th Type
-                    th Name
+                    th Company Name
                     th Trade Name
                     th Branch
                     th TIN
@@ -26,9 +26,9 @@
                     th SEC No
                     th Credit Limit
                     th Transaction Limit
-                    th Payment Term
+                    th Payment Terms
                     th Shipping Mode
-                    th Commission
+                    th Percent Commission
                     th Sales Executive
                     th Price Type
                     th Status
@@ -37,26 +37,26 @@
                 tr(ng-repeat="customer in customers")
                     td(data-title="'Category'", sortable="'category'") {{customer.category}}
                     td(data-title="'Type'", sortable="'type'") {{customer.type}}
-                    td(data-title="'Name'", sortable="'name'") {{customer.name}}
-                    td(data-title="'TradeName'", sortable="'tradeName'") {{customer.tradename}}
+                    td(data-title="'Company Name'", sortable="'company_name'") {{customer.company_name}}
+                    td(data-title="'Trade Name'", sortable="'trade_name'") {{customer.trade_name}}
                     td(data-title="'Branch'", sortable="'branch'") {{customer.branch}}
                     td(data-title="'TIN'", sortable="'tin'") {{customer.tin}}
                     td(data-title="'Phone'", sortable="'phone'") {{customer.phone}}
                     td(data-title="'Website'", sortable="'website'") {{customer.website}}
                     td(data-title="'Email'", sortable="'email'") {{customer.email}}
-                    td(data-title="'SECNo'", sortable="'sec'") {{customer.sec}}
-                    td(data-title="'CreditLimit'", sortable="'creditLimit'") {{customer.creditLimit}}
-                    td(data-title="'TransactionLimit'", sortable="'transactionLimit'") {{customer.transactionLimit}}
-                    td(data-title="'PaymentTerm'", sortable="'paymentTerm'") {{customer.paymentTerm}}
-                    td(data-title="'ShippingMode'", sortable="'shippingMode'") {{customer.shippingMode}}
-                    td(data-title="'Commission'", sortable="'commission'") {{customer.commission}}
-                    td(data-title="'SalesExecutive'", sortable="'salesExecutive'") {{customer.priceType}}
-                    td(data-title="'PriceType'", sortable="'priceType'") {{customer.tin}}
-                    td(data-title="'Status'", sortable="'status'") {{customer.status}}
+                    td(data-title="'SEC No'", sortable="'sec_no'") {{customer.sec_no}}
+                    td(data-title="'Credit Limit'", sortable="'credit_limit'") {{customer.credit_limit}}
+                    td(data-title="'Transaction Limit'", sortable="'transaction_limit'") {{customer.transaction_limit}}
+                    td(data-title="'Payment Terms'", sortable="'payment_term'") {{customer.payment_term}}
+                    td(data-title="'Shipping Mode'", sortable="'shipping_mode'") {{customer.shipping_mode}}
+                    td(data-title="'Percent Commission'", sortable="'percent_commission'") {{customer.percent_commission}}
+                    td(data-title="'Sales Executive'", sortable="'sales_executive'") {{customer.sales_executive}}
+                    td(data-title="'Price Type'", sortable="'price_type'") {{customer.price_type}}
+                    td(data-title="'Status'", sortable="'customer_status'") {{customer.customer_status}}
                     td
-                        button(type="button", ui-sref="viewcustomer").tooltips(data-container="body", data-placement="top", data-html="true", data-original-title="View Record")
+                        button(type="button", ui-sref="viewCustomer({id:customer._id})").tooltips(data-container="body", data-placement="top", data-html="true", data-original-title="View Record")
                             i.fa.fa-eye
-                        button(type="button", ui-sref="editcustomer").tooltips(data-container="body", data-placement="top", data-html="true", data-original-title="Edit Record")
+                        button(type="button", ui-sref="editCustomer").tooltips(data-container="body", data-placement="top", data-html="true", data-original-title="Edit Record")
                             i.fa.fa-pencil
-                        button(type="button", ng-click="deletecustomer(customer)").tooltips(data-container="body", data-placement="top", data-html="true", data-original-title="Delete Record")
+                        button(type="button", ng-click="deleteCustomer(customer)").tooltips(data-container="body", data-placement="top", data-html="true", data-original-title="Delete Record")
                             i.fa.fa-trash-o

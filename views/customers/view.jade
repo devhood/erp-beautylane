@@ -5,14 +5,14 @@ block content
 		.portlet-title
 			.caption
 				i.fa.fa-reorder
-				| ADD CUSTOMER PROFILE
+				| VIEW CUSTOMER PROFILE
 			.tools
 				a.collapse(href="javascript:;")
 				a.config(href="#portlet-config", data-toggle="modal")
 				a.reload(href="javascript:;")
 				a.remove(href="javascript:;")
 		.portlet-body.form
-			form#customer_add.form-horizontal(action="/customers/add", method="post")
+			form#customer_view.form-horizontal(action="/customers/view", method="post")
 				.form-body
 					.alert.alert-danger.display-hide
 						button.close(data-close="alert")
@@ -315,6 +315,6 @@ block content
 					.row
 						.col-md-6
 							.col-md-offset-3.col-md-9
-								button.btn.green(type="submit") Submit
-								button.btn.default(type="button", ui-sref="customers") Cancel
+							button.btn.green(type="button", ui-sref="editCustomer") Edit
+							button.btn.default(type="button", ui-sref="customers") Back
 						.col-md-6

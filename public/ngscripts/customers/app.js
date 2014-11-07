@@ -6,15 +6,15 @@ app.config(function($stateProvider,$httpProvider){
         url:'/customers/list',
         templateUrl:'/customers/list',
         controller:'customerListController'
-    }).state('viewcustomer',{
+    }).state('viewCustomer',{
        url:'/customers/view',
        templateUrl:'customers/view',
        controller:'customerViewController'
-    }).state('newcustomer',{
+    }).state('newCustomer',{
         url:'/customers/add',
         templateUrl:'customers/add',
         controller:'customerCreateController'
-    }).state('editcustomer',{
+    }).state('editCustomer',{
         url:'/customers/edit',
         templateUrl:'customers/edit',
         controller:'customerEditController'
