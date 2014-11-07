@@ -1,0 +1,1001 @@
+customer_id,category,type,company_name,consignee,branch,trade_name,tin,phone,email,website,franchisee,credit_limit,payment_term,transaction_limit,commision_sharing,shipping_mode,price_type,status
+0000000001,Corporate,Professional,"Anne Mariquit",,Main,"Anne Mariquit",,"0915 7683593",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000002,Corporate,Professional,"Monette L. Pua",,Main,"Monette L. Pua",,"0917 8888598",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000003,Corporate,Professional,"Grace De Leon",,Main,"Grace De Leon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000004,Corporate,Professional,"Marielle Lagdameo",,Main,"Marielle Lagdameo",,"0927 4513822",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000005,Corporate,Professional,"Ruby Fard",,Main,"Ruby Fard",,"0917 8401559",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000006,Corporate,Professional,"Dennis Santos Salon",,Main,"Dennis Santos Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000007,Corporate,Professional,"Jen Parilla",,Main,"Jen Parilla",,,ilyjhen@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000008,Corporate,Professional,"Jun Chua",,Main,"Jun Chua",,"0939 4151466",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000009,Corporate,Professional,"Veejay Pilapil",,Main,"Veejay Pilapil",,"0917 8081438",veejaypilapil@gmail.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000010,Corporate,Professional,"Reyna S. Evangelista",,Main,"Reyna S. Evangelista",,"0915 2767037",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000011,Corporate,Professional,"Charo Bulaon",,Main,"Charo Bulaon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000012,Corporate,Professional,"Maricar Abad",,Main,"Maricar Abad",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000013,Corporate,Professional,"Caryll Salon",No,Main,"Caryll Salon",,,,N/A,No,No,COD,,,"Walk- In",Professional,Active
+0000000014,Corporate,Professional,"Extreme Barber Shop Salon",,Main,"Extreme Barber Shop Salon",,"0917 8513582 / 0920 4100490",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000015,Corporate,Professional,"Nail Harbor",No,Main,"Nail Harbor",,"0920 9545857",maluisa.cueto@yahoo.com,,No,No,COD,,,"Walk- In",Professional,Active
+0000000016,Corporate,Professional,"Sis Deluxe Spa",,Main,"Sis Deluxe Spa",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000017,Corporate,Professional,"Blissful Salon",,Main,"Blissful Salon",,"0917 8008898",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000018,Corporate,Professional,"Bliss Hand Body Nails Spa",No,Main,"Bliss Hand Body Nails Spa",,"0918 9294480",,,No,No,COD,,,"Walk- In",Professional,Active
+0000000019,Corporate,Professional,"Blooming Touch Salon",No,Main,"Blooming Touch Salon",,"0917 9871492",,,No,No,COD,,,ideliver101,Professional,Active
+0000000020,Corporate,Professional,"Sheirachel Salon Spa & Barbers",,Main,"Sheirachel Salon Spa & Barbers",,"0917 8829064",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000021,Corporate,Professional,"The Nail Story",,Main,"The Nail Story",,"0905 3911765",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000022,Corporate,Professional,"Friends Salon & Spa",,Main,"Friends Salon & Spa",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000023,Corporate,Professional,"Chi Chi Knappett",,Main,"Chi Chi Knappett",,"0917 5598508",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000024,Corporate,Professional,"French Tip Nail Salon",No,Main,"French Tip Nail Salon",,"0917 7184633",,,No,No,COD,,,"Walk- In",Professional,Active
+0000000025,Corporate,Professional,"Yaffechen Incorporation",No,Main,"The Beauty Loft Salon",,"0922 8554195",,,No,No,COD,,,"Walk- In",Professional,Active
+0000000026,Corporate,Professional,"Forever Touch",No,Main,"Forever Touch",,,,,No,No,COD,,,"Walk- In",Professional,Active
+0000000027,Corporate,Professional,"Face & Body Company",,Main,"Face & Body Company",,"0917 8627778",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000028,Corporate,Professional,"Skin Rituals Face & Body Care Center",No,Main,"Skin Rituals Face & Body Care Center",,,,,No,No,COD,,,"Walk- In",Professional,Active
+0000000029,Corporate,Professional,"Hairritage Salon",,Main,"Hairritage Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000030,Corporate,Professional,Oryspa,,Main,Oryspa,,"0917 5449587",oryspa@gmail.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000031,Corporate,Professional,"Pink Style Salon",,Main,"Pink Style Salon",,"0927 2647123",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000032,Corporate,Professional,"J Nice Salon",,Main,"J Nice Salon",,"0947 3569209",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000033,Corporate,Professional,"Citi Spa",,Main,"Citi Spa",,"0917 8192478",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000034,Corporate,Professional,"Cut in Save",,Main,"Cut in Save",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000035,Corporate,Professional,"Maribeth Salon",,Main,"Maribeth Salon",,"0929 2222989",bethdetoyato@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000036,Corporate,Professional,"True Berry Nail Spa",,Main,"True Berry Nail Spa",,"0917 8875537",lenokurt@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000037,Corporate,Professional,"New You Salon & Spa",,Main,"New You Salon & Spa",,"0908 8888266",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000038,Corporate,Professional,"Aqua Spa",,Main,"Aqua Spa",,"0917 5322851",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000039,Corporate,Professional,"Estetica Medispa",,Main,"Estetica Medispa",,"0915 5195854 / 0917 8566508",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000040,Corporate,Professional,"Nailed It",,Main,"Nailed It",,"0917 5007691",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000041,Corporate,Professional,"Ring a Spa",,Main,"Ring a Spa",,"0922 8865210  0922 8811972",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000042,Corporate,Professional,"Beauty Perks Salon",,Main,"Beauty Perks Salon",,"0922 8543410",betchaikool@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000043,Corporate,Professional,"Lalic Salon",,Main,"Lalic Salon",,"0920 9457974",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000044,Corporate,Professional,"Face Value Salon",,Main,"Face Value Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000045,Corporate,Professional,"Empress Jaya",,Main,"Empress Jaya",,,ysa_nagui@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000046,Corporate,Professional,"Aizen Salon",No,Main,"Aizen Salon",103-772-712-000," 874-3901",,,No,No,COD,,,ideliver101,Professional,Active
+0000000047,Corporate,Professional,"Amelia Salon",,Main,"Amelia Salon",,"0939 6377967",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000048,Corporate,Professional,"Americuts Salon & Spa",,Main,"Americuts Salon & Spa",,,magatyolanda@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000049,Corporate,Professional,"Angelo Falconi III Salon",,Main,"Angelo Falconi III Salon",,"0917 5309669",cdungo@angelofalconi.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000050,Corporate,Professional,"Angels Ways",,Main,"Angels Ways",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000051,Corporate,Professional,"Aqua Salon",,Main,"Aqua Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000052,Corporate,Professional,"Artisan Salon",,Main,"Artisan Salon",,"0908 6144795",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000053,Corporate,Professional,"At Your Service",,Main,"At Your Service",,"0918 4323802",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000054,Corporate,Professional,"Attyna Salon",,Main,"Attyna Salon",,"0919 2845849",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000055,Corporate,Professional,"Ayz Secrets of Beauty Salon",,Main,"Ayz Secrets of Beauty Salon",,"0939 1917365",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000056,Corporate,Professional,"Azzanzi Salon",Yes,Main,"Azzanzi Salon",155-992-386-001,"0917 5337231",,,No,No,COD,,,"Walk- In",JUL2014PROMO,Active
+0000000057,Corporate,Professional,"Christine Hair Salon",No,Main,"Christine Hair Salon",,"0918 9659515",,,No,No,COD,,,"Walk- In",Professional,Active
+0000000058,Corporate,Professional,"Jo Zen Salon",,Main,"Jo Zen Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000059,Corporate,Professional,"B7 Salon",,Main,"B7 Salon",,"0915 5854546",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000060,Corporate,Professional,Baros,,Main,Baros,,"0918 9347180",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000061,Corporate,Professional,B-Bums,,Main,B-Bums,,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000062,Corporate,Professional,"Beauty Works",,Main,"Beauty Works",,"0918 9119718",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000063,Corporate,Professional,"Belleza Wellness Spa",,Main,"Belleza Wellness Spa",,"0915 7292189",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000064,Corporate,Professional,"Belmere Skin Care",,Main,"Belmere Skin Care",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000065,Corporate,Professional,"Blanca Salon",,Main,"Blanca Salon",,"0918 4574274",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000066,Corporate,Professional,"Blooming Touch",,Main,"Blooming Touch",,"0917 9871492",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000067,Corporate,Professional,"Blunt Cut Salon",,Main,"Blunt Cut Salon",,"0949 6249784",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000068,Corporate,Professional,"Body Care Treatment Spa & Salon",,Main,"Body Care Treatment Spa & Salon",,"0920 9504129",gclbodycarehomespa@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000069,Corporate,Professional,"Boracay Sands Spa",,Main,"Boracay Sands Spa",,"0917 8004995",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000070,Corporate,Professional,"Boracay Sands Spa",No,Makati,"Boracay Sands Spa",,8937293,,,No,No,COD,,,ideliver101,Professional,Active
+0000000071,Corporate,Professional,"Buddha Groove",,Main,"Buddha Groove",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000072,Corporate,Professional,"Burj-Al Hair Salon",,Main,"Burj-Al Hair Salon",,"0917 5618722",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000073,Corporate,Professional,"Clientele Salon",,Main,"Clientele Salon",,"0927 4767979",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000074,Corporate,Professional,"Cosmopolitan Salon",,Main,"Cosmopolitan Salon",,"0917 8572125",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000075,Corporate,Professional,"Countrystyle Salon",,Main,"Countrystyle Salon",,"0908 8648795",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000076,Corporate,Professional,"Cut Couture",,Main,"Cut Couture",,"0918 3465497 0907 7230199",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000077,Corporate,Professional,"Cuts n Snax",,Main,"Cuts n Snax",,"0915 2803811",yesfridanep@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000078,Corporate,Professional,"Davida Salon",,Main,"Davida Salon",,"0917 8455837",arciea@davidasalonspa.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000079,Corporate,Professional,"Day to Day Wellness Spa",,Main,"Day to Day Wellness Spa",,"0922 3908746",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000080,Corporate,Professional,"Dezeno del Palo Salon",,Main,"Dezeno del Palo Salon",,"0910 3247332",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000081,Corporate,Professional,"Dhalynz Salon",,Main,"Dhalynz Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000082,Corporate,Professional,"Dhang Arevalo Salon",,Main,"Dhang Arevalo Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000083,Corporate,Professional,"Dial Zen Home Service Massage",,Main,"Dial Zen Home Service Massage",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000084,Corporate,Professional,"Diamond Spa & Wellness Services",No,Main,"Diamond Spa & Wellness Services",,"0917 8053564",,,No,No,COD,,,"Walk- In",Professional,Active
+0000000085,Corporate,Professional,"Dick Bejeran Salon",,Main,"Dick Bejeran Salon",,"0907 8092509",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000086,Corporate,Professional,Dinmei,,Main,Dinmei,,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000087,Corporate,Professional,"DVG Salon & Spa",No,Main,"DVG Salon & Spa",118-014-488-001,"0922 8026302",,,No,No,COD,,,"Walk- In",Professional,Active
+0000000088,Corporate,Professional,"Ellytes Salon",,Main,"Ellytes Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000089,Corporate,Professional,"Epic Salon",,Main,"Epic Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000090,Corporate,Professional,"Essential Touch Massage Centre",,Main,"Essential Touch Massage Centre",,"0917 8407475",essential_touch_massage@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000091,Corporate,Professional,"Euro Asian Facial Care",,Main,"Euro Asian Facial Care",,"0917 8930730",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000092,Corporate,Professional,"Fab Spa Skin Care",No,Main,"Fab Spa Skin Care",006-642-667-000,"0916 5620707","roismanel@yahoo.com / fabspa _skincarecenter@yahoo.com",fabspa_skincarecenter@yahoo.com,No,No,COD,,,"Walk- In",Professional,Active
+0000000093,Corporate,Professional,Faceline,,Main,Faceline,,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000094,Corporate,Professional,"Faces Hair & Make Up Studio",,Main,"Faces Hair & Make Up Studio",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000095,Corporate,Professional,"Facial Avenue",,Main,"Facial Avenue",,"0939 5131114",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000096,Corporate,Professional,"Finest Salon & Spa",,Main,"Finest Salon",,"0916 5220147",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000097,Corporate,Professional,"Five Elements",,Main,"Five Elements",,"0916 3569146",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000098,Corporate,Professional,"French Tip",,Main,"French Tip",,"0917 8506258",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000099,Corporate,Professional,"Froilan Cabrera Salon & Spa",No,Main,"Froilan Cabrera Salon & Spa",,"0908 8844680",cabrera.froilan@yahoo.com,,No,No,COD,,,"Walk- In",Professional,Active
+0000000100,Corporate,Professional,"Green Garden Foot Massage",,Main,"Green Garden Foot Massage",,"0908 8605872",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000101,Corporate,Professional,"G Spot",,Main,"G Spot",,"0927 8563899",fujindevera@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000102,Corporate,Professional,"Hair Bytes",,Main,"Hair Bytes",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000103,Corporate,Professional,"Prima Basic Beauty Center",No,Main,"Hairspray Salon",152-885-755-000,,,,No,No,COD,,,ideliver101,Professional,Active
+0000000104,Corporate,Professional,"Hair Statement",,Main,"Hair Statement",,"0926 6198483",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000105,Corporate,Professional,"Hair Station",,Main,"Hair Station",,"0916 2860224",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000106,Corporate,Professional,"Hair Tropics",,Main,"Hair Tropics",,"0929 1643735",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000107,Corporate,Professional,"Hairrebonding Salon",,Main,"Hairrebonding Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000108,Corporate,Professional,Hairritage,,Main,Hairritage,,"0927 7980147",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000109,Corporate,Professional,"Happy Face",,Main,"Happy Face",,"0927 3558808",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000110,Corporate,Professional,"Home Service Mass",,Main,"Home Service Mass",,0918-4075429,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000111,Corporate,Professional,"Hot Hair Salon",,Main,"Hot Hair Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000112,Corporate,Professional,"I Derm Facial Center & Spa",,Main,"I Derm Facial Center & Spa",,"0917 8343376",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000113,Corporate,Professional,"Koffee N Style",,Main,"Koffee N Style",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000114,Corporate,Professional,"I Love Spa",,Main,"I Love Spa",,"0922 8450090",bulaon@pldtsl.net,,no,no,COD,,,"Walk- In",Professional,Active
+0000000115,Corporate,Professional,"Images Quo",,Main,"Images Quo",,"0905 3420286",decasa.pearlie@bd-css.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000116,Corporate,Professional,"In & Out Spa",,Main,"In & Out Spa",,"0917 8004897",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000117,Corporate,Professional,"Infinity Spa",,Main,"Infinity Spa",,"0922 8994061",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000118,Corporate,Professional,"Hair Buzz Salon",No,Main,"Hair Buzz Salon",117-547-807-000,"873 7679",,,No,No,COD,,,"In- House Delivery",Professional,Active
+0000000119,Corporate,Professional,"Isabella Nail Salon & Foot Spa",No,Main,"Isabella Nail Salon & Foot Spa",240-575-045-000,"0918 9079805",myktimtom@yahoo.com.ph,,No,No,COD,,,"Walk- In",Professional,Active
+0000000120,Corporate,Professional,"iStyle by Irene Manigo",,Main,"iStyle by Irene Manigo",,"0917 8913645",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000121,Corporate,Professional,"Iyashi Spa",,Main,"Iyashi Spa",,"0933 2123202",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000122,Corporate,Professional,"J Nice",,Main,"J Nice",,"0947 3569209",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000123,Corporate,Professional,"J Spa",,Main,"J Spa",,"0949 8218597",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000124,Corporate,Professional,"Jaja Salon",,Main,"Jaja Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000125,Corporate,Professional,"Jennesse Skin Care Solution",No,Main,"Jennesse Skin Care Solution",,"0917 5501175",hirao_reyma@yahoo.com,,No,No,COD,,,ideliver101,Professional,Active
+0000000126,Corporate,Professional,"Jessa Margaret",,Main,"Jessa Margaret",,"0948 7709092",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000127,Corporate,Professional,"Justine Barbara Salon",No,Main,"Justine Barbara",006-909-969-000,"0922 8508676",justinbarbarasalon@yahoo.com,,No,No,"30 days",,,"In- House Delivery",Professional,Active
+0000000128,Corporate,Professional,"La Seoches Salon",,Main,"La Seoches Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000129,Corporate,Professional,"La Sophia Salon & Spa",No,Main,"La Sophia Salon & Spa",,"0907 5583106",,,No,No,COD,,,"Walk- In",Professional,Active
+0000000130,Corporate,Professional,"La Vie",,Main,"La Vie",,"0922 6978927",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000131,Corporate,Professional,"Lalique Salon",,Main,"Lalique Salon",,"0949 7777431",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000132,Corporate,Professional,"Lavish Lashes",,Main,"Lavish Lashes",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000133,Corporate,Professional,"Laxare Nail and Day Spa",,Main,"Laxare Nail and Day Spa",,"0922 8788615",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000134,Corporate,Professional,"Leo Pregola Salon",,Main,"Leo Pregola Salon",,"0920 5965178",lpriagola@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000135,Corporate,Professional,"Lereve Spa",,Main,"Lereve Spa",,"0918 9485372",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000136,Corporate,Professional,"Lissa Martin",,Main,"Lissa Martin",,"0929 1658926",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000137,Corporate,Professional,"Lojanes Salon",,Main,"Lojanes Salon",,"0917 8194318",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000138,Corporate,Professional,"Luminous Salon",,Main,"Luminous Salon",,"0915 3871506",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000139,Corporate,Professional,"Lynderm Facial Center & Day Spa",No,Main,Lynderm,,"0922 8370905",,,No,No,COD,,,"Walk- In",Professional,Active
+0000000140,Corporate,Professional,"Mae Lynns Spa",,Main,"Mae Lynns Spa",,"0917 8840696",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000141,Corporate,Professional,"Magic Touch Home Service",,Main,"Magic Touch Home Service",,"0918 6671629",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000142,Corporate,Professional,"Mammita Hair Salon",,Main,"Mammita Hair Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000143,Corporate,Professional,"Mandarine Foot Spa",,Main,"Mandarine Foot Spa",,"0906 3002544",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000144,Corporate,Professional,"Mane Event Salon",,Main,"Mane Event Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000145,Corporate,Professional,"Margot Garcia",,Main,"Margot Garcia",,"0918 9646464",margotg@pldtdsl.net,,no,no,COD,,,"Walk- In",Professional,Active
+0000000146,Corporate,Professional,"Mercy Salon",,Main,"Mercy Salon",,"0928 3311569",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000147,Corporate,Professional,"Michelle n Maricar",,Main,"Michelle n Maricar",,"0916 2723655",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000148,Corporate,Professional,"Mikeys Barber Shop and Salon",No,Main,"Mikeys Barber Shop and Salon",113-225-873-003,,,,No,No,COD,,,ideliver101,Professional,Active
+0000000149,Corporate,Professional,"Miles Salon",,Main,"Miles Salon",,"0916 3770931",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000150,Corporate,Professional,"Mimar Beauty Salon",No,Main,"Mimar Beauty Salon",902-972-455-000,,,,No,No,COD,,,"Walk- In",Professional,Active
+0000000151,Corporate,Professional,"MLB Salon",,Main,"MLB Salon",,"0916 2210861",kizz_me26@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000152,Corporate,Professional,"Mr.Ting Salon",,Main,"Mr.Ting Salon",,"0918 9386252",celieto@hotmail.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000153,Corporate,Professional,"Mrs. Bernie Lachica",,Main,"Mrs. Bernie Lachica",,,bernie_lachica@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000154,Corporate,Professional,"Ms. Nancy Castiglione",,Main,"Ms. Nancy Castiglione",,"0917 8271777 /  0917 8270081",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000155,Corporate,Professional,"My Hair Doctor Salon",,Main,"My Hair Doctor Salon",,"0917 8241581",mhds_salon@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000156,Corporate,Professional,"My Spa",,Main,"My Spa",,"0922 8531952",odessalaher@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000157,Corporate,Professional,"My Tralala",,Main,"My Tralala",,"0933 4620501",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000158,Corporate,Professional,"Nail to Toe",,Main,"Nail to Toe",,"0923 4796058",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000159,Corporate,Professional,"Nailegance Spa",No,Main,"Nailegance Spa",249-620-992-000,"0927 6992093",marissa.csilverio@gmail.com,,No,No,COD,,,"Walk- In",Professional,Active
+0000000160,Corporate,Professional,"Nicchia Spa",,Main,"Nicchia Spa",,"0915 3442534",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000161,Corporate,Professional,"Nida Beauty Salon",,Main,"Nida Beauty Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000162,Corporate,Professional,"NU Style Salon & Spa",No,Main,"NU Style Salon & Spa",,,,,No,No,COD,,,"Walk- In",Professional,Active
+0000000163,Corporate,Professional,"Oh my Nails",,Main,"Oh my Nails",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000164,Corporate,Professional,"My Tralala haven Nail & Day Spa",,Main,"My Tralala haven Nail & Day Spa",,,maribeth_pion@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000165,Corporate,Professional,"Justin Barbara Salon",No,Main,"Justin Barbara Salon",,"0920 9507164",justinbarbarasalon@yahoo.com,,No,No,COD,,,"Walk- In",Professional,Active
+0000000166,Corporate,Professional,"Orange Bloom Salon",,Main,"Orange Bloom Salon",,"0922 8280492",orangebloomsalon@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000167,Corporate,Professional,"Orange Blossom",,Main,"Orange the Spa",,"0927 5141084",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000168,Corporate,Professional,"Pampering Face Beauty Center",,Main,"Pampering Face Beauty Center",,"0923 8659726",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000169,Corporate,Professional,"Payneta Salon",,Main,"Payneta Salon",,"0905 3728723",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000170,Corporate,Professional,"J & N Beauty Salon for Men & Women",,Main,"J & N Beauty Salon for Men & Women",,"0905 2477865",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000171,Corporate,Professional,"Peach Grooming Pad",,Main,"Peach Grooming Pad",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000172,Corporate,Professional,"Peluqueria Salon",,Main,"Peluqueria Salon",,"0908 3004464",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000173,Corporate,Professional,"Pink Beauty & Hair",,Main,"Pink Beauty & Hair",,"0921 2314472",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000174,Corporate,Professional,"Positive Hair Salon & Spa",,Main,Positive,,"0919 9131031",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000175,Corporate,Professional,"Rastilo Salon",,Main,"Rastilo Salon",,"0927 6389333",dang_pabilona214@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000176,Corporate,Professional,"Red Gold Salon",,Main,"Red Gold Salon",,"0930 2434878",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000177,Corporate,Professional,"Rejuvinate Touch",,Main,"Rejuvinate Touch",,"0918 2899169",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000178,Corporate,Professional,"Salon 28",,Main,"Salon 29",,"0917 4990066",salon28_byrudy@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000179,Corporate,Professional,"Salon De Ayala Service and Credit Cooperative",No,Main,"Salon De Ayala Serive and Credit Cooperative",210-413-722-000,,salondeayala_coop@yahoo.com.ph,,No,No,COD,,,"Walk- In",JUL2014PROMO,Active
+0000000180,Corporate,Professional,"Samantha Salon & Spa",,Main,"Samantha Salon & Spa",,"0921 4212051",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000181,Corporate,Professional,"Sandreas Salon",,Main,"Sandreas Salon",,"0919 3708702",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000182,Corporate,Professional,"Thera Touch Home Service Spa",,Main,"Thera Touch Home Service Spa",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000183,Corporate,Professional,"Shapes n Waves Salon & Spa",,Main,"Shapes n Waves",,"0999 99202518",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000184,Corporate,Professional,"Shek Trix Salon de Estilo & Spa",No,Main,"Shek Trix Salon de Estilo & Spa",210-222-937-000,"0920 9386946",,,No,No,COD,,,"Walk- In",Professional,Active
+0000000185,Corporate,Professional,"Silk Skin",No,Main,"Silk Skin",,"836 0150",,,No,No,"30 days",,,ideliver101,Professional,Active
+0000000186,Corporate,Professional,"Silk Skin Beauty Care Corp",No,Main,"Silk Skin Derma Center",,"842 0236",silkskinbc@gmail.com,,No,No,COD,,,ideliver101,Professional,Active
+0000000187,Corporate,Professional,"Sir Edward Barbershop",,Main,"Sir Edward Barbershop",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000188,Corporate,Professional,"Sit n Style",,Main,"Sit n Style",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000189,Corporate,Professional,"Skin Smart",,Main,"Skin Smart",,"0922 8841889",skinsmart.paseo@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000190,Corporate,Professional,"Skin Touch",,Main,"Skin Touch",,"0919 4053344",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000191,Corporate,Professional,"Skin Trend",,Main,"Skin Trend",,"0921 795 4588 / 0927 600 2217",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000192,Corporate,Professional,"Skin Ultima",,Main,"Skin Ultima",,"0917 9482188",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000193,Corporate,Professional,"Soothing Touch",,Main,"Soothing Touch",,"0917 8939385",bhaby_nonato@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000194,Corporate,Professional,"Soothing Touch & Body Works",,Main,"Soothing Touch & Body Works",,"0921 2730083 / 0917 893 9385",bhaby_nonato@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000195,Corporate,Professional,"Sophie Saloon (full salon)",,Main,"Sophie Saloon (full salon)",,"0920 6335693",exoticmarla2008@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000196,Corporate,Professional,"Enrique and Victoria Corp.",Yes,Main,"South Salon",008-082-428-000,,southsalon@gmail.com,,No,No,"30 days",,,"In- House Delivery",Professional,Active
+0000000197,Corporate,Professional,"Spa at the Tropics",,Main,"Spa at the Tropics",,"0929 3141848",spaatthetropics@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000198,Corporate,Professional,"Sujivana Spa",,"West Gate","Sujivana Spa",,"0928 9789658","mar.recto@gmail.com / jgaduena@gmail.com",,no,no,COD,,,"Walk- In",Professional,Active
+0000000199,Corporate,Professional,Tabbs,,Main,Tabbs,,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000200,Corporate,Professional,"The J Feliciano Salon",,Main,"The J Feliciano Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000201,Corporate,Professional,"The Yes Salon",,Main,"The Yes Salon",,"0909 5394388",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000202,Corporate,Professional,"Tints Nail Waxing",,Main,"Tints Nail Waxing",,"0917 5455042",tintspa@gmail.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000203,Corporate,Professional,"Tints Salon",,Main,"Tints Salon",,"0917 5455042/ 0917 5011115",tintspa@gmail.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000204,Corporate,Professional,"Tip n Toes Nails Hand and Foot Spa",No,Main,"Tip n Toes Nails Hand and Foot Spa",,"0922 8988391",,,No,No,COD,,,"Walk- In",Professional,Active
+0000000205,Corporate,Professional,"Tip Top Toes",No,Main,"Tip Top Toes",,"0922 8902308",,,No,No,COD,,,"Walk- In",Professional,Active
+0000000206,Corporate,Professional,"True Berry",,Main,"True Berry",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000207,Corporate,Professional,"Ur Stile Salon",,Main,"Ur Stile Salon",,"0908 8924718",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000208,Corporate,Professional,"Urban Luxe",,Main,"Urban Luxe",,"0920 4203881",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000209,Corporate,Professional,"Vaviva Salon (Sunny Punzalan)",,Main,"Vaviva Salon (Sunny Punzalan)",,"0916 5938230",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000210,Corporate,Professional,"Violets Salon",,Main,Violets,,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000211,Corporate,Professional,"Vivere Spa",,Main,"Vivere Spa",,"0917 8430912",info@viveresuites.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000212,Corporate,Professional,"VM Medical Spa (Face n Body)",,Main,"VM Medical Spa",,"0917 8627778",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000213,Corporate,Professional,"Wella Beauty Salon",,Main,"Wella Beauty Salon",,"0920 9530084",hleonengenmerchandise@msn.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000214,Corporate,Professional,"Whimsical Beauty Salon",,Main,"Whimsical Beauty Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000215,Corporate,Professional,"Winds Salon",,Main,"Winds Salon",,"0949 9177152",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000216,Corporate,Professional,"Wow Hair Salon",,Main,"Wow Hair Salon",,"0917 5445658",hazel.t@wowhairsalons.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000217,Corporate,Professional,"Xtrim Hair Studio",,Main,"Xtrim Hair Studio",,"0917 8513582 / 0920 4100490",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000218,Corporate,Professional,"Young Skin",,Main,"Young Skin",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000219,Corporate,Professional,"Zenys Salon",No,Main,"Zen Ace",,,,,No,No,COD,,,"In- House Delivery",Professional,Active
+0000000220,Corporate,Professional,"Zenya Wellness Spa",,Main,"Zenya Wellness Spa",,"0949 6365164",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000221,Corporate,Professional,"Zytouna Spa & Salon",,Main,"Zytouna Spa & Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000222,Corporate,Professional,"Blue Hay Salon",,Main,"Blue Hay Salon",,"0929 5511524",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000223,Corporate,Professional,"Salon Fashionista",,Main,"Salon Fashionista",,"0917 963075",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000224,Corporate,Professional,"Touch of Esther",,Main,"Touch of Esther",,"0906 3915841",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000225,Corporate,Professional,"Body Works",,Main,"Body Works",,"0917 5011115",pnet1126@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000226,Corporate,Professional,"Jonila Espada",,Main,"Jonila Espada",,"0999 6556874",jhoann19@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000227,Corporate,Professional,"Dolly Franco",,Main,"Dolly Franco",,"0917 8810099",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000228,Corporate,Professional,"Flor Colcol",,Main,"Flor Colcol",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000229,Corporate,Professional,"Doris Pascual",,Main,"Doris Pascual",,"0927 8531503",dorisjuana36@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000230,Corporate,Professional,"Raquel Nieves",,Main,"Raquel Nieves",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000231,Corporate,Professional,"Dianne Argamosa",,Main,"Dianne Argamosa",,"0917 4395824",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000233,Corporate,Professional,"Vera Tan",,Main,"Vera Tan",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000234,Corporate,Professional,"Mary Grace Reymundo",,Main,"Mary Grace Reymundo",,"0917 8262631",grace8310961@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000235,Corporate,Professional,"Rosemarie Asajar",,Main,"Rosemarie Asajar",,"0928 4453697",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000236,Corporate,Professional,"Nina Magtoto",,Main,"Nina Magtoto",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000237,Corporate,Professional,"Angie Tan",,Main,"Angie Tan",,"0917 8801029",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000238,Corporate,Professional,"Giselle Gargantos",,Main,"Giselle Gargantos",,"0918 9097042",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000239,Corporate,Professional,"Cecille Montero Tan",,Main,"Cecille Montero Tan",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000240,Corporate,Professional,"Feet to File",,Main,"Feet to File",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000241,Corporate,Professional,"G. O. G. Health & Skin Center Salon",,Main,"G. O. G. Health & Skin Center Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000242,Corporate,Professional,"Petra & Pepita Salon",No,Main,"Petra & Pepita Salon",,0917-501-5677,,,No,No,COD,,,ideliver101,Professional,Active
+0000000243,Corporate,Professional,"Alice Salon",,Main,"Alice Salon",,"0909 8006670",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000244,Corporate,Professional,"Mint Spa",No,Main,"Mint Spa",,,,,No,No,COD,,,"Walk- In",Professional,Active
+0000000245,Corporate,Professional,"Paparazzi Salon",,Main,"Paparazzi Salon",,"0917 5452488","no email",,no,no,COD,,,"Walk- In",Professional,Active
+0000000246,Corporate,Professional,"Ronnie Rarugal Salon",,Main,"Ronnie Rarugal Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000247,Corporate,Professional,"Bare Skin Waxing",,Pasay,"Bare Skin Waxing",,"0917 8119644",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000248,Corporate,Professional,"Dermstrata Skin Clinic & Spa",,MOA,"Dermstrata Skin Clinic & Spa",,,dermstrataskinclinic@yahoo.com,,yes,no,COD,,,"Walk- In",Professional,Active
+0000000249,Corporate,Professional,"Essencia Fresh",,Main,"Essencia Fresh",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000250,Corporate,Professional,"Ezzy Salon",,Main,"Ezzy Salon",,"0922 8164544",marlon_almonicar@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000251,Corporate,Professional,"Brow Bar",,Main,"Brow Bar",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000252,Corporate,Professional,"Mychaels Corp",,MOA,"Mychaels Corp",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000253,Corporate,Professional,"Mich & Myle Nails",No,Mandaluyong,"(Mychaels Corp)",,,,,No,No,COD,,,"Walk- In",Professional,Active
+0000000254,Corporate,Professional,"Mychaels Corp",,Ortigas,"Mychaels Corp",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000255,Corporate,Professional,"Headroom Spa",,Main,"Headroom Spa",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000256,Corporate,Professional,"Beauty First",,Main,"Beauty First",,"0917 5157295  0927 5263534",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000257,Corporate,Professional,"Azgenda Salon",,Main,"Azgenda Salon",,"0917 9820490 / 0927 7040856 / 503 8771",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000258,Corporate,Professional,"Comfort Zone Salon & Spa",,Main,"Comfort Zone Salon & Spa",,"0915 9008330",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000259,Corporate,Professional,"Vertical Salon",No,Main,"Vertical Salon",,0917-584-3035,,,No,No,COD,,,ideliver101,Professional,Active
+0000000260,Corporate,Professional,"J.R.Cunanan Salon",,Main,"J.R.Cunanan Salon",,"0907 4713832",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000261,Corporate,Professional,"Lunula Nail Salon",,Main,"Lunula Nail Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000262,Corporate,Professional,"MACM Massage Therapy and Body Center",,Main,"MACM Massage Therapy and Body Center",,"0915 3640554",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000263,Corporate,Professional,"Bay Spa",,Main,"Bay Spa",,"0921 5168653",bayspacenter@yahoo.com.ph,,no,no,COD,,,"Walk- In",Professional,Active
+0000000264,Corporate,Professional,"Ms. Bojee Romero",,Main,"Ms. Bojee Romero",,"0917 8907716",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000265,Corporate,Professional,"Ms. Rachelle Neri (TNT Express Worldwide)",,Main,"Ms. Rachelle Neri (TNT Express Worldwide)",,,rbasconeri@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000266,Corporate,Professional,"Agenda Salon",,Main,"Agenda Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000267,Corporate,Professional,"Beauty Guide",,Main,"Beauty Guide",,"0908 1281870",faye.beautyguide_25@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000268,Corporate,Professional,"D Mark Multisales Corp.",,Main,"D Mark Multisales Corp.",,,dmark_hrd888@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000269,Corporate,Professional,"Derma Basics Skin & Hair Clinic",,Main,"Derma Basics Skin & Hair Clinic",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000270,Corporate,Professional,"Dermstrata Skin Clinic & Spa",,Main,"Dermstrata Skin Clinic & Spa",,,dermstrataskinclinic@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000271,Corporate,Professional,"Dino Fajardo Hair Salon",,Main,"Dino Fajardo Hair Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000272,Corporate,Professional,"Ehemplo Salon",,Main,"Ehemplo Salon",,"0929 7235111",maryroseserrano@yahoo.com/Facebook:ehemplosalon&dayspa@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000273,Corporate,Professional,"Eves Salon Manila",,Main,"Eves Salon Manila",,"0915 7809380/  0919 6333515",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000274,Corporate,Professional,"FMS Salon",,Main,"FMS Salon",,"0920 9240259",fmsalon@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000275,Corporate,Professional,"Forma Salon",,Main,"Forma Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000276,Corporate,Professional,"Francz Salon",,Main,"Francz Salon",,"0908 3671311",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000277,Corporate,Professional,"Ganda Mo Salon",,Main,"Ganda Mo Salon",,"0912 7855440",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000278,Corporate,Professional,"Holie Facial Spa",,Taft,"Holie Facial Spa",,,,,yes,no,COD,,,"Walk- In",Professional,Active
+0000000279,Corporate,Professional,"Holie Facial Spa",,Makati,"Holie Facial Spa",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000280,Corporate,Professional,"Jhezka Salon (hair & nail salon)",,Main,"Jhezka Salon (hair & nail salon)",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000281,Corporate,Professional,"Blush Nail",,Main,"Blush Nail",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000282,Corporate,Professional,"Victor Hair Works",,Main,"Victor Hair Works",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000283,Corporate,Professional,"Jun L. Encarnacion",,Sampaloc,"Jun L. Encarnacion",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000284,Corporate,Professional,"Jun L. Encarnacion",,Podium,"Jun L. Encarnacion",,,wrencarnacion_groupofsalon@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000285,Corporate,Professional,"Jun Pido Salon",,Malate,"Jun Pido Salon",,"0921 9587748",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000286,Corporate,Professional,"Kaes Beauty Parlor",,Main,"Kaes Beauty Parlor",,"0917 6146709",bycj_29@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000287,Corporate,Professional,"Leo Magallanes Salon",,Main,"Leo Magallanes Salon",,"0922 5369522",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000288,Corporate,Professional,"Les Pappu  Head Office",,Main,"Les Pappu  Head Office",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000289,Corporate,Professional,"Ms. Kathryn Depano",,Main,"Ms. Kathryn Depano",,"0917 8951995",kathryn_csb@hotmail.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000290,Corporate,Professional,"MTO (Mass Therapeutic Optinum)",,Main,"MTO (Mass Therapeutic Optinum)",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000291,Corporate,Professional,"Natures Way Aromatherapy Salon",,"SM City","Natures Way Aromatherapy Salon",,,natureswayaromatherapy@yahoo.com,,,no,COD,,,"Walk- In",Professional,Active
+0000000292,Corporate,Professional,"Natures Way Aromatherapy Salon",,"SM San Lazaro","Natures Way Aromatherapy Salon",,,,,yes,no,COD,,,"Walk- In",Professional,Active
+0000000293,Corporate,Professional,"Natures Way Aromatherapy Salon",,"SM Manila","Natures Way Aromatherapy Salon",,,natureswayaroma@yahoo.com,,yes,no,COD,,,"Walk- In",Professional,Active
+0000000294,Corporate,Professional,"Nitz Laxa Salon",,Main,"Nitz Laxa Salon",,"0927 5428689",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000295,Corporate,Professional,"Om Spa",,Main,"Om Spa",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000296,Corporate,Professional,"Powercutzz Beauty Salon",,"Westin Phil.Plaza Hotel","Powercutzz Beauty Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000297,Corporate,Professional,"Princess Salon",,Main,"Princess Salon",,"0920 9487521",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000298,Corporate,Professional,"Ronnie Salon",,Sampaloc,"Ronnie Salon",,"0927 6682328",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000299,Corporate,Professional,"S and R Salon Spa",,Main,"S and R Salon Spa",,"0933 1769954",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000300,Corporate,Professional,"Salon de Liz",,Main,"Salon de Liz",,"0922 8242527",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000301,Corporate,Professional,"Skin Indulgence",,Main,"Skin Indulgence",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000302,Corporate,Professional,"Skin Lite Face and Body Center",No,Main,"Skin Lite",,,bustos_melissa@yahoo.com,,No,No,"30 days",,,ideliver101,Professional,Active
+0000000303,Corporate,Professional,"Skin Lite",No,"Metro East","Skin Lite",,,,,No,No,COD,,,"Walk- In",Professional,Active
+0000000304,Corporate,Professional,"The Ritz Spa Malate",,Main,"The Ritz Spa Malate",,,theritzspa@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000305,Corporate,Professional,"Tisa Len Beauty Shop",,Main,"Tisa Len Beauty Shop",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000306,Corporate,Professional,"Viva Le Baron Salon & Barbershop",,Main,"Viva Le Baron Salon & Barbershop",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000307,Corporate,Professional,"Weigh Less Center",,Main,"Weigh Less Center",,,eagm@sofitel.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000308,Corporate,Professional,"Jun L. Encarnacion Salon",,"Sta Cruz","Jun L. Encarnacion Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000309,Corporate,Professional,"Zalon By Jun Pido",,Bambang,"Zalon By Jun Pido",,,pidojun@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000310,Corporate,Professional,"Sanctuario Spa",,Main,"Sanctuario Spa",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000311,Corporate,Professional,"Shapes Salon",,Main,"Shapes Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000312,Corporate,Professional,"Fashionista Salon Spa",,Main,"Fashionista Salon Spa",,"0922 8241309",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000313,Corporate,Professional,"Feet toe Pile",,Main,"Feet toe Pile",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000314,Corporate,Professional,"Fixed Me Up Beauty Salon",,Main,"Fixed Me Up Beauty Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000315,Corporate,Professional,"Jals Salon",,Main,"Jals Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000316,Corporate,Professional,"Country Breeze Laundry Mat",,Main,"Country Breeze Laundry Mat",,"0923 1934059",countrybreezelaundrymat@gmail.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000317,Corporate,Professional,"Caprichosa Day Spa",,Main,"Caprichosa Day Spa",,,caprichosaspa@gmail.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000318,Corporate,Professional,"Signey Salon",,Main,"Signey Salon",,"0917 3265905",susansigney@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000319,Corporate,Professional,"Sujivana Spa",,Main,"Sujivana Spa",,,,"Unit H PS Cor Bldg. Kalaw St. Phase 1 BF Homes",no,no,COD,,,"Walk- In",Professional,Active
+0000000320,Corporate,Professional,"All About Face",,Main,"All About Face",,,allaboutfaceph@gmail.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000321,Corporate,Professional,"Angela  Salon",,Main,"Angela  Salon",,,"no email",,no,no,COD,,,"Walk- In",Professional,Active
+0000000322,Corporate,Professional,"Archie Montalban Body Studio",,Main,"Archie Montalban Body Studio",,,"no email",,no,no,COD,,,"Walk- In",Professional,Active
+0000000323,Corporate,Professional,"Breeze & Bliss Salon",,Main,"Breeze & Bliss Salon",,"0917 8451239","no email",,no,no,COD,,,"Walk- In",Professional,Active
+0000000324,Corporate,Professional,"Cecille Marie Salon",,Main,"Cecille Marie Salon",,,jennifermacatangay@gmail.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000325,Corporate,Professional,"Vergo Skin Care Beauty Salon",No,Main,"Vergo Skin Care Beauty Salon",,"0917 8601048",,,No,No,COD,,,"Walk- In",Professional,Active
+0000000326,Corporate,Professional,"Cosmo World Salon",,Main,"Cosmo World Salon",,"0917 5271276","no email",,no,no,COD,,,"Walk- In",Professional,Active
+0000000327,Corporate,Professional,"Earth Accents Day Spa",,Main,"Earth Accents Day Spa",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000328,Corporate,Professional,"EZ Red Salon",No,Main,"EZ Red Salon",,,ronaldsantaines@yahoo.com,,No,No,COD,,,"Walk- In",Professional,Active
+0000000329,Corporate,Professional,"Get Polished",,Main,"Get Polished",,"0917 5779494",rachel.concepcion@db.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000330,Corporate,Professional,"Haille Berry Beauty Salon Spa",,Main,"Haille Berry Beauty Salon Spa",,,igotdeliveryservices@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000331,Corporate,Professional,"Jhezka Beauty Salon",,Main,"Jhezka Beauty Salon",,"0923 2351348",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000332,Corporate,Professional,"Just For Nails",No,Main,"Just For Nails",,"0917 5663460",giannakezia@gmail.com,,No,No,COD,,,"Walk- In",Professional,Active
+0000000333,Corporate,Professional,"Lady Kate Salon",,Main,"Lady Kate Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000334,Corporate,Professional,"Le Flaunt",,Main,"Le Flaunt",,,sheila_policarpio@hotmail.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000335,Corporate,Professional,"Mane Event Hair Salon",,Main,"Mane Event Hair Salon",,"0923 5113988  / 0927 7377933",manuales_ian@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000336,Corporate,Professional,"Massage By Us",No,Paranaque,"Massage By Us",,,,,No,No,COD,,,"Walk- In",JUL2014PROMO,Active
+0000000337,Corporate,Professional,"Pamper Your Feet",,Main,"Pamper Your Feet",,"0922 8276299",,,No,no,COD,,,"Walk- In",Professional,Active
+0000000338,Corporate,Professional,"Pro Style Salon",,Main,"Pro Style Salon",,,egay.petines@yahoo.com,,No,no,COD,,,"Walk- In",Professional,Active
+0000000339,Corporate,Professional,"Red Rock Nail Spa",,Main,"Red Rock Nail Spa",,,redrocknailspa@yahoo.com,,No,no,COD,,,"Walk- In",Professional,Active
+0000000340,Corporate,Professional,"Renewed Salon",,Main,"Renewed Salon",,,joansalas54@yahoo.com,,No,no,COD,,,"Walk- In",Professional,Active
+0000000341,Corporate,Professional,"Jiosally Holdings Inc.",No,Main,"Rodeo Spa ",,,khjgio1@yahoo.co.kr,,No,No,COD,,,"Walk- In",Professional,Active
+0000000342,Corporate,Professional,"Rosangelas Salon",,Main,"Rosangelas Salon",,"0916 7196048",,,No,no,COD,,,"Walk- In",Professional,Active
+0000000343,Corporate,Professional,"Rubylita Salon",,Main,"Rubylita Salon",,,,,No,no,COD,,,"Walk- In",Professional,Active
+0000000344,Corporate,Professional,"Sawasdi Salon",,Main,"Sawasdi Salon",,,"no email",,No,no,COD,,,"Walk- In",Professional,Active
+0000000345,Corporate,Professional,"Sesitra Day Spa",,Main,"Sesitra Day Spa",,,,,No,no,COD,,,"Walk- In",Professional,Active
+0000000346,Corporate,Professional,"Shear Design Salon",,Main,"Shear Design Salon",,"0919 6175460",,,No,no,COD,,,"Walk- In",Professional,Active
+0000000347,Corporate,Professional,"Skin and Body Essence",,Main,"Skin and Body Essence",,"0918 3318800",,,No,no,COD,,,"Walk- In",Professional,Active
+0000000348,Corporate,Professional,"Skin Caress",,Main,"Skin Caress",,"0917 8621000",,,No,no,COD,,,"Walk- In",Professional,Active
+0000000349,Corporate,Professional,"Sleek Spa & Waxing Salon",,Main,"Sleek Spa & Waxing Salon",,"0917 5022447",,,No,no,COD,,,"Walk- In",Professional,Active
+0000000350,Corporate,Professional,"Stay Polished",,Main,"Stay Polished",,,,,No,no,COD,,,"Walk- In",Professional,Active
+0000000351,Corporate,Professional,"Steel Salon",,Main,"Steel Salon",,,,,No,no,COD,,,"Walk- In",Professional,Active
+0000000352,Corporate,Professional,"Sweet Lime Salon",,Main,"Sweet Lime Salon",,,,,No,no,COD,,,"Walk- In",Professional,Active
+0000000353,Corporate,Professional,"Tailored Tips Nail Spa",,Main,"Tailored Tips Nail Spa",,"0917 5401222","no email",,No,no,COD,,,"Walk- In",Professional,Active
+0000000354,Corporate,Professional,"The Lil Nail Shop",,Main,"The Lil Nail Shop",,,,,No,no,COD,,,"Walk- In",Professional,Active
+0000000355,Corporate,Professional,"The Wax Clinic",,Main,"The Wax Clinic",,,,,No,no,COD,,,"Walk- In",Professional,Active
+0000000356,Corporate,Professional,"Thumb N Scissors Salon",,Main,"Thumb N Scissors Salon",,"0916 4378527",,,No,no,COD,,,"Walk- In",Professional,Active
+0000000357,Corporate,Professional,"California Nails & Day Spa",,Main,"Tickled Pink Spa",,"0918 9632045 / 0917 8466791",californianails.bf.pergola@gmail.com,,No,no,COD,,,"Walk- In",Professional,Active
+0000000358,Corporate,Professional,"Toetally Nail It",,Main,"Toetally Nail It",,,toetallynailit@yahoo.com,,No,no,COD,,,"Walk- In",Professional,Active
+0000000359,Corporate,Professional,"Trimline Spa",,Main,"Trimline Spa",,,cute_jane222406@yahoo.com,,No,no,COD,,,"Walk- In",Professional,Active
+0000000360,Corporate,Professional,"Urban Escape Spa & Nail Studio",,Main,"Urban Escape Spa & Nail Studio",,"0922 8002377",marilor06@yahoo.com,,No,no,COD,,,"Walk- In",Professional,Active
+0000000361,Corporate,Professional,"Well Body Station",,Main,"Well Body Station",,,"no email",,No,no,COD,,,"Walk- In",Professional,Active
+0000000362,Corporate,Professional,"WM Medical Spa",,Main,"WM Medical Spa",,,,,No,no,COD,,,"Walk- In",Professional,Active
+0000000363,Corporate,Professional,"Youve Got Nail",,Main,"Youve Got Nail",,"0917 8382328",,,No,no,COD,,,"Walk- In",Professional,Active
+0000000364,Corporate,Professional,"Youve Got Nail! Specialty Foot Spa & Premier Nail Salon Co.",No,"Sta. Rosa","Youve Got Nail Salon Co.",007-732-855-000,"0917 5878870",mregino@brent.edu.ph,N/A,No,No,COD,,,"Walk- In",Professional,Active
+0000000365,Corporate,Professional,"Zeus Spa and Massage",,Main,"Zeus Spa and Massage",,,,,No,no,COD,,,"Walk- In",Professional,Active
+0000000366,Corporate,Professional,"Zuri Salon & Wellness Spa",No,Main,"Zuri Salon & Wellness Spa",130-506-909-000,"0920 9279884 / 0922 8331472",,,No,No,COD,,,"Walk- In",Professional,Active
+0000000367,Corporate,Professional,"Royal Barber",,Main,"Royal Barber",,,,,No,no,COD,,,"Walk- In",Professional,Active
+0000000368,Corporate,Professional,"Glam Salon",No,Main,"Glam Salon",148-250-211-000,"0920 9246014",,,No,No,COD,,,ideliver101,Professional,Active
+0000000369,Corporate,Professional,"Pondera Wellness Center",,Main,"Pondera Wellness Center",,"0917 8376372",,,No,no,COD,,,"Walk- In",Professional,Active
+0000000370,Corporate,Professional,"Calix & Shin Salon",,Main,"Calix & Shin Salon",,"0917 6335168",,,No,no,COD,,,"Walk- In",Professional,Active
+0000000371,Corporate,Professional,"Lapizlazuri Salon",,Main,"Lapizlazuri Salon",,,,,No,no,COD,,,"Walk- In",Professional,Active
+0000000372,Corporate,Professional,"Acacia And Mayumi",,Main,"Acacia And Mayumi",,,,,No,no,COD,,,"Walk- In",Professional,Active
+0000000373,Corporate,Professional,"Bianca Santos",,Main,"Bianca Santos",,"0917 3474541",biancasantosnailartdecals@gmail.com,,No,no,COD,,,"Walk- In",Professional,Active
+0000000374,Corporate,Professional,"ETN Beauty Concept Inc.",No,Main,"ETN Beauty Concept Inc.",,,ella_nisceskinandface@yahoo.com,,No,No,COD,,,ideliver101,Professional,Active
+0000000375,Corporate,Professional,"Henry Calayag Salon",,Main,"Henry Calayag Salon",,,,,No,no,COD,,,"Walk- In",Professional,Active
+0000000376,Corporate,Professional,"Katherine Dela Calzada",,Main,"Katherine Dela Calzada",,"0932 9097448",,,No,no,COD,,,"Walk- In",Professional,Active
+0000000377,Corporate,Professional,"Dra. Giselle L. Lazaro",Yes,Main,"Dra. Giselle L. Lazaro",,"0917 5230806",,,No,No,COD,,,"Walk- In",Professional,Active
+0000000378,Corporate,Professional,"Angel Villa",,Main,"Angel Villa",,"0917 5230806",,,No,no,COD,,,"Walk- In",Professional,Active
+0000000379,Corporate,Professional,"Anne Almuete",,Main,"Anne Almuete",,"0919 5732578",,,No,no,COD,,,"Walk- In",Professional,Active
+0000000380,Corporate,Professional,"Catherine Dela Calzada",No,Main,"Catherine Dela Calzada",,"0917 8213443",catherine.delacalzada@gmail.com,,No,No,COD,,,"Walk- In",Professional,Active
+0000000381,Corporate,Professional,"Renergy Dermspa",,Main,"Renergy Dermspa",,,,,No,no,COD,,,"Walk- In",Professional,Active
+0000000382,Corporate,Professional,"Filipina Saquilayan",,Main,"Filipina Saquilayan",,"0917 8817897",,,No,no,COD,,,"Walk- In",Professional,Active
+0000000383,Corporate,Professional,"Optima Nail Art & Beauty Center",,Main,"Optima Nail Art & Beauty Center",,,,,No,no,COD,,,"Walk- In",Professional,Active
+0000000384,Corporate,Professional,"DFI ISLAND RESORTS INC.",No,Main,"Sun Spa Boracay",,893-7293,,,No,No,COD,,,"Walk- In",Professional,Active
+0000000385,Corporate,Professional,"Hilary Chang",,Main,"Hilary Chang",,"0917 8546559",,,No,no,COD,,,"Walk- In",Professional,Active
+0000000386,Corporate,Professional,"Essex Salon & Facial Care Center",,Main,"Essex Salon & Facial Care Center",,"0922 8484886",,,No,yes,COD,,,"Walk- In",Professional,Active
+0000000387,Corporate,Professional,"Neo Net One Center Inc.",No,Main,"Neo Day Spa",,,danica_uson@yahoo.com,,No,No,COD,,,"Walk- In",Professional,Active
+0000000388,Corporate,Professional,"Zhelle Nail Gallery Inc.",,Main,"Zhelle Nail Gallery Inc.",,,krishiabenson@yahoo.com,,No,no,COD,,,"Walk- In",Professional,Active
+0000000389,Corporate,Professional,"Virtu Salon",,Main,"Virtu Salon",,"0920 9529123 / 0928 5024222",mlyusay@yahoo.com,,No,no,COD,,,"Walk- In",Professional,Active
+0000000390,Corporate,Professional,"Beau Modelage Centre",,Main,"Beau Modelage Centre",,,,,No,no,COD,,,"Walk- In",Professional,Active
+0000000391,Corporate,Professional,"Happy Feet",,Main,"Happy Feet",,,,,No,no,COD,,,"Walk- In",Professional,Active
+0000000392,Corporate,Professional,"Philippes Salon",,Main,"Philippes Salon",,,,,No,no,COD,,,"Walk- In",Professional,Active
+0000000393,Corporate,Professional,"FHC-MRT Hair Care Inc.",,Main,"FHC-MRT Hair Care Inc.",,,purchasingcortrustmgt@yahoo.com,,No,no,COD,,,"Walk- In",Professional,Active
+0000000394,Corporate,Professional,"H Salon",,Main,"H Salon",,,,,No,no,COD,,,"Walk- In",Professional,Active
+0000000395,Corporate,Professional,"Body Guidance Spa",,Main,"Body Guidance Spa",,,,,No,no,COD,,,"Walk- In",Professional,Active
+0000000396,Corporate,Professional,"Lañapa Salon",,Main,"Lañapa Salon",,,info@lanapasalon.com,,No,no,COD,,,"Walk- In",Professional,Active
+0000000397,Corporate,Professional,"Angels Wellness Center",,Main,"Angels Wellness Center",,,angel.bernaldo@rsbernaldo,,No,no,COD,,,"Walk- In",Professional,Active
+0000000398,Corporate,Professional,"Beauty Power",,Main,"Beauty Power",,,"no email",,No,no,COD,,,"Walk- In",Professional,Active
+0000000399,Corporate,Professional,"Derma Logica",,Main,"Derma Logica",,,,www.dermalogica.com,No,no,COD,,,"Walk- In",Professional,Active
+0000000400,Corporate,Professional,"Facial World",,Main,"Facial World",,,manuel_nigado@yahoo.com,,No,no,COD,,,"Walk- In",Professional,Active
+0000000401,Corporate,Professional,"New You Hair Asia",,Main,"New You Hair Asia",,"0917 8235366 / 0917 5230806",giselle_lz@yahoo.com,,No,yes,COD,,,"Walk- In",Professional,Active
+0000000402,Corporate,Professional,"Skin Health",,Main,"Skin Health",,,,www.skinhealth.ph,No,no,COD,,,"Walk- In",Professional,Active
+0000000403,Corporate,Professional,"Skin Nutriance Center",,Main,"Skin Nutriance Center",,,skinutriance@yahoo.com,,No,no,COD,,,"Walk- In",Professional,Active
+0000000404,Corporate,Professional,"Skin Perfect Facial Salon",,Main,"Skin Perfect Facial Salon",,,,,No,no,COD,,,"Walk- In",Professional,Active
+0000000405,Corporate,Professional,"Skin Station",,Main,"Skin Station",,"0932 9729666", info@skinstation.ph,,No,no,COD,,,"Walk- In",Professional,Active
+0000000406,Corporate,Professional,"Skin Talk Avenue",,Main,"Skin Talk Avenue",,"0916 3569146",,,No,yes,COD,,,"Walk- In",Professional,Active
+0000000407,Corporate,Professional,"Hair Gloss Salon",,Main,"Hair Gloss Salon",,,techiequintas@yahoo.com,,No,no,COD,,,"Walk- In",Professional,Active
+0000000408,Corporate,Professional,"Euro Hair Design",,Main,"Euro Hair Design",,,europeanhair@yahoo.com,,No,no,COD,,,"Walk- In",Professional,Active
+0000000409,Corporate,Professional,"Arcade Friseur Salon",,Main,"Arcade Friseur Salon",,,btalaw@pldtdsl.net,,No,no,COD,,,"Walk- In",Professional,Active
+0000000410,Corporate,Professional,"Be Beautiful For Him",,Main,"Be Beautiful For Him",,,,,No,no,COD,,,"Walk- In",Professional,Active
+0000000411,Corporate,Professional,"The Blounge Salon",No,Main,"The Blounge",269-894-814-001,"0920 9086474",info.theblounge@gmail.com,http://www.theblounge.net,No,No,"30 days",,,ideliver101,Professional,Active
+0000000412,Corporate,Professional,"Giso Salon",,Main,"Giso Salon",,,,,No,no,COD,,,"Walk- In",Professional,Active
+0000000413,Corporate,Professional,"Brunos Barbers",No,Ortigas,"Brunos Barbers",,,info@brunosbarbers.com,,No,No,COD,,,"Walk- In",Professional,Active
+0000000414,Corporate,Professional,"Brunos Barbers",,Taguig,"Brunos Barbers",,,"no email",,No,yes,COD,,,"Walk- In",Professional,Active
+0000000415,Corporate,Professional,"Brunos Services Corporation",No,Main,"Brunos Barbers",003-675-871-000,,info@brunosbarbers.com,,No,No,COD,,,"Walk- In",Professional,Active
+0000000416,Corporate,Professional,"Brunos Barbers",,Cebu,"Brunos Barbers",,,,,No,yes,COD,,,"Walk- In",Professional,Active
+0000000417,Corporate,Professional,"Clippers and Tippers",,Main,"Clippers and Tippers",,,,,No,no,COD,,,"Walk- In",Professional,Active
+0000000418,Corporate,Professional,"Creations By Lourd Ramos",No,Main,"Creations By Lourd Ramos",,"0908 8977364",luredm@yahoo.com,,No,No,COD,,,"Walk- In",Professional,Active
+0000000419,Corporate,Professional,"Eddie Bruan Hair Designs",,Main,"Eddie Bruan Hair Designs",,,"no email",,No,no,COD,,,"Walk- In",Professional,Active
+0000000420,Corporate,Professional,"Edwin Lisa Salon",No,Main,"Edwin Lisa Salon",912-793-925-000,"0929 7954414 / 0928 7826143  / 0919 2222113",edwinsalon_spa@yahoo.com,,No,No,COD,,,"Walk- In",Professional,Active
+0000000421,Corporate,Professional,"Elevation Salon",,Main,"Elevation Salon",,,phillippessalon@gmail.com,,No,no,COD,,,"Walk- In",Professional,Active
+0000000422,Corporate,Professional,"Essensuals Toni & Guy",,Main,"Essensuals Toni & Guy",,,,,No,no,COD,,,"Walk- In",Professional,Active
+0000000423,Corporate,Professional,"Eugene Erika Salon",,Main,"Eugene Erika Salon",,,,,No,no,COD,,,"Walk- In",Professional,Active
+0000000424,Corporate,Professional,"Exclusive Cut Beauty Salon",,Main,"Exclusive Cut Beauty Salon",,,"no email",,No,no,COD,,,"Walk- In",Professional,Active
+0000000425,Corporate,Professional,"Extreme Makeover Inc.",No,Main,"Hair & Make Up Studio",007-516-709-000,"0917 5012110",liza_timog@yahoo.com/makeover@myhmstudio.net,,No,No,COD,,,"Walk- In",Professional,Active
+0000000426,Corporate,Professional,"Hair Lounge Salon",No,Main,"Hair Lounge Salon",," (02) 2393702, (02) 6248444, 09178084848",,,No,No,COD,,,"Walk- In",Professional,Active
+0000000427,Corporate,Professional,"Hair Match Salon",,Main,"Hair Match Salon",,,,,No,no,COD,,,"Walk- In",Professional,Active
+0000000428,Corporate,Professional,"Kerastase Institute by Salon ESA",No,Main,"Prima E Dopo Salon Inc.",234-750-869-000,"0917 5018422",kerastase.salon.esa@gmail.com,http://salonesa.ph/index.html,No,No,"30 days",,,ideliver101,Professional,Active
+0000000429,Corporate,Professional,"Hair Works Salon",,Main,"Hair Works Salon",,,hairworks@yahoo.com,,No,no,COD,,,"Walk- In",Professional,Active
+0000000430,Corporate,Professional,"Hygiea Salon",,Main,"Hygiea Salon",,,,,No,no,COD,,,"Walk- In",Professional,Active
+0000000431,Corporate,Professional,"Index Hair & Body Salon  Head Office",,Main,"Index Hair & Body Salon  Head Office",,,index_hairbody_salon@yahoo.com,,No,no,COD,,,"Walk- In",Professional,Active
+0000000432,Corporate,Professional,"G & J Salon Inc.",No,Main,"Lucy Britanico Salon",,"0922 8906774",,,No,No,COD,,,"Walk- In",Professional,Active
+0000000433,Corporate,Professional,"Maris Salon",No,Main,"Maris Salon",,"0922 8492455",maris11delosreyes@yahoo.com,,No,No,COD,,,"Walk- In",Professional,Active
+0000000434,Corporate,Professional,"Myneths Salon",,Main,"Myneths Salon",,,,,No,no,COD,,,"Walk- In",Professional,Active
+0000000435,Corporate,Professional,"Myrna Farinas Salon",,Main,"Myrna Farinas Salon",,"0916 5288437 / 0906 2916305",myrnafarinassalon@yahoo.com,,No,no,COD,,,"Walk- In",Professional,Active
+0000000436,Corporate,Professional,"Oh Kay Salon",,Main,"Oh Kay Salon",,,,,No,no,COD,,,"Walk- In",Professional,Active
+0000000437,Corporate,Professional,"Paradigm Salon",,Main,"Paradigm Salon",,,,www.salondemanila.com,No,no,COD,,,"Walk- In",Professional,Active
+0000000438,Corporate,Professional,"Park Juns Beauty Lab",,Main,"Park Juns Beauty Lab",,,,www.parkjun.com,No,no,COD,,,"Walk- In",Professional,Active
+0000000439,Corporate,Professional,"Peak Salon",,Main,"Peak Salon",,,,,No,no,COD,,,"Walk- In",Professional,Active
+0000000440,Corporate,Professional,"Piandre Salon for Men & Women",,Main,"Piandre Salon for Men & Women",,,,www.piandre.com,No,no,COD,,,"Walk- In",Professional,Active
+0000000441,Corporate,Professional,"Salon for Men and Women",No,Main,"Salon for Men and Women",,,"no email",,No,No,COD,,,"Walk- In",Professional,Active
+0000000442,Corporate,Professional,"Simon Kim Hair Salon",,Main,"Simon Kim Hair Salon",,"0905 4131920",,,No,no,COD,,,"Walk- In",Professional,Active
+0000000443,Corporate,Professional,"Tony and Jackey",,Main,"Tony and Jackey",,"0906 3659155",toandj_cebu@yahoo.com,,No,no,COD,,,"Walk- In",Professional,Active
+0000000444,Corporate,Professional,"Triple 7 Salon",,Main,"Triple 7 Salon",,,,,No,no,COD,,,"Walk- In",Professional,Active
+0000000445,Corporate,Professional,"Natural Hype",,Main,"Natural Hype",,,,,No,no,COD,,,"Walk- In",Professional,Active
+0000000446,Corporate,Professional,"Sei Salon",,Main,"Sei Salon",,,,,No,no,COD,,,"Walk- In",Professional,Active
+0000000447,Corporate,Professional,"Jing Monis Salon",,Main,"Jing Monis Salon",,,,,No,no,COD,,,"Walk- In",Professional,Active
+0000000448,Corporate,Professional,"Jing Monis Salon",,"Alabang Branch","Jing Monis Salon",,,,,No,no,COD,,,"Walk- In",Professional,Active
+0000000449,Corporate,Professional,"Josefina Salon",,Main,"Josefina Salon",,,"no email",,No,no,COD,,,"Walk- In",Professional,Active
+0000000450,Corporate,Professional,"Chez Victoria Salon",,Main,"Chez Victoria Salon",,"0927 3219154",chezvictoria@facebook,,No,no,COD,,,"Walk- In",Professional,Active
+0000000451,Corporate,Professional,"Edge Salon",,Main,"Edge Salon",,"0927 5028664",mayeth_cabrera@yahoo.com,,No,no,COD,,,"Walk- In",Professional,Active
+0000000452,Corporate,Professional,"Groom Pad",,Main,"Groom Pad",,,,,No,no,COD,,,"Walk- In",Professional,Active
+0000000453,Corporate,Professional,"H & M Hair and Make Up Studio",,Main,"H & M Hair and Make Up Studio",,"0917 8365333",makeover@myhmstudio.net,,No,no,COD,,,"Walk- In",Professional,Active
+0000000454,Corporate,Professional,"Hair by Tony and Jackie",,Main,"Hair by Tony and Jackie",,,"no email",,No,no,COD,,,"Walk- In",Professional,Active
+0000000455,Corporate,Professional,"LCHP Inc.",No,Podium,"Hairshaft Salon",,,,,No,No,COD,,,"Walk- In",Professional,Active
+0000000456,Corporate,Professional,"Lordcare Corporation",No,"Bonifacio Global City","Hairshaft Salon",,,chicvalenciano@yahoo.com,,No,No,COD,,,"Walk- In",Professional,Active
+0000000457,Corporate,Professional,"Tinette & Co. Salon",No,Main,"Humphrey Holdings, Inc.",,856-9806,tinetteco@yahoo.com,https://www.facebook.com/tinetteco/info,No,No,"30 days",,,ideliver101,Professional,Active
+0000000458,Corporate,Professional,"IG Hygea Hair and Body Salon",,Main,"IG Hygea Hair and Body Salon",,,"no email",,No,no,COD,,,"Walk- In",Professional,Active
+0000000459,Corporate,Professional,"Kevins Cut",,Main,"Kevins Cut",,,leacuaderna@yahoo.com,,No,no,COD,,,"Walk- In",Professional,Active
+0000000460,Corporate,Professional,"Kevins Cut",,"Ayala MRT","Kevins Cut",,,muebles_pacific.net.ph,,No,no,COD,,,"Walk- In",Professional,Active
+0000000461,Corporate,Professional,"LMC Boutique and Beauty Salon",,Main,"LMC Boutique and Beauty Salon",,,,,No,no,COD,,,"Walk- In",Professional,Active
+0000000462,Corporate,Professional,"Louis Philip Kee Salon",,Main,"Louis Philip Kee Salon",,"0909 7884105",Louiskee2001@yahoo.com,,No,yes,COD,,,"Walk- In",Professional,Active
+0000000463,Corporate,Professional,"Maru Palad",,Main,"Maru Palad",,"0906 8416205",edelbertopalad@yahoo.com,,No,no,COD,,,"Walk- In",Professional,Active
+0000000464,Corporate,Professional,"COMPANIA DE LSL INC.",No,Rada,"Menage Salon",007-120-719-001,"0917 5129110",,,Yes,No,COD,,,"Walk- In",Professional,Active
+0000000465,Corporate,Professional,"Natural Woman Beauty Salon & Day Spa",,Main,"Natural Woman Beauty Salon & Day Spa",,"0916 2665562","no email",,no,no,COD,,,"Walk- In",Professional,Active
+0000000466,Corporate,Professional,"Piandre Salon",,"Ayala Avenue","Piandre Salon",,,,www.piandresaloninc.com,no,no,COD,,,"Walk- In",Professional,Active
+0000000467,Corporate,Professional,"Piandre Salon for Men & Women",,Legaspi,"Piandre Salon for Men & Women",,,,www.piandre.com,no,no,COD,,,"Walk- In",Professional,Active
+0000000468,Corporate,Professional,"Rainbow Hair Salon and Spa",,Main,"Rainbow Hair Salon and Spa",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000469,Corporate,Professional,"RO2 Beauty & Wellness Center",,Main,"RO2 Beauty & Wellness Center",,"0922 2360928",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000470,Corporate,Professional,"Salon @ Hampton",,Main,"Salon @ Hampton",,"0922 8963384",,,no,yes,COD,,,"Walk- In",Professional,Active
+0000000471,Corporate,Professional,"Salon De San Lorenzo",,Main,"Salon De San Lorenzo",,"0923 8204291",krisfajardo@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000472,Corporate,Professional,"Salon Prive",,Main,"Salon Prive",,"0917 53505254",sherleyesperas@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000473,Corporate,Professional,"You Hair and Body Salon",,Main,"You Hair and Body Salon",,"0928 3520700",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000474,Corporate,Professional,"Diana Kwong Make Up and Design Salon",,Main,"Diana Kwong Make Up and Design Salon",,"0917 8133734",,www.dianakwong.net,no,no,COD,,,"Walk- In",Professional,Active
+0000000475,Corporate,Professional,"Studio 119 Salon for Men and Women",,Main,"Studio 119 Salon for Men and Women",,"0905 4249909",STUDIO119SALON@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000476,Corporate,Professional,"Hair Philosophy",No,Main,"Hair Philosophie",,"0917 5717717",,,No,No,COD,,,"Walk- In",Professional,Active
+0000000477,Corporate,Professional,"Fab Salon",,Main,"Fab Salon",,,info@fabsalon.ph,,no,no,COD,,,"Walk- In",Professional,Active
+0000000478,Corporate,Professional,"Henri Calayag Salon",No,Main,"Henri Calayag Salon",,"0920 9181880",henricalayag_salon@yahoo.com,,No,No,COD,,,"Walk- In",JUL2014PROMO,Active
+0000000479,Corporate,Professional,"B & W Beaute Salon",,Main,"B & W Beaute Salon",,"0939 8181263",wengtdiaz@yahoo.com.ph,,no,yes,COD,,,"Walk- In",Professional,Active
+0000000480,Corporate,Professional,"Straight and Smooth Salon",,Main,"Straight and Smooth Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000481,Corporate,Professional,"Akira Hair and Make Up Studio",,Main,"Akira Hair and Make Up Studio",,,info@akira-hairmake.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000482,Corporate,Professional,"Beauty Brick Hair Art Salon",,Main,"Beauty Brick Hair Art Salon",,"0917 5200044",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000483,Corporate,Professional,"Belle Cat and Co. Nail Care and Wax Salon",No,Main,"Belle and Cat Nail and Wax Studio",,"0917 8516608",bellecat.studio@gmail.com,,No,No,COD,,,"Walk- In",Professional,Active
+0000000484,Corporate,Professional,"Dashing Diva",,Main,"Dashing Diva",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000485,Corporate,Professional,Enza,,Main,Enza,,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000486,Corporate,Professional,"Klassy Klaws Hand and Foot Spa",,Main,"Klassy Klaws Hand and Foot Spa",,"0917 8683592",klassyklaws@gmail.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000487,Corporate,Professional,"Nail It",,Main,"Nail It",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000488,Corporate,Professional,"Nail Nature",,Main,"Nail Nature",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000489,Corporate,Professional,"Oceana Nail Club",No,Main,"Asian Cosmetic Dental Group",,"0917 53055989","osoriopm@yahoo.com and oceananailclub@gmail.com",,No,No,COD,,,ideliver101,Professional,Active
+0000000490,Corporate,Professional,"Pacific Nail Care Salon",,Main,"Pacific Nail Care Salon",,"0916 5808308",pacificnails@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000491,Corporate,Professional,"Verdance Nail Salon",,Main,"Verdance Nail Salon",,"0922 8734441",jerinady@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000492,Corporate,Professional,"Diva Nail Salon",,Main,"Diva Nail Salon",,"0920 9471191",aimeecuti@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000493,Corporate,Professional,"Dutchess Haven Salon",,Main,"Dutchess Haven Salon",,"0917 5855079",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000494,Corporate,Professional,"Foot and Hand Care",,Main,"Foot and Hand Care",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000495,Corporate,Professional,"Footloose International, Inc.",,Main,"Footloose International, Inc.",,"0917 8107008",footlooseinternationalinc@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000496,Corporate,Professional,"Green Nature",,Main,"Green Nature",,"0918 5885109",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000497,Corporate,Professional,"Luxe Spa",,Main,"Luxe Spa",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000498,Corporate,Professional,"Green Goodness Inc",No,Main,"Manos Nail Lounge",,"0917 8390210",info@ManosNailLounge.com,,No,No,COD,,,"Walk- In",Professional,blocked
+0000000499,Corporate,Professional,"Nail Republik",,Main,"Nail Republik",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000500,Corporate,Professional,"Nail Spa",,Legaspi,"Nail Spa",,,gamboa.nailspa@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000501,Corporate,Professional,"Nail Spa",,EDSA,"Nail Spa",,,gamboa.nailspa@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000502,Corporate,Professional,"Nicer Nails Nail Salon",,Main,"Nicer Nails Nail Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000503,Corporate,Professional,"Big Apple Express",,Main,"Big Apple Express",,"0922 8242775",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000504,Corporate,Professional,"Blue Mountains Spa",,Main,"Blue Mountains Spa",,"0918 9025212 / 0915 5453550",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000505,Corporate,Professional,"Blue Water Day Spa",,Main,"Blue Water Day Spa",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000506,Corporate,Professional,"Blue Water Day Spa",No,Eastwood,"Blue Water Day Spa",,"915-1247 / 702-8290",bluewatereastwood@yahoo.com,,No,No,"30 days",,,ideliver101,Professional,Active
+0000000507,Corporate,Professional,"Brazilian Bare Salon",,Main,"Brazilian Bare Salon",,"0922 4448498",gutas_3.boys@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000508,Corporate,Professional,"Felicity Skin Care & Spa",,Main,"Felicity Skin Care & Spa",,,felicity_lauryn@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000509,Corporate,Professional,"Foot Options",,Main,"Foot Options",,,rowenamusico@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000510,Corporate,Professional,"Formosa Spa",,Main,"Formosa Spa",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000511,Corporate,Professional,"Fresh Day Spa",,Main,"Fresh Day Spa",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000512,Corporate,Professional,"Heavenly Care Salon and Massage Inc.",,Main,"Heavenly Care Salon and Massage Inc.",,,lee_kisses@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000513,Corporate,Professional,"Le Massage",,Main,"Le Massage",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000514,Corporate,Professional,"Lovely Touch",,Main,"Lovely Touch",,"0916 4315877",lee_kisses@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000515,Corporate,Professional,"Luxury Spa",,Main,"Luxury Spa",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000516,Corporate,Professional,"Melinda Javier",,Main,"Melinda Javier",,"0917 7885650",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000517,Corporate,Professional,"Simply 1 Spa",,Main,"Simply 1 Spa",,,simply1spa@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000518,Corporate,Professional,"Skin Spa Clarins",,Main,"Skin Spa Clarins",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000519,Corporate,Professional,"Su Casa Service Spa",,Main,"Su Casa Service Spa",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000520,Corporate,Professional,"Talk of the Town",,Main,"Talk of the Town",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000521,Corporate,Professional,"The Island Spa",,Main,"The Island Spa",,"0922 8152787",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000522,Corporate,Professional,"The Lotus Spa",,Main,"The Lotus Spa",,"0918 9085672 / 0917 5409245",,thelotusmymassageplace@facebook,no,no,COD,,,"Walk- In",Professional,Active
+0000000523,Corporate,Professional,"The Suriya Spa",,Main,"The Suriya Spa",,,frontera@suriyaspa.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000524,Corporate,Professional,"Tocarre Spa",,Main,"Tocarre Spa",,,,www.tocarrespa.com.ph,no,no,COD,,,"Walk- In",Professional,Active
+0000000525,Corporate,Professional,"Touch of Hands",,Main,"Touch of Hands",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000526,Corporate,Professional,"Vanity Room",,Main,"Vanity Room",,,tinadayanhirang@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000527,Corporate,Professional,"Village Spa",,Main,"Village Spa",,,leannkuan@gmail.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000528,Corporate,Professional,"Yuveyn Spa",,Main,"Yuveyn Spa",,,"no email",,no,no,COD,,,"Walk- In",Professional,Active
+0000000529,Corporate,Professional,"Zen Asia Massage",,Main,"Zen Asia Massage",,"0917 8258225",inquiry@zenasiaspa.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000530,Corporate,Professional,SpaDeMaria,,Main,SpaDeMaria,,"0939 4433578",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000531,Corporate,Professional,"Juliet Herrera",,Main,"Juliet Herrera",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000532,Corporate,Professional,"Allan Dela Cruz",,Main,"Allan Dela Cruz",,"0915 8043833",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000533,Corporate,Professional,"Raquel Bautista",,Main,"Raquel Bautista",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000534,Corporate,Professional,"Iya Yotokko",,Main,"Iya Yotokko",,"0917 5251971",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000535,Corporate,Professional,"Clinic Clarens",,Main,"Clinic Clarens",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000536,Corporate,Professional,"Julie Gamboa",,Main,"Julie Gamboa",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000537,Corporate,Professional,"Sherbeth Ranay",,Main,"Sherbeth Ranay",,"0917 8031807",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000538,Corporate,Professional,"Amalia Benigay",,Main,"Amalia Benigay",,"0921 7332593",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000539,Corporate,Professional,"Margaux Romero",,Main,"Margaux Romero",,"0917 5213577",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000540,Corporate,Professional,"Elena Ong",,Main,"Elena Ong",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000541,Corporate,Professional,"Kate Kho",,Main,"Kate Kho",,"0917 5310131",k8_kho@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000542,Corporate,Professional,"Top Brand Awards & Business Expo",,Main,"Top Brand Awards & Business Expo",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000543,Corporate,Professional,"Eika Castaneda",,Main,"Eika Castaneda",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000544,Corporate,Professional,"Ana Viray",,Main,"Ana Viray",,"0917 6214277",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000545,Corporate,Professional,"Cecilia Garcia",,Main,"Cecilia Garcia",,"0917 5324368",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000546,Corporate,Professional,"Jean Padilla",,Main,"Jean Padilla",,"0917 5456770",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000547,Corporate,Professional,"Letty Vibar",,Main,"Letty Vibar",,"0915 9095596",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000548,Corporate,Professional,"Vina Tan",,Main,"Vina Tan",,"0917 5080883",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000549,Corporate,Professional,"Catherine Diploma",,Main,"Catherine Diploma",,"0928 5049392",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000550,Corporate,Professional,"Dra. Luisa Cruz",,Main,"Dra. Luisa Cruz",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000551,Corporate,Professional,"Melinda Pader",,Main,"Melinda Pader",,"0917 5115155",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000552,Corporate,Professional,"Jessica Lace",,Main,"Jessica Lace",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000553,Corporate,Professional,"Validosa Salon Head Office",,Main,"Validosa Salon Head Office",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000554,Corporate,Professional,"Salon De Brillantes",,Main,"Salon De Brillantes",,,bm_marekting.ph09@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000555,Corporate,Professional,"GNV Facial & body care",,Main,"GNV Facial & body care",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000556,Corporate,Professional,"Queenn esther salon",,Main,"Queenn esther salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000557,Corporate,Professional,"Ynonah salon",,Main,"Ynonah salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000558,Corporate,Professional,"K. beau salon and spa",,Main,"K. beau salon and spa",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000559,Corporate,Professional,"Kikay Salon",,Main,"Kikay Salon",,"0917 8508464",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000560,Corporate,Professional,"kookoo spa",,Main,"kookoo spa",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000561,Corporate,Professional,"Jun Bernardo Salon",,Main,"Jun Bernardo Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000562,Corporate,Professional,"Infina Massage & spa",,Main,"Infina Massage & spa",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000563,Corporate,Professional,"memese spa and wellness",,Main,"memese spa and wellness",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000564,Corporate,Professional,"Rikki Esiquel salon",,Main,"Rikki Esiquel salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000565,Corporate,Professional,"Spa de bea",,Main,"Spa de bea",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000566,Corporate,Professional,"Belizima Salon",No,Main,"Belizima Salon",,,,,No,No,COD,,,"Walk- In",Professional,Active
+0000000567,Corporate,Professional,"Change by nap salon",,Main,"Change by nap salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000568,Corporate,Professional,"Essential glow facial",,Main,"Essential glow facial",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000569,Corporate,Professional,"fashionista salon",,Main,"fashionista salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000570,Corporate,Professional,"Golden Jigs salon",,Main,"Golden Jigs salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000571,Corporate,Professional,"Horizon salon",,Main,"Horizon salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000572,Corporate,Professional,"fashionline salon",,Main,"fashionline salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000573,Corporate,Professional,"hair at work",,Main,"hair at work",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000574,Corporate,Professional,"Head Turner",,Main,"Head Turner",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000575,Corporate,Professional,"Laurier Salon",No,Main,"Laurier Salon",,774-0655,,,No,No,COD,,,ideliver101,Professional,Active
+0000000576,Corporate,Professional,"Redwood spa",,Main,"Redwood spa",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000577,Corporate,Professional,"Royal Garden Spa",No,Main,"Royal Garden Spa",,514-5217,,,No,No,COD,,,ideliver101,Professional,Active
+0000000578,Corporate,Professional,"Ruby Paul salon",,Main,"Ruby Paul salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000579,Corporate,Professional,"Splended salon",,Main,"Splended salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000580,Corporate,Professional,"White spa",,Main,"White spa",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000581,Corporate,Professional,"Xtenso salon",,Main,"Xtenso salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000582,Corporate,Professional,"B H E salon",,Main,"B H E salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000583,Corporate,Professional,"Citrine salon",,Main,"Citrine salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000584,Corporate,Professional,"Refresh salon",No,Main,"Refresh salon",,215-7303,,,No,No,COD,,,"Walk- In",Professional,Active
+0000000585,Corporate,Professional,"Allure Salon & Day Spa",No,Main,"Allure Salon & Day Spa",,"9222 333381",alluredayspa@ymail.com,,No,No,COD,,,ideliver101,Professional,Active
+0000000586,Corporate,Professional,"Ancheelovia Salon",,Main,"Ancheelovia Salon",,"0916 459427",anamaria0204@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000587,Corporate,Professional,"Muscle Worx Gym,Facial Care & Spa",,Main,"Muscle Worx Gym,Facial Care & Spa",,"0916 2749191",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000588,Corporate,Professional,"MGC Veranda",No,Main,"Spa De Veranda",,,,,No,No,COD,,,ideliver101,Professional,Active
+0000000589,Corporate,Professional,"Top 2 toe salon",,Main,"Top 2 toe salon",,"0948 4792248",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000590,Corporate,Professional,"tsubaki salon",,Main,"tsubaki salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000591,Corporate,Professional,"Antonios salon",,Main,"Antonios salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000592,Corporate,Professional,"Executive salon",,Main,"Executive salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000593,Corporate,Professional,"Headstart salon",,Main,"Headstart salon",,,,,no,yes,COD,,,"Walk- In",Professional,Active
+0000000594,Corporate,Professional,"Perfect grooming salon and spa",,Main,"Perfect grooming salon and spa",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000595,Corporate,Professional,"Nesti Salon",No,Main,"Nesti Salon",,"0916 4848450",,,No,No,COD,,,"Walk- In",Professional,Active
+0000000596,Corporate,Professional,"Hairchitec Salon",No,Main,"Hairchetic Salon",,,,,No,No,COD,,,"Walk- In",Professional,Active
+0000000597,Corporate,Professional,"Leciel Spa Services and Marketing",No,Main,"Nails & Beyond",,,,,No,No,"30 days",,,ideliver101,Professional,Active
+0000000598,Corporate,Professional,"Hair Fix New Style Salon",,Main,"Hair Fix New Style Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000599,Corporate,Professional,"Relax N Wax Nails and Body Spa Salon",No,Main,"formerly Excellent Choice",,"0923 3239325",,,No,No,COD,,,ideliver101,Professional,Active
+0000000600,Corporate,Professional,"Rico Ignacio Salon",,Main,"Rico Ignacio Salon",,,,,no,yes,COD,,,"Walk- In",Professional,Active
+0000000601,Corporate,Professional,"Erika Nail Station",No,Main,"Erika Nail Station",,"0919 4133942",,,No,No,COD,,,"Walk- In",Professional,Active
+0000000602,Corporate,Professional,"Surangle Salon",,Main,"Surangle Salon",,"0947 8621472",mitz_flores@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000603,Corporate,Professional,"Symetrique Ageless Slim & Beauty Salon",,Main,"Symetrique Ageless Slim & Beauty Salon",,"0917 8510331",,,no,yes,COD,,,"Walk- In",Professional,Active
+0000000604,Corporate,Professional,"16th Avenue Salon & Spa",,Main,"16th Avenue Salon & Spa",,,,,no,yes,COD,,,"Walk- In",Professional,Active
+0000000605,Corporate,Professional,"Nail & Teas",,Main,"Nail & Teas",,,,,no,yes,COD,,,"Walk- In",Professional,Active
+0000000606,Corporate,Professional,"Kabibe Salon",No,Main,"Kabibe Salon",,"0917 8717756",,,No,No,COD,,,"Walk- In",Professional,Active
+0000000607,Corporate,Professional,"Seiya Salon & Spa",No,Main,"Seiya Salon & Spa",,"0935 5107397",,,No,No,COD,,,"Walk- In",Professional,Active
+0000000608,Corporate,Professional,"Samonte Clinic (Aesthetic Concepts)",No,Main,"Samonte Spa",,951-0969,,,No,No,COD,,,"Walk- In",Professional,Active
+0000000609,Corporate,Professional,"Ladanica Beauty Center and Boutique",,Main,"Ladanica Beauty Center and Boutique",,,,,no,yes,COD,,,"Walk- In",Professional,Active
+0000000610,Corporate,Professional,"Jayland Salon",,Main,"Jayland Salon",,"0949 6542901",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000611,Corporate,Professional,"Californian Beau The Medical Spa",,Main,"Californian Beau The Medical Spa",,"0915 4016106",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000612,Corporate,Professional,"Le Vive Salon",,Main,"Le Vive Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000613,Corporate,Professional,"Style Artica Salon",No,Main,"Style Artica Salon",,"0922 8233014",,,No,No,COD,,,"Walk- In",Professional,Active
+0000000614,Corporate,Professional,"Heavenly Green Spa",,Main,"Heavenly Green Spa",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000615,Corporate,Professional,"Fashion Line Salon",,Main,"Fashion Line Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000616,Corporate,Professional,"Azuela Salon",,Main,"Azuela Salon",,"0939 7273595",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000617,Corporate,Professional,"Nailcessity Hand Foot & Body Spa",,Main,"Nailcessity Hand Foot & Body Spa",,"0915 8777699",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000618,Corporate,Professional,"Skin Central",,Main,"Skin Central",,"0915 4474000",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000619,Corporate,Professional,"Derm Asia Skin Care Center",,Main,"Derm Asia Skin Care Center",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000620,Corporate,Professional,"Kaunis Spa",,Main,"Kaunis Spa",,"0917 8489951",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000621,Corporate,Professional,"Nail Fairy Spa",,Main,"Nail Fairy Spa",,"0917 8370718 / 0923 5888742",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000622,Corporate,Professional,"Chic Nails Hands and Foot Body Spa",,Main,"Chic Nails Hands and Foot Body Spa",,"0928 5544305",chicnails&spa.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000623,Corporate,Professional,"Headtone Salon",,Main,"Headtone Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000624,Corporate,Professional,"Cosmo Nail",,Main,"Cosmo Nail",,,joyce_0911@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000625,Corporate,Professional,"Come & Comfort Spa",,Main,"Come & Comfort Spa",,"0917 8500718",coc_spa@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000626,Corporate,Professional,"Hair Jobs Salon",,Main,"Hair Jobs Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000627,Corporate,Professional,"MAC Nail and Body Spa",No,Main,"MAC Nail Spa",,"0917 8030826",macnailspa@gmail.com,,No,No,COD,,,"Walk- In",Professional,Active
+0000000628,Corporate,Professional,"Arm Skin Essentials ( Matulac Medical Clinic )",,Main,"Arm Skin Essentials ( Matulac Medical Clinic )",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000629,Corporate,Professional,"5JS Salon",,Main,"5JS Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000630,Corporate,Professional,"Be Our Guest Spa",,Main,"Be Our Guest Spa",,"0920 6262731",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000631,Corporate,Professional,"Doorstep Spa",No,Main,"Doorstep Spa",,"0917 5770579",,,No,No,"30 days",,,"pick up",Professional,Active
+0000000632,Corporate,Professional,"Into Skin Wellness & Spa",,Main,"Into Skin Wellness & Spa",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000633,Corporate,Professional,"Natural Spa & Profile Salon",,Main,"Natural Spa & Profile Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000634,Corporate,Professional,"Haircials Salon",,Main,"Haircials Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000635,Corporate,Professional,"Etiquette Salon & Spa",,Main,"Etiquette Salon & Spa",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000636,Corporate,Professional,"Marquee Salon",,Main,"Marquee Salon",,"0919 8217605",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000637,Corporate,Professional,"Cris Salon",,Main,"Cris Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000638,Corporate,Professional,"F Salon & Body Spa",,Kamuning,"F Salon & Body Spa",,"0918 9367533",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000639,Corporate,Professional,"F Salon & Body Spa",,Ortigas,"F Salon & Body Spa",,,,,yes,no,COD,,,"Walk- In",Professional,Active
+0000000640,Corporate,Professional,"Bellisimo Salon",,Main,"Bellisimo Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000641,Corporate,Professional,"Azta Urban",,Main,"Azta Urban",,"0917 5868783",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000642,Corporate,Professional,"RJ salon",,Main,"RJ salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000643,Corporate,Professional,"Ross Pilotin Salon",No,Main,"Ross Pilotin Salon",,,,,No,No,COD,,,"Walk- In",Professional,Active
+0000000644,Corporate,Professional,"Salon Canali",No,Main,"Salon Canali",,442-9293,,,No,No,COD,,,ideliver101,Professional,Active
+0000000645,Corporate,Professional,"Salon Clidoro",,Main,"Salon Clidoro",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000646,Corporate,Professional,"Salon De Sentro",,Main,"Salon De Sentro",,"0918 5148623",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000647,Corporate,Professional,"Skin Clinique",No,Main,"Skin Clinique",,"0922 8606636",,,No,No,COD,,,"Walk- In",Professional,Active
+0000000648,Corporate,Professional,"Status Salon",,Main,"Status Salon",,"0916 5305170",,,no,yes,COD,,,"Walk- In",Professional,Active
+0000000649,Corporate,Professional,"DVISAGE International Corporation",No,"Robinsons Galleria","Status Salon",229-118-579-000,634-3385,,,No,No,COD,,,ideliver101,Professional,Active
+0000000650,Corporate,Professional,"Benefits Salon",,"Eastwood Citywalk","Benefits Salon",,"0917 8857288",,,no,yes,COD,,,"Walk- In",Professional,Active
+0000000651,Corporate,Professional,"Studio 8 salon",,Main,"Studio 8 salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000652,Corporate,Professional,"Studio One salon",,Main,"Studio One salon",,"0917 5365660",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000653,Corporate,Professional,"Bhoy Navarette salon",No,Main,"Bhoy Navarette salon",,584-6016,,,No,No,"30 days",,,ideliver101,Professional,Active
+0000000654,Corporate,Professional,"Comprehensive Dermatology",,Main,"Comprehensive Dermatology",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000655,Corporate,Professional,"Glamazon Salon",No,Main,"Glamazon Salon",200-671-180-001,3864867,,,No,No,COD,,,ideliver101,Professional,Active
+0000000656,Corporate,Professional,"Royal Spa",,Main,"Royal Spa",,"0922 8655005",,,no,yes,COD,,,"Walk- In",Professional,Active
+0000000657,Corporate,Professional,"DLF Posh Nails",,Main,"DLF Posh Nails",,,,,no,yes,COD,,,"Walk- In",Professional,Active
+0000000658,Corporate,Professional,"Eagle Rock Dialysis & Wellness Center",,Main,"Eagle Rock Dialysis & Wellness Center",,"0915 7021206",,,no,yes,COD,,,"Walk- In",Professional,Active
+0000000659,Corporate,Professional,"Elegant secret",,Main,"Elegant secret",,,,,no,yes,COD,,,"Walk- In",Professional,Active
+0000000660,Corporate,Professional,"Em salon",,Main,"Em salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000661,Corporate,Professional,"Fabee Salon",No,Main,"Fabee Salon",,"0917 8361276",,,No,No,COD,,,"Walk- In",Professional,Active
+0000000662,Corporate,Professional,Hairliners,,Main,Hairliners,,"0917 6206669",,,no,yes,COD,,,"Walk- In",Professional,Active
+0000000663,Corporate,Professional,Hairliners,,Paranaque,Hairliners,,,,,yes,yes,COD,,,"Walk- In",Professional,Active
+0000000664,Corporate,Professional,"I-cut salon",No,Main,"I Cut Salon",,"0917 5343732",,,No,No,COD,,,"In- House Delivery",Professional,Active
+0000000665,Corporate,Professional,"Studio 16 Salon and Spa",No,Main,"Studio 16 Salon",,"0929 6174651",,,No,No,COD,,,"Walk- In",Professional,Active
+0000000666,Corporate,Professional,"Jarlls Salon",,Main,"Jarlls Salon",,,,,no,yes,COD,,,"Walk- In",Professional,Active
+0000000667,Corporate,Professional,"La Danica Beauty center",,Main,"La Danica Beauty center",,"0922 8103348",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000668,Corporate,Professional,"Marguax Essential Beauty",,Main,"Marguax Essential Beauty",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000669,Corporate,Professional,"COMPANIA DE LSL INC.",No,Main,"Menage Salon",,"0922 9028521",,,No,No,COD,,,"Walk- In",Professional,Active
+0000000670,Corporate,Professional,"COMPANIA DE LSL INC.",No,Manhattan,"Menage Salon",,"0922 9028521",,,No,No,COD,,,"Walk- In",Professional,Active
+0000000671,Corporate,Professional,Nails.Glow,Yes,Main,Nails.Glow,,"0922 8829793",,,No,No,COD,,,"Walk- In",JUL2014PROMO,Active
+0000000672,Corporate,Professional,Nails.Glow,,Pag-Asa,Nails.Glow,,"0922 8624576",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000673,Corporate,Professional,Nails.Glow,,"Tandang Sora",Nails.Glow,,"0922 8624576",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000674,Corporate,Professional,Nails.Glow,,Munoz,Nails.Glow,,"0922 8268438",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000675,Corporate,Professional,Nails.Glow,,Malate,Nails.Glow,,"0922 7545958",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000676,Corporate,Professional,Nails.Glow,,Paranaque,Nails.Glow,,"0922 8726583",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000677,Corporate,Professional,Nails.Glow,,Sampaloc,Nails.Glow,,"0922 8042227",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000678,Corporate,Professional,Nails.Glow,,Caloocan,Nails.Glow,,"0923 7307044",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000679,Corporate,Professional,"Nails & Teas",No,Main,"Nails & Teas",,09178900874,,,No,No,COD,,,"Walk- In",Professional,Active
+0000000680,Corporate,Professional,"Pimp My Nails",No,Main,"Pimp My Nails",,"0917 5575919",micaramos8@yahoo.com,,No,No,COD,,,"Walk- In",Professional,Active
+0000000681,Corporate,Professional,"Prime Salon",No,Main,"Prime Salon",,"0917 8821967",,,No,No,COD,,,"Walk- In",Professional,Active
+0000000682,Corporate,Professional,"Salon de Pag-asa",,Main,"Salon de Pag-asa",,"0920 5349553",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000683,Corporate,Professional,"Salon de Panay",,Main,"Salon de Panay",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000684,Corporate,Professional,"Salon De Royale",,Main,"Salon De Royale",,"0917 5381462",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000685,Corporate,Professional,"Salon Infiniti Barbershop & Salon",,Main,"Salon Infiniti Barbershop & Salon",,"0920 9097594",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000686,Corporate,Professional,"Sir George Salon by Mary Pauline",,Main,"Sir George Salon by Mary Pauline",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000687,Corporate,Professional,"Soiree Salon and Spa",No,Main,"Soiree Salon and Spa",,9118772,soireesalonandspa@yahoo.com,http://soireesalonandspa.multiply.com/,No,No,COD,,,"Walk- In",Professional,Active
+0000000688,Corporate,Professional,"The Nail Fairy and Day Spa",,Main,"The Nail Fairy and Day Spa",,"09178370718  09235888742",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000689,Corporate,Professional,"The Oriental Hair Salon",,Main,"The Oriental Hair Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000690,Corporate,Professional,"The Splendor Spa",,Main,"The Splendor Spa",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000691,Corporate,Professional,"Urban Escape Day Spa",,Main,"Urban Escape Day Spa",,,cegarcia1027@gmail.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000692,Corporate,Professional,"Vanity Clinic",,Main,"Vanity Clinic",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000693,Corporate,Professional,"Xtrim Salon",,Main,"Xtrim Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000694,Corporate,Professional,"Yazuragi Wellness Center",,Main,"Yazuragi Wellness Center",,"0916 2337023/  0910 2528449",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000695,Corporate,Professional,"Ysabella Salon",,Main,"Ysabella Salon",,"0906 4787844",mcbastoriano@yahoo.com,,no,yes,COD,,,"Walk- In",Professional,Active
+0000000696,Corporate,Professional,"2nd Editon Salon",,Main,"2nd Editon Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000697,Corporate,Professional,"Acqua Salon",,Trinoma,"Acqua Salon",,"0921 9846396",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000698,Corporate,Professional,"Alejandros Haircutters",,Main,"Alejandros Haircutters",,"0922 8759062",,,no,yes,COD,,,"Walk- In",Professional,Active
+0000000699,Corporate,Professional,"All Day Spa",,Main,"All Day Spa",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000700,Corporate,Professional,"Alter Ego Salon",,Main,"Alter Ego Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000701,Corporate,Professional,"Amy Chua",,Main,"Amy Chua",,"0917 5332796",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000702,Corporate,Professional,"Arte Salon",,Main,"Arte Salon",,"0920 2380382",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000703,Corporate,Professional,"Artista Salon",,Main,"Artista Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000704,Corporate,Professional,"Azta Urban Salon Head Office",,Main,"Azta Urban Salon Head Office",,"0917 3886774",,,no,yes,COD,,,"Walk- In",Professional,Active
+0000000705,Corporate,Professional,"Benjie Galino Salon",,Main,"Benjie Galino Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000706,Corporate,Professional,"Bold And Chic Salon",,Main,"Bold And Chic Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000707,Corporate,Professional,"Bridal Makeover by Val Villarin",,Main,"Bridal Makeover by Val Villarin",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000708,Corporate,Professional,"Brow Studio",Yes,Main,"Brow Studio",,"0928 5004852",,,No,No,COD,,,"Walk- In",Professional,Active
+0000000709,Corporate,Professional,"Brow Studio",No,"Mega Mall","Brow Studio",,"0922 8875883",,,No,No,"15 days",,,"Walk- In",Professional,Active
+0000000710,Corporate,Professional,"City Lifestyles Spa & Fitness Center",,Main,"City Lifestyles Spa & Fitness Center",,"0906 4411624",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000711,Corporate,Professional,"Cozy Nail Lounge",No,Main,"Cozy Nail Lounge",,"0917 7955828",,,No,No,COD,,,"Walk- In",Professional,Active
+0000000712,Corporate,Professional,"D Good Lyfe Salon",,Main,"D Good Lyfe Salon",,"0929 6899889",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000713,Corporate,Professional,"D Visage Salon",,Main,"D Visage Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000714,Corporate,Professional,"Dare to Bare Skin Center",No,Main,"Dare to Bare Skin Center",007-748-926-000,"0915 8286516",,,No,No,COD,,,"Walk- In",Professional,Active
+0000000715,Corporate,Professional,"Davids Day Spa",,Main,"Davids Day Spa",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000716,Corporate,Professional,"Derma Basics",,Main,"Derma Basics",,,,,no,yes,COD,,,"Walk- In",Professional,Active
+0000000717,Corporate,Professional,"Elemente Salon Hair Salon",,Main,"Elemente Salon Hair Salon",,"0915 3030424",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000718,Corporate,Professional,"Excelsior Spa",,Main,"Excelsior Spa",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000719,Corporate,Professional,"Excelsior Spa",,"Robinsons Galleria","Excelsior Spa",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000720,Corporate,Professional,"Get a Polish",,Main,"Get a Polish",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000721,Corporate,Professional,"Get a Polish",,Diliman,"Get a Polish",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000722,Corporate,Professional,"Get Away Spa",,Main,"Get Away Spa",,"0917 2594233",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000723,Corporate,Professional,"Hair Wear Creative Hair System",,Main,"Hair Wear Creative Hair System",,"0917 5322504",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000724,Corporate,Professional,"Hot Nails",,Main,"Hot Nails",,"0917 8435362",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000725,Corporate,Professional,"House of Glitz Nail Studio",,Main,"House of Glitz Nail Studio",,"0927 2784038",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000726,Corporate,Professional,"Impressions Salon for His and Hers",,Main,"Impressions Salon for His and Hers",,"0917 8144282 /  0917 8568236 / 0922 8844282",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000727,Corporate,Professional,"Indigo Salon",,Main,"Indigo Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000728,Corporate,Professional,"Jake Galvez",,Main,"Jake Galvez",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000729,Corporate,Professional,"Aswellasme Salon",,Main,"Aswellasme Salon",,"0939 7273595",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000730,Corporate,Professional,"Jimmy Lu Salon",,Main,"Jimmy Lu Salon",,"0918 9230391","lujimmy16@yahoo.com / jimmylu16@gmail.com",,no,no,COD,,,"Walk- In",Professional,Active
+0000000731,Corporate,Professional,"Kaunis Beauty & Wellness Center",No,Main,"Kaunis Beauty & Wellness Center",104-013-723-000,"0917 8489951",,,No,No,COD,,,"Walk- In",Professional,Active
+0000000732,Corporate,Professional,"Kaya Hair Studio",,Marikina,"Kaya Hair Studio",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000733,Corporate,Professional,"Kaya Hair Studio",,"Tandang Sora","Kaya Hair Studio",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000734,Corporate,Professional,"Kaya Hair Studio",,Novaliches,"Kaya Hair Studio",,"0999 7312223",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000735,Corporate,Professional,"Khoobsurat Salon",,Main,"Khoobsurat Salon",,"0919 8217605",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000736,Corporate,Professional,"L salon",,Main,"L salon",,"494 2776",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000737,Corporate,Professional,"Le Blanc Face and Body Wellness",,Main,"Le Blanc Face and Body Wellness",,"0917 8959210",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000738,Corporate,Professional,"Lexxusa Salon",No,Main,"Lexxusa Salon",,,,,No,No,COD,,,"Walk- In",Professional,Active
+0000000739,Corporate,Professional,"Lineamente Salon",,Main,"Lineamente Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000740,Corporate,Professional,"Maia Haircutters",,Main,"Maia Haircutters",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000741,Corporate,Professional,"Mar Js Salon",,Main,"Mar Js Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000742,Corporate,Professional,"Mary Pauline Salon",,Main,"Mary Pauline Salon",,"0906 4978986",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000743,Corporate,Professional,"Medi Spa",,Main,"Medi Spa",,"0917 5115155",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000744,Corporate,Professional,"Medi Spa",,Tuguegarao,"Medi Spa",,"0917 5692250",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000745,Corporate,Professional,"Minaro Skin Care Product Phils, Inc",,Main,"Minaro Skin Care Product Phils, Inc",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000746,Corporate,Professional,"MINX Nail Care & Lounge",,Main,"MINX Nail Care & Lounge",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000747,Corporate,Professional,"Mr. West Barbershop",,Main,"Mr. West Barbershop",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000748,Corporate,Professional,"My Own Space Salon",,Main,"My Own Space Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000749,Corporate,Professional,"Nail Craft",,Main,"Nail Craft",,"0920 9188720",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000750,Corporate,Professional,"Nail Heaven Hand Foot & Body Relaxation",,Main,"Nail Heaven Hand Foot & Body Relaxation",,"0920 9283484/  0917 3897023",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000751,Corporate,Professional,"Nail Studio Day Spa",,Main,"Nail Studio Day Spa",,"0917 5366977",nailstudio.dayspa@gmail.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000752,Corporate,Professional,"Natural Spa",,Main,"Natural Spa",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000753,Corporate,Professional,"Ness Astilla Salon",,Main,"Ness Astilla Salon",,,,,no,yes,COD,,,"Walk- In",Professional,Active
+0000000754,Corporate,Professional,"Pan Pacific Aesthetic Institute",No,Main,"Pan Pacific Aesthetic Institute",,"0917 8638950/  0917 8636399",,,No,No,COD,,,"Walk- In",Professional,Active
+0000000755,Corporate,Professional,"Percival M. Chan Salon",,Main,"Percival M. Chan Salon",,"0922 8644167",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000756,Corporate,Professional,"Profiles Salon",,Main,"Profiles Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000757,Corporate,Professional,"Protege Medical Spa Philosophy",,Main,"Protege Medical Spa Philosophy",,"0917 6229400",tinsalejogabriel@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000758,Corporate,Professional,"Ric Ponse Salon",,Main,"Ric Ponse Salon",,"911 7840",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000759,Corporate,Professional,"Richelle Salon & Spa",,Main,"Richelle Salon & Spa",,"0917 8120804",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000760,Corporate,Professional,"Rosedel Salon",,Main,"Rosedel Salon",,"0929 4805629",,,no,yes,COD,,,"Walk- In",Professional,Active
+0000000761,Corporate,Professional,"Spa Philosophy",,Main,"Spa Philosophy",,"0922 8268966",mariejean5@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000762,Corporate,Professional,"Elegance Secret",,Main,"Elegance Secret",,"0939 2524390",jen.0118@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000763,Corporate,Professional,"Annabelle De Leon",,Main,"Annabelle De Leon",,"0922 3029042",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000764,Corporate,Professional,"Elizabeth Banno",,Main,"Elizabeth Banno",,"0922 8824347",elizabethbanno@gmail.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000765,Corporate,Professional,"Dr. Sol Javier",,Main,"Dr. Sol Javier",,"0916 4003639",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000766,Corporate,Professional,"Hair Fashion Salon by Arlene",,Main,"Hair Fashion Salon by Arlene",,"09231 286219",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000767,Corporate,Professional,"Shirley Quintana",,Main,"Shirley Quintana",,"0919 8916391",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000768,Corporate,Professional,"Nyssa Feredo",,Main,"Nyssa Feredo",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000769,Corporate,Professional,"Angela Gonzales",,Main,"Angela Gonzales",,"0927 7709950",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000770,Corporate,Professional,"Rose Mendoza",,Main,"Rose Mendoza",,"0906 2642285",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000771,Corporate,Professional,"Charlene Carlos",,Main,"Charlene Carlos",,"0917 5180899",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000772,Corporate,Professional,"Eunice Delos Reyes",,Main,"Eunice Delos Reyes",,"0928 6258677",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000773,Corporate,Professional,"Erlyn B. Bradbury",,Main,"Erlyn B. Bradbury",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000774,Corporate,Professional,"Angela Cutanda",,Main,"Angela Cutanda",,"0917 9180922",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000775,Corporate,Professional,"Mhel Cruz",,Main,"Mhel Cruz",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000776,Corporate,Professional,"Carmen Flores",,Main,"Carmen Flores",,"0907 7884105",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000777,Corporate,Professional,"Pam Pastor",,Main,"Pam Pastor",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000778,Corporate,Professional,"Kaya Marquinton",Yes,Main,"Kaya Marquinton",,"091 58439012",,,No,No,COD,,,"Walk- In",Professional,Active
+0000000779,Corporate,Professional,"Karen Torcino",,Main,"Karen Torcino",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000780,Corporate,Professional,"Style Unlimited by Arlene",,Main,"Style Unlimited by Arlene",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000781,Corporate,Professional,"ELJO Nail Spa",,Main,"ELJO Nail Spa",,"0917 9852921",eljovillanueva@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000782,Corporate,Professional,"Volume Salon",No,Main,"Volume Salon",267-019-138-000,542-8154/215-6492,,,No,No,COD,,,ideliver101,Professional,Active
+0000000783,Corporate,Professional,"KCG Salon and Spa",,Main,"KCG Salon and Spa",,"0917 8471360",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000784,Corporate,Professional,"The Nail Studio & Mobile Spa",No,Main,"The Nail Studio & Mobile Spa",,,,,No,No,COD,,,"Walk- In",Professional,Active
+0000000785,Corporate,Professional,"Great Style Salon",,Main,"Great Style Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000786,Corporate,Professional,"Cest Lavi",,Main,"Cest Lavi",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000787,Corporate,Professional,"JCA Salon",,Main,"JCA Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000788,Corporate,Professional,"WR Encarnacion Group of Salon",No,Main,"WR Encarnacion Group of Salon",249-596-114-009,353-8404,wrencanracion_groupofsalon@yahoo.com,http://www.cutencarnacion.com,No,No,COD,,,ideliver101,Professional,Active
+0000000789,Corporate,Professional,"Facial House",,Main,"Facial House",,,tevez_lizette@yahoo.com.ph,,no,no,COD,,,"Walk- In",Professional,Active
+0000000790,Corporate,Professional,"Hair Tottler ( Sophisticat Inc.)",,Main,"Hair Tottler ( Sophisticat Inc.)",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000791,Corporate,Professional,"Beauty Inspiration",,Main,"Beauty Inspiration",,"0917 8471360",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000792,Corporate,Professional,"Conception Derma Clinic",,Main,"Conception Derma Clinic",,"0916 5871159",leigh_cbc@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000793,Corporate,Professional,"Edith Salon",,Main,"Edith Salon",,,edithacamacho62@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000794,Corporate,Professional,"G Salon",,Main,"G Salon",,,"no email",,no,no,COD,,,"Walk- In",Professional,Active
+0000000795,Corporate,Professional,"Haircials Salon & Spa",,Main,"Haircials Salon & Spa",,,luvicuyco@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000796,Corporate,Professional,"Kaya Hair Studio",,Main,"Kaya Hair Studio",,,"no email",,no,no,COD,,,"Walk- In",Professional,Active
+0000000797,Corporate,Professional,M.Y.Derm,,Main,M.Y.Derm,,"0917 5210157","no email",,no,no,COD,,,"Walk- In",Professional,Active
+0000000798,Corporate,Professional,"Pamela Salon",,Main,"Pamela Salon",,"0999 7166851",Shalata_Pama@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000799,Corporate,Professional,"F8th Avenue Salon",,Main,"F8th Avenue Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000800,Corporate,Professional,Sculptherapy,No,Pasig,Sculptherapy,,"0917 5652710",,,No,No,COD,,,"Walk- In",Professional,Active
+0000000801,Corporate,Professional,Sculptherapy,,Katipunan,Sculptherapy,,"0917 8031421",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000803,Corporate,Professional,"Peping De Guzman Salon",,Main,"Peping De Guzman Salon",,"0921 4700208",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000804,Corporate,Professional,"Dermaline Facial and Skin Care Center",,"San Roque","Dermaline Facial and Skin Care Center",,"0927 4246123",marketing@yahoodianastadler.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000805,Corporate,Professional,"Goodlife Reflex Zone",,"Paragon SQ.","Goodlife Reflex Zone",,,jenie@ktvphil.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000806,Corporate,Professional,"Nails Indulgence",,Rizal,"Nails Indulgence",,"0922 8908350",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000807,Corporate,Professional,"One Berverly Spa",,"Sta Lucia","One Berverly Spa",,"0917 9633174",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000808,Corporate,Professional,"Optimist Salon",,"Antipolo City","Optimist Salon",,"0918 5983538",lysam2310@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000809,Corporate,Professional,"Skin Perfect",,Robinsons,"Skin Perfect",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000810,Corporate,Professional,"SAMMS Salon",,Main,"SAMMS Salon",,"0949 1546503",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000811,Corporate,Professional,"Amazing Salon",No,Main,"Amazing Salon",,,,http://www.amazingsalon.com,No,No,COD,,,"Walk- In",Professional,Active
+0000000812,Corporate,Professional,"BYG Salon for Men and Women",,Main,"BYG Salon for Men and Women",,"0918 5139410","no email",,no,no,COD,,,"Walk- In",Professional,Active
+0000000813,Corporate,Professional,"Jun Encarnacion",,Taguig,"Jun Encarnacion",,,,,no,yes,COD,,,"Walk- In",Professional,Active
+0000000814,Corporate,Professional,"Nail Expert Spa",,Main,"Nail Expert Spa",,,,,no,yes,COD,,,"Walk- In",Professional,Active
+0000000815,Corporate,Professional,"James Body & Nails Spa",No,Main,"James Body & Nails Spa",,,,,No,No,COD,,,"Walk- In",Professional,Active
+0000000816,Corporate,Professional,"Elite Nails Hand, Foot and Body Spa",No,Main,"Elite Nails Hand, Foot and Body Spa",008-452-744-000,,,,No,No,COD,,,ideliver101,JUL2014PROMO,Active
+0000000817,Corporate,Professional,"Pampered Nails and Body",No,Main,"Pampered Nails and Body",,,,,No,No,COD,,,"Walk- In",Professional,Active
+0000000818,Corporate,Professional,"Bare Feet Spa",,Main,"Bare Feet Spa",,"0939 3137206",elitenails@live.com.au,,no,no,COD,,,"Walk- In",Professional,Active
+0000000819,Corporate,Professional,"Nail Bar",No,Mendiola,"Nail Bar",,"0917 5754880 (mendiola) / 0922 3978394 (Katipunan)",,,No,No,COD,,,"In- House Delivery",Professional,Active
+0000000820,Corporate,Professional,"Daisy Reyes Salon",,Main,"Daisy Reyes Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000821,Corporate,Professional,"Nailicious Home Salon",,Main,"Nailicious Home Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000822,Corporate,Professional,"Fresh Salon",No,Main,"Fresh Salon",,748-9788,freshsalonspa@yahoo.com,http://www.freshsalon-spa.net/,No,No,COD,,,"Walk- In",Professional,Active
+0000000823,Corporate,Professional,"Fresh Salon",No,Masangkay,"Fresh Salon",,"0917 8802046",,http://www.freshsalon-spa.net/,No,No,COD,,,ideliver101,Professional,Active
+0000000824,Corporate,Professional,"Nail Organix",No,Main,"Nail Organix",007-994-402-000,792-0133,,,No,No,COD,,,ideliver101,Professional,Active
+0000000825,Corporate,Professional,"Four Leaf Spa",No,Main,"Four Leaf Spa",,"727-4681 / 215-8427",,,No,No,COD,,,ideliver101,Professional,Active
+0000000826,Corporate,Professional,"Perfectly polished",,Main,"Perfectly polished",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000827,Corporate,Professional,"Kuku Moolah",,Main,"Kuku Moolah",,"0916 4065986",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000828,Corporate,Professional,"Relaxamento Grooming Salon",No,Main,"Relaxa Mento Salon",,584-0907,,,No,No,COD,,,ideliver101,Professional,Active
+0000000829,Corporate,Professional,"H & B Hub Slimming & Kids Salon",No,Main,"H & B Hub Slimming & Kids Salon",,"0917 8380832",,,No,No,COD,,,"Walk- In",Professional,Active
+0000000830,Corporate,Professional,"Karen Sulit",,Main,"Karen Sulit",,"0917 3037707",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000831,Corporate,Professional,"Comfy Salon",,Main,"Comfy Salon",,"0906 4103386",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000832,Corporate,Professional,"Flirt Waxing Lounge",,Main,"Flirt Waxing Lounge",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000833,Corporate,Professional,"Rico Gallegos Salon",,Main,"Rico Gallegos Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000834,Corporate,Professional,"La Solena Salon & Spa",,Main,"La Solena Salon & Spa",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000835,Corporate,Professional,"Naimahs Spa",,Main,"Naimahs Spa",,"0917 5305908",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000836,Corporate,Professional,"Lavander Garden",,Main,"Lavander Garden",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000837,Corporate,Professional,"Shojikida Hollywood Salon",,Main,"Shojikida Hollywood Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000838,Corporate,Professional,"Nean Spa",,Main,"Nean Spa",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000839,Corporate,Professional,"Nail Care by Monida",,Main,"Nail Care by Monida",,"0939 9491436",mhelman113@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000840,Corporate,Professional,"Derm Care",,Main,"Derm Care",,"0928 3005677",yayi@dermcareprofessionals.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000841,Corporate,Professional,"Mohesaka Health and Beauty Center",,Main,"Mohesaka Health and Beauty Center",,"0917 8456513",hcmilla@gmail.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000842,Corporate,Professional,"Minami Salon",,Main,"Minami Salon",,"0927 9178906",minamisalon@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000843,Corporate,Professional,"Aspeto Salon",,Main,"Aspeto Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000844,Corporate,Professional,"Derma  Aesthetica",,Main,"Derma  Aesthetica",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000845,Corporate,Professional,"Aesthetica Homes Spa",No,Main,"Aesthetica Homes Spa",,"0916 6871024",cristinejavier24@yahoo.com,,No,No,COD,,,ideliver101,Professional,Active
+0000000846,Corporate,Professional,Widescope,,Main,Widescope,,"0917 3853895",miyaow_kitty@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000847,Corporate,Professional,"Precy Beauty Center",No,duplicate,"Precy Beauty Center",,,,,No,No,COD,,,"Walk- In",Professional,Active
+0000000848,Corporate,Professional,"Spamper Me",,Main,"Spamper Me",,"0917 5670699",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000849,Corporate,Professional,"MB Young Skin",,Main,"MB Young Skin",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000850,Corporate,Professional,"Headway Barbershop Salon",No,Ermita,"Headway Barbershop Salon",,,,"Metro Manila",No,No,COD,,,ideliver101,Professional,Active
+0000000851,Corporate,Professional,"Avante Garde Salon",,Main,"Avante Garde Salon",,"0917 8081708",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000852,Corporate,Professional,"Jsn Es Headway Corporation",No,"SM North","Headway Vera",,,,,No,No,COD,,,ideliver101,Professional,Active
+0000000853,Corporate,Professional,"Jsn Es Headway Corporation",Yes,"SM MOA","Headway Vera",241-055-981-000,,mikhaelhirang@yahoo.com,,No,No,COD,,,"Walk- In",Professional,Active
+0000000854,Corporate,Professional,"Salon De Matt",,Main,"Salon De Matt",,,salon_de_matt@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000855,Corporate,Professional,"Salon Paradesus",,Main,"Salon Paradesus",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000856,Corporate,Professional,"Salon De Sharon",,Main,"Salon De Sharon",,,salondesharon@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000857,Corporate,Professional,"Salon Ungrina",,Main,"Salon Ungrina",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000858,Corporate,Professional,"Shunji Matsou Salon",No,Main,"Shunji Matsou Salon",157-585-024-000,"0922 8679896","no email",,No,No,COD,,,"Walk- In",Professional,Active
+0000000859,Corporate,Professional,"Signature Style",,Main,"Signature Style",,,sigstylemktng@gmail.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000860,Corporate,Professional,"Skin Dermatology Associates",,Main,"Skin Dermatology Associates",,,"no email",,no,no,COD,,,"Walk- In",Professional,Active
+0000000861,Corporate,Professional,"Skin Health Total Skin and Body Enhancement",,Main,"Skin Health Total Skin and Body Enhancement",,,info@skinhealth.ph,,no,no,COD,,,"Walk- In",Professional,Active
+0000000862,Corporate,Professional,"Skin Lite Face and Body Center (Cancel)",No,Main,"Skin Lite Face and Body Center",,,"No email",,No,No,COD,,,"Walk- In",Professional,Active
+0000000863,Corporate,Professional,"Skin Perfect",,"Sta. Lucia","Skin Perfect",,,chuahellen1101@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000864,Corporate,Professional,"Skin Wellness Center",,Main,"Skin Wellness Center",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000865,Corporate,Professional,"Skinline Day Spa Facial & Body Center",,Main,"Skinline Day Spa Facial & Body Center",,,mgc_skinline@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000866,Corporate,Professional,"Spaholic Spabulous Girls, Inc.",No,Main,"Spaholic Spabulous Girls, Inc.",,0917-539-3539,,,No,No,COD,,,ideliver101,Professional,Active
+0000000867,Corporate,Professional,"Spaholics the Home Spa",,Main,"Spaholics the Home Spa",,,spaholics_homespa@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000868,Corporate,Professional,"Strands Lifestyle Salon and Spa",,Main,"Strands Lifestyle Salon and Spa",,,strands_salon@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000869,Corporate,Professional,"Studio 546",No,Main,"Studio 546",231-252-998-000,638-3956,elnamartin@yahoo.com,,No,No,COD,,,ideliver101,Professional,Active
+0000000870,Corporate,Professional,"Strands Hair Salon",,Main,"Strands Hair Salon",,,"No email",,no,no,COD,,,"Walk- In",Professional,Active
+0000000871,Corporate,Professional,"Terra Wellness Spa",,Main,"Terra Wellness Spa",,,terrawellness.spa@gmail.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000872,Corporate,Professional,"Ultima Salon for Men & Women",,Main,"Ultima Salon for Men & Women",,,lynllave@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000873,Corporate,Professional,"Urban Spa",,Main,"Urban Spa",,,urban_spa@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000874,Corporate,Professional,Visage,,Main,Visage,,,visage_robinsonsgalleria@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000875,Corporate,Professional,"Eco Essence Beauty Lounge",No,Main,"Eco Essence Beauty Lounge",,341-2084,"no email",,No,No,COD,,,"Walk- In",Professional,Active
+0000000876,Corporate,Professional,"Ave Jewel Salon",,Main,"Ave Jewel Salon",,,avejewelsalon@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000877,Corporate,Professional,"Azta Urban Salon",,Main,"Azta Urban Salon",,,chiccuttars_inc@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000878,Corporate,Professional,"Bamboo Nails",,Main,"Bamboo Nails",,,wandalynl@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000879,Corporate,Professional,"Barber Bar One Stop Grooming Venue",No,Main,"Barber Bar One Stop Grooming Venue",,637-4385,,,No,No,COD,,,ideliver101,Professional,Active
+0000000880,Corporate,Professional,"Beauty Concept Salon Eqpt & Beauty Supply, Inc.",,Main,"Beauty Concept Salon Eqpt & Beauty Supply, Inc.",,,beautycon@pldtdsl.net,,no,no,COD,,,"Walk- In",Professional,Active
+0000000881,Corporate,Professional,"Beauty Source Skin Care & Spa",No,Main,"Beauty Source Skin Care & Spa",,"0917 2068815",beautysource_spa@yahoo.com,www.beautysource.com.ph,No,No,"30 days",,,ideliver101,Professional,Active
+0000000882,Corporate,Professional,"Beverly & Kyla",,Main,"Beverly & Kyla",,,"no email",,no,no,COD,,,"Walk- In",Professional,Active
+0000000883,Corporate,Professional,"BFP Salon",,Main,"BFP Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000884,Corporate,Professional,"Bing Styler Salon",,Main,"Bing Styler Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000885,Corporate,Professional,"California Garden Square",No,Main,"California Garden Square",,,"No email address",,No,No,COD,,,"Walk- In",Professional,Active
+0000000886,Corporate,Professional,"Cameo Salon for Men & Women",,Main,"Cameo Salon for Men & Women",,,"no email",,no,no,COD,,,"Walk- In",Professional,Active
+0000000887,Corporate,Professional,"Cathy Valencia Clnic",,Main,"Cathy Valencia Clnic",,,cathyvaelnciaskincenter@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000888,Corporate,Professional,"Celebrity Nails Salon",,Main,"Celebrity Nails Salon",,,celebritynailsmakati@gmail.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000889,Corporate,Professional,"Charina Salon & Spa",,Main,"Charina Salon & Spa",,,santoyoclothline@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000890,Corporate,Professional,"Cocomo Nail Spa",,Main,"Cocomo Nail Spa",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000891,Corporate,Professional,"Cocoon Salon",,Main,"Cocoon Salon",,,cezduldulao@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000892,Corporate,Professional,"Cocoy Salon",,Main,"Cocoy Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000893,Corporate,Professional,"Cuts & Colours",No,Main,"Cuts & Colours",,577-1096,cuts_and_colours@yahoo.com,,No,No,COD,,,ideliver101,Professional,Active
+0000000894,Corporate,Professional,"Dermaline Facial and Skin Care Center",,Main,"Dermaline Facial and Skin Care Center",,,"no email",,no,no,COD,,,"Walk- In",Professional,Active
+0000000895,Corporate,Professional,"Dermaline Facial and Skin Care Center",,Araneta,"Dermaline Facial and Skin Care Center",,,dianastaldercubao@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000896,Corporate,Professional,"Dermexcel Skin & Hair Clinic",No,Main,"Dermexcel Skin & Hair Clinic",,6563000,cyrilannbernardo@yahoo.com,,No,No,"30 days",,,ideliver101,Professional,Active
+0000000897,Corporate,Professional,"Ellis Salon for Men & Women",,Main,"Ellis Salon for Men & Women",,,"no email",,no,no,COD,,,"Walk- In",Professional,Active
+0000000898,Corporate,Professional,"Elvies Beauty Café",,Main,"Elvies Beauty Café",,,ellaariolla@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000899,Corporate,Professional,"Emerald Skin Care Center",,Main,"Emerald Skin Care Center",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000900,Corporate,Professional,"Eros Salon",,Main,"Eros Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000901,Corporate,Professional,"Face Matter",,Main,"Face Matter",,"0920 5718799",dermcareprofessional@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000902,Corporate,Professional,"Facial Care Center-Head Office",,Main,"Facial Care Center-Head Office",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000903,Corporate,Professional,"Farfalla Salon",,Main,"Farfalla Salon",,,olan_02ph@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000904,Corporate,Professional,"Good Grooming Barber Shop & Salon",,Main,"Good Grooming Barber Shop & Salon",,,"no email",,no,no,COD,,,"Walk- In",Professional,Active
+0000000905,Corporate,Professional,"Hanuels Spa",,Main,"Hanuels Spa",,"0919 2954450",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000906,Corporate,Professional,"Happy Family Back & Body Spa",,Main,"Happy Family Back & Body Spa",,,"no email",,no,no,COD,,,"Walk- In",Professional,Active
+0000000907,Corporate,Professional,"Headway Barber Shop",No,"Mega Mall","Headway Barber Shop",,,,,No,No,COD,,,"Walk- In",Professional,Active
+0000000908,Corporate,Professional,"Holistic Circle, Inc.",,Main,"Holistic Circle, Inc.",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000909,Corporate,Professional,"I-lash Extensions Salon",,Main,"I-lash Extensions Salon",,,,ilashsalon.multiply.com,no,no,COD,,,"Walk- In",Professional,Active
+0000000910,Corporate,Professional,"Institut de Vybrance Salon",,Main,"Institut de Vybrance Salon",,,"no email",,no,no,COD,,,"Walk- In",Professional,Active
+0000000911,Corporate,Professional,"La Ritirata Urbana",,Main,"La Ritirata Urbana",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000912,Corporate,Professional,"Life Strands Salon & Spa",,Main,"Life Strands Salon & Spa",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000913,Corporate,Professional,"Lotus Hand & Foot Spa",,Main,"Lotus Hand & Foot Spa",,,j_bellaflores@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000914,Corporate,Professional,"Mane Depot Salon",,Main,"Mane Depot Salon",,"0905 3571102",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000915,Corporate,Professional,"MB Youngskin Facial Care Center",No,Main,"MB Youngskin Facial Care Center",,,wrozul@yahoo.com,,No,No,COD,,,"Walk- In",Professional,Active
+0000000916,Corporate,Professional,"Mirovelle Salon And Spa",,Main,"Mirovelle Salon And Spa",,,beverly@mirovellesalonspa.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000917,Corporate,Professional,"Modelle Salon",No,Main,"Modelle Salon",,726-7960,,,No,No,COD,,,ideliver101,Professional,Active
+0000000918,Corporate,Professional,"Motion Sison Salon",,Main,"Motion Sison Salon",,,jovysison918@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000919,Corporate,Professional,"Ms. Emelyn Alingog",,Main,"Ms. Emelyn Alingog",,,alingogph@hotmail.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000920,Corporate,Professional,"Nail Loft",,Main,"Nail Loft",,"0917 3294912","no email",,no,no,COD,,,"Walk- In",Professional,Active
+0000000921,Corporate,Professional,"Nailcare By Monida",,Main,"Nailcare By Monida",,"0919 6827511",mhelman113@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000922,Corporate,Professional,"Nails at Home",,Main,"Nails at Home",,,nailsathome@gmail.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000923,Corporate,Professional,"Ness Astilla Hair Salon",No,Main,"Ness Astilla Hair Salon",,,,,No,No,COD,,,"Walk- In",Professional,Active
+0000000924,Corporate,Professional,"Ngiyan Spa",,Main,"Ngiyan Spa",,"0917 5709570",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000925,Corporate,Professional,"Nimfa Ferrer Salon",,Main,"Nimfa Ferrer Salon",,,"no email",,no,no,COD,,,"Walk- In",Professional,Active
+0000000926,Corporate,Professional,"Nora Dela Rosa Beauty Skin Care Center",,Main,"Nora Dela Rosa Beauty Skin Care Center",,,graceocampo0727@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000927,Corporate,Professional,"Nuvo Nails",No,Main,"Nuvo Nails",,"0917 3283371",,,No,No,COD,,,"Walk- In",Professional,Active
+0000000928,Corporate,Professional,"Opulence Spa",,Main,"Opulence Spa",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000929,Corporate,Professional,"Ortigas Spa & Salon",,Main,"Ortigas Spa & Salon",,,elainedublin@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000930,Corporate,Professional,"Out And About Salon",,Main,"Out And About Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000931,Corporate,Professional,"Pat of Cameo Salon",,Main,"Pat of Cameo Salon",,,"no email",,no,no,COD,,,"Walk- In",Professional,Active
+0000000932,Corporate,Professional,"Piandre Salon",,Anapolis,"Piandre Salon",,,salonsys@hotmail.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000933,Corporate,Professional,"Piandre Salon for Men & Women",,"Little Baguio","Piandre Salon for Men & Women",,,ainazvalencia@hotmail.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000934,Corporate,Professional,"Precys Beauty Center",,Main,"Precys Beauty Center",,,"no email",,no,no,COD,,,"Walk- In",Professional,Active
+0000000935,Corporate,Professional,"Red Salon Head Office",,Main,"Red Salon Head Office",,,ian_paz2000@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000936,Corporate,Professional,"Dominguez Salon",,Main,"Dominguez Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000937,Corporate,Professional,"One Beverly Spa",,Main,"One Beverly Spa",,"0917 9633174",onebeverlyspa@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000938,Corporate,Professional,"Jun L. Encarnacion Salon for Men & Women",,Ortigas,"Jun L. Encarnacion Salon for Men & Women",,,"itumayerikha39@yahoo.com edwina39@gmail.com",,no,no,COD,,,"Walk- In",Professional,Active
+0000000939,Corporate,Professional,"Encarnation Salon Skin Care & Spa",,Manila,"Encarnation Salon Skin Care & Spa",,"0919 5397464",dory_7270@yahoo.com.ph,,no,no,COD,,,"Walk- In",Professional,Active
+0000000940,Corporate,Professional,"Salon Isabel",No,Main,"Salon Isabel",,"0908 8911406",ysabodyandskin@yahoo.com,,No,No,"30 days",,,ideliver101,Professional,Active
+0000000941,Corporate,Professional,"Organique Salon",No,Main,"Organique Salon",,"0939 2228939/ 0917 8124459",,,No,No,COD,,,JRS,Professional,Active
+0000000942,Corporate,Professional,"Nail Treats Hand & Foot Spa",,Main,"Nail Treats Hand & Foot Spa",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000943,Corporate,Professional,"Metro Salon",,Main,"Metro Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000944,Corporate,Professional,"La Vie Hand Foot & Nail Spa",No,Main,"La Vie Hand Foot & Nail Spa",,"0922 8552843",lavienails@gmal.com,lavienails.multiply.com,No,No,COD,,,ideliver101,Professional,Active
+0000000945,Corporate,Professional,"EDS Salon",,Ortigas,"EDS Salon",,,,,no,yes,COD,,,"Walk- In",Professional,Active
+0000000946,Corporate,Professional,"EDS Salon Head Office",,Main,"EDS Salon Head Office",,"0905 2946761/ 0920 2587566",,,no,yes,COD,,,"Walk- In",Professional,Active
+0000000947,Corporate,Professional,"CAMS Salon",No,Main,"CAMS Salon",,"0916 5240830",,,No,No,COD,,,"Walk- In",Professional,Active
+0000000948,Corporate,Professional,"All About Nails",,Main,"All About Nails",,,,,no,yes,COD,,,"Walk- In",Professional,Active
+0000000949,Corporate,Professional,"Vogue Visage Salon",,Main,"Vogue Visage Salon",,"0920 9216628",visagesalonlibis@yahoo.com,,no,yes,COD,,,"Walk- In",Professional,Active
+0000000950,Corporate,Professional,"Nail Concept",,Main,"Nail Concept",,,,,no,yes,COD,,,"Walk- In",Professional,Active
+0000000951,Corporate,Professional,"Nail Concept",,"Marquee Mall","Nail Concept",,,,,no,yes,COD,,,"Walk- In",Professional,Active
+0000000952,Corporate,Professional,"Blush Nail Spa",No,Main,"Blush Nail Spa",,"0920 9180256",blushnailspa@yahoo.com,,No,No,"30 days",,,ideliver101,Professional,Active
+0000000953,Corporate,Professional,"Freshy Salon",,Main,"Freshy Salon",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000954,Corporate,Professional,"Straight Naturelle Salon",No,"San Pablo","Straight Naturelle Salon",,,,,No,No,COD,,,"Walk- In",Professional,Active
+0000000955,Corporate,Professional,"Straight Naturelle Salon",,Waltermart,"Straight Naturelle Salon",,"0922 8312274",grace.lee928@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000956,Corporate,Professional,"Platinum Skin Care Center",No,Main,"Platinum Skin Care Center",,"0916 7275558",platinumskin_care@yahoo.com,,No,No,COD,,,"Walk- In",Professional,Active
+0000000957,Corporate,Professional,"Mendez Medical Group",,Main,"Mendez Medical Group",,,nyssaferedo@gmail.com,,no,yes,COD,,,"Walk- In",Professional,Active
+0000000958,Corporate,Professional,"Genesis Nail Enhancement",,Main,"Genesis Nail Enhancement",,"0923 9764353",,,no,yes,COD,,,"Walk- In",Professional,Active
+0000000959,Corporate,Professional,"Aesthetica Salon",,Main,"Aesthetica Salon",,"0917 8213443",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000960,Corporate,Professional,"Nail Suite Theraphy",,Makati,"Nail Suite Theraphy",,"0917 8391688",bvec8888@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000961,Corporate,Professional,"Nail Suite Theraphy",,Main,"Nail Suite Theraphy",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000962,Corporate,Professional,"Athena House of Beauty & Wellness",,Main,"Athena House of Beauty & Wellness",,"0918 9087678",athena_hbw@yahoo.com,,no,yes,COD,,,"Walk- In",Professional,Active
+0000000963,Corporate,Professional,"Salon De Mayo",,Main,"Salon De Mayo",,"0917 8630531",,,no,yes,COD,,,"Walk- In",Professional,Active
+0000000964,Corporate,Professional,"Epic Salon",No,"Head Office (Main)","Beautiventures International ( Epic Salon HO )",,,epicthesalon@gmail.com,,No,No,COD,,,"Walk- In",Professional,Active
+0000000965,Corporate,Professional,"Antonio Hairdressing Salon & Spa",,Main,"Antonio Hairdressing Salon & Spa",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000966,Corporate,Professional,"Ricci Salon",No,Main,"Ricci Salon",,"0919 8615094",,,No,No,COD,,,JRS,Professional,Active
+0000000967,Corporate,Professional,"Bridges Salon",,Main,"Bridges Salon",,"0917 3281188",,,no,yes,COD,,,"Walk- In",Professional,Active
+0000000968,Corporate,Professional,"Franzy Salon",No,Main,"Franzy Salon",,"344 7624",,,No,No,COD,,,JRS,Professional,Active
+0000000969,Corporate,Professional,"Hairs and Nails Salon",No,Main,"Hairs and Nails Bodies & Faces Spa",928090881,"0918 9023616",,,No,No,COD,,,JRS,Professional,Active
+0000000970,Corporate,Professional,"Envy Me Salon & Spa",No,Ortigas,"Envy Me Salon & Spa",945583103003,"0918 9023616",envymegalleria@gmail.com," http://www.blogspot.com/envymesalon",No,No,"30 days",,,ideliver101,Professional,blocked
+0000000971,Corporate,Professional,"Head Zone Salon",No,Dagupan,"Head Zone Salon",,"0920 9283927",,,No,No,COD,,,JRS,Professional,Active
+0000000972,Corporate,Professional,"Facial Plus by Bioessence",No,Main,"Facial Plus by Bioessence",,"0922 8749004",cheryl_garcia682@yahoo.com,,No,No,"30 days",,,ideliver101,Professional,Active
+0000000973,Corporate,Professional,"City Spa",No,Main,"City Spa",,,shine_sims@yahoo.com,,No,No,COD,,,"Walk- In",Professional,Active
+0000000974,Corporate,Professional,"City Spa Olongapo",No,Main,"City Spa Olongapo",,"0918 9023616/ 0922 8974463 / 09178116886",shine_sims@yahoo.com,,No,No,COD,,,JRS,Professional,Active
+0000000975,Corporate,Professional,"The Spa @ Reveal",No,Main,"Reveal Group of Companies",,"0927 2489812/0921 4417965",reveal_facialskincarespa@yahoo.com,,No,No,COD,,,JRS,Professional,Active
+0000000976,Corporate,Professional,"Philosphy Salon",No,Main,"Philosphy Salon",,,,,No,No,COD,,,"Walk- In",Professional,Inactive
+0000000977,Corporate,Professional,"Buff Spa",No,Main,"Buff Spa",,,,,No,No,COD,,,"Walk- In",Professional,Active
+0000000978,Corporate,Professional,"Buff Spa",,Fairview,"Buff Spa",,"0922 5573991 09175276362",,,no,yes,COD,,,"Walk- In",Professional,Active
+0000000979,Corporate,Professional,"Buff Spa",,Sucat,"Buff Spa",,"0917 5276362",uwli.ph@gmail.com,,no,yes,COD,,,"Walk- In",Professional,Active
+0000000980,Corporate,Professional,"Fabio Salon & Barber Shop",,Main,"Fabio Salon & Barber Shop",,"0916 6676343",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000981,Corporate,Professional,"Le Charmant Salon",No,Main,"Les Charmant Salon",,7215055,le.charmant@yahoo.com,,No,No,COD,,,ideliver101,Professional,Active
+0000000982,Corporate,Professional,"Avesta Salon",No,Main,"Avesta Salon",,09228456848,avesta_nan88@yahoo.com,http://avestasalon.com/contact,No,No,"30 days",,,ideliver101,Professional,Active
+0000000983,Corporate,Professional,"Revilla International Salon Services",No,.,"Great Cuts by Angelo Justin",302373773,"413 9406",angelojustin_greatcuts@yahoo.com,,No,No,"30 days",,,ideliver101,Professional,Active
+0000000984,Corporate,Professional,"Bambi Fuentes Hair & Make-Up",,Main,"Bambi Fuentes Hair & Make-Up",,,bridalbook.com/bambifuentessalon@yahoo.com,,no,yes,COD,,,"Walk- In",Professional,Active
+0000000985,Corporate,Professional,"BCG Salon",No,Main,"BCG Salon",,"0922 8261576",cheril926@gmail.com,,No,No,"30 days",,,ideliver101,Professional,Active
+0000000986,Corporate,Professional,"Beauty and Butter",No,Main,"Beauty and Butter",,"0927 5055773",wed.tinga@beautyandbutter.com,http://beautyandbutter.tumblr.com/,No,No,"30 days",,,ideliver101,Professional,Active
+0000000987,Corporate,Professional,"California Nails and Day Spa Inc.",No,Main,"California Nails and Day Spa",,"0917 8588162",,,No,No,COD,,,"Walk- In",Professional,Active
+0000000988,Corporate,Professional,"California Nails and Day Spa",,"the Fort","California Nails and Day Spa",,,calif_nailsdayspa@yahoo.com/califnail@gmail.com,,no,yes,COD,,,"Walk- In",Professional,Active
+0000000989,Corporate,Professional,"Chic Center Corp.",,Main,"Chic Center Corp.",,,lulai.alvez@chiccentre.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000990,Corporate,Professional,"Clara International Phil. Inc. Face & Body Centre",No,"Quezon City","Clara International Phil. Inc. Face & Body Centre",,"374-6154 / 374-0974 / 782-575",Clarainternationalph@yahoo.com.ph,,No,No,"30 days",,,ideliver101,Professional,Active
+0000000991,Corporate,Professional,"Davids Salon Inc. Head Office",No,Main,"Davids Salon Inc. Head Office",,,hannapinon@davidsalon.com.ph,www.davidsalon.com.ph,No,No,COD,,,"Walk- In",Professional,Active
+0000000992,Corporate,Professional,"Davids Salon Inc.",No,"QC Pavillion","Rever David's Salon",,"0920 9282531",marilynalbert_79@yahoo.com,http://www.davidsalon.com.ph,No,No,COD,,,JRS,Professional,Active
+0000000993,Corporate,Professional,"Dynes Salon",,Main,"Dynes Salon",,"0922 8489688",dynes_salon_spa@yahoo.com,,no,no,COD,,,"Walk- In",Professional,Active
+0000000994,Corporate,Professional,"Edwin Samot Hair Design & Spa",No,Main,"Edwin Samot Salon",,"0917 5098668",,,No,No,"30 days",,,ideliver101,Professional,Active
+0000000995,Corporate,Professional,"El Pelo Salon",,Main,"El Pelo Salon",,"0916 4769181",,,no,no,COD,,,"Walk- In",Professional,Active
+0000000996,Corporate,Professional,"Fabio Salsa",,Main,"Fabio Salsa",,,,,no,no,COD,,,"Walk- In",Professional,Active
+0000000997,Corporate,Professional,"Fanny Serrano Beauty Salon",No,Main,"FF JR Enterprises",104015611,"0927 8761415  0918 3013032",fannyserranosalon@yahoo.com,myfannyserrano.com,No,No,"30 days",,,ideliver101,Professional,blocked
+0000000998,Corporate,Professional,"Fanny Serrano Beauty Salon",No,Connecticut,"Fanny Serrano Beauty Salon",,,fannyserranosalon@yahoo.com,,No,No,COD,,,"Walk- In",Professional,blocked
+0000000999,Corporate,Professional,"Fanny Serrano Beauty Salon",No,Anapolis,"Fanny Serrano Beauty Salon",,,fannyserranosalon@yahoo.com,,No,No,COD,,,"Walk- In",Professional,blocked
+0000001000,Corporate,Professional,"Fanny Serrano Beauty Salon",No,"the Fort","Fanny Serrano Beauty Salon",,,fannyserranosalon@yahoo.com,,No,No,COD,,,"Walk- In",Professional,blocked
+0000001001,Corporate,Professional,"Fanny Serrano Beauty Salon",No,Pasig,"Fanny Serrano Beauty Salon",,,fannyserranosalon@yahoo.com,,No,No,COD,,,"Walk- In",Professional,blocked
+0000001002,Corporate,Professional,"Franck Provost",No,Rockwell,"Innovation and Concepts, Inc",005376864,8953401,bogaborro@gmail.com,http://www.franphil.com/franck-provost-salon-franchise/,No,No,"30 days",,,ideliver101,Professional,Active
