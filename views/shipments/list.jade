@@ -1,0 +1,40 @@
+.portlet.box.grey
+	.portlet-title
+		.caption
+			i.fa.fa-edit
+			| SHIPMENT LIST
+		.tools
+			a.collapse(href="javascript:;")
+	.portlet-body.flip-scroll
+		.table-toolbar
+			.btn-group
+				button(ui-sref="newShipment").tooltips(data-container="body", data-placement="top", data-html="true", data-original-title="Add new Record")
+					i.fa.fa-plus
+					
+		table#shipments_table.table.table-bordered.table-condensed.flip-content(ng-table="tableParams")
+			thead.flip-content.bg-grey
+				tr
+					th Part Number
+					th Supplier
+					th Reference Number
+					th Arrival Date
+					th Confirmed By
+					th Approved By
+					th Shipment Notes
+					th Shipment Status
+			tbody
+				tr(ng-repeat="shipment in shipments")
+					td(data-title="'Part Number'", sortable="'part_number'") {{shipment.part_number}}
+					td(data-title="'Supplier'", sortable="'supplier'") {{shipment.supplier}}
+					td(data-title="'Reference Number'", sortable="'reference_no'") {{shipment.reference_no}}
+					td(data-title="'Arrival Date'", sortable="'arrival_date'") {{shipment.arrival_date}}
+					td(data-title="'Confirmed By'", sortable="'confirmed_by'") {{shipment.confirmed_by}}
+					td(data-title="'Shipment Notes'", sortable="'shipment_notes'") {{shipment.shipment_notes}}
+					td(data-title="'Shipment Status'", sortable="'shipment_status'") {{shipment.shipment_status}}
+					td
+						button(type="button", ui-sref="viewShipment({id:shipment._id})").tooltips(data-container="body", data-placement="top", data-html="true", data-original-title="View Record")
+							i.fa.fa-eye
+						button(type="button", ui-sref="editShipment").tooltips(data-container="body", data-placement="top", data-html="true", data-original-title="Edit Record")
+							i.fa.fa-pencil
+						button(type="button", ng-click="deleteShipment(shipment)").tooltips(data-container="body", data-placement="top", data-html="true", data-original-title="Delete Record")
+							i.fa.fa-trash-o

@@ -1,0 +1,38 @@
+.portlet.box.grey
+	.portlet-title
+		.caption
+			i.fa.fa-edit
+			| ORDER LIST
+		.tools
+			a.collapse(href="javascript:;")
+	.portlet-body.flip-scroll
+		.table-toolbar
+			.btn-group
+				button(ui-sref="newOrder").tooltips(data-container="body", data-placement="top", data-html="true", data-original-title="Add new Record")
+					i.fa.fa-plus
+					
+		table#orders_table.table.table-bordered.table-condensed.flip-content(ng-table="tableParams")
+			thead.flip-content.bg-grey
+				tr
+					th SO Number
+					th Inventory Location
+					th Order Source
+					th Sales Executive
+					th Delivery Method
+					th Ordered By
+					th Customer
+			tbody
+				tr(ng-repeat="order in orders")
+					td(data-title="'SO Number'", sortable="'sono'") {{order.brand}}
+					td(data-title="'Inventory Location'", sortable="'inventory_locations'") {{order.brand}}
+					td(data-title="'Order Source'", sortable="'order_source'") {{order.order_source}}
+					td(data-title="'Sales Executive'", sortable="'sales_executive'") {{order.sales_executive}}
+					td(data-title="'Delivery Method'", sortable="'delivery_method'") {{order.delivery_method}}
+					td(data-title="'Ordered By'", sortable="'odered_by'") {{order.odered_by}}
+					td
+						button(type="button", ui-sref="viewOrder({id:order._id})").tooltips(data-container="body", data-placement="top", data-html="true", data-original-title="View Record")
+							i.fa.fa-eye
+						button(type="button", ui-sref="editOrder").tooltips(data-container="body", data-placement="top", data-html="true", data-original-title="Edit Record")
+							i.fa.fa-pencil
+						button(type="button", ng-click="deleteOrder(order)").tooltips(data-container="body", data-placement="top", data-html="true", data-original-title="Delete Record")
+							i.fa.fa-trash-o

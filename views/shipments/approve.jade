@@ -1,0 +1,134 @@
+.portlet.box.grey
+	.portlet-title
+		.caption
+			i.fa.fa-reorder
+			| APPROVE SHIPMENT
+		.tools
+			a.collapse(href="javascript:;")
+			a.config(href="#portlet-config", data-toggle="modal")
+			a.reload(href="javascript:;")
+			a.remove(href="javascript:;")
+	.portlet-body.form
+		form#shipment_approve.form-horizontal(action="/shipment/approve", method="post")
+			.form-body
+				.alert.alert-danger.display-hide
+					button.close(data-close="alert")
+					| You have some form errors. Please check below.
+				.alert.alert-success.display-hide
+					button.close(data-close="alert")
+					| Your form validation is successful!
+				.row
+					.col-md-6
+						.form-group
+							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+								select#transactionTypeId.select2me.form-control.select2-offscreen(name="supplier[supplierId]", tabindex="-1", required="required")
+									option(value="")
+									option(value="1") Supplier 1
+									option(value="2") Supplier 2
+								span.col-md-12.control-label	Supplier 
+					.col-md-6
+						.form-group
+							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
+								input#shipmentNo.form-control(type="text", name="shipmentNo", readonly="readonly", value="")
+								span.col-md-12.control-label	Shipment Number 
+				.row
+					.col-md-6
+						.form-group
+							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+								input#referenceNo.form-control(type="text", name="referenceNo", value="")
+								span.col-md-12.control-label	Reference Number 
+					.col-md-6
+						.form-group
+							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
+				.row
+					.col-md-6
+						.form-group
+							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+								select#shipmentStatus.select2me.form-control.select2-offscreen(name="shipmentStatus", tabindex="-1", required="required")
+									option(value="")
+									option(value="1") Status1
+									option(value="2") Status2
+					.col-md-6
+						.form-group
+							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
+								input#arrivalDate.form-control(type="text", name="arrivalDate", value="")
+								span.col-md-12.control-label	Arrival Date 
+				.row
+					.col-md-12
+						.form-group
+							.col-md-2.col-lg-2
+							.col-md-8.col-xs-12.col-sm-12.col-lg-8
+								textarea#shipmentNotes.text-area.form-control(name="shipmentNotes", rows="1", required="required")
+								span.col-md-12.control-label	Special Instructions 
+							.col-md-2.col-lg-2
+				.row
+					.col-md-6
+						.form-group
+							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+								input#confirmedBy.form-control(type="text", name="confirmedBy", value="")
+								span.col-md-12.control-label	Confirmed By 
+					.col-md-6
+						.form-group
+							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
+								input#approveBy.form-control(type="text", name="approveBy", value="")
+								span.col-md-12.control-label	Approved By 
+				.portlet.box.grey
+					.portlet-title
+						.caption
+							i.fa.fa-reorder
+							| SHIPMENT ITEMS
+						.tools
+							a.collapse(href="javascript:;")
+							a.config(href="#portlet-config", data-toggle="modal")
+							a.reload(href="javascript:;")
+							a.remove(href="javascript:;")
+					.portlet-body.form
+						.form-body
+							.row
+								br
+								.col-md-2
+								.col-md-8
+									.col-xs-6.col-sm-6.col-md-6.col-md-6(style="padding-left: 0px;")
+										button.btn-sm.green.custom-left(type="button", data-toggle="modal", href="#purchaseModal")
+											| Add New
+											i.fa.fa-plus
+									.col-xs-6.col-sm-6.col-md-6.col-md-6(style="padding-right: 0px;")
+								.col-md-2
+							.form-group
+								.col-md-2
+								.col-md-8
+									.row
+										br
+										.col-md-12
+											.portlet-body.flip-scroll
+												table#purchaseTable.table.table-bordered.table-condensed.flip-content
+													thead.flip-content.bg-grey
+														tr
+															th Shipment Item
+															th Shipment ID 
+															th Product 
+															th Quantity
+															th Cost
+															th Currency
+															th Expiry Date
+															th Condition
+															th 
+													tbody
+														tr
+															td
+															td
+															td
+															td
+															td
+															td
+															td
+															td
+															td
+								.col-md-2
+			.form-actions.fluid
+				.row
+					.col-xs-10.col-sm-10.col-md-11.col-lg-11
+						.custom-right
+							button.btn.green(type="submit") Approve
+							button.btn.default(type="button", ui-sref="shipments") Cancel
+					.col-md-6

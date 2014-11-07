@@ -1,0 +1,37 @@
+.portlet.box.grey
+	.portlet-title
+		.caption
+			i.fa.fa-edit
+			| PURCHASE LIST
+		.tools
+			a.collapse(href="javascript:;")
+	.portlet-body.flip-scroll
+		.table-toolbar
+			.btn-group
+				button(ui-sref="newPurchase").tooltips(data-container="body", data-placement="top", data-html="true", data-original-title="Add new Record")
+					i.fa.fa-plus
+					
+		table#purchases_table.table.table-bordered.table-condensed.flip-content(ng-table="tableParams")
+			thead.flip-content.bg-grey
+				tr
+					th Supplier
+					th Reference Number
+					th Purchase Date
+					th Expected Arrival Date
+					th Purchase Notes
+					th Purchase Status
+			tbody
+				tr(ng-repeat="purchase in purchases")
+					td(data-title="'Supplier'", sortable="'supplier'") {{purchase.supplier}}
+					td(data-title="'Reference Number'", sortable="'reference_no'") {{purchase.reference_no}}
+					td(data-title="'Purchase Date'", sortable="'purchase_date'") {{purchase.purchase_date}}
+					td(data-title="'Expected Arrival Date'", sortable="'expected_arrival_date'") {{purchase.expected_arrival_date}}
+					td(data-title="'Purchase Notes'", sortable="'brand'") {{purchase.purchase_notes}}
+					td(data-title="'Purchase Status'", sortable="'brand'") {{purchase.purchase_status}}
+					td
+						button(type="button", ui-sref="viewPurchase({id:purchase._id})").tooltips(data-container="body", data-placement="top", data-html="true", data-original-title="View Record")
+							i.fa.fa-eye
+						button(type="button", ui-sref="editPurchase").tooltips(data-container="body", data-placement="top", data-html="true", data-original-title="Edit Record")
+							i.fa.fa-pencil
+						button(type="button", ng-click="deletePurchase(purchase)").tooltips(data-container="body", data-placement="top", data-html="true", data-original-title="Delete Record")
+							i.fa.fa-trash-o

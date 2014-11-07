@@ -57,17 +57,17 @@
 		   id : 2,
 		   childLink : [
 		      {
-		          link : "/customer",
+		          link : "/customers",
 		          title : "Customer",
 		          description : "Sales",
 		      },
 		      {
-		          link : "/product",
+		          link : "/products",
 		          title : "Products",
 		          description : "Sales",
 		      },
 		      {
-		          link : "/user",
+		          link : "/users",
 		          title : "Users",
 		          description : "Sales",
 		      }

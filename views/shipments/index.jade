@@ -1,0 +1,11 @@
+extends ../layout/main
+block scripts
+	script(src="/ngscripts/shipments/app.js", type="text/javascript")
+	script(src="/ngscripts/shipments/services.js", type="text/javascript")
+	script(src="/ngscripts/shipments/controllers.js", type="text/javascript")
+	script(type='text/javascript').
+		(function(){
+			var app = angular.module('erp',['menu','notification','shipmentApp','message','user','task','ngTable','datatables','ui.router']);
+		})();
+block content
+	div(ui-view)
