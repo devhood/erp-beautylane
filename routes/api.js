@@ -40,7 +40,7 @@ router.get('/:object/:id', function(req, res) {
     .sort(req.query.sorting || {}).skip(req.query.page || 0)
     .limit(req.query.rows || 0).toArray()
     .done(function(data){   
-    	res.status(200).json(data);
+    	res.status(200).json(data[0]);
     })
     .fail( function( err ) { 
     	res.status(400).json(err);

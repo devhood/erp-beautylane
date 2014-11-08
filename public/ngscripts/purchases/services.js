@@ -1,4 +1,4 @@
-angular.module('purchaseApp.services',[]).factory('Product',function($resource){
+angular.module('purchaseApp.services',[]).factory('Purchase',function($resource){
     return $resource('/api/purchases/:id',{id:'@_id'},{
         update: {
             method: 'PUT'
