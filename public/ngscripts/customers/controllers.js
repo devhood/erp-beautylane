@@ -5,7 +5,6 @@ angular.module('customerApp.controllers',[])
 		$scope.dtOptions = DTOptionsBuilder
 		.fromSource('/api/customers')
 		// Add Bootstrap compatibility
-//	.withBootstrap()
 		.withBootstrapOptions({
 				TableTools: {
 						classes: {
@@ -30,6 +29,8 @@ angular.module('customerApp.controllers',[])
 				'pdf',
 				'xls',
 		]);
+	    $scope.dtOptions.sScrollX = "100%";
+	    $scope.dtOptions.sScrollXInner = "100%";  
 	$scope.dtColumns = [
 			DTColumnBuilder.newColumn('category').withTitle('Category'),
 			DTColumnBuilder.newColumn('type').withTitle('Type'),
@@ -45,10 +46,10 @@ angular.module('customerApp.controllers',[])
 			DTColumnBuilder.newColumn('transaction_limit').withTitle('Transaction Limit'),
 			DTColumnBuilder.newColumn('payment_term').withTitle('Payment Terms'),
 			DTColumnBuilder.newColumn('shipping_mode').withTitle('Shipping Mode'),
-			DTColumnBuilder.newColumn('percent_commission').withTitle('Percent Commission'),
+			DTColumnBuilder.newColumn('commission_sharing').withTitle('Percent Commission'),
 			DTColumnBuilder.newColumn('sales_executive').withTitle('Sales Executive'),
 			DTColumnBuilder.newColumn('price_type').withTitle('Price Type'),
-			DTColumnBuilder.newColumn('customer_status').withTitle('Status'),
+			DTColumnBuilder.newColumn('status').withTitle('Status'),
 			DTColumnBuilder.newColumn(null).withTitle('Actions').notSortable()
 			.renderWith(function(data, type, full, meta) {
 					return '<a href="#/customers/view", ui-sref="editCustomer" class="tooltips btn default" '+

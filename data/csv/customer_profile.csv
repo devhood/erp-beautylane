@@ -1,4 +1,4 @@
-customer_id,category,type,company_name,consignee,branch,trade_name,tin,phone,email,website,franchisee,credit_limit,payment_term,transaction_limit,commision_sharing,shipping_mode,price_type,status,sec_no,sales_executive
+customer_id,category,type,company_name,consignee,branch,trade_name,tin,phone,email,website,franchisee,credit_limit,payment_term,transaction_limit,commission_sharing,shipping_mode,price_type,status,sec_no,sales_executive
 0000000001,Corporate,Professional,"Anne Mariquit",,Main,"Anne Mariquit",,"0915 7683593",,,no,no,COD,,,"Walk- In",Professional,Active,---,---
 0000000002,Corporate,Professional,"Monette L. Pua",,Main,"Monette L. Pua",,"0917 8888598",,,no,no,COD,,,"Walk- In",Professional,Active,---,---
 0000000003,Corporate,Professional,"Grace De Leon",,Main,"Grace De Leon",,,,,no,no,COD,,,"Walk- In",Professional,Active,---,---

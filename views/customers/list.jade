@@ -5,9 +5,9 @@
       | CUSTOMER LIST
     .tools
       a.collapse(href="javascript:;")
-  .portlet-body.flip-scroll(ng-controller="CustomerListController")
+  .portlet-body(ng-controller="CustomerListController")
     .table-toolbar
       .btn-group
         button(ui-sref="newCustomer").tooltips(data-container="body", data-placement="top", data-html="true", data-original-title="Add new Record")
           i.fa.fa-plus
-    table#customers_table.table.table-bordered.table-condensed.flip-content(datatable="" dt-options="dtOptions" dt-columns="dtColumns")
+    table#users_table.table.table-bordered.table-striped(datatable="" dt-options="dtOptions" dt-columns="dtColumns")
