@@ -7,7 +7,7 @@ app.config(function($stateProvider,$httpProvider){
         templateUrl:'/users/list',
         controller:'UserListController'
     }).state('viewUser',{
-       url:'/users/view',
+       url:'/users/view/:id',
        templateUrl:'users/view',
        controller:'UserViewController'
     }).state('newUser',{
@@ -15,7 +15,7 @@ app.config(function($stateProvider,$httpProvider){
         templateUrl:'users/add',
         controller:'UserCreateController'
     }).state('editUser',{
-        url:'/users/edit',
+        url:'/users/edit/:id',
         templateUrl:'users/edit',
         controller:'UserEditController'
     });

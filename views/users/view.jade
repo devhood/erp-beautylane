@@ -21,29 +21,29 @@
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
-								input#userId.form-control(type="text", name="userId", disabled="disabled")
+								input#userId.form-control(type="text", name="userId", disabled="disabled", value="{{user._id}}")
 								span.col-md-12.control-label ID
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
-								input#fullName.form-control(type="text", name="fullName", value="", required="")
+								input#fullName.form-control(type="text", name="fullName", required="", disabled="disabled", value="{{user.fullname}}")
 								span.col-md-12.control-label Full Name
 				.row
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
-								input#userName.form-control(type="text", name="userName", value="", required="")
+								input#userName.form-control(type="text", name="userName", required="", disabled="disabled", value="{{user.username}}")
 								span.col-md-12.control-label Username
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
-								input#password.form-control(type="password", name="password", value="", required="")
+								input#password.form-control(type="password", name="password", required="", , disabled="disabled", value="{{user.password}}")
 								span.col-md-12.control-label Password
 				.row
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
-								select#designationId.select2me.form-control.select2-offscreen(name="designation[designationId]", tabindex="-1")
+								select#designationId.select2me.form-control.select2-offscreen(name="position", tabindex="-1")
 									option(value="1") Developer
 									option(value="2") Sales Executive
 									option(value="3") Admin Assistant
@@ -53,13 +53,13 @@
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
-								input#email.form-control(type="email", name="email", value="", required="")
+								input#email.form-control(type="email", name="email", required="", disabled="disabled", value="{{user.email}}")
 								span.col-md-12.control-label Email
 				.row
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
-								input#mobile.form-control(type="text", name="mobile", value="", required="")
+								input#mobile.form-control(type="text", name="mobile", required="", disabled="disabled", value="{{user.phone}}")
 								span.col-md-12.control-label Mobile
 					.col-md-6
 						.form-group

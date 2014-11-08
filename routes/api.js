@@ -38,9 +38,9 @@ router.get('/:object/:id', function(req, res) {
     db.collection(req.params.object)
     .find(filter,req.query.columns || {})
     .sort(req.query.sorting || {}).skip(req.query.page || 0)
-    .limit(req.query.rows || 0)
+    .limit(req.query.rows || 0).toArray()
     .done(function(data){   
-        res.json(200,data);
+        res.json(200,data[0]);
     })
     .fail( function( err ) { 
         res.json(400,err);

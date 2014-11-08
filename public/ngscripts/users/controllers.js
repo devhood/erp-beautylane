@@ -1,14 +1,6 @@
 angular.module('userApp.controllers',[])
 .controller('UserListController',function($scope,$state,popupService,$window,User, $filter, DTOptionsBuilder, DTColumnBuilder){
 
-    $scope.deleteUser = function(user){
-        if(popupService.showPopup('Really delete this?')){
-            user.$delete(function(){
-                $window.location.href='';
-            });
-        }
-    };
-    
     $scope.dtOptions = DTOptionsBuilder
     .fromSource('/api/users')
     // Add Bootstrap compatibility
@@ -49,13 +41,13 @@ angular.module('userApp.controllers',[])
 	    DTColumnBuilder.newColumn('status').withTitle('Status'),
 	    DTColumnBuilder.newColumn(null).withTitle('Actions').notSortable()
 	    .renderWith(function(data, type, full, meta) {
-	        return '<a href="#/users/view", ui-sref="editUser" class="tooltips btn default" '+
+	        return '<a href="#/users/view/'+data._id+'", ui-sref="editUser" class="tooltips btn default" '+
 	        	'data-container="body", data-placement="top", '+
 	        	'data-html="true", data-original-title="View Record">' +
 	            '   <i class="fa fa-eye"></i>' +
 	            '</a>&nbsp;' +
 	            
-	            '<a href="#/users/edit", ui-sref="editUser" class="tooltips btn default" '+
+	            '<a href="#/users/edit/'+data._id+'"", ui-sref="editUser" class="tooltips btn default" '+
 	        	'data-container="body", data-placement="top", '+
 	        	'data-html="true", data-original-title="Edit Record">' +
 	            '   <i class="fa fa-edit"></i>' +
@@ -65,7 +57,9 @@ angular.module('userApp.controllers',[])
 
 }).controller('UserViewController',function($scope,$stateParams,User){
 
+	console.log($stateParams.id);
     $scope.user=User.get({id:$stateParams.id});
+    console.log($scope.user);
 
 }).controller('UserCreateController',function($scope,$state,$stateParams,User){
 
