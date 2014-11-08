@@ -1,4 +1,4 @@
-angular.module('customerApp.controllers',['ngTable'])
+angular.module('customerApp.controllers',[])
 .controller('customerListController',function($scope,$state,popupService,$window,Customer,ngTableParams, $filter){
 
 	

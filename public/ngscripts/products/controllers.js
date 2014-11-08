@@ -2,8 +2,6 @@ angular.module('productApp.controllers',['ngTable'])
 .controller('ProductListController',function($scope,$state,popupService,$window,Product,ngTableParams, $filter){
 
 
-		
-	
   $scope.products=Product.query();
 	
     $scope.deleteProduct = function(product){

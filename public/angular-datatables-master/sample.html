@@ -1,0 +1,65 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>angular-datatables</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="vendor/font-awesome-animation/dist/font-awesome-animation.min.css">
+	<link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="vendor/datatables/media/css/jquery.dataTables.min.css">
+	<link rel="stylesheet" href="vendor/datatables-colreorder/css/dataTables.colReorder.css">
+	<link rel="stylesheet" href="vendor/datatables-colvis/css/dataTables.colVis.css">
+	<link rel="stylesheet" href="vendor/datatables-tabletools/css/dataTables.tableTools.css">
+	<link rel="stylesheet" href="vendor/datatables-responsive/css/dataTables.responsive.css">
+	<link rel="stylesheet" href="vendor/datatables-scroller/css/dataTables.scroller.css">
+    <link rel="stylesheet" href="vendor/backtotop/backtotop.min.css">
+    <link rel="stylesheet" href="vendor/highlightjs/styles/github.css">
+    <link rel="stylesheet" href="dist/datatables.bootstrap.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body ng-app="datatablesSampleApp">
+
+
+<div ng-controller="withBootstrapOptionsCtrl">
+    <table datatable="" dt-options="dtOptions" dt-columns="dtColumns" class="table table-striped table-bordered"></table>
+</div>
+
+    <script src="vendor/jquery/dist/jquery.min.js"></script>
+	<script src="vendor/angular/angular.min.js"></script>
+	<script src="vendor/angular-resource/angular-resource.min.js"></script>
+	<script src="vendor/angular-bootstrap/ui-bootstrap.min.js"></script>
+	<script src="vendor/datatables/media/js/jquery.dataTables.js"></script>
+	<script src="vendor/datatables-colvis/js/dataTables.colVis.js"></script>
+	<script src="vendor/datatables-tabletools/js/dataTables.tableTools.js"></script>
+	<script src="vendor/datatables-responsive/js/dataTables.responsive.js"></script>
+    <script src="vendor/datatables-scroller/js/dataTables.scroller.js"></script>
+    <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="vendor/angular-bootstrap/ui-bootstrap.min.js"></script>
+	<script src="vendor/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    
+	<script src="src/angular-datatables.js"></script>
+    <script src="src/angular-datatables.util.js"></script>
+    <script src="src/angular-datatables.options.js"></script>
+    <script src="src/angular-datatables.factory.js"></script>
+    <script src="src/angular-datatables.renderer.js"></script>
+    <script src="src/angular-datatables.bootstrap.options.js"></script>
+    <script src="src/angular-datatables.bootstrap.js"></script>
+    <script src="src/angular-datatables.directive.js"></script>
+    
+    <script type="text/javascript">
+    (function(){
+    	'use strict';
+    	angular.module('datatablesSampleApp',
+    	['ngResource', 'datatables', 'ui.bootstrap'])
+
+    })();
+    </script>
+    <script src="demo/withPlugins/overrideBootstrapOptions.js"></script>
+</body>
+</html>
