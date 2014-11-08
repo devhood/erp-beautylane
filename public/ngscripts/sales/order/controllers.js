@@ -5,7 +5,7 @@ angular.module('salesOrderApp.controllers',['ngTable'])
 $scope.dtOptions = DTOptionsBuilder
 .fromSource('/api/sales')
 // Add Bootstrap compatibility
-// .withBootstrap()
+ .withBootstrap()
 .withBootstrapOptions({
     TableTools: {
         classes: {
@@ -30,13 +30,15 @@ $scope.dtOptions = DTOptionsBuilder
     'pdf',
     'xls',
 ]);
+$scope.dtOptions.sScrollX = "100%";
+$scope.dtOptions.sScrollXInner = "100%";  
 $scope.dtColumns = [
   DTColumnBuilder.newColumn('sono').withTitle('SO Number'),
   DTColumnBuilder.newColumn('inventory_location').withTitle('Inventory Location'),
   DTColumnBuilder.newColumn('order_source').withTitle('Order Source'),
   DTColumnBuilder.newColumn('sales_executive').withTitle('Sales Executive'),
-  DTColumnBuilder.newColumn('delivery_method').withTitle('Delivery Method'),
-  DTColumnBuilder.newColumn('odered_by').withTitle('Ordered By'),
+  DTColumnBuilder.newColumn('shipping_mode').withTitle('Delivery Method'),
+  DTColumnBuilder.newColumn('ordered_by').withTitle('Ordered By'),
   DTColumnBuilder.newColumn('customer').withTitle('Customer'),
   DTColumnBuilder.newColumn(null).withTitle('Actions').notSortable()
   .renderWith(function(data, type, full, meta) {

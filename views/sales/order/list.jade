@@ -5,9 +5,9 @@
 			| SALES ORDER LIST
 		.tools
 			a.collapse(href="javascript:;")
-	.portlet-body.flip-scroll(ng-controller="SalesOrderListController")
+	.portlet-body(ng-controller="SalesOrderListController")
 		.table-toolbar
 			.btn-group
 				button(ui-sref="newSalesOrder").tooltips(data-container="body", data-placement="top", data-html="true", data-original-title="Add new Record")
 					i.fa.fa-plus
-		table#sales_table.table.table-bordered.table-striped.table-condensed.flip-content( datatable="" dt-options="dtOptions" dt-columns="dtColumns")
+		table#sales_table.table.table-bordered.table-striped( datatable="" dt-options="dtOptions" dt-columns="dtColumns")
