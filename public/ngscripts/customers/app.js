@@ -5,19 +5,19 @@ app.config(function($stateProvider,$httpProvider){
     $stateProvider.state('customers',{
         url:'/customers/list',
         templateUrl:'/customers/list',
-        controller:'customerListController'
+        controller:'CustomerListController'
     }).state('viewCustomer',{
        url:'/customers/view',
        templateUrl:'customers/view',
-       controller:'customerViewController'
+       controller:'CustomerViewController'
     }).state('newCustomer',{
         url:'/customers/add',
         templateUrl:'customers/add',
-        controller:'customerCreateController'
+        controller:'CustomerCreateController'
     }).state('editCustomer',{
         url:'/customers/edit',
         templateUrl:'customers/edit',
-        controller:'customerEditController'
+        controller:'CustomerEditController'
     });
 }).run(function($state){
    $state.go('customers');

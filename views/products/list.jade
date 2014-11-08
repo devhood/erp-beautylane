@@ -5,56 +5,9 @@
 			| PRODUCT LIST
 		.tools
 			a.collapse(href="javascript:;")
-	.portlet-body.flip-scroll
+	.portlet-body.flip-scroll(ng-controller="ProductListController")
 		.table-toolbar
 			.btn-group
 				button(ui-sref="newProduct").tooltips(data-container="body", data-placement="top", data-html="true", data-original-title="Add new Record")
 					i.fa.fa-plus
-					
-		table#products_table.table.table-bordered.table-condensed.flip-content(ng-table="tableParams")
-			thead.flip-content.bg-grey
-				tr
-					th Part Number
-					th Supplier Code
-					th BL Code
-					th Brand
-					th Item Name
-					th Size
-					th Color
-					th Payment Terms
-					th UOM
-					th Movement
-					th Description
-					th Supplier
-					th Currency
-					th Intl Cost
-					th Prof Price
-					th Retail Price
-					th Status
-					th Action
-			tbody
-				tr(ng-repeat="product in products")
-					td(data-title="'Part Number'", sortable="'part_number'") {{product.part_number}}
-					td(data-title="'Supplier Code'", sortable="'supplier_code'") {{product.supplier_code}}
-					td(data-title="'BL Code'", sortable="'bl_code'") {{product.bl_code}}
-					td(data-title="'Brand'", sortable="'brand'") {{product.brand}}
-					td(data-title="'Item Name'", sortable="'item_name'") {{product.item_name}}
-					td(data-title="'Size'", sortable="'size'") {{product.size}}
-					td(data-title="'Color'", sortable="'color'") {{product.color}}
-					td(data-title="'Payment Terms'", sortable="'payment_term'") {{product.payment_term}}
-					td(data-title="'UOM'", sortable="'uom'") {{product.uom}}
-					td(data-title="'Movement'", sortable="'movement'") {{product.movement}}
-					td(data-title="'Description'", sortable="'description'") {{product.description}}
-					td(data-title="'Supplier'", sortable="'supplier'") {{product.supplier}}
-					td(data-title="'Currency'", sortable="'currency'") {{product.currency}}
-					td(data-title="'Intl Cost'", sortable="'international_cost'") {{product.international_cost}}
-					td(data-title="'Prof Price'", sortable="'professional_price'") {{product.professional_price}}
-					td(data-title="'Retail Price'", sortable="'retail_price'") {{product.retail_price}}
-					td(data-title="'Status'", sortable="'status'") {{product.status}}
-					td
-						button(type="button", ui-sref="viewProduct({id:product._id})").tooltips(data-container="body", data-placement="top", data-html="true", data-original-title="View Record")
-							i.fa.fa-eye
-						button(type="button", ui-sref="editProduct").tooltips(data-container="body", data-placement="top", data-html="true", data-original-title="Edit Record")
-							i.fa.fa-pencil
-						button(type="button", ng-click="deleteProduct(product)").tooltips(data-container="body", data-placement="top", data-html="true", data-original-title="Delete Record")
-							i.fa.fa-trash-o
+		table#products_table.table.table-bordered.table-striped.table-condensed.flip-content( datatable="" dt-options="dtOptions" dt-columns="dtColumns")
