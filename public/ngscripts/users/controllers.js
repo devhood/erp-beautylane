@@ -4,10 +4,7 @@ angular.module('userApp.controllers',[])
     $scope.dtOptions = DTOptionsBuilder
     .fromSource('/api/users')
     // Add Bootstrap compatibility
-    .withScroller()
-    .withOption('deferRender', true)
-        // Do not forget to add the scorllY option!!!
-    .withOption('scrollY', 400)
+    .withBootstrap()
     .withBootstrapOptions({
         TableTools: {
             classes: {
@@ -24,6 +21,7 @@ angular.module('userApp.controllers',[])
         }
     })
 
+        	
     // Add ColVis compatibility
     .withColVis()
     // Add Table tools compatibility
@@ -32,6 +30,8 @@ angular.module('userApp.controllers',[])
         'pdf',
         'xls',
     ]);
+
+
 	$scope.dtColumns = [
 	    DTColumnBuilder.newColumn('fullname').withTitle('Fullname'),
 	    DTColumnBuilder.newColumn('username').withTitle('Username'),
