@@ -26,18 +26,18 @@
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
-								input#fullName.form-control(type="text", name="fullName", value="", required="")
+								input#fullName.form-control(type="text", name="fullname", ng-model="user.fullname", required="")
 								span.col-md-12.control-label Full Name
 				.row
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
-								input#userName.form-control(type="text", name="userName", value="", required="")
+								input#userName.form-control(type="text", name="username", ng-model="user.username", required="")
 								span.col-md-12.control-label Username
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
-								input#password.form-control(type="password", name="password", value="", required="")
+								input#password.form-control(type="password", name="password", ng-model="user.password", required="")
 								span.col-md-12.control-label Password
 				.row
 					.col-md-6
@@ -53,18 +53,18 @@
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
-								input#email.form-control(type="email", name="email", value="", required="")
+								input#email.form-control(type="email", name="email", ng-model="user.email", required="")
 								span.col-md-12.control-label Email
 				.row
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
-								input#mobile.form-control(type="text", name="mobile", value="", required="")
-								span.col-md-12.control-label Mobile
+								input#mobile.form-control(type="text", name="phone", ng-model="user.phone", required="")
+								span.col-md-12.control-label Phone
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
-								select#userStatus.select2me.form-control.select2-offscreen(name="userStatus", tabindex="-1")
+								select#userStatus.select2me.form-control.select2-offscreen(name="status",ng-model="user.status", tabindex="-1")
 									option(value="0") Active
 									option(value="1") Inactive
 								span.col-md-12.control-label User Status

@@ -59,9 +59,8 @@ angular.module('userApp.controllers',[])
 
 }).controller('UserViewController',function($scope,$stateParams,User){
 
-	console.log($stateParams.id);
+
     $scope.user=User.get({id:$stateParams.id});
-    console.log($scope.user);
 
 }).controller('UserCreateController',function($scope,$state,$stateParams,User){
 
