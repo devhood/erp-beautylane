@@ -5,9 +5,9 @@
 			| USER LIST
 		.tools
 			a.collapse(href="javascript:;")
-	.portlet-body.flip-scroll(ng-controller="UserListController")
+	.portlet-body(ng-controller="UserListController")
 		.table-toolbar
 			.btn-group
 				button(ui-sref="newUser").tooltips(data-container="body", data-placement="top", data-html="true", data-original-title="Add new Record")
 					i.fa.fa-plus
-		table#users_table.table.table-bordered.table-striped.table-condensed.flip-content( datatable="" dt-options="dtOptions" dt-columns="dtColumns")
+		table#users_table.table.table-bordered.table-striped( datatable="" dt-options="dtOptions" dt-columns="dtColumns")
