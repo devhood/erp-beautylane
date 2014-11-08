@@ -1,4 +1,4 @@
-var app = angular.module('purchaseApp',['datatables','ngTable','ui.router','ngResource','purchaseApp.controllers','purchaseApp.services']);
+var app = angular.module('purchaseApp',['ngTable','ui.router','ngResource','purchaseApp.controllers','purchaseApp.services']);
 
 
 app.config(function($stateProvider,$httpProvider){

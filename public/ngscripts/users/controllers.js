@@ -4,7 +4,7 @@ angular.module('userApp.controllers',[])
     $scope.dtOptions = DTOptionsBuilder
     .fromSource('/api/users')
     // Add Bootstrap compatibility
-    .withBootstrap()
+//    .withBootstrap()
     .withBootstrapOptions({
         TableTools: {
             classes: {
@@ -21,7 +21,7 @@ angular.module('userApp.controllers',[])
         }
     })
 
-        	
+
     // Add ColVis compatibility
     .withColVis()
     // Add Table tools compatibility
@@ -46,7 +46,7 @@ angular.module('userApp.controllers',[])
 	        	'data-html="true", data-original-title="View Record">' +
 	            '   <i class="fa fa-eye"></i>' +
 	            '</a>&nbsp;' +
-	            
+
 	            '<a href="#/users/edit/'+data._id+'"", ui-sref="editUser" class="tooltips btn default" '+
 	        	'data-container="body", data-placement="top", '+
 	        	'data-html="true", data-original-title="Edit Record">' +

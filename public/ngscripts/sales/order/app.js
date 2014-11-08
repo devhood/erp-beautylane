@@ -7,7 +7,7 @@ app.config(function($stateProvider,$httpProvider){
         templateUrl:'/sales/order/list',
         controller:'SalesOrderListController'
     }).state('viewSales',{
-       url:'/sales/order/view',
+       url:'/sales/order/view/:id',
        templateUrl:'sales/order/view',
        controller:'SalesOrderViewController'
     }).state('newSales',{
@@ -15,7 +15,7 @@ app.config(function($stateProvider,$httpProvider){
         templateUrl:'sales/order/add',
         controller:'SalesOrderCreateController'
     }).state('editSales',{
-        url:'/sales/order/edit',
+        url:'/sales/order/edit/:id',
         templateUrl:'sales/order/edit',
         controller:'SalesOrderEditController'
     });

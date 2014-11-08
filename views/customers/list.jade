@@ -1,62 +1,13 @@
 .portlet.box.grey
-    .portlet-title
-        .caption
-            i.fa.fa-edit
-            | CUSTOMER LIST
-        .tools
-            a.collapse(href="javascript:;")
-    .portlet-body.flip-scroll
-        .table-toolbar
-            .btn-group
-                button(ui-sref="newCustomer").tooltips(data-container="body", data-placement="top", data-html="true", data-original-title="Add new Record")
-                    i.fa.fa-plus
-                    
-        table#customers_table.table.table-bordered.table-condensed.flip-content(ng-table="tableParams")
-            thead.flip-content.bg-grey
-                tr
-                    th Category
-                    th Type
-                    th Company Name
-                    th Trade Name
-                    th Branch
-                    th TIN
-                    th Phone
-                    th Email
-                    th Website
-                    th SEC No
-                    th Credit Limit
-                    th Transaction Limit
-                    th Payment Terms
-                    th Shipping Mode
-                    th Percent Commission
-                    th Sales Executive
-                    th Price Type
-                    th Status
-                    th Action
-            tbody
-                tr(ng-repeat="customer in customers")
-                    td(data-title="'Category'", sortable="'category'") {{customer.category}}
-                    td(data-title="'Type'", sortable="'type'") {{customer.type}}
-                    td(data-title="'Company Name'", sortable="'company_name'") {{customer.company_name}}
-                    td(data-title="'Trade Name'", sortable="'trade_name'") {{customer.trade_name}}
-                    td(data-title="'Branch'", sortable="'branch'") {{customer.branch}}
-                    td(data-title="'TIN'", sortable="'tin'") {{customer.tin}}
-                    td(data-title="'Phone'", sortable="'phone'") {{customer.phone}}
-                    td(data-title="'Website'", sortable="'website'") {{customer.website}}
-                    td(data-title="'Email'", sortable="'email'") {{customer.email}}
-                    td(data-title="'SEC No'", sortable="'sec_no'") {{customer.sec_no}}
-                    td(data-title="'Credit Limit'", sortable="'credit_limit'") {{customer.credit_limit}}
-                    td(data-title="'Transaction Limit'", sortable="'transaction_limit'") {{customer.transaction_limit}}
-                    td(data-title="'Payment Terms'", sortable="'payment_term'") {{customer.payment_term}}
-                    td(data-title="'Shipping Mode'", sortable="'shipping_mode'") {{customer.shipping_mode}}
-                    td(data-title="'Percent Commission'", sortable="'percent_commission'") {{customer.percent_commission}}
-                    td(data-title="'Sales Executive'", sortable="'sales_executive'") {{customer.sales_executive}}
-                    td(data-title="'Price Type'", sortable="'price_type'") {{customer.price_type}}
-                    td(data-title="'Status'", sortable="'customer_status'") {{customer.customer_status}}
-                    td
-                        button(type="button", ui-sref="viewCustomer({id:customer._id})").tooltips(data-container="body", data-placement="top", data-html="true", data-original-title="View Record")
-                            i.fa.fa-eye
-                        button(type="button", ui-sref="editCustomer").tooltips(data-container="body", data-placement="top", data-html="true", data-original-title="Edit Record")
-                            i.fa.fa-pencil
-                        button(type="button", ng-click="deleteCustomer(customer)").tooltips(data-container="body", data-placement="top", data-html="true", data-original-title="Delete Record")
-                            i.fa.fa-trash-o
+  .portlet-title
+    .caption
+      i.fa.fa-edit
+      | CUSTOMER LIST
+    .tools
+      a.collapse(href="javascript:;")
+  .portlet-body.flip-scroll(ng-controller="CustomerListController")
+    .table-toolbar
+      .btn-group
+        button(ui-sref="newCustomer").tooltips(data-container="body", data-placement="top", data-html="true", data-original-title="Add new Record")
+          i.fa.fa-plus
+    table#customers_table.table.table-bordered.table-condensed.flip-content(datatable="" dt-options="dtOptions" dt-columns="dtColumns")
