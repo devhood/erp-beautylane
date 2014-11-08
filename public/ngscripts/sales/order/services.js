@@ -1,4 +1,4 @@
-angular.module('salesApp.services',[]).factory('Sales',function($resource){
+angular.module('salesOrderApp.services',[]).factory('Sales',function($resource){
     return $resource('/api/sales/:id',{id:'@_id'},{
         update: {
             method: 'PUT'

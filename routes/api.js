@@ -13,11 +13,11 @@ router.get('/:object', function(req, res) {
     .sort(req.query.sorting || {}).skip(req.query.page || 0)
     .limit(req.query.rows || 0).toArray()
     .done(function(data){   
-        res.json(200,data);
+    	res.status(200).json(data);
     })
     .fail( function( err ) { 
     	console.log(err);
-        res.json(400,err);
+    	 res.status(400).json(err);
     });  
 	
 });
@@ -25,10 +25,10 @@ router.post('/:object', function(req, res) {
     db.collection(req.params.object)
     .insert(req.body, {safe: true})
     .done(function(data){   
-        res.json(200,data);
+    	res.status(200).json(data);
     })
     .fail( function( err ) { 
-        res.json(400,err);
+    	res.status(400).json(err);
     });   
 });
 router.get('/:object/:id', function(req, res) {
@@ -40,10 +40,10 @@ router.get('/:object/:id', function(req, res) {
     .sort(req.query.sorting || {}).skip(req.query.page || 0)
     .limit(req.query.rows || 0).toArray()
     .done(function(data){   
-        res.json(200,data[0]);
+    	res.status(200).json(data);
     })
     .fail( function( err ) { 
-        res.json(400,err);
+    	res.status(400).json(err);
     }); 
 });
 router.put('/:object/:id', function(req, res) {
@@ -53,10 +53,10 @@ router.put('/:object/:id', function(req, res) {
 	db.collection(req.params.object)
     .update(filter, req.body, {safe: true})
     .done(function(data){   
-        res.json(200,data);
+    	res.status(200).json(data);
     })
     .fail( function( err ) { 
-        res.json(400,err);
+    	res.status(400).json(err);
     }); 
 });
 router['delete']('/:object/:id', function(req, res) {
@@ -66,10 +66,10 @@ router['delete']('/:object/:id', function(req, res) {
     db.collection(req.params.object)
     .remove(filter, {safe: true})
     .done(function(data){   
-        res.json(200,data);
+    	res.status(200).json(data);
     })
     .fail( function( err ) { 
-        res.json(400,err);
+    	res.status(400).json(err);
     });
 });
 

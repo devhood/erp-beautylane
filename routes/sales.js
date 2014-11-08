@@ -8,16 +8,16 @@ router.get('/order/add', function(req, res) {
 	res.render('sales/order/add');
 });
 router.get('/order/list', function(req, res) {
-	res.render('sales/order/add');
+	res.render('sales/order/list');
 });
 router.get('/order/approve', function(req, res) {
-	res.render('sales/order/add');
+	res.render('sales/order/approve');
 });
 router.get('/order/view', function(req, res) {
-	res.render('sales/order/add');
+	res.render('sales/order/view');
 });
 router.get('/order/edit', function(req, res) {
-	res.render('sales/order/add');
+	res.render('sales/order/edit');
 });
 
 

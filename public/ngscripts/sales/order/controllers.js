@@ -1,9 +1,9 @@
-angular.module('salesApp.controllers',['ngTable'])
-.controller('SalesListController',function($scope, $state, popupService, $window, Sales, ngTableParams, $filter, DTOptionsBuilder){
+angular.module('salesOrderApp.controllers',['ngTable'])
+.controller('SalesOrderListController',function($scope, $state, popupService, $window, Sales, ngTableParams, $filter, DTOptionsBuilder, DTColumnBuilder){
 
 
 $scope.dtOptions = DTOptionsBuilder
-.fromSource('/api/sales/order')
+.fromSource('/api/sales')
 // Add Bootstrap compatibility
 // .withBootstrap()
 .withBootstrapOptions({
@@ -54,30 +54,18 @@ $scope.dtColumns = [
   })
 ];
 
-
-
-  $scope.sales=Sales.query();
-
-    $scope.deleteSales = function(sales){
-        if(popupService.showPopup('Really delete this?')){
-            sales.$delete(function(){
-                $window.location.href='';
-            });
-        }
-    };
-
-}).controller('SalesViewController',function($scope,$stateParams,Sales){
+}).controller('SalesOrderViewController',function($scope,$stateParams,Sales){
     console.log($stateParams.id);
     $scope.sales=Sales.get({id:$stateParams.id});
 
-}).controller('SalesCreateController',function($scope,$state,$stateParams,Sales){
+}).controller('SalesOrderCreateController',function($scope,$state,$stateParams,Sales){
     $scope.sales=new Sales();
     $scope.addSales=function(){
         $scope.sales.$save(function(){
             $state.go('sales');
         });
     }
-}).controller('SalesEditController',function($scope,$state,$stateParams,Sales){
+}).controller('SalesOrderEditController',function($scope,$state,$stateParams,Sales){
     $scope.updateSales=function(){
         $scope.sales.$update(function(){
             $state.go('sales');
