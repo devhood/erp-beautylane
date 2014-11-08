@@ -2,40 +2,8 @@
 	.portlet-title
 		.caption
 			i.fa.fa-edit
-			| INVOICE LIST
+			| SALES INVOICE LIST
 		.tools
 			a.collapse(href="javascript:;")
-	.portlet-body.flip-scroll
-		.table-toolbar
-			.btn-group
-					
-		table#invoice_table.table.table-bordered.table-condensed.flip-content(ng-table="tableParams")
-			thead.flip-content.bg-grey
-				tr
-				th SI Number
-				th DR Number
-				th SO Number
-				th Inventory Location
-				th Order Source
-				th Sales Executive
-				th Delivery Method
-				th Ordered By
-				th Customer
-				th Action
-			tbody
-				tr(ng-repeat="order in orders")
-					td(data-title="'SI Number'", sortable="'sino'") {{order.sino}}
-					td(data-title="'DR Number'", sortable="'drno'") {{order.drno}}
-					td(data-title="'SO Number'", sortable="'sono'") {{order.sono}}
-					td(data-title="'Inventory Location'", sortable="'inventory_location'") {{order.inventory_location}}
-					td(data-title="'Order Source'", sortable="'order_source'") {{order.order_source}}
-					td(data-title="'Sales Executive'", sortable="'sales_executive'") {{order.sales_executive}}
-					td(data-title="'Delivery Method'", sortable="'invoice_method'") {{order.invoice_method}}
-					td(data-title="'Ordered By'", sortable="'odered_by'") {{order.odered_by}}
-					td
-						button(type="button", ui-sref="viewInvoice({id:invoice._id})").tooltips(data-container="body", data-placement="top", data-html="true", data-original-title="View Record")
-							i.fa.fa-eye
-						button(type="button", ui-sref="editInvoice").tooltips(data-container="body", data-placement="top", data-html="true", data-original-title="Edit Record")
-							i.fa.fa-pencil
-						button(type="button", ng-click="deleteInvoice(invoice)").tooltips(data-container="body", data-placement="top", data-html="true", data-original-title="Delete Record")
-							i.fa.fa-trash-o
+	.portlet-body(ng-controller="SalesInvoiceListController")
+		table#sales_table.table.table-bordered.table-striped( datatable="" dt-options="dtOptions" dt-columns="dtColumns")

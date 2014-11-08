@@ -32,8 +32,8 @@ angular.module('userApp.controllers',[])
     ]);
 
     $scope.dtOptions.sScrollX = "100%";
-    $scope.dtOptions.sScrollXInner = "100%";  
-              
+    $scope.dtOptions.sScrollXInner = "100%";
+
 	$scope.dtColumns = [
 	    DTColumnBuilder.newColumn('fullname').withTitle('Fullname'),
 	    DTColumnBuilder.newColumn('username').withTitle('Username'),

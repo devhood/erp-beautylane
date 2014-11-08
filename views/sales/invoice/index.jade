@@ -1,11 +1,12 @@
-extends ../layout/main
+extends ../../layout/main
 block scripts
-	script(src="/ngscripts/sales/app.js", type="text/javascript")
+	script(src="/ngscripts/sales/invoice/app.js", type="text/javascript")
 	script(src="/ngscripts/sales/services.js", type="text/javascript")
-	script(src="/ngscripts/sales/controllers.js", type="text/javascript")
+	script(src="/ngscripts/sales/invoice/controllers.js", type="text/javascript")
 	script(type='text/javascript').
 		(function(){
-			var app = angular.module('erp',['orderApp','deliveryApp','invoiceApp','paymentApp','returnApp','creditmemoApp','orderApp','menu','notification','message','user','task','ngTable','datatables','ui.router']);
+			var app = angular.module('erp',['ui.router','ngResource','menu','notification','salesInvoiceApp','message','user','task']);
 		})();
+		
 block content
 	div(ui-view)

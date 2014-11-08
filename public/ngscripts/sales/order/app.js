@@ -1,19 +1,19 @@
-var app = angular.module('salesOrderApp',['datatables', 'ui.bootstrap','salesOrderApp.controllers','salesOrderApp.services']);
+var app = angular.module('salesOrderApp',['datatables', 'ui.bootstrap','salesOrderApp.controllers','salesApp.services']);
 
 app.config(function($stateProvider,$httpProvider){
     $stateProvider.state('sales/order',{
         url:'/sales/order/list',
         templateUrl:'/sales/order/list',
         controller:'SalesOrderListController'
-    }).state('viewSales',{
+    }).state('viewSalesOrder',{
        url:'/sales/order/view/:id',
        templateUrl:'sales/order/view',
        controller:'SalesOrderViewController'
-    }).state('newSales',{
+    }).state('newSalesOrder',{
         url:'/sales/order/add',
         templateUrl:'sales/order/add',
         controller:'SalesOrderCreateController'
-    }).state('editSales',{
+    }).state('editSalesOrder',{
         url:'/sales/order/edit/:id',
         templateUrl:'sales/order/edit',
         controller:'SalesOrderEditController'
