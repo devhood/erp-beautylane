@@ -9,264 +9,108 @@
 			a.reload(href="javascript:;")
 			a.remove(href="javascript:;")
 	.portlet-body.form
-		form#product_view.form-horizontal(action="/products/view", method="post")
+		form.form-horizontal(role="form", name="add_form", ng-submit="add_form.$valid && updateProduct()", novalidate)
 			.form-body
-				.alert.alert-danger.display-hide
-					button.close(data-close="alert")
-					| You have some form errors. Please check below.
-				.alert.alert-success.display-hide
-					button.close(data-close="alert")
-					| Your form validation is successful!
-				.row
-					br
-					.col-md-6
-						.form-group
-							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
-								input#productCode.form-control(type="text", name="productCode", value="")
-								span.col-md-12.control-label
-									| Item Code
-					.col-md-6
-						.form-group
-							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
-								input#productName.form-control(type="text", name="productName", value="")
-								span.col-md-12.control-label
-									| Name
-				.row
-					.col-md-12
-						.form-group
-							.col-md-2.col-lg-2
-							.col-md-8.col-xs-12.col-sm-12.col-lg-8
-								textarea#productDescription.form-control(name="productDescription", rows="1")
-								span.col-md-12.control-label
-									| Description
-							.col-md-2.col-lg-2
 				.row
 					.col-md-6
 						.form-group
-							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
-								select#paymentTermId.select2me.form-control.select2-offscreen(name="paymentTerm[paymentTermId]", tabindex="-1", required="required")
-									option(value="")
-									option(value="1") Cash
-									option(value="2") 15 Days
-									option(value="3") 30 Days
-								span.col-md-12.control-label
-									| Payment Terms
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
+								input#part_no.form-control(type="text", ng-model="product.part_number", disabled)
+								span.col-md-12.control-label Part Number
 					.col-md-6
 						.form-group
-							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
-								input#partNumber.form-control(type="text", name="partNumber", value="")
-								span.col-md-12.control-label
-									| Part Number
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
+								input#supplier_code.form-control(type="text", ng-model="product.supplier_code", disabled)
+								span.col-md-12.control-label Supplier Code
 				.row
 					.col-md-6
 						.form-group
-							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
-								input#blCode.form-control(type="text", name="blCode", value="")
-								span.col-md-12.control-label
-									| BL Code
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
+								input#bl_code.form-control(type="text", ng-model="product.bl_code", disabled)
+								span.col-md-12.control-label BL Code
 					.col-md-6
 						.form-group
-							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
-								select#brandId.select2me.form-control.select2-offscreen(name="brand[brandId]", tabindex="-1", required="required")
-									option(value="")
-									option(value="1") Ardell
-									option(value="2") China Glaze
-									option(value="3") Color Club
-									option(value="4") GiGi
-									option(value="5") Brazilian Blowout
-									option(value="6") Osmo
-								span.col-md-12.control-label
-									| Brand
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
+								select#brand.select2me.form-control.select2-offscreen(ng-model="product.brand", ng-options="brand.brand as brand.brand for brand in brands", ng-selected="{{product.brand}}" ,tabindex="-1", disabled)
+								span.col-md-12.control-label Brand
 				.row
 					.col-md-6
 						.form-group
-							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
-								select#classificationId.select2me.form-control.select2-offscreen(name="classification[classificationId]", tabindex="-1", required="required")
-									option(value="")
-									option(value="1") Product
-									option(value="2") Marketing
-								span.col-md-12.control-label
-									| Product Movement
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
+								input#name.form-control(type="text", ng-model="product.name", disabled)
+								span.col-md-12.control-label Item Name
 					.col-md-6
 						.form-group
-							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
-								input#size.form-control(type="text", name="size", value="")
-								span.col-md-12.control-label
-									| Size
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
+								input#size.form-control(type="text", ng-model="product.size", disabled)
+								span.col-md-12.control-label Size
+				.row
+					.col-md-1
+					.col-md-10
+						.form-group
+							.col-xs-12.col-sm-12.col-md-12.col-lg-12(align="center")
+								input#description.form-control(type="text", ng-model="product.description", disabled)
+								span.col-md-12.control-label Description Notes
+					.col-md-1
 				.row
 					.col-md-6
 						.form-group
-							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
-								select#supplierId.select2me.form-control.select2-offscreen(name="supplier[supplierId]", tabindex="-1", required="required")
-									option(value="")
-									option(value="1") American Internatioal Industries
-									option(value="2") Forsythe Cosmetic Group
-								span.col-md-12.control-label
-									| Supplier
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
+								input#color.form-control(type="text", ng-model="product.color", disabled)
+								span.col-md-12.control-label Color
 					.col-md-6
 						.form-group
-							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
-								select#productStatus.select2me.form-control.select2-offscreen(name="productStatus", tabindex="-1")
-									option(value="Active") Active
-									option(value="Inactive") Inactive
-									option(value="Discontinued") Discontinued
-									option(value="Cancelled") Cancelled
-								span.col-md-12.control-label
-									| Product Status
-				.portlet.box.grey
-					.portlet-title
-						.caption
-							i.fa.fa-reorder
-							| PRODUCT PACKAGE
-						.tools
-							a.collapse(href="javascript:;")
-							a.config(href="#portlet-config", data-toggle="modal")
-							a.reload(href="javascript:;")
-							a.remove(href="javascript:;")
-					.portlet-body.form
-						.form-body
-							.row
-								br
-								.col-md-2
-								.col-md-8
-									.col-xs-6.col-sm-6.col-md-6.col-md-6(style="padding-left: 0px;")
-										button.btn-sm.green.custom-left(type="button", data-toggle="modal", href="#bundleModal")
-											| Add New
-											i.fa.fa-plus
-									.col-xs-6.col-sm-6.col-md-6.col-md-6(style="padding-right: 0px;")
-								.col-md-2
-							.form-group
-								.col-md-2
-								.col-md-8
-									.row
-										br
-										.col-md-12
-											.portlet-body.flip-scroll
-												table#bundlesTable.table.table-bordered.table-condensed.flip-content
-													thead.flip-content.bg-grey
-														tr
-															th Items Included
-															th Quantity
-															th 
-													tbody
-								.col-md-2
-				.portlet.box.grey
-					.portlet-title
-						.caption
-							i.fa.fa-reorder
-							| UNIT
-						.tools
-							a.collapse(href="javascript:;")
-							a.config(href="#portlet-config", data-toggle="modal")
-							a.reload(href="javascript:;")
-							a.remove(href="javascript:;")
-					.portlet-body.form
-						.form-body
-							.row
-								br
-								.col-md-2
-								.col-md-8
-									.col-xs-6.col-sm-6.col-md-6.col-md-6(style="padding-left: 0px;")
-										button.btn-sm.green.custom-left(type="button", data-toggle="modal", href="#unitModal")
-											| Add New
-											i.fa.fa-plus
-									.col-xs-6.col-sm-6.col-md-6.col-md-6(style="padding-right: 0px;")
-								.col-md-2
-							.form-group
-								.col-md-2
-								.col-md-8
-									.row
-										br
-										.col-md-12
-											.portlet-body.flip-scroll
-												table#uomsTable.table.table-bordered.table-condensed.flip-content
-													thead.flip-content.bg-grey
-														tr
-															th Unit of Measurement
-															th Quantity
-															th 
-													tbody
-								.col-md-2
-				.portlet.box.grey
-					.portlet-title
-						.caption
-							i.fa.fa-reorder
-							| PRICE
-						.tools
-							a.collapse(href="javascript:;")
-							a.config(href="#portlet-config", data-toggle="modal")
-							a.reload(href="javascript:;")
-							a.remove(href="javascript:;")
-					.portlet-body.form
-						.form-body
-							.row
-								br
-								.col-md-2
-								.col-md-8
-									.col-xs-6.col-sm-6.col-md-6.col-md-6(style="padding-left: 0px;")
-										button.btn-sm.green.custom-left(type="button", data-toggle="modal", href="#priceModal")
-											| Add New
-											i.fa.fa-plus
-									.col-xs-6.col-sm-6.col-md-6.col-md-6(style="padding-right: 0px;")
-								.col-md-2
-							.form-group
-								.col-md-2
-								.col-md-8
-									.row
-										br
-										.col-md-12
-											.portlet-body.flip-scroll
-												table#priceTable.table.table-bordered.table-condensed.flip-content
-													thead.flip-content.bg-grey
-														tr
-															th Price Type
-															th Amount
-															th Currency
-															th 
-													tbody
-								.col-md-2
-				.portlet.box.grey
-					.portlet-title
-						.caption
-							i.fa.fa-reorder
-							| DOCUMENT
-						.tools
-							a.collapse(href="javascript:;")
-							a.config(href="#portlet-config", data-toggle="modal")
-							a.reload(href="javascript:;")
-							a.remove(href="javascript:;")
-					.portlet-body.form
-						.form-body
-							.row
-								br
-								.col-md-2
-								.col-md-8
-									.col-xs-6.col-sm-6.col-md-6.col-md-6(style="padding-left: 0px;")
-										button.btn-sm.green.custom-left(type="button", data-toggle="modal", href="#documentModal")
-											| Add New
-											i.fa.fa-plus
-									.col-xs-6.col-sm-6.col-md-6.col-md-6(style="padding-right: 0px;")
-								.col-md-2
-							.form-group
-								.col-md-2
-								.col-md-8
-									.row
-										br
-										.col-md-12
-											.portlet-body.flip-scroll
-												table#documentTable.table.table-bordered.table-condensed.flip-content
-													thead.flip-content.bg-grey
-														tr
-															th Type
-															th Filename
-															th Link
-															th 
-													tbody
-								.col-md-2
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
+								select#payment_term.select2me.form-control.select2-offscreen(ng-model="product.payment_term", tabindex="-1",ng-options="payment_term.payment_term_name as payment_term.payment_term_name for payment_term in payment_terms", ng-selected="{{product.payment_term}}", disabled)
+								span.col-md-12.control-label Payment Terms
+				.row
+					.col-md-6
+						.form-group
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
+								select#status.select2me.form-control.select2-offscreen(ng-model="product.status", tabindex="-1",ng-options="status.status as status.status for status in statuses", ng-selected="{{product.status}}", disabled)
+								span.col-md-12.control-label Status
+					.col-md-6
+						.form-group
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
+								select#uom.select2me.form-control.select2-offscreen(ng-model="product.uom", tabindex="-1",ng-options="uom.uom as uom.uom for uom in uoms", ng-selected="{{product.uom}}", disabled)
+								span.col-md-12.control-label UOM
+				.row
+					.col-md-6
+						.form-group
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
+								select#movement.select2me.form-control.select2-offscreen(ng-model="product.movement", tabindex="-1",ng-options="movement.movement as movement.movement for movement in movements", ng-selected="{{product.movement}}", disabled)
+								span.col-md-12.control-label Movement
+					.col-md-6
+						.form-group
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
+								select#supplier.select2me.form-control.select2-offscreen(ng-model="product.supplier", tabindex="-1",ng-options="supplier.supplier as supplier.supplier for supplier in suppliers", ng-selected="{{product.supplier}}", disabled)
+								span.col-md-12.control-label Supplier
+				.row
+					.col-md-6
+						.form-group
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
+								select#currency.select2me.form-control.select2-offscreen(ng-model="product.currency", tabindex="-1",ng-options="currency.currency as currency.currency for currency in currencies", ng-selected="{{product.currency}}", disabled)
+								span.col-md-12.control-label Currency
+					.col-md-6
+						.form-group
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
+								input#Cost.form-control(type="text", ng-model="product.international_cost", disabled)
+								span.col-md-12.control-label International Cost
+				.row
+					.col-md-6
+						.form-group
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
+								input#retail_price.form-control(type="text",ng-model="product.retail_price", disabled)
+								span.col-md-12.control-label Retail Price
+					.col-md-6
+						.form-group
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
+								input#professional_price.form-control(type="text", ng-model="product.professional_price", disabled)
+								span.col-md-12.control-label Professional Price
 			.form-actions.fluid
 				.row
 					.col-md-6
 						.col-md-offset-3.col-md-9
-							button.btn.green(type="button", ui-sref="editProduct") Edit
-							button.btn.default(type="button", ui-sref="products") Back
+							button.btn.green(type="button", ui-sref="editProduct({id:product._id})") Edit
+							button.btn.default(type="button", ui-sref="products") Cancel
 					.col-md-6
