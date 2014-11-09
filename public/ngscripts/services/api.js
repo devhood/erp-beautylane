@@ -62,6 +62,36 @@ angular.module('serviceApp.reference',[])
                 method: 'PUT'
             }
         }),
+        Brand : $resource('/api/brands/:id',{id:'@_id'},{
+            update: {
+                method: 'PUT'
+            }
+        }),
+        ProductStatus : $resource('/api/product_status/:id',{id:'@_id'},{
+            update: {
+                method: 'PUT'
+            }
+        }),
+        Uom : $resource('/api/uom/:id',{id:'@_id'},{
+            update: {
+                method: 'PUT'
+            }
+        }),
+        Movement : $resource('/api/movements/:id',{id:'@_id'},{
+            update: {
+                method: 'PUT'
+            }
+        }),
+        Supplier : $resource('/api/suppliers/:id',{id:'@_id'},{
+            update: {
+                method: 'PUT'
+            }
+        }),
+        Currency : $resource('/api/currencies/:id',{id:'@_id'},{
+            update: {
+                method: 'PUT'
+            }
+        }),
     };
     
 })

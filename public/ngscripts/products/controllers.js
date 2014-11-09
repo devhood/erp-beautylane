@@ -1,11 +1,11 @@
 angular.module('productApp.controllers',['ngTable'])
-.controller('ProductListController',function($scope,$state,popupService,$window,Product,ngTableParams, $filter,DTOptionsBuilder, DTColumnBuilder){
+.controller('ProductListController',function($scope,$state,popupService,$window,Product, $filter,DTOptionsBuilder, DTColumnBuilder){
 
 
 $scope.dtOptions = DTOptionsBuilder
 .fromSource('/api/products')
 // Add Bootstrap compatibility
-// .withBootstrap()
+.withBootstrap()
 .withBootstrapOptions({
     TableTools: {
         classes: {
@@ -24,12 +24,16 @@ $scope.dtOptions = DTOptionsBuilder
 
 // Add ColVis compatibility
 .withColVis()
+.withColVisOption("buttonText","Columns")
 // Add Table tools compatibility
 .withTableTools('/vendor/datatables-tabletools/swf/copy_csv_xls_pdf.swf')
 .withTableToolsButtons([
     'pdf',
     'xls',
 ]);
+$scope.dtOptions.sScrollX = "100%";
+$scope.dtOptions.sScrollXInner = "100%";  
+$scope.dtOptions.bPaginate = false;
 $scope.dtColumns = [
   DTColumnBuilder.newColumn('part_number').withTitle('Part Number'),
   DTColumnBuilder.newColumn('supplier_code').withTitle('Supplier Code'),
@@ -50,25 +54,24 @@ $scope.dtColumns = [
   DTColumnBuilder.newColumn('status').withTitle('Status'),
   DTColumnBuilder.newColumn(null).withTitle('Actions').notSortable()
   .renderWith(function(data, type, full, meta) {
-      return '<a href="#/products/view", ui-sref="editProduct" class="tooltips btn default" '+
+      return '<div class="btn-group btn-group-xs btn-group-solid"><a href="#/products/view/'+data._id+'", ui-sref="editProduct" class="tooltips btn default" '+
         'data-container="body", data-placement="top", '+
         'data-html="true", data-original-title="View Record">' +
           '   <i class="fa fa-eye"></i>' +
           '</a>&nbsp;' +
 
-          '<a href="#/products/edit", ui-sref="editProduct" class="tooltips btn default" '+
+          '<a href="#/products/edit/'+data._id+'", ui-sref="editProduct" class="tooltips btn default" '+
         'data-container="body", data-placement="top", '+
         'data-html="true", data-original-title="Edit Record">' +
           '   <i class="fa fa-edit"></i>' +
-          '</a>&nbsp;';
+          '</a>&nbsp;</div>';
   })
 ];
 
 }).controller('ProductViewController',function($scope,$stateParams,Product){
-    console.log($stateParams.id);
     $scope.product=Product.get({id:$stateParams.id});
 
-}).controller('ProductCreateController',function($scope,$state,$stateParams,Product){
+}).controller('ProductCreateController',function($scope,$state,$stateParams,Product,Api){
 
     $scope.product=new Product();
 
@@ -77,6 +80,14 @@ $scope.dtColumns = [
             $state.go('products');
         });
     }
+    $scope.payment_terms = Api.PaymentTerm.query();
+    $scope.brands = Api.Brand.query();
+    $scope.statuses = Api.ProductStatus.query();
+    $scope.uoms = Api.Uom.query();
+    $scope.movements = Api.Movement.query();
+    $scope.suppliers = Api.Supplier.query();
+    $scope.currencies = Api.Currency.query();
+    
 
 }).controller('ProductEditController',function($scope,$state,$stateParams,Product){
 
@@ -86,9 +97,5 @@ $scope.dtColumns = [
         });
     };
 
-    $scope.loadProduct=function(){
-        $scope.product=Product.get({id:$stateParams.id});
-    };
-
-    $scope.loadProduct();
+    $scope.product=Product.get({id:$stateParams.id});
 });
