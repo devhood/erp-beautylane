@@ -57,6 +57,11 @@ angular.module('serviceApp.reference',[])
                 method: 'PUT'
             }
         }),
+        Country : $resource('/api/countries/:id',{id:'@_id'},{
+            update: {
+                method: 'PUT'
+            }
+        }),
     };
     
 })

@@ -98,7 +98,7 @@
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left.select
-								select#userId.select2me.form-control.select2-offscreen(ng-model="customer.sales_executive" ng-options="sales_executive.sales_executive.fullname for sales_executive in sales_executives", ng-selected="{{customer.sales_executive}}" required)
+								select#userId.select2me.form-control.select2-offscreen(ng-model="customer.sales_executive" ng-options="sales_executive.fullname for sales_executive in sales_executives", ng-selected="{{customer.sales_executive}}" required)
 								span.col-md-12.control-label	Sales Executive 
 				.row
 					.col-md-6
@@ -145,12 +145,12 @@
 							.col-md-6
 								.form-group
 									.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
-										select.select2me.form-control.select2-offscreen(ng-model="customer.shipping_address.country", ng-options="geography.country for geography in geographys", required)
+										select.select2me.form-control.select2-offscreen(ng-model="customer.shipping_address.country", ng-options="country.country for country in countries", required)
 										span.col-md-12.control-label	Country 
 							.col-md-6
 								.form-group
 									.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
-										select.select2me.form-control.select2-offscreen(ng-model="customer.shipping_address.province", ng-options="province.province for province in customer.shipping_address.country.provinces",required)
+										select.select2me.form-control.select2-offscreen(ng-model="customer.shipping_address.province", ng-options="geography.province for geography in geographys",required)
 										span.col-md-12.control-label	Province 
 						.row
 							.col-md-6
@@ -198,12 +198,12 @@
 							.col-md-6
 								.form-group
 									.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
-										select.select2me.form-control.select2-offscreen(ng-model="customer.billing_address.country", ng-options="geography.country for geography in geographys", required)
+										select.select2me.form-control.select2-offscreen(ng-model="customer.billing_address.country", ng-options="country.country for country in countries", required)
 										span.col-md-12.control-label	Country 
 							.col-md-6
 								.form-group
 									.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
-										select.select2me.form-control.select2-offscreen(ng-model="customer.billing_address.province", ng-options="province.province for province in customer.billing_address.country.provinces",required)
+										select.select2me.form-control.select2-offscreen(ng-model="customer.billing_address.province", ng-options="geography.province for geography in geographys",required)
 										span.col-md-12.control-label	Province 
 						.row
 							.col-md-6
