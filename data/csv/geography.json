@@ -1,45 +1,53 @@
 [
-  {
-    "country":"Philippines",
-    "provinces":[
-      {
-        "province" : "Laguna",
-        "cities" : [
-          {
-            "city" : "Calamba",
-            "zipcodes" : [
-              "area" : "calamba",
-              "zipcode" : "4027"
-            ]
-          },
-          {
-            "city" : "Cabuyao",
-            "zipcodes" : [
-              "area" : "cabuyao",
-              "zipcode" : "4025"
-            ]
-          }
+    {
+        "country": "Philippines",
+        "provinces": [
+            {
+                "province": "Laguna",
+                "cities": [
+                    {
+                        "city": "Calamba",
+                        "zipcodes": [
+                            {
+                                "area": "calamba",
+                                "zipcode": "4027"
+                            }
+                        ]
+                    },
+                    {
+                        "city": "Cabuyao",
+                        "zipcodes": [
+                            {
+                                "area": "cabuyao",
+                                "zipcode": "4025"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "province": "Metro Manila",
+                "cities": [
+                    {
+                        "city": "Makati",
+                        "zipcodes": [
+                            {
+                                "area": "makati",
+                                "zipcode": "1228"
+                            }
+                        ]
+                    },
+                    {
+                        "city": "Manila",
+                        "zipcodes": [
+                            {
+                                "area": "manila",
+                                "zipcode": "1226"
+                            }
+                        ]
+                    }
+                ]
+            }
         ]
-      },
-      {
-        "province" : "Metro Manila",
-        "cities" : [
-          {
-            "city" : "Makati",
-            "zipcodes" : [
-              "area" : "makati",
-              "zipcode" : "1228"
-            ]
-          },
-          {
-            "city" : "Manila",
-            "zipcodes" : [
-              "area" : "manila",
-              "zipcode" : "1226"
-            ]
-          }
-        ]
-      }
-    ]
-  }
+    }
 ]
