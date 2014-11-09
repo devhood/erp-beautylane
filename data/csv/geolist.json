@@ -1,3 +1,113 @@
+//geo
+
+/*
+Metro Manila
+Manila
+Caloocan
+Las Piñas
+Makati
+Malabon
+Mandaluyong
+Marikina
+Muntinlupa
+Navotas
+Parañaque
+Pasay
+Pasig
+Pateros
+Quezon City
+San_Juan
+Taguig
+Valenzuela
+*/
+
+/*
+Batangas
+Lipa City, Batangas
+Santo Tomas, Batangas
+Tanauan City*, Batangas
+Malvar, Batangas
+Padre Garcia, Batangas
+Mataas na Kahoy, Batangas
+San Jose, Batangas
+San Pascual, Batangas
+Batangas City
+Talisay, Batangas
+Bauan, Batangas
+*/
+
+/*
+Bulacan
+Meycauayan City
+Marilao, Bulacan
+Santa Maria, Bulacan
+San Jose del Monte City
+Bocaue, Bulacan
+Malolos City
+Balagtas, Bulacan
+Bulacan, Bulacan
+Guiguinto, Bulacan
+Plaridel, Bulacan
+Pandi, Bulacan
+Calumpit, Bulacan
+Pulilan, Bulacan
+Hagonoy, Bulacan
+Baliuag, Bulacan
+Obando, Bulacan
+Paombong, Bulacan
+*/
+
+/*
+Cavite
+Bacoor City
+Imus City
+Kawit, Cavite
+General Trias, Cavite
+Gen. Mariano Alvarez, Cavite
+Carmona, Cavite
+Cavite City
+Tanza, Cavite
+Rosario, Cavite
+Noveleta, Cavite
+Naic, Cavite
+Silang, Cavite
+*/
+
+/*
+Laguna
+San Pedro City
+Biñan City
+Santa Rosa City
+Cabuyao City
+Calamba City
+Los Baños, Laguna
+Bay, Laguna
+San Pablo City
+*/
+
+/*
+Pampanga
+Apalit, Pampanga
+Masantol, Pampanga
+*/
+
+/*
+Rizal
+Antipolo City
+Cainta, Rizal
+San Mateo, Rizal
+Taytay, Rizal
+Angono, Rizal
+Binangonan, Rizal
+Rodriguez, Rizal
+Cardona, Rizal
+Morong, Rizal
+Teresa, Rizal
+*/
+
+
+
+
 [
     {
         "country": "Philippines",
