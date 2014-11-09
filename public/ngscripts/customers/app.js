@@ -7,7 +7,7 @@ app.config(function($stateProvider,$httpProvider){
         templateUrl:'/customers/list',
         controller:'CustomerListController'
     }).state('viewCustomer',{
-       url:'/customers/view',
+       url:'/customers/view/:id',
        templateUrl:'customers/view',
        controller:'CustomerViewController'
     }).state('newCustomer',{
@@ -15,7 +15,7 @@ app.config(function($stateProvider,$httpProvider){
         templateUrl:'customers/add',
         controller:'CustomerCreateController'
     }).state('editCustomer',{
-        url:'/customers/edit',
+        url:'/customers/edit/:id',
         templateUrl:'customers/edit',
         controller:'CustomerEditController'
     });

@@ -46,11 +46,11 @@ angular.module('customerApp.controllers',[])
 			DTColumnBuilder.newColumn('credit_limit').withTitle('Credit Limit'),
 			DTColumnBuilder.newColumn('transaction_limit').withTitle('Transaction Limit'),
 			DTColumnBuilder.newColumn('payment_term').withTitle('Payment Terms'),
-			DTColumnBuilder.newColumn('shipping_mode.shipping_mode_name').withTitle('Shipping Mode'),
+			DTColumnBuilder.newColumn('shipping_mode').withTitle('Shipping Mode'),
 			DTColumnBuilder.newColumn('commission_sharing').withTitle('Percent Commission'),
-			DTColumnBuilder.newColumn('sales_executive.fullname').withTitle('Sales Executive'),
-			DTColumnBuilder.newColumn('price_type.price_type_name').withTitle('Price Type'),
-			DTColumnBuilder.newColumn('status.status').withTitle('Status'),
+			DTColumnBuilder.newColumn('sales_executive').withTitle('Sales Executive'),
+			DTColumnBuilder.newColumn('price_type').withTitle('Price Type'),
+			DTColumnBuilder.newColumn('status').withTitle('Status'),
 			DTColumnBuilder.newColumn(null).withTitle('Actions').notSortable()
 			.renderWith(function(data, type, full, meta) {
 					return '<div class="btn-group btn-group-xs btn-group-solid"><a href="#/customers/view/'+data._id+'", ui-sref="editCustomer" class="tooltips btn default" '+
@@ -67,9 +67,17 @@ angular.module('customerApp.controllers',[])
 			})
 	];
 
-}).controller('CustomerViewController',function($scope,$stateParams,Customer){
+}).controller('CustomerViewController',function($scope,$stateParams,Customer,Api){
 
     $scope.customer=Customer.get({id:$stateParams.id});
+    $scope.types = Api.CustomerType.query();
+    $scope.payment_terms = Api.PaymentTerm.query();
+    $scope.shipping_modes = Api.ShippingMode.query();
+    $scope.sales_executives = Api.SalesExecutive.query();
+    $scope.price_types = Api.PriceType.query();
+    $scope.statuses = Api.CustomerStatus.query();
+    $scope.geographys = Api.Geography.query();
+    $scope.countries = Api.Country.query();
 
 }).controller('CustomerCreateController',function($scope,$state,$stateParams,Customer,Api,User){
 
@@ -108,7 +116,7 @@ angular.module('customerApp.controllers',[])
     	$scope.customer.contacts.splice(index, 1);
     }
 
-}).controller('CustomerEditController',function($scope,$state,$stateParams,Customer){
+}).controller('CustomerEditController',function($scope,$state,$window,popupService,$stateParams,Customer, Api){
 
     $scope.updateCustomer=function(){
         $scope.customer.$update(function(){
@@ -123,7 +131,14 @@ angular.module('customerApp.controllers',[])
    	      });
    	   }
    	};
-   	
+   	$scope.types = Api.CustomerType.query();
+    $scope.payment_terms = Api.PaymentTerm.query();
+    $scope.shipping_modes = Api.ShippingMode.query();
+    $scope.sales_executives = Api.SalesExecutive.query();
+    $scope.price_types = Api.PriceType.query();
+    $scope.statuses = Api.CustomerStatus.query();
+    $scope.geographys = Api.Geography.query();
+    $scope.countries = Api.Country.query();
     $scope.loadCustomer=function(){
         $scope.customer=Customer.get({id:$stateParams.id});
     };

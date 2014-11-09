@@ -2,161 +2,125 @@
 	.portlet-title
 		.caption
 			i.fa.fa-reorder
-			| VIEW CUSTOMER PROFILE
+			| ADD CUSTOMER PROFILE
 		.tools
 			a.collapse(href="javascript:;")
-			a.config(href="#portlet-config", data-toggle="modal")
-			a.reload(href="javascript:;")
-			a.remove(href="javascript:;")
 	.portlet-body.form
-		form#customer_view.form-horizontal(action="/customers/view", method="post")
+		form.form-horizontal(role="form", name="add_form", ng-submit="add_form.$valid && addCustomer()", novalidate)
 			.form-body
-				.alert.alert-danger.display-hide
-					button.close(data-close="alert")
-					| You have some form errors. Please check below.
-				.alert.alert-success.display-hide
-					button.close(data-close="alert")
-					| Your form validation is successful!
+				.row
+					.col-md-6
+						.form-group
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
+								input#company_name.form-control(type="text", ng-model="customer.company_name" required readonly)
+								span.col-md-12.control-label	Company Name 
+					.col-md-6
+						.form-group
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
+								input#branch.form-control(type="text",  ng-model="customer.branch", required readonly)
+								span.col-md-12.control-label	Branch Location 
 				.row
 					br
 					.col-md-6
 						.form-group
-							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
-								select#categoryId.select2me.form-control.select2-offscreen(name="category[categoryId]", tabindex="-1", required="required")
-									option(value="")
-									option(value="1") Corporate
-									option(value="2") Individual
-									option(value="3") Product Category
-									option(value="4") Category
-								span.col-md-12.control-label	Category 
-					.col-md-6
-						.form-group
-							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
-								select#customerTypeId.select2me.form-control.select2-offscreen(name="customerType[customerTypeId]", tabindex="-1", required="required")
-									option(value="")
-									option(value="1") Professional
-									option(value="2") Retail
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
+								select.select2me.form-control.select2-offscreen(ng-model="customer.type", ng-options="type.type_name as type.type_name for type in types", ng-selected="{{customer.type}}" ,tabindex="-1", required readonly)
 								span.col-md-12.control-label	Type 
+					.col-md-6
+						.form-group
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
+								input#website.form-control(type="text", ng-model="customer.website", required readonly)
+								span.col-md-12.control-label	Website 
 				.row
 					.col-md-6
 						.form-group
-							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
-								input#companyName.form-control(type="text", name="companyName", value="")
-								span.col-md-12.control-label	Company Name 
-					.col-md-6
-						.form-group
-							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
-								input#branch.form-control(type="text", name="branch", value="")
-								span.col-md-12.control-label	Branch Location 
-				.row
-					.col-md-6
-						.form-group
-							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
-								input#tradeName.form-control(type="text", name="tradeName", value="")
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
+								input#trade_name.form-control(type="text", ng-model="customer.trade_name", required readonly)
 								span.col-md-12.control-label	Trade Name 
 					.col-md-6
 						.form-group
-							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
-								input#tinNumber.form-control(type="text", name="tin", value="")
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
+								input#tin.form-control(type="text",   ng-model="customer.tin" required readonly)
 								span.col-md-12.control-label	TIN 
 				.row
 					.col-md-6
 						.form-group
-							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
-								input#phone.form-control(type="text", name="phone", value="")
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
+								input#commission_sharing.form-control(type="text", ng-model="customer.commission_sharing", required readonly)
+								span.col-md-12.control-label	Commission Sharing
+					.col-md-6
+						.form-group
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
+								input#sec_no.form-control(type="text",   ng-model="customer.sec_no" required readonly)
+								span.col-md-12.control-label	Sec Number 
+				.row
+					.col-md-6
+						.form-group
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
+								input#phone.form-control(type="text",   ng-model="customer.phone" required readonly)
 								span.col-md-12.control-label	Phone 
 					.col-md-6
 						.form-group
-							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
-								input#email.form-control(type="text", name="email", value="")
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
+								input#email.form-control(type="email",   ng-model="customer.email" required readonly)
 								span.col-md-12.control-label	Email 
 				.row
 					.col-md-6
 						.form-group
-							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
-								input#website.form-control(type="text", name="website", value="")
-								span.col-md-12.control-label	Website 
-					// /span
-					.col-md-6
-						.form-group
-							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
-								input#secNo.form-control(type="text", name="secNo", value="")
-								span.col-md-12.control-label	SEC Number 
-				.row
-					.col-md-6
-						.form-group
-							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+							.col-xs-12.col-sm-12.col-md-7.col-lg-7.custom-right
 								label.checkbox
-									input#consignee.form-control(type="checkbox", name="consignee", value="1")
+									input#consignee(type="checkbox",   ng-model="customer.consignee" value="1")
 									| Consignee
 					.col-md-6
 						.form-group
-							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
 								label.checkbox
-									input#franchise.form-control(type="checkbox", name="franchise", value="1")
+									input#franchise(type="checkbox", ng-model="customer.franchise", value="1")
 									| Franchise
 				.row
 					.col-md-6
 						.form-group
-							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
-								input#creditLimit.form-control(type="text", name="creditLimit", value="")
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
+								input#credit_limit.form-control(type="text", ng-model="customer.credit_limit" required readonly)
 								span.col-md-12.control-label	Credit Limit 
 					.col-md-6
 						.form-group
-							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left.select
-								input#transactionLimit.form-control(type="text", name="transactionLimit", value="")
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left.select
+								input#transaction_limit.form-control(type="text", ng-model="customer.transaction_limit" required readonly)
 								span.col-md-12.control-label
 									| Unpaid Transaction Limit
 				.row
 					.col-md-6
 						.form-group
-							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
-								select#paymentTermId.select2me.form-control.select2-offscreen(name="paymentTerm[paymentTermId]", tabindex="-1", required="required")
-									option(value="")
-									option(value="1") Cash
-									option(value="2") 15 Days
-									option(value="3") 30 Days
-									option(value="4") 40 Days
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
+								select#payment_term.select2me.form-control.select2-offscreen(ng-model="customer.payment_term", ng-options="payment_term.payment_term_name as payment_term.payment_term_name for payment_term in payment_terms", ng-selected="{{customer.payment_term}}" required readonly)
 								span.col-md-12.control-label	Payment Terms 
 					.col-md-6
 						.form-group
-							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left.select
-								input#permanentDiscount.form-control(type="text", name="permanentDiscount", value="")
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left.select
+								input#discount.form-control(type="text", ng-model="customer.discount" required readonly)
 								span.col-md-12.control-label	Permanent Discount 
 				.row
 					.col-md-6
 						.form-group
-							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
-								select#shippingModeId.select2me.form-control.select2-offscreen(name="shippingMode[shippingModeId]", tabindex="-1")
-									option(value="")
-									option(value="1") Walk-in
-									option(value="2") In-House Delivery
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
+								select#shippingModeId.select2me.form-control.select2-offscreen(ng-model="customer.shipping_mode", ng-options="shipping_mode.shipping_mode_name as shipping_mode.shipping_mode_name for shipping_mode in shipping_modes", ng-selected="{{customer.shipping_mode}}" required readonly)
 								span.col-md-12.control-label	Shipping Mode 
 					.col-md-6
 						.form-group
-							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left.select
-								select#userId.select2me.form-control.select2-offscreen(name="salesExecutive[userId]", tabindex="-1", required="required")
-									option(value="")
-									option(value="2") Lj sales
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left.select
+								select#userId.select2me.form-control.select2-offscreen(ng-model="customer.sales_executive", ng-options="sales_executive.fullname as sales_executive.fullname for sales_executive in sales_executives", ng-selected="{{customer.sales_executive}}" required readonly)
 								span.col-md-12.control-label	Sales Executive 
 				.row
 					.col-md-6
 						.form-group
-							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
-								select#priceTypeId.select2me.form-control.select2-offscreen(name="priceType[priceTypeId]", tabindex="-1", required="required")
-									option(value="")  
-									option(value="1") Retail
-									option(value="2") Professional
-									option(value="3") Rustans
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
+								select#priceTypeId.select2me.form-control.select2-offscreen(ng-model="customer.price_type", ng-options="price_type.price_type_name as price_type.price_type_name for price_type in price_types", ng-selected="{{customer.price_type}}" required readonly)
 								span.col-md-12.control-label	Price Type 
 					.col-md-6
 						.form-group
-							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left.select
-								select#customerStatus.select2me.form-control.select2-offscreen(name="customerStatus", tabindex="-1", required="required")
-									option(value="0") Active
-									option(value="1") Inactive
-									option(value="2") Suspended
-									option(value="3") Block
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left.select
+								select#status.select2me.form-control.select2-offscreen(ng-model="customer.status", ng-options="status.status as status.status for status in statuses", ng-selected="{{customer.status}}" required readonly)
 								span.col-md-12.control-label	Customer Status 
 				.portlet.box.grey
 					.portlet-title
@@ -165,9 +129,6 @@
 							| ADDRESS
 						.tools
 							a.collapse(href="javascript:;")
-							a.config(href="#portlet-config", data-toggle="modal")
-							a.reload(href="javascript:;")
-							a.remove(href="javascript:;")
 					.portlet-body.form
 						.row
 							br
@@ -175,45 +136,43 @@
 								// <div class="form-group">
 								.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
 									h3.inline Shipping Address
+									br
+									br
 								// </div>
 							.col-md-6
 								.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
 						.row
 							.col-md-6
 								.form-group
-									.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+									.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
+										input.form-control(type="text", ng-model="customer.shipping_address.landmark", required readonly)
+										span.col-md-12.control-label	Floor/Unit/Building
 							.col-md-6
 								.form-group
 									.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
-										input#streetLandmark.form-control(type="text", name="streetLandmark", placeholder="Enter Street Landmark", value="")
-										span.col-md-12.control-label	Street/Landmark 
+										input.form-control(type="text", ng-model="customer.shipping_address.barangay", required readonly)
+										span.col-md-12.control-label	Street/Barangay
 						.row
 							.col-md-6
 								.form-group
 									.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
-										select#cityId.select2me.form-control.select2-offscreen(name="city[cityId]", tabindex="-1")
-											option(value="")
-											option(value="1") Calamba
-										span.col-md-12.control-label	City 
+										select.select2me.form-control.select2-offscreen(ng-model="customer.shipping_address.country",ng-selected="{{customer.shipping_address.country}}", ng-options="country.country as country.country for country in countries", required readonly)
+										span.col-md-12.control-label	Country 
 							.col-md-6
 								.form-group
 									.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
-										select#provinceId.select2me.form-control.select2-offscreen(name="province[provinceId]", tabindex="-1")
-											option(value="")
-											option(value="1") Laguna
+										select.select2me.form-control.select2-offscreen(ng-model="customer.shipping_address.province",ng-selected="{{customer.shipping_address.province}}", ng-options="geography.province as geography.province for geography in geographys track by geography._id",required readonly)
 										span.col-md-12.control-label	Province 
 						.row
 							.col-md-6
 								.form-group
 									.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
-										select#countryId.select2me.form-control.select2-offscreen(name="country[countryId]", tabindex="-1")
-											option(value="")
-											option(value="1") Phillippines
-										span.col-md-12.control-label	Country 
+										select.select2me.form-control.select2-offscreen(ng-model="customer.shipping_address.city",ng-selected="{{customer.shipping_address.city}}", ng-options="city.city as city.city for city in customer.shipping_address.province.cities track by city.city", required readonly)
+										span.col-md-12.control-label	City 
 							.col-md-6
 								.form-group
 									.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
-										input#zipcode.form-control(type="text", name="zipcode", placeholder="Enter Zipcode", value="")
+										select.select2me.form-control.select2-offscreen(ng-model="customer.shipping_address.zipcode",ng-selected="{{customer.shipping_address.zipcode}}", ng-options="zipcode.zipcode as zipcode.zipcode for zipcode in customer.shipping_address.city.zipcodes track by zipcode.zipcode", required readonly)
 										span.col-md-12.control-label	Zipcode 
 						.row
 							.col-md-6
@@ -222,52 +181,51 @@
 							.col-md-6
 								.form-group
 									.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
-										label.checkbox
-											input#billing.form-control(type="checkbox", name="billing", value="1")
-											| Use as Billing Address
+										label.checkbox Use as Billing
+											input(type="checkbox", ng-checked="copyShipping(customer)", ng-model="customer.shipping_address.same", value="1")
 						.row
 							br
 							.col-md-6
+								// <div class="form-group">
 								.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
 									h3.inline Billing Address
+									br
+									br
+								// </div>
 							.col-md-6
 								.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
 						.row
 							.col-md-6
 								.form-group
-									.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+									.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
+										input.form-control(type="text", ng-model="customer.billing_address.landmark", required readonly)
+										span.col-md-12.control-label	Floor/Unit/Building
 							.col-md-6
 								.form-group
 									.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
-										input#streetLandmark.form-control(type="text", name="streetLandmark", placeholder="Enter Street Landmark", value="")
-										span.col-md-12.control-label	Street/Landmark 
+										input.form-control(type="text", ng-model="customer.billing_address.barangay", required readonly)
+										span.col-md-12.control-label	Street/Barangay
 						.row
 							.col-md-6
 								.form-group
 									.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
-										select#cityId.select2me.form-control.select2-offscreen(name="city[cityId]", tabindex="-1")
-											option(value="")
-											option(value="1") Calamba
-										span.col-md-12.control-label	City 
+										select.select2me.form-control.select2-offscreen(ng-model="customer.billing_address.country", ng-selected="{{customer.billing_address.country}}", ng-options="country.country as country.country for country in countries", required readonly)
+										span.col-md-12.control-label	Country 
 							.col-md-6
 								.form-group
 									.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
-										select#provinceId.select2me.form-control.select2-offscreen(name="province[provinceId]", tabindex="-1")
-											option(value="")
-											option(value="1") Laguna
+										select.select2me.form-control.select2-offscreen(ng-model="customer.billing_address.province",ng-selected="{{customer.billing_address.province}}", ng-options="geography.province as geography.province for geography in geographys track by geography._id",required readonly)
 										span.col-md-12.control-label	Province 
 						.row
 							.col-md-6
 								.form-group
 									.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
-										select#countryId.select2me.form-control.select2-offscreen(name="country[countryId]", tabindex="-1")
-											option(value="")
-											option(value="1") Phillippines
-										span.col-md-12.control-label	Country 
+										select.select2me.form-control.select2-offscreen(ng-model="customer.billing_address.city", ng-selected="{{customer.billing_address.city}}",ng-options="city.city as city.city for city in customer.billing_address.province.cities  track by city.city", required readonly)
+										span.col-md-12.control-label	City 
 							.col-md-6
 								.form-group
 									.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
-										input#zipcode.form-control(type="text", name="zipcode", placeholder="Enter Zipcode", value="")
+										select.select2me.form-control.select2-offscreen(ng-model="customer.billing_address.zipcode",ng-selected="{{customer.billing_address.zipcode}}", ng-options="zipcode.zipcode as zipcode.zipcode for zipcode in customer.billing_address.city.zipcodes  track by zipcode.zipcode", required readonly)
 										span.col-md-12.control-label	Zipcode 
 				.portlet.box.grey
 					.portlet-title
@@ -276,42 +234,31 @@
 							| CONTACT PERSONS
 						.tools
 							a.collapse(href="javascript:;")
-							a.config(href="#portlet-config", data-toggle="modal")
-							a.reload(href="javascript:;")
-							a.remove(href="javascript:;")
 					.portlet-body.form
 						.form-body
-							.row
-								br
-								.col-md-2
-								.col-md-8
-									.col-xs-6.col-sm-6.col-md-6.col-md-6(style="padding-left: 0px;")
-										button.btn-sm.green.custom-left(type="button", data-toggle="modal", href="#contactModal")
-											| Add New
-											i.fa.fa-plus
-									.col-xs-6.col-sm-6.col-md-6.col-md-6(style="padding-right: 0px;")
-								.col-md-2
 							.form-group
-								.col-md-2
-								.col-md-8
+								.col-md-1
+								.col-md-10
 									.row
 										br
 										.col-md-12
 											.portlet-body.flip-scroll
-												table#contactTable.table.table-bordered.table-condensed.flip-content
+												table.table.table-bordered.table-condensed.flip-content
 													thead.flip-content.bg-grey
 														tr
 															th Name
 															th Position
-															th Mobile
-															th Email
-															th(width="12%")
+															th Phone
 													tbody
-								.col-md-2
+														tr(ng-repeat="contact in customer.contacts")
+															td {{contact.name}}
+															td {{contact.position}}
+															td {{contact.phone}}
+								.col-md-1
 			.form-actions.fluid
 				.row
 					.col-md-6
 						.col-md-offset-3.col-md-9
-						button.btn.green(type="button", ui-sref="editCustomer") Edit
-						button.btn.default(type="button", ui-sref="customers") Back
+							button.btn.green(type="button", ui-sref="editCustomer({id:customer._id})") Edit
+							button.btn.default(type="button", ui-sref="customers") Cancel
 					.col-md-6
