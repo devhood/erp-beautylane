@@ -156,65 +156,56 @@
 							.col-md-6
 								.form-group
 									.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
-										select.select2me.form-control.select2-offscreen(ng-model="customer.shipping_address.city", required)
+										select.select2me.form-control.select2-offscreen(ng-model="customer.shipping_address.city", ng-options="city.city for city in customer.shipping_address.province.cities", required)
 										span.col-md-12.control-label	City 
 							.col-md-6
 								.form-group
 									.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
-										select.select2me.form-control.select2-offscreen(ng-model="customer.shipping_address.zipcode", required)
+										select.select2me.form-control.select2-offscreen(ng-model="customer.shipping_address.zipcode",, ng-options="zipcode.zipcode for zipcode in customer.shipping_address.city.zipcodes", required)
 										span.col-md-12.control-label	Zipcode 
-						.row
-							.col-md-6
-								.form-group
-									.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
-							.col-md-6
-								.form-group
-									.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
-										label.checkbox Use as Billing
-											input(type="checkbox", name="billing", value="1")
 						.row
 							br
 							.col-md-6
+								// <div class="form-group">
 								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
 									h3.inline Billing Address
+									br
+									br
+								// </div>
 							.col-md-6
 								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
 						.row
 							.col-md-6
 								.form-group
 									.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+										input.form-control(type="text", ng-model="customer.billing_address.landmark", required)
+										span.col-md-12.control-label	Floor/Unit/Building
 							.col-md-6
 								.form-group
 									.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
-										input#streetLandmark.form-control(type="text", name="streetLandmark", placeholder="Enter Street Landmark", value="")
-										span.col-md-12.control-label	Street/Landmark 
+										input.form-control(type="text", ng-model="customer.billing_address.barangay", required)
+										span.col-md-12.control-label	Street/Barangay
 						.row
 							.col-md-6
 								.form-group
 									.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
-										select#cityId.select2me.form-control.select2-offscreen(name="city[cityId]", tabindex="-1")
-											option(value="")
-											option(value="1") Calamba
-										span.col-md-12.control-label	City 
+										select.select2me.form-control.select2-offscreen(ng-model="customer.billing_address.country", ng-options="geography.country for geography in geographys", required)
+										span.col-md-12.control-label	Country 
 							.col-md-6
 								.form-group
 									.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
-										select#provinceId.select2me.form-control.select2-offscreen(name="province[provinceId]", tabindex="-1")
-											option(value="")
-											option(value="1") Laguna
+										select.select2me.form-control.select2-offscreen(ng-model="customer.billing_address.province", ng-options="province.province for province in customer.billing_address.country.provinces",required)
 										span.col-md-12.control-label	Province 
 						.row
 							.col-md-6
 								.form-group
 									.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
-										select#countryId.select2me.form-control.select2-offscreen(name="country[countryId]", tabindex="-1")
-											option(value="")
-											option(value="1") Phillippines
-										span.col-md-12.control-label	Country 
+										select.select2me.form-control.select2-offscreen(ng-model="customer.billing_address.city", ng-options="city.city for city in customer.billing_address.province.cities", required)
+										span.col-md-12.control-label	City 
 							.col-md-6
 								.form-group
 									.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
-										input#zipcode.form-control(type="text", name="zipcode", placeholder="Enter Zipcode", value="")
+										select.select2me.form-control.select2-offscreen(ng-model="customer.billing_address.zipcode",, ng-options="zipcode.zipcode for zipcode in customer.billing_address.city.zipcodes", required)
 										span.col-md-12.control-label	Zipcode 
 				.portlet.box.grey
 					.portlet-title
