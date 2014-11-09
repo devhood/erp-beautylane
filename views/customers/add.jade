@@ -225,33 +225,51 @@
 							a.collapse(href="javascript:;")
 					.portlet-body.form
 						.form-body
+							br
+							br
 							.row
-								br
-								.col-md-2
-								.col-md-8
-									.col-xs-6.col-sm-6.col-md-6.col-md-6(style="padding-left: 0px;")
-										button.btn-sm.green.custom-left(type="button", data-toggle="modal", href="#contactModal")
-											| Add New
-											i.fa.fa-plus
-									.col-xs-6.col-sm-6.col-md-6.col-md-6(style="padding-right: 0px;")
-								.col-md-2
+								.col-md-1
+								.col-md-10
+									.col-md-3
+										.form-group
+											.col-xs-12.col-sm-12.col-md-12.col-lg-12
+												select.select2me.form-control.select2-offscreen(ng-model="customer.billing_address.city", ng-options="city.city for city in customer.billing_address.province.cities", required)
+												span.col-md-12.control-label	City 
+									.col-md-3
+										.form-group
+											.col-xs-12.col-sm-12.col-md-12.col-lg-12
+												select.select2me.form-control.select2-offscreen(ng-model="customer.billing_address.zipcode",, ng-options="zipcode.zipcode for zipcode in customer.billing_address.city.zipcodes", required)
+												span.col-md-12.control-label	Zipcode 
+									.col-md-3
+										.form-group
+											.col-xs-12.col-sm-12.col-md-12.col-lg-12
+												select.select2me.form-control.select2-offscreen(ng-model="customer.billing_address.city", ng-options="city.city for city in customer.billing_address.province.cities", required)
+												span.col-md-12.control-label	City 
+									.col-md-3
+										.form-group
+											.col-xs-12.col-sm-12.col-md-12.col-lg-12
+												select.select2me.form-control.select2-offscreen(ng-model="customer.billing_address.zipcode",, ng-options="zipcode.zipcode for zipcode in customer.billing_address.city.zipcodes", required)
+												span.col-md-12.control-label	Zipcode 
+								.col-md-1
+									button.btn-sm.green.custom-left(type="button")
+										i.fa.fa-plus
 							.form-group
-								.col-md-2
-								.col-md-8
+								.col-md-1
+								.col-md-10
 									.row
 										br
 										.col-md-12
 											.portlet-body.flip-scroll
-												table#contactTable.table.table-bordered.table-condensed.flip-content
+												table.table.table-bordered.table-condensed.flip-content
 													thead.flip-content.bg-grey
 														tr
 															th Name
 															th Position
 															th Mobile
 															th Email
-															th(width="12%")
+															th Action
 													tbody
-								.col-md-2
+								.col-md-1
 			.form-actions.fluid
 				.row
 					.col-md-6
