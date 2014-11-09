@@ -15,48 +15,48 @@
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
-								input#part_no.form-control(type="text", name="part_no", ng-model="product.part_no", required)
+								input#part_no.form-control(type="text", ng-model="product.part_number", required)
 								span.col-md-12.control-label Part Number
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
-								input#fullName.form-control(type="text", name="fullname", ng-model="product.supplier_code", required)
+								input#supplier_code.form-control(type="text", ng-model="product.supplier_code", required)
 								span.col-md-12.control-label Supplier Code
 				.row
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
-								input#userName.form-control(type="text", name="username", ng-model="product.bl_code", required)
+								input#bl_code.form-control(type="text", ng-model="product.bl_code", required)
 								span.col-md-12.control-label BL Code
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
-								select#position.select2me.form-control.select2-offscreen(ng-model="product.brand", ng-options="brand.brand as brand.brand for brand in brands", ng-selected="{{product.brnd}}" ,tabindex="-1", required)
+								select#position.select2me.form-control.select2-offscreen(ng-model="product.brand", ng-options="brand.brand as brand.brand for brand in brands", ng-selected="{{product.brand}}" ,tabindex="-1", required)
 								span.col-md-12.control-label Brand
 				.row
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
-								input#userName.form-control(type="text", name="name", ng-model="product.name", required)
+								input#name.form-control(type="text", ng-model="product.name", required)
 								span.col-md-12.control-label Item Name
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
-								input#email.form-control(type="email", name="size", ng-model="product.size", required)
+								input#size.form-control(type="text", ng-model="product.size", required)
 								span.col-md-12.control-label Size
 				.row
 					.col-md-1
 					.col-md-10
 						.form-group
 							.col-xs-12.col-sm-12.col-md-12.col-lg-12(align="center")
-								input#userName.form-control(type="text", name="name", ng-model="product.name", required)
+								input#description.form-control(type="text", ng-model="product.description", required)
 								span.col-md-12.control-label Description Notes
 					.col-md-1
 				.row
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
-								input#mobile.form-control(type="text", name="color", ng-model="product.color", required)
+								input#color.form-control(type="text", ng-model="product.color", required)
 								span.col-md-12.control-label Color
 					.col-md-6
 						.form-group
@@ -67,45 +67,45 @@
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
-								select#user_status.select2me.form-control.select2-offscreen(ng-model="product.payment_term", tabindex="-1",ng-options="status.status as status.status for status in statuses", ng-selected="{{user.status}}", required)
+								select#status.select2me.form-control.select2-offscreen(ng-model="product.status", tabindex="-1",ng-options="status.status as status.status for status in statuses", ng-selected="{{product.status}}", required)
 								span.col-md-12.control-label Status
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
-								select#user_status.select2me.form-control.select2-offscreen(ng-model="product.payment_term", tabindex="-1",ng-options="status.status as status.status for status in statuses", ng-selected="{{user.status}}", required)
+								select#uom.select2me.form-control.select2-offscreen(ng-model="product.uom", tabindex="-1",ng-options="uom.uom as uom.uom for uom in uoms", ng-selected="{{product.uom}}", required)
 								span.col-md-12.control-label UOM
 				.row
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
-								select#user_status.select2me.form-control.select2-offscreen(ng-model="product.payment_term", tabindex="-1",ng-options="status.status as status.status for status in statuses", ng-selected="{{user.status}}", required)
+								select#movement.select2me.form-control.select2-offscreen(ng-model="product.movement", tabindex="-1",ng-options="movement.movement as movement.movement for movement in movements", ng-selected="{{product.movement}}", required)
 								span.col-md-12.control-label Movement
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
-								select#user_status.select2me.form-control.select2-offscreen(ng-model="product.payment_term", tabindex="-1",ng-options="status.status as status.status for status in statuses", ng-selected="{{user.status}}", required)
+								select#supplier.select2me.form-control.select2-offscreen(ng-model="product.supplier", tabindex="-1",ng-options="supplier.supplier as supplier.supplier for supplier in suppliers", ng-selected="{{product.supplier}}", required)
 								span.col-md-12.control-label Supplier
 				.row
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
-								select#user_status.select2me.form-control.select2-offscreen(ng-model="product.payment_term", tabindex="-1",ng-options="status.status as status.status for status in statuses", ng-selected="{{user.status}}", required)
+								select#currency.select2me.form-control.select2-offscreen(ng-model="product.currency", tabindex="-1",ng-options="currency.currency as currency.currency for currency in currencies", ng-selected="{{user.status}}", required)
 								span.col-md-12.control-label Currency
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
-								input#mobile.form-control(type="text", name="color", ng-model="product.color", required)
+								input#Cost.form-control(type="text", ng-model="product.international_cost", required)
 								span.col-md-12.control-label International Cost
 				.row
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
-								input#userName.form-control(type="text", name="name", ng-model="product.name", required)
+								input#retail_price.form-control(type="text",ng-model="product.retail_price", required)
 								span.col-md-12.control-label Retail Price
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
-								input#email.form-control(type="email", name="size", ng-model="product.size", required)
+								input#professional_price.form-control(type="text", ng-model="product.professional_price", required)
 								span.col-md-12.control-label Professional Price
 			.form-actions.fluid
 				.row
