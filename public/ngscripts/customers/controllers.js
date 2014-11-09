@@ -87,6 +87,7 @@ angular.module('customerApp.controllers',[])
     $scope.sales_executives = Api.SalesExecutive.query();
     $scope.price_types = Api.PriceType.query();
     $scope.statuses = Api.CustomerStatus.query();
+    $scope.geographys = Api.Geography.query();
 
 }).controller('CustomerEditController',function($scope,$state,$stateParams,Customer){
 
