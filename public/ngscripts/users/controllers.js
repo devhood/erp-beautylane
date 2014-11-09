@@ -35,17 +35,16 @@ angular.module('userApp.controllers',[])
     $scope.dtOptions.sScrollX = "100%";
     $scope.dtOptions.sScrollXInner = "100%";
     $scope.dtOptions.bPaginate = false;
-    
 	$scope.dtColumns = [
-	    DTColumnBuilder.newColumn('fullname').withTitle('Fullname'),
-	    DTColumnBuilder.newColumn('username').withTitle('Username'),
-	    DTColumnBuilder.newColumn('position').withTitle('Position'),
-	    DTColumnBuilder.newColumn('phone').withTitle('Phone'),
-	    DTColumnBuilder.newColumn('email').withTitle('Email'),
-	    DTColumnBuilder.newColumn('status').withTitle('Status'),
-	    DTColumnBuilder.newColumn(null).withTitle('Actions').notSortable()
+	DTColumnBuilder.newColumn('fullname').withTitle('Fullname'),
+	DTColumnBuilder.newColumn('username').withTitle('Username'),
+	DTColumnBuilder.newColumn('position').withTitle('Position'),
+	DTColumnBuilder.newColumn('phone').withTitle('Phone'),
+	DTColumnBuilder.newColumn('email').withTitle('Email'),
+	DTColumnBuilder.newColumn('status').withTitle('Status'),
+	DTColumnBuilder.newColumn(null).withTitle('Actions').notSortable()
 	    .renderWith(function(data, type, full, meta) {
-	        return '<a href="#/users/view/'+data._id+'", ui-sref="editUser" class="tooltips btn default" '+
+	        return '<div class="btn-group btn-group-xs btn-group-solid"><a href="#/users/view/'+data._id+'", ui-sref="editUser" class="tooltips btn default" '+
 	        	'data-container="body", data-placement="top", '+
 	        	'data-html="true", data-original-title="View Record">' +
 	            '   <i class="fa fa-eye"></i>' +
@@ -55,7 +54,7 @@ angular.module('userApp.controllers',[])
 	        	'data-container="body", data-placement="top", '+
 	        	'data-html="true", data-original-title="Edit Record">' +
 	            '   <i class="fa fa-edit"></i>' +
-	            '</a>&nbsp;';
+	            '</a>&nbsp;</div>';
 	    })
 	];
 

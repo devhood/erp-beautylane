@@ -5,7 +5,7 @@ block scripts
 	script(src="/ngscripts/sales/controllers.js", type="text/javascript")
 	script(type='text/javascript').
 		(function(){
-			var app = angular.module('erp',['orderApp','deliveryApp','invoiceApp','paymentApp','returnApp','creditmemoApp','orderApp','menu','notification','message','userApp','task','ngTable','datatables','ui.router']);
+			var app = angular.module('erp',['returnApp','creditmemoApp','orderApp','menu','notification','message','userApp','task','datatables','ui.router']);
 		})();
 block content
 	div(ui-view)
