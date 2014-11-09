@@ -72,7 +72,7 @@ router['delete']('/:object/:id', function(req, res) {
     req.query.filter = JSON.parse(req.query.filter || '{}');
     req.query.filter._id = id;
     db.collection(req.params.object)
-    .remove(re.query.filter, {safe: true})
+    .remove(req.query.filter, {safe: true})
     .done(function(data){   
     	res.status(200).json(data);
     })

@@ -1,5 +1,5 @@
 angular.module('userApp.controllers',[])
-.controller('UserListController',function($scope,$state,popupService,$window,User, Api, $filter, DTOptionsBuilder, DTColumnBuilder){
+.controller('UserListController',function($scope,$state,User, Api, $filter, DTOptionsBuilder, DTColumnBuilder){
 
     $scope.dtOptions = DTOptionsBuilder
     .fromSource("/api/users")
@@ -73,10 +73,12 @@ angular.module('userApp.controllers',[])
             $state.go('users');
         });
     }
+   
+ 	
     $scope.positions = Api.Position.query();
     $scope.statuses = Api.UserStatus.query();
 
-}).controller('UserEditController',function($scope,$state,$stateParams,User,Api){
+}).controller('UserEditController',function($scope,$window,popupService,$state,$stateParams,User,Api){
 
     $scope.updateUser=function(){
         console.log($scope.user);
@@ -85,6 +87,14 @@ angular.module('userApp.controllers',[])
         });
     };
 
+    $scope.deleteUser=function(movie){
+  	   if(popupService.showPopup('Really delete this?')){
+  	       movie.$delete(function(){
+  	         $window.location.href='';
+  	      });
+  	   }
+  	};
+  	
     $scope.loadUser=function(){
         $scope.user=User.get({id:$stateParams.id});
     };
