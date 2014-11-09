@@ -31,3 +31,9 @@ textarea{
 #DataTables_Table_0_filter.dataTables_filter{
 	float: left;
 }
+.ng-invalid {
+	border-color : #FA787E
+}
+.ng-valid {
+	border-color : #78fA89
+}

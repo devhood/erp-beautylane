@@ -1,5 +1,5 @@
 angular.module('userApp.controllers',[])
-.controller('UserListController',function($scope,$state,popupService,$window,User, $filter, DTOptionsBuilder, DTColumnBuilder){
+.controller('UserListController',function($scope,$state,popupService,$window,User, Api, $filter, DTOptionsBuilder, DTColumnBuilder){
 
     $scope.dtOptions = DTOptionsBuilder
     .fromSource("/api/users")
@@ -58,12 +58,13 @@ angular.module('userApp.controllers',[])
 	    })
 	];
 
-}).controller('UserViewController',function($scope,$stateParams,User){
+}).controller('UserViewController',function($scope,$stateParams,User, Api){
 
 
     $scope.user=User.get({id:$stateParams.id});
+    
 
-}).controller('UserCreateController',function($scope,$state,$stateParams,User){
+}).controller('UserCreateController',function($scope,$state,$stateParams,User,Api){
 
     $scope.user=new User();
 
@@ -72,10 +73,13 @@ angular.module('userApp.controllers',[])
             $state.go('users');
         });
     }
+    $scope.positions = Api.Position.query();
+    $scope.statuses = Api.UserStatus.query();
 
-}).controller('UserEditController',function($scope,$state,$stateParams,User){
+}).controller('UserEditController',function($scope,$state,$stateParams,User,Api){
 
     $scope.updateUser=function(){
+        console.log($scope.user);
         $scope.user.$update(function(){
             $state.go('users');
         });
@@ -84,6 +88,8 @@ angular.module('userApp.controllers',[])
     $scope.loadUser=function(){
         $scope.user=User.get({id:$stateParams.id});
     };
+    $scope.positions = Api.Position.query();
+    $scope.statuses = Api.UserStatus.query();
 
     $scope.loadUser();
 }).controller('UserLoginController',function($scope,$stateParams,User){

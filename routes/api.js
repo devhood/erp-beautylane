@@ -27,7 +27,7 @@ router.post('/:object', function(req, res) {
     db.collection(req.params.object)
     .insert(req.body, {safe: true})
     .done(function(data){   
-    	res.status(200).json(data);
+    	res.status(200).json(data[0]);
     })
     .fail( function( err ) { 
     	res.status(400).json(err);
@@ -51,14 +51,16 @@ router.get('/:object/:id', function(req, res) {
     }); 
 });
 router.put('/:object/:id', function(req, res) {
+
     var id = mongoq.mongodb.BSONPure.ObjectID.createFromHexString(req.params.id);
+    delete req.body._id;
     req.query.filter = JSON.parse(req.query.filter || '{}');
     req.query.columns = JSON.parse(req.query.columns || '{}');
     req.query.sorting = JSON.parse(req.query.sorting || '{}');    
     req.query.filter._id = id;
     db.collection(req.params.object)
-    .update(req.query, req.body, {safe: true})
-    .done(function(data){   
+    .update(req.query.filter, req.body, {safe: true})
+    .done(function(data){  
     	res.status(200).json(data);
     })
     .fail( function( err ) { 

@@ -1,4 +1,4 @@
-var app = angular.module('userApp',['datatables', 'ui.bootstrap','userApp.controllers','userApp.services']);
+var app = angular.module('userApp',['serviceApp.reference','datatables', 'ui.bootstrap','userApp.controllers','userApp.services']);
 
 
 app.config(function($stateProvider,$httpProvider){
