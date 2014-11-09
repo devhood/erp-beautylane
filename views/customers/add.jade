@@ -11,46 +11,46 @@
 				.row
 					.col-md-6
 						.form-group
-							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
 								input#company_name.form-control(type="text", ng-model="customer.company_name" required)
 								span.col-md-12.control-label	Company Name 
 					.col-md-6
 						.form-group
-							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
 								input#branch.form-control(type="text",  ng-model="customer.branch", required)
 								span.col-md-12.control-label	Branch Location 
 				.row
 					br
 					.col-md-6
 						.form-group
-							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
 								select.select2me.form-control.select2-offscreen(ng-model="customer.type", ng-options="type.type_name as type.type_name for type in types", ng-selected="{{customer.type}}" ,tabindex="-1", required)
 								span.col-md-12.control-label	Type 
 					.col-md-6
 						.form-group
-							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
 								input#website.form-control(type="text", ng-model="customer.website", required)
 								span.col-md-12.control-label	Website 
 				.row
 					.col-md-6
 						.form-group
-							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
 								input#tradeName.form-control(type="text", ng-model="customer.trade_name", required)
 								span.col-md-12.control-label	Trade Name 
 					.col-md-6
 						.form-group
-							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
 								input#tin.form-control(type="text",   ng-model="customer.tin" required)
 								span.col-md-12.control-label	TIN 
 				.row
 					.col-md-6
 						.form-group
-							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
 								input#phone.form-control(type="text",   ng-model="customer.phone" required)
 								span.col-md-12.control-label	Phone 
 					.col-md-6
 						.form-group
-							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
 								input#email.form-control(type="email",   ng-model="customer.email" required)
 								span.col-md-12.control-label	Email 
 				.row
@@ -62,53 +62,53 @@
 									| Consignee
 					.col-md-6
 						.form-group
-							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
 								label.checkbox
 									input#franchise(type="checkbox", ng-model="customer.franchise", value="1")
 									| Franchise
 				.row
 					.col-md-6
 						.form-group
-							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
 								input#credit_limit.form-control(type="text", ng-model="customer.credit_limit" required)
 								span.col-md-12.control-label	Credit Limit 
 					.col-md-6
 						.form-group
-							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left.select
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left.select
 								input#transaction_limit.form-control(type="text", ng-model="customer.transaction_limit" required)
 								span.col-md-12.control-label
 									| Unpaid Transaction Limit
 				.row
 					.col-md-6
 						.form-group
-							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
 								select#payment_term.select2me.form-control.select2-offscreen(ng-model="customer.payment_term", ng-options="payment_term.payment_term_name as payment_term.payment_term_name for payment_term in payment_terms", ng-selected="{{customer.payment_term}}" required)
 								span.col-md-12.control-label	Payment Terms 
 					.col-md-6
 						.form-group
-							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left.select
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left.select
 								input#discount.form-control(type="text", ng-model="customer.discount" required)
 								span.col-md-12.control-label	Permanent Discount 
 				.row
 					.col-md-6
 						.form-group
-							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
 								select#shippingModeId.select2me.form-control.select2-offscreen(ng-model="customer.shipping_mode" ng-options="shipping_mode.shipping_mode_name for shipping_mode in shipping_modes", ng-selected="{{customer.shipping_mode}}" required)
 								span.col-md-12.control-label	Shipping Mode 
 					.col-md-6
 						.form-group
-							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left.select
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left.select
 								select#userId.select2me.form-control.select2-offscreen(ng-model="customer.sales_executive" ng-options="sales_executive.sales_executive.fullname for sales_executive in sales_executives", ng-selected="{{customer.sales_executive}}" required)
 								span.col-md-12.control-label	Sales Executive 
 				.row
 					.col-md-6
 						.form-group
-							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
 								select#priceTypeId.select2me.form-control.select2-offscreen(ng-model="customer.price_type" ng-options="price_type.price_type_name for price_type in price_types", ng-selected="{{customer.price_type}}" required)
 								span.col-md-12.control-label	Price Type 
 					.col-md-6
 						.form-group
-							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left.select
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left.select
 								select#status.select2me.form-control.select2-offscreen(ng-model="customer.status" ng-options="status.status for status in statuses", ng-selected="{{customer.status}}" required)
 								span.col-md-12.control-label	Customer Status 
 				.portlet.box.grey
@@ -123,97 +123,97 @@
 							br
 							.col-md-6
 								// <div class="form-group">
-								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+								.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
 									h3.inline Shipping Address
 									br
 									br
 								// </div>
 							.col-md-6
-								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
+								.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
 						.row
 							.col-md-6
 								.form-group
-									.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+									.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
 										input.form-control(type="text", ng-model="customer.shipping_address.landmark", required)
 										span.col-md-12.control-label	Floor/Unit/Building
 							.col-md-6
 								.form-group
-									.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
+									.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
 										input.form-control(type="text", ng-model="customer.shipping_address.barangay", required)
 										span.col-md-12.control-label	Street/Barangay
 						.row
 							.col-md-6
 								.form-group
-									.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+									.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
 										select.select2me.form-control.select2-offscreen(ng-model="customer.shipping_address.country", ng-options="geography.country for geography in geographys", required)
 										span.col-md-12.control-label	Country 
 							.col-md-6
 								.form-group
-									.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
+									.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
 										select.select2me.form-control.select2-offscreen(ng-model="customer.shipping_address.province", ng-options="province.province for province in customer.shipping_address.country.provinces",required)
 										span.col-md-12.control-label	Province 
 						.row
 							.col-md-6
 								.form-group
-									.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+									.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
 										select.select2me.form-control.select2-offscreen(ng-model="customer.shipping_address.city", ng-options="city.city for city in customer.shipping_address.province.cities", required)
 										span.col-md-12.control-label	City 
 							.col-md-6
 								.form-group
-									.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
+									.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
 										select.select2me.form-control.select2-offscreen(ng-model="customer.shipping_address.zipcode", ng-options="zipcode.zipcode for zipcode in customer.shipping_address.city.zipcodes", required)
 										span.col-md-12.control-label	Zipcode 
 						.row
 							.col-md-6
 								.form-group
-									.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+									.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
 							.col-md-6
 								.form-group
-									.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+									.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
 										label.checkbox Use as Billing
 											input(type="checkbox", ng-checked="copyShipping(customer)", ng-model="customer.shipping_address.same", value="1")
 						.row
 							br
 							.col-md-6
 								// <div class="form-group">
-								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+								.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
 									h3.inline Billing Address
 									br
 									br
 								// </div>
 							.col-md-6
-								.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
+								.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
 						.row
 							.col-md-6
 								.form-group
-									.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+									.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
 										input.form-control(type="text", ng-model="customer.billing_address.landmark", required)
 										span.col-md-12.control-label	Floor/Unit/Building
 							.col-md-6
 								.form-group
-									.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
+									.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
 										input.form-control(type="text", ng-model="customer.billing_address.barangay", required)
 										span.col-md-12.control-label	Street/Barangay
 						.row
 							.col-md-6
 								.form-group
-									.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+									.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
 										select.select2me.form-control.select2-offscreen(ng-model="customer.billing_address.country", ng-options="geography.country for geography in geographys", required)
 										span.col-md-12.control-label	Country 
 							.col-md-6
 								.form-group
-									.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
+									.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
 										select.select2me.form-control.select2-offscreen(ng-model="customer.billing_address.province", ng-options="province.province for province in customer.billing_address.country.provinces",required)
 										span.col-md-12.control-label	Province 
 						.row
 							.col-md-6
 								.form-group
-									.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+									.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
 										select.select2me.form-control.select2-offscreen(ng-model="customer.billing_address.city", ng-options="city.city for city in customer.billing_address.province.cities", required)
 										span.col-md-12.control-label	City 
 							.col-md-6
 								.form-group
-									.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
+									.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
 										select.select2me.form-control.select2-offscreen(ng-model="customer.billing_address.zipcode",, ng-options="zipcode.zipcode for zipcode in customer.billing_address.city.zipcodes", required)
 										span.col-md-12.control-label	Zipcode 
 				.portlet.box.grey
@@ -230,29 +230,25 @@
 							.row
 								.col-md-1
 								.col-md-10
+									.col-md-4
+										.form-group
+											.col-xs-12.col-sm-12.col-md-12.col-lg-12
+												input.form-control(type="text", ng-model="customer.contact.name")
+												span.col-md-12.control-label	Name 
+									.col-md-4
+										.form-group
+											.col-xs-12.col-sm-12.col-md-12.col-lg-12
+												input.form-control(type="text", ng-model="customer.contact.position")
+												span.col-md-12.control-label	Position 
 									.col-md-3
 										.form-group
 											.col-xs-12.col-sm-12.col-md-12.col-lg-12
-												select.select2me.form-control.select2-offscreen(ng-model="customer.billing_address.city", ng-options="city.city for city in customer.billing_address.province.cities", required)
-												span.col-md-12.control-label	City 
-									.col-md-3
-										.form-group
-											.col-xs-12.col-sm-12.col-md-12.col-lg-12
-												select.select2me.form-control.select2-offscreen(ng-model="customer.billing_address.zipcode",, ng-options="zipcode.zipcode for zipcode in customer.billing_address.city.zipcodes", required)
-												span.col-md-12.control-label	Zipcode 
-									.col-md-3
-										.form-group
-											.col-xs-12.col-sm-12.col-md-12.col-lg-12
-												select.select2me.form-control.select2-offscreen(ng-model="customer.billing_address.city", ng-options="city.city for city in customer.billing_address.province.cities", required)
-												span.col-md-12.control-label	City 
-									.col-md-3
-										.form-group
-											.col-xs-12.col-sm-12.col-md-12.col-lg-12
-												select.select2me.form-control.select2-offscreen(ng-model="customer.billing_address.zipcode",, ng-options="zipcode.zipcode for zipcode in customer.billing_address.city.zipcodes", required)
-												span.col-md-12.control-label	Zipcode 
+												input.form-control(type="text", ng-model="customer.contact.phone")
+												span.col-md-12.control-label	Phone
+									.col-md-1
+										button.btn-sm.green.custom-right(type="button",ng-click="addContact(customer)")
+											i.fa.fa-plus 
 								.col-md-1
-									button.btn-sm.green.custom-left(type="button")
-										i.fa.fa-plus
 							.form-group
 								.col-md-1
 								.col-md-10
@@ -265,10 +261,17 @@
 														tr
 															th Name
 															th Position
-															th Mobile
-															th Email
+															th Phone
 															th Action
 													tbody
+														tr(ng-repeat="contact in customer.contacts")
+															td {{contact.name}}
+															td {{contact.position}}
+															td {{contact.phone}}
+															td
+																.btn-group.btn-group-xs.btn-group-solid
+																	a.tooltips.btn.default(ng-click="removeContact($index)", data-container="body", data-placement="top", data-html="true", data-original-title="Delete Record")
+																		i.fa.fa-trash-o
 								.col-md-1
 			.form-actions.fluid
 				.row
