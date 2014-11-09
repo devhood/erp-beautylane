@@ -139,6 +139,25 @@ angular.module('customerApp.controllers',[])
     $scope.statuses = Api.CustomerStatus.query();
     $scope.geographys = Api.Geography.query();
     $scope.countries = Api.Country.query();
+    $scope.copyShipping = function(customer){
+    	if(customer.shipping_address && customer.shipping_address.same){
+    		$scope.customer.billing_address = customer.shipping_address;
+    	}
+    };
+    $scope.addContact = function(customer){
+    	if(customer.contact.name && customer.contact.position && customer.contact.phone ){
+	    	if($scope.customer.contacts){
+	    		$scope.customer.contacts.push(customer.contact);
+	    	}
+	    	else{
+	    		$scope.customer.contacts = [customer.contact];
+	    	}
+	    	customer.contact = {};
+    	}
+    }
+    $scope.removeContact = function(index){
+    	$scope.customer.contacts.splice(index, 1);
+    }
     $scope.loadCustomer=function(){
         $scope.customer=Customer.get({id:$stateParams.id});
     };
