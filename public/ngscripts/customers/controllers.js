@@ -68,11 +68,11 @@ angular.module('customerApp.controllers',[])
 			})
 	];
 
-}).controller('customerViewController',function($scope,$stateParams,Customer){
+}).controller('CustomerViewController',function($scope,$stateParams,Customer){
 
     $scope.customer=Customer.get({id:$stateParams.id});
 
-}).controller('customerCreateController',function($scope,$state,$stateParams,Customer){
+}).controller('CustomerCreateController',function($scope,$state,$stateParams,Customer,Api){
 
     $scope.customer=new Customer();
 
@@ -81,8 +81,9 @@ angular.module('customerApp.controllers',[])
             $state.go('customers');
         });
     }
+    $scope.types = Api.CustomerType.query();
 
-}).controller('customerEditController',function($scope,$state,$stateParams,Customer){
+}).controller('CustomerEditController',function($scope,$state,$stateParams,Customer){
 
     $scope.updateCustomer=function(){
         $scope.customer.$update(function(){

@@ -12,88 +12,73 @@
 		form.form-horizontal(role="form", name="add_form", ng-submit="add_form.$valid && addCustomer()", novalidate)
 			.form-body
 				.row
-					br
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
-								select.select2me.form-control.select2-offscreen(ng-model="customer.category", ng-options="category.category_name as category.category_name for category in categories", ng-selected="{{category.category_name}}" ,tabindex="-1", required)
-								span.col-md-12.control-label	Category 
-					.col-md-6
-						.form-group
-							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
-								select#customerTypeId.select2me.form-control.select2-offscreen(name="customerType[customerTypeId]", tabindex="-1", required)
-									option(value="")
-									option(value="1") Professional
-									option(value="2") Retail
-								span.col-md-12.control-label	Type 
-				.row
-					.col-md-6
-						.form-group
-							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
-								input#companyName.form-control(type="text", name="companyName", value="")
+								input#company_name.form-control(type="text", ng-model="customer.company_name" required)
 								span.col-md-12.control-label	Company Name 
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
-								input#branch.form-control(type="text", name="branch", value="")
+								input#branch.form-control(type="text",  ng-model="customer.branch", required)
 								span.col-md-12.control-label	Branch Location 
+				.row
+					br
+					.col-md-6
+						.form-group
+							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+								select.select2me.form-control.select2-offscreen(ng-model="customer.type", ng-options="type.type_name as type.type_name for type in types", ng-selected="{{customer.type}}" ,tabindex="-1", required)
+								span.col-md-12.control-label	Type 
+					.col-md-6
+						.form-group
+							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
+								input#website.form-control(type="text", ng-model="customer.website", required)
+								span.col-md-12.control-label	Website 
 				.row
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
-								input#tradeName.form-control(type="text", name="tradeName", value="")
+								input#tradeName.form-control(type="text", ng-model="customer.trade_name", required)
 								span.col-md-12.control-label	Trade Name 
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
-								input#tinNumber.form-control(type="text", name="tin", value="")
+								input#tin.form-control(type="text",   ng-model="customer.tin" required)
 								span.col-md-12.control-label	TIN 
 				.row
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
-								input#phone.form-control(type="text", name="phone", value="")
+								input#phone.form-control(type="text",   ng-model="customer.phone" required)
 								span.col-md-12.control-label	Phone 
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
-								input#email.form-control(type="text", name="email", value="")
+								input#email.form-control(type="email",   ng-model="customer.email" required)
 								span.col-md-12.control-label	Email 
 				.row
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
-								input#website.form-control(type="text", name="website", value="")
-								span.col-md-12.control-label	Website 
-					// /span
-					.col-md-6
-						.form-group
-							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
-								input#secNo.form-control(type="text", name="secNo", value="")
-								span.col-md-12.control-label	SEC Number 
-				.row
-					.col-md-6
-						.form-group
-							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
 								label.checkbox
-									input#consignee.form-control(type="checkbox", name="consignee", value="1")
+									input#consignee.form-control(type="checkbox",   ng-model="customer.consignee" value="1")
 									| Consignee
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
 								label.checkbox
-									input#franchise.form-control(type="checkbox", name="franchise", value="1")
+									input#franchise.form-control(type="checkbox", ng-model="customer.franchise", value="1")
 									| Franchise
 				.row
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
-								input#creditLimit.form-control(type="text", name="creditLimit", value="")
+								input#credit_limit.form-control(type="text", ng-model="customer.credit_limit" required)
 								span.col-md-12.control-label	Credit Limit 
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left.select
-								input#transactionLimit.form-control(type="text", name="transactionLimit", value="")
+								input#transaction_limit.form-control(type="text", ng-model="customer.transaction_limit" required)
 								span.col-md-12.control-label
 									| Unpaid Transaction Limit
 				.row
