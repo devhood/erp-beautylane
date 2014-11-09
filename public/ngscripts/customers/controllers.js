@@ -72,7 +72,7 @@ angular.module('customerApp.controllers',[])
 
     $scope.customer=Customer.get({id:$stateParams.id});
 
-}).controller('CustomerCreateController',function($scope,$state,$stateParams,Customer,Api){
+}).controller('CustomerCreateController',function($scope,$state,$stateParams,Customer,Api,User){
 
     $scope.customer=new Customer();
 
@@ -82,6 +82,11 @@ angular.module('customerApp.controllers',[])
         });
     }
     $scope.types = Api.CustomerType.query();
+    $scope.payment_terms = Api.PaymentTerm.query();
+    $scope.shipping_modes = Api.ShippingMode.query();
+    $scope.sales_executives = Api.SalesExecutive.query();
+    $scope.price_types = Api.PriceType.query();
+    $scope.statuses = Api.CustomerStatus.query();
 
 }).controller('CustomerEditController',function($scope,$state,$stateParams,Customer){
 

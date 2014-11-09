@@ -11,12 +11,18 @@ angular.module('serviceApp.reference',[])
                 method: 'PUT'
             }
         }),
-        PaymentTerm : $resource('/api/payment_terms/:id',{id:'@_id'},{
+        PaymentTerm : $resource('/api/payment_term/:id',{id:'@_id'},{
             update: {
                 method: 'PUT'
             }
         }),
         PriceType : $resource('/api/price_type/:id',{id:'@_id'},{
+            update: {
+                method: 'PUT'
+            }
+        }),
+ 
+        SalesExecutive : $resource('/api/users?filter='+encodeURIComponent(JSON.stringify({"position":"Sales Executive"})),{id:'@_id'},{
             update: {
                 method: 'PUT'
             }
@@ -42,6 +48,11 @@ angular.module('serviceApp.reference',[])
             }
         }),
         UserStatus : $resource('/api/user_status/:id',{id:'@_id'},{
+            update: {
+                method: 'PUT'
+            }
+        }),
+        CustomerStatus : $resource('/api/customer_status/:id',{id:'@_id'},{
             update: {
                 method: 'PUT'
             }

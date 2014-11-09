@@ -85,12 +85,7 @@
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
-								select#paymentTermId.select2me.form-control.select2-offscreen(name="paymentTerm[paymentTermId]", tabindex="-1", required)
-									option(value="")
-									option(value="1") Cash
-									option(value="2") 15 Days
-									option(value="3") 30 Days
-									option(value="4") 40 Days
+								select#payment_term.select2me.form-control.select2-offscreen(ng-model="customer.payment_term", ng-options="payment_term.payment_term_name as payment_term.payment_term_name for payment_term in payment_terms", ng-selected="{{customer.payment_term}}" required)
 								span.col-md-12.control-label	Payment Terms 
 					.col-md-6
 						.form-group
@@ -101,36 +96,23 @@
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
-								select#shippingModeId.select2me.form-control.select2-offscreen(name="shippingMode[shippingModeId]", tabindex="-1")
-									option(value="")
-									option(value="1") Walk-in
-									option(value="2") In-House Delivery
+								select#shippingModeId.select2me.form-control.select2-offscreen(ng-model="customer.shipping_mode" ng-options="shipping_mode.shipping_mode_name as shipping_mode.shipping_mode_name for shipping_mode in shipping_modes", ng-selected="{{customer.shipping_mode}}" required)
 								span.col-md-12.control-label	Shipping Mode 
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left.select
-								select#userId.select2me.form-control.select2-offscreen(name="salesExecutive[userId]", tabindex="-1", required)
-									option(value="")
-									option(value="2") Lj sales
+								select#userId.select2me.form-control.select2-offscreen(ng-model="customer.sales_executive" ng-options="sales_executive.sales_executive.fullname as sales_executive.fullname for sales_executive in sales_executives", ng-selected="{{customer.sales_executive}}" required)
 								span.col-md-12.control-label	Sales Executive 
 				.row
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
-								select#priceTypeId.select2me.form-control.select2-offscreen(name="priceType[priceTypeId]", tabindex="-1", required)
-									option(value="")  
-									option(value="1") Retail
-									option(value="2") Professional
-									option(value="3") Rustans
+								select#priceTypeId.select2me.form-control.select2-offscreen(ng-model="customer.price_type" ng-options="price_type.price_type_name as price_type.price_type_name for price_type in price_types", ng-selected="{{customer.price_type}}" required)
 								span.col-md-12.control-label	Price Type 
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left.select
-								select#customerStatus.select2me.form-control.select2-offscreen(name="customerStatus", tabindex="-1", required)
-									option(value="0") Active
-									option(value="1") Inactive
-									option(value="2") Suspended
-									option(value="3") Block
+								select#status.select2me.form-control.select2-offscreen(ng-model="customer.status" ng-options="status.status as status.status for status in statuses", ng-selected="{{customer.status}}" required)
 								span.col-md-12.control-label	Customer Status 
 				.portlet.box.grey
 					.portlet-title
