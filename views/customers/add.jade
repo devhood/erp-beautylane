@@ -171,7 +171,7 @@
 								.form-group
 									.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
 										label.checkbox Use as Billing
-											input(type="checkbox", ng-checked="sameAsBilling()", ng-model="customer.shipping_address.same", value="1")
+											input(type="checkbox", ng-checked="copyShipping(customer)", ng-model="customer.shipping_address.same", value="1")
 						.row
 							br
 							.col-md-6

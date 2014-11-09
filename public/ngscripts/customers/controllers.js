@@ -88,6 +88,15 @@ angular.module('customerApp.controllers',[])
     $scope.price_types = Api.PriceType.query();
     $scope.statuses = Api.CustomerStatus.query();
     $scope.geographys = Api.Geography.query();
+    $scope.copyShipping =function(customer){
+    	if(customer.shipping_address && customer.shipping_address.same){
+    		$scope.customer.billing_address = customer.shipping_address;
+    	}
+    	else{
+    		$scope.customer.billing_address = {};
+    	}
+    	
+    };
 
 }).controller('CustomerEditController',function($scope,$state,$stateParams,Customer){
 
