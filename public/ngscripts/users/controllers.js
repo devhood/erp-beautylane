@@ -2,9 +2,9 @@ angular.module('userApp.controllers',[])
 .controller('UserListController',function($scope,$state,popupService,$window,User, $filter, DTOptionsBuilder, DTColumnBuilder){
 
     $scope.dtOptions = DTOptionsBuilder
-    .fromSource('/api/users')
+    .fromSource("/api/users")
     // Add Bootstrap compatibility
-   .withBootstrap()
+    .withBootstrap()
     .withBootstrapOptions({
         TableTools: {
             classes: {

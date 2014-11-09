@@ -1,9 +1,9 @@
 angular.module('salesOrderApp.controllers',[])
 .controller('SalesOrderListController',function($scope, $state, popupService, $window, Sales, $filter, DTOptionsBuilder, DTColumnBuilder){
 
-
+	var query = {"status":"SO submitted to Warehouse"};
 $scope.dtOptions = DTOptionsBuilder
-.fromSource('/api/sales')
+.fromSource("/api/sales?filter="+encodeURIComponent(JSON.stringify(query)))
 // Add Bootstrap compatibility
  .withBootstrap()
 .withBootstrapOptions({

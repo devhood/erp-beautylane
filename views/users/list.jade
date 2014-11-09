@@ -8,6 +8,6 @@
 	.portlet-body(ng-controller="UserListController")
 		.table-toolbar
 			.btn-group
-				button(ui-sref="newUser").tooltips(data-container="body", data-placement="top", data-html="true", data-original-title="Add new Record")
+				button.tooltips(ui-sref="newUser", data-container="body", data-placement="top", data-html="true", data-original-title="Add new Record")
 					i.fa.fa-plus
 		table#users_table.table.table-bordered.table-striped( datatable="" dt-options="dtOptions" dt-columns="dtColumns")
