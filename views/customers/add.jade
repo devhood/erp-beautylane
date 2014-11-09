@@ -35,13 +35,24 @@
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
-								input#tradeName.form-control(type="text", ng-model="customer.trade_name", required)
+								input#trade_name.form-control(type="text", ng-model="customer.trade_name", required)
 								span.col-md-12.control-label	Trade Name 
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
 								input#tin.form-control(type="text",   ng-model="customer.tin" required)
 								span.col-md-12.control-label	TIN 
+				.row
+					.col-md-6
+						.form-group
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
+								input#commission_sharing.form-control(type="text", ng-model="customer.commission_sharing", required)
+								span.col-md-12.control-label	Commission Sharing
+					.col-md-6
+						.form-group
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
+								input#sec_no.form-control(type="text",   ng-model="customer.sec_no" required)
+								span.col-md-12.control-label	Sec Number 
 				.row
 					.col-md-6
 						.form-group

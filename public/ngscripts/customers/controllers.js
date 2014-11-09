@@ -33,8 +33,7 @@ angular.module('customerApp.controllers',[])
 	    $scope.dtOptions.sScrollX = "100%";
 	    $scope.dtOptions.sScrollXInner = "100%";  
 	    $scope.dtOptions.bPaginate = false;
-	$scope.dtColumns = [
-			DTColumnBuilder.newColumn('category').withTitle('Category'),
+	    $scope.dtColumns = [
 			DTColumnBuilder.newColumn('type').withTitle('Type'),
 			DTColumnBuilder.newColumn('company_name').withTitle('Company Name'),
 			DTColumnBuilder.newColumn('phone').withTitle('Trade Name'),
@@ -47,11 +46,11 @@ angular.module('customerApp.controllers',[])
 			DTColumnBuilder.newColumn('credit_limit').withTitle('Credit Limit'),
 			DTColumnBuilder.newColumn('transaction_limit').withTitle('Transaction Limit'),
 			DTColumnBuilder.newColumn('payment_term').withTitle('Payment Terms'),
-			DTColumnBuilder.newColumn('shipping_mode').withTitle('Shipping Mode'),
+			DTColumnBuilder.newColumn('shipping_mode.shipping_mode_name').withTitle('Shipping Mode'),
 			DTColumnBuilder.newColumn('commission_sharing').withTitle('Percent Commission'),
-			DTColumnBuilder.newColumn('sales_executive').withTitle('Sales Executive'),
-			DTColumnBuilder.newColumn('price_type').withTitle('Price Type'),
-			DTColumnBuilder.newColumn('status').withTitle('Status'),
+			DTColumnBuilder.newColumn('sales_executive.fullname').withTitle('Sales Executive'),
+			DTColumnBuilder.newColumn('price_type.price_type_name').withTitle('Price Type'),
+			DTColumnBuilder.newColumn('status.status').withTitle('Status'),
 			DTColumnBuilder.newColumn(null).withTitle('Actions').notSortable()
 			.renderWith(function(data, type, full, meta) {
 					return '<div class="btn-group btn-group-xs btn-group-solid"><a href="#/customers/view/'+data._id+'", ui-sref="editCustomer" class="tooltips btn default" '+
@@ -93,10 +92,6 @@ angular.module('customerApp.controllers',[])
     	if(customer.shipping_address && customer.shipping_address.same){
     		$scope.customer.billing_address = customer.shipping_address;
     	}
-    	else{
-    		$scope.customer.billing_address = {};
-    	}
-    	
     };
     $scope.addContact = function(customer){
     	if(customer.contact.name && customer.contact.position && customer.contact.phone ){
