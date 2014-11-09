@@ -28,6 +28,6 @@ textarea{
 .dataTables_wrapper.form-inline.no-footer div.btn-group{
 	float: right;
 }
-#users_table_filter.dataTables_filter{
+#DataTables_Table_0_filter.dataTables_filter{
 	float: left;
 }

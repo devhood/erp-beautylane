@@ -24,6 +24,7 @@ angular.module('userApp.controllers',[])
 
     // Add ColVis compatibility
     .withColVis()
+    .withColVisOption("buttonText","Columns")
     // Add Table tools compatibility
     .withTableTools('/vendor/datatables-tabletools/swf/copy_csv_xls_pdf.swf')
     .withTableToolsButtons([
@@ -34,6 +35,7 @@ angular.module('userApp.controllers',[])
     $scope.dtOptions.sScrollX = "100%";
     $scope.dtOptions.sScrollXInner = "100%";
     $scope.dtOptions.bPaginate = false;
+    
 	$scope.dtColumns = [
 	    DTColumnBuilder.newColumn('fullname').withTitle('Fullname'),
 	    DTColumnBuilder.newColumn('username').withTitle('Username'),
@@ -85,4 +87,18 @@ angular.module('userApp.controllers',[])
     };
 
     $scope.loadUser();
+}).controller('UserLoginController',function($scope,$stateParams,User){
+
+
+    $scope.user= {
+    		username:"Ace Besmonte",
+    		photo:"/assets/img/ace.jpg",
+    		profileUrl: "extra_profile.html",
+    		calendarUrl: "page_calendar.html",
+    		inboxUrl: "https://www.facebook.com/messages",
+    		taskUrl: "task.html",
+    		lockScreen: "",
+    		logout: "https://www.facebook.com/logout.php"
+    	};
+
 });

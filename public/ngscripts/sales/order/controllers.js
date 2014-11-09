@@ -24,6 +24,7 @@ $scope.dtOptions = DTOptionsBuilder
 
 // Add ColVis compatibility
 .withColVis()
+.withColVisOption("buttonText","Columns")
 // Add Table tools compatibility
 .withTableTools('/vendor/datatables-tabletools/swf/copy_csv_xls_pdf.swf')
 .withTableToolsButtons([
@@ -32,6 +33,7 @@ $scope.dtOptions = DTOptionsBuilder
 ]);
 $scope.dtOptions.sScrollX = "100%";
 $scope.dtOptions.sScrollXInner = "100%";
+$scope.dtOptions.bPaginate = false;
 $scope.dtColumns = [
   DTColumnBuilder.newColumn('sono').withTitle('SO Number'),
   DTColumnBuilder.newColumn('inventory_location').withTitle('Inventory Location'),

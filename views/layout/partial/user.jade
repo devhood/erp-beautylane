@@ -1,26 +1,26 @@
-li.dropdown.user(ng-controller="userController as userCtrl" )
+li.dropdown.user(ng-controller="UserLoginController" )
 	a.dropdown-toggle(href="#", data-toggle="dropdown", data-hover="dropdown", data-close-others="true")
-		img(alt="", src="{{userCtrl.user.photo}}")
+		img(alt="", src="{{user.photo}}")
 		span.username
-			| {{userCtrl.user.username}}
+			| {{user.username}}
 		i.fa.fa-angle-down
 	ul.dropdown-menu
 		li
-			a(href="{{userCtrl.user.profileUrl}}")
+			a(href="{{user.profileUrl}}")
 				i.fa.fa-user
 				| My Profile
 		li
-			a(href="{{userCtrl.user.calendarUrl}}")
+			a(href="{{user.calendarUrl}}")
 				i.fa.fa-calendar
 				| My Calendar
 		li
-			a(href="{{userCtrl.user.inboxUrl}}")
+			a(href="{{user.inboxUrl}}")
 				i.fa.fa-envelope
 				| My Inbox
 				span.badge.badge-danger
 					| 3
 		li
-			a(href="{{userCtrl.user.taskUrl}}")
+			a(href="{{user.taskUrl}}")
 				i.fa.fa-tasks
 				| My Tasks
 				span.badge.badge-success
@@ -31,11 +31,11 @@ li.dropdown.user(ng-controller="userController as userCtrl" )
 				i.fa.fa-arrows
 				| Full Screen
 		li
-			a(href="{{userCtrl.user.lockScreen}}")
+			a(href="{{user.lockScreen}}")
 				i.fa.fa-lock
 				| Lock Screen
 		li
-			a(href="{{userCtrl.user.logout}}")
+			a(href="{{user.logout}}")
 				i.fa.fa-key
 				| Log Out
 // END USER LOGIN DROPDOWN

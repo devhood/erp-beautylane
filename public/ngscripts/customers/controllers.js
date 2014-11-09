@@ -4,7 +4,8 @@ angular.module('customerApp.controllers',[])
 
 		$scope.dtOptions = DTOptionsBuilder
 		.fromSource('/api/customers')
-		// Add Bootstrap compatibility
+    // Add Bootstrap compatibility
+        .withBootstrap()
 		.withBootstrapOptions({
 				TableTools: {
 						classes: {
@@ -23,6 +24,7 @@ angular.module('customerApp.controllers',[])
 
 		// Add ColVis compatibility
 		.withColVis()
+		.withColVisOption("buttonText","Columns")
 		// Add Table tools compatibility
 		.withTableTools('/vendor/datatables-tabletools/swf/copy_csv_xls_pdf.swf')
 		.withTableToolsButtons([
@@ -31,6 +33,7 @@ angular.module('customerApp.controllers',[])
 		]);
 	    $scope.dtOptions.sScrollX = "100%";
 	    $scope.dtOptions.sScrollXInner = "100%";  
+	    $scope.dtOptions.bPaginate = false;
 	$scope.dtColumns = [
 			DTColumnBuilder.newColumn('category').withTitle('Category'),
 			DTColumnBuilder.newColumn('type').withTitle('Type'),
