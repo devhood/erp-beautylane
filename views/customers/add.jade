@@ -5,9 +5,6 @@
 			| ADD CUSTOMER PROFILE
 		.tools
 			a.collapse(href="javascript:;")
-			a.config(href="#portlet-config", data-toggle="modal")
-			a.reload(href="javascript:;")
-			a.remove(href="javascript:;")
 	.portlet-body.form
 		form.form-horizontal(role="form", name="add_form", ng-submit="add_form.$valid && addCustomer()", novalidate)
 			.form-body
@@ -90,7 +87,7 @@
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left.select
-								input#permanentDiscount.form-control(type="text", name="permanentDiscount", value="")
+								input#discount.form-control(type="text", ng-model="customer.discount" required)
 								span.col-md-12.control-label	Permanent Discount 
 				.row
 					.col-md-6
@@ -121,9 +118,6 @@
 							| ADDRESS
 						.tools
 							a.collapse(href="javascript:;")
-							a.config(href="#portlet-config", data-toggle="modal")
-							a.reload(href="javascript:;")
-							a.remove(href="javascript:;")
 					.portlet-body.form
 						.row
 							br
@@ -232,9 +226,6 @@
 							| CONTACT PERSONS
 						.tools
 							a.collapse(href="javascript:;")
-							a.config(href="#portlet-config", data-toggle="modal")
-							a.reload(href="javascript:;")
-							a.remove(href="javascript:;")
 					.portlet-body.form
 						.form-body
 							.row
