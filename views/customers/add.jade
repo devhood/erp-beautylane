@@ -9,30 +9,19 @@
 			a.reload(href="javascript:;")
 			a.remove(href="javascript:;")
 	.portlet-body.form
-		form#customer_add.form-horizontal(action="/customers/add", method="post")
+		form.form-horizontal(role="form", name="add_form", ng-submit="add_form.$valid && addCustomer()", novalidate)
 			.form-body
-				.alert.alert-danger.display-hide
-					button.close(data-close="alert")
-					| You have some form errors. Please check below.
-				.alert.alert-success.display-hide
-					button.close(data-close="alert")
-					| Your form validation is successful!
 				.row
 					br
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
-								select#categoryId.select2me.form-control.select2-offscreen(name="category[categoryId]", tabindex="-1", required="required")
-									option(value="")
-									option(value="1") Corporate
-									option(value="2") Individual
-									option(value="3") Product Category
-									option(value="4") Category
+								select.select2me.form-control.select2-offscreen(ng-model="customer.category", ng-options="category.category_name as category.category_name for category in categories", ng-selected="{{category.category_name}}" ,tabindex="-1", required)
 								span.col-md-12.control-label	Category 
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
-								select#customerTypeId.select2me.form-control.select2-offscreen(name="customerType[customerTypeId]", tabindex="-1", required="required")
+								select#customerTypeId.select2me.form-control.select2-offscreen(name="customerType[customerTypeId]", tabindex="-1", required)
 									option(value="")
 									option(value="1") Professional
 									option(value="2") Retail
@@ -111,7 +100,7 @@
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
-								select#paymentTermId.select2me.form-control.select2-offscreen(name="paymentTerm[paymentTermId]", tabindex="-1", required="required")
+								select#paymentTermId.select2me.form-control.select2-offscreen(name="paymentTerm[paymentTermId]", tabindex="-1", required)
 									option(value="")
 									option(value="1") Cash
 									option(value="2") 15 Days
@@ -135,7 +124,7 @@
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left.select
-								select#userId.select2me.form-control.select2-offscreen(name="salesExecutive[userId]", tabindex="-1", required="required")
+								select#userId.select2me.form-control.select2-offscreen(name="salesExecutive[userId]", tabindex="-1", required)
 									option(value="")
 									option(value="2") Lj sales
 								span.col-md-12.control-label	Sales Executive 
@@ -143,7 +132,7 @@
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
-								select#priceTypeId.select2me.form-control.select2-offscreen(name="priceType[priceTypeId]", tabindex="-1", required="required")
+								select#priceTypeId.select2me.form-control.select2-offscreen(name="priceType[priceTypeId]", tabindex="-1", required)
 									option(value="")  
 									option(value="1") Retail
 									option(value="2") Professional
@@ -152,7 +141,7 @@
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left.select
-								select#customerStatus.select2me.form-control.select2-offscreen(name="customerStatus", tabindex="-1", required="required")
+								select#customerStatus.select2me.form-control.select2-offscreen(name="customerStatus", tabindex="-1", required)
 									option(value="0") Active
 									option(value="1") Inactive
 									option(value="2") Suspended

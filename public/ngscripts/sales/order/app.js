@@ -1,7 +1,7 @@
-var app = angular.module('salesOrderApp',['datatables', 'ui.bootstrap','salesOrderApp.controllers','salesApp.services']);
+var app = angular.module('salesOrderApp',['serviceApp.reference','datatables', 'ui.bootstrap','salesOrderApp.controllers','salesApp.services']);
 
 app.config(function($stateProvider,$httpProvider){
-    $stateProvider.state('sales/order',{
+    $stateProvider.state('salesOrder',{
         url:'/sales/order/list',
         templateUrl:'/sales/order/list',
         controller:'SalesOrderListController'
@@ -19,5 +19,5 @@ app.config(function($stateProvider,$httpProvider){
         controller:'SalesOrderEditController'
     });
 }).run(function($state){
-   $state.go('sales/order');
+   $state.go('salesOrder');
 });

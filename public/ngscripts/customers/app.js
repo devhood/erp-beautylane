@@ -1,4 +1,4 @@
-var app = angular.module('customerApp',['ngTable','ui.router','ngResource','customerApp.controllers','customerApp.services']);
+var app = angular.module('customerApp',['serviceApp.reference','ui.router','ngResource','customerApp.controllers','customerApp.services']);
 
 
 app.config(function($stateProvider,$httpProvider){

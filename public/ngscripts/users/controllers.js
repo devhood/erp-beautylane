@@ -50,7 +50,7 @@ angular.module('userApp.controllers',[])
 	            '   <i class="fa fa-eye"></i>' +
 	            '</a>&nbsp;' +
 
-	            '<a href="#/users/edit/'+data._id+'"", ui-sref="editUser" class="tooltips btn default" '+
+	            '<a href="#/users/edit/'+data._id+'", ui-sref="editUser" class="tooltips btn default" '+
 	        	'data-container="body", data-placement="top", '+
 	        	'data-html="true", data-original-title="Edit Record">' +
 	            '   <i class="fa fa-edit"></i>' +
@@ -87,10 +87,10 @@ angular.module('userApp.controllers',[])
         });
     };
 
-    $scope.deleteUser=function(movie){
+    $scope.deleteUser=function(user){
   	   if(popupService.showPopup('Really delete this?')){
-  	       movie.$delete(function(){
-  	         $window.location.href='';
+  	       user.$delete(function(){
+  	    	 $state.go('users');
   	      });
   	   }
   	};

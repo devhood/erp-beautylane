@@ -1,6 +1,5 @@
 angular.module('customerApp.controllers',[])
-.controller('CustomerListController',function($scope,$state,popupService,$window,Customer,ngTableParams, $filter, DTOptionsBuilder, DTColumnBuilder){
-
+.controller('CustomerListController',function($scope,$state,popupService,$window,Customer, $filter, DTOptionsBuilder, DTColumnBuilder){
 
 		$scope.dtOptions = DTOptionsBuilder
 		.fromSource('/api/customers')
@@ -55,17 +54,17 @@ angular.module('customerApp.controllers',[])
 			DTColumnBuilder.newColumn('status').withTitle('Status'),
 			DTColumnBuilder.newColumn(null).withTitle('Actions').notSortable()
 			.renderWith(function(data, type, full, meta) {
-					return '<a href="#/customers/view", ui-sref="editCustomer" class="tooltips btn default" '+
+					return '<div class="btn-group btn-group-xs btn-group-solid"><a href="#/customers/view/'+data._id+'", ui-sref="editCustomer" class="tooltips btn default" '+
 						'data-container="body", data-placement="top", '+
 						'data-html="true", data-original-title="View Record">' +
 							'   <i class="fa fa-eye"></i>' +
 							'</a>&nbsp;' +
 
-							'<a href="#/customers/edit", ui-sref="editCustomer" class="tooltips btn default" '+
+							'<a href="#/customers/edit/'+data._id+'", ui-sref="editCustomer" class="tooltips btn default" '+
 						'data-container="body", data-placement="top", '+
 						'data-html="true", data-original-title="Edit Record">' +
 							'   <i class="fa fa-edit"></i>' +
-							'</a>&nbsp;';
+							'</a>&nbsp;</div>';
 			})
 	];
 
@@ -91,6 +90,14 @@ angular.module('customerApp.controllers',[])
         });
     };
 
+    $scope.deleteCustomer=function(customer){
+   	   if(popupService.showPopup('Really delete this?')){
+   	       customer.$delete(function(){
+   	    	$state.go('customers');
+   	      });
+   	   }
+   	};
+   	
     $scope.loadCustomer=function(){
         $scope.customer=Customer.get({id:$stateParams.id});
     };
