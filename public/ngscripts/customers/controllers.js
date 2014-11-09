@@ -98,13 +98,18 @@ angular.module('customerApp.controllers',[])
     	
     };
     $scope.addContact = function(customer){
-    	if($scope.customer.contacts){
-    		$scope.customer.contacts.push(customer.contact);
+    	if(customer.contact.name && customer.contact.position && customer.contact.phone ){
+	    	if($scope.customer.contacts){
+	    		$scope.customer.contacts.push(customer.contact);
+	    	}
+	    	else{
+	    		$scope.customer.contacts = [customer.contact];
+	    	}
+	    	customer.contact = {};
     	}
-    	else{
-    		$scope.customer.contacts = [customer.contact];
-    	}
-    	customer.contact = {};
+    }
+    $scope.removeContact = function(index){
+    	$scope.customer.contacts.splice(index, 1);
     }
 
 }).controller('CustomerEditController',function($scope,$state,$stateParams,Customer){
