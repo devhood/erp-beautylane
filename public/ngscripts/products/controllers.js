@@ -39,7 +39,7 @@ $scope.dtColumns = [
   DTColumnBuilder.newColumn('supplier_code').withTitle('Supplier Code'),
   DTColumnBuilder.newColumn('bl_code').withTitle('BL Code'),
   DTColumnBuilder.newColumn('brand').withTitle('Brand'),
-  DTColumnBuilder.newColumn('item_name').withTitle('Item Name'),
+  DTColumnBuilder.newColumn('name').withTitle('Item Name'),
   DTColumnBuilder.newColumn('size').withTitle('Size'),
   DTColumnBuilder.newColumn('color').withTitle('Color'),
   DTColumnBuilder.newColumn('payment_term').withTitle('Payment Terms'),
@@ -68,8 +68,15 @@ $scope.dtColumns = [
   })
 ];
 
-}).controller('ProductViewController',function($scope,$stateParams,Product){
+}).controller('ProductViewController',function($scope,$stateParams,Product, Api){
     $scope.product=Product.get({id:$stateParams.id});
+    $scope.payment_terms = Api.PaymentTerm.query();
+    $scope.brands = Api.Brand.query();
+    $scope.statuses = Api.ProductStatus.query();
+    $scope.uoms = Api.Uom.query();
+    $scope.movements = Api.Movement.query();
+    $scope.suppliers = Api.Supplier.query();
+    $scope.currencies = Api.Currency.query();
 
 }).controller('ProductCreateController',function($scope,$state,$stateParams,Product,Api){
 
@@ -89,13 +96,26 @@ $scope.dtColumns = [
     $scope.currencies = Api.Currency.query();
     
 
-}).controller('ProductEditController',function($scope,$state,$stateParams,Product){
+}).controller('ProductEditController',function($scope,$window,popupService,$state,$stateParams,Product, Api){
 
     $scope.updateProduct=function(){
         $scope.product.$update(function(){
             $state.go('products');
         });
     };
-
+    $scope.deleteProduct=function(product){
+   	   if(popupService.showPopup('Really delete this?')){
+   	       product.$delete(function(){
+   	    	 $state.go('products');
+   	      });
+   	   }
+   	};
+    $scope.payment_terms = Api.PaymentTerm.query();
+    $scope.brands = Api.Brand.query();
+    $scope.statuses = Api.ProductStatus.query();
+    $scope.uoms = Api.Uom.query();
+    $scope.movements = Api.Movement.query();
+    $scope.suppliers = Api.Supplier.query();
+    $scope.currencies = Api.Currency.query();
     $scope.product=Product.get({id:$stateParams.id});
 });

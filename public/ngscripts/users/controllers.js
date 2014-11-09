@@ -95,13 +95,10 @@ angular.module('userApp.controllers',[])
   	   }
   	};
   	
-    $scope.loadUser=function(){
-        $scope.user=User.get({id:$stateParams.id});
-    };
+  	$scope.user=User.get({id:$stateParams.id});
     $scope.positions = Api.Position.query();
     $scope.statuses = Api.UserStatus.query();
 
-    $scope.loadUser();
 }).controller('UserLoginController',function($scope,$stateParams,User){
 
 
