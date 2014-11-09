@@ -118,6 +118,7 @@ angular.module('customerApp.controllers',[])
 
 }).controller('CustomerEditController',function($scope,$state,$window,popupService,$stateParams,Customer, Api){
 
+	$scope.customer=Customer.get({id:$stateParams.id});
     $scope.updateCustomer=function(){
         $scope.customer.$update(function(){
             $state.go('customers');
@@ -158,9 +159,5 @@ angular.module('customerApp.controllers',[])
     $scope.removeContact = function(index){
     	$scope.customer.contacts.splice(index, 1);
     }
-    $scope.loadCustomer=function(){
-        $scope.customer=Customer.get({id:$stateParams.id});
-    };
-
-    $scope.loadCustomer();
+    
 });
