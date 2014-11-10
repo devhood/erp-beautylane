@@ -24,5 +24,5 @@ app.config(function($stateProvider,$httpProvider){
         controller:'PurchaseApproveController'
     });
 }).run(function($state){
-   $state.go('purchases');
+   
 });

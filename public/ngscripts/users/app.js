@@ -20,5 +20,5 @@ app.config(function($stateProvider,$httpProvider){
         controller:'UserEditController'
     });
 }).run(function($state){
-   $state.go('users');
+   
 });

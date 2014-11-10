@@ -1,8 +1,0 @@
-extends ../layout/main
-block scripts
-	script(type='text/javascript').
-		(function(){
-			var app = angular.module('erp',['ui.router','ngResource','menu','notification','userApp','message','task']);
-		})();
-block content
-	div(ui-view)

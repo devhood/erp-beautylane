@@ -20,5 +20,5 @@ app.config(function($stateProvider,$httpProvider){
         controller:'CustomerEditController'
     });
 }).run(function($state){
-   
+   $state.go('customers');
 });

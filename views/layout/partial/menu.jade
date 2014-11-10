@@ -11,6 +11,6 @@
 					span.arrow(ng-show="{{menu.childLink.length}}")
 				ul.sub-menu
 					li.tooltips(ng-repeat="submenu in menu.childLink", data-container="body", data-placement="right", data-html="true", data-original-title="{{submenu.description}}")
-						a(href="{{submenu.link}}")
+						a(href="{{submenu.link}}", ui-sref="{{submenu.sref}}")
 							span.title
 								| {{submenu.title}}

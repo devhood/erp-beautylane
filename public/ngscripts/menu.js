@@ -1,6 +1,6 @@
 (function(){
 	var app = angular.module('menu',['notification']);
-	
+
 	app.controller('MenuController', function(){
 		this.menus = menus;
 		this.active = 0;
@@ -11,65 +11,83 @@
 			this.active = active;
 		}
 	});
-	
+
 	var menus = [
 	   {
 		   link : "javascript:;",
 		   title : "Sales",
-		   description : "Sales",
 		   start : true,
 		   icon : "fa-home",
 		   id : 1,
 		   childLink : [
 		      {
-		          link : "/sales/order",
 		          title : "Sales Order",
-		          description : "Sales",
+		          description : "Create Sales Order",
+							sref : "salesOrder"
 		      },
+					{
+							title : "Print Pick List",
+							description : "Prepare Items for Delivery",
+							sref : "salesPickList"
+					},
 		      {
-		          link : "/sales/delivery",
 		          title : "Delivery Receipts",
-		          description : "Sales",
+		          description : "Prepare and Approve Items for Delivery",
+							sref : "salesDelivery"
 		      },
 		      {
-		          link : "/sales/invoice",
 		          title : "Sales Invoices",
-		          description : "Sales",
+		          description : "Approve Sales Invoices",
+							sref : "salesInvoice"
 		      },
+					{
+							title : "Print DR and SI",
+							description : "Print Dr and SI",
+							sref : "salesPrint"
+					},
+					{
+							title : "Trip Ticket",
+							description : "Print and Update Trip Ticket",
+							sref : "salesTripTicket"
+					},
 		      {
-		          link : "/sales/return",
 		          title : "Return Merchandise",
-		          description : "Sales",
+		          description : "Return Sales Item",
+							sref : "salesReturn"
 		      },
 		      {
-		          link : "/sales/credit",
 		          title : "Credit Memo",
-		          description : "Sales",
-		      }
+		          description : "Apply for Credit Memo",
+							sref : "salesMemo"
+		      },
+					{
+							title : "Payment",
+							description : "Record Payment",
+							sref : "salesPayment"
+					}
 		   ]
 	   },
 	   {
 		   link : "javascript:;",
 		   title : "Admin",
-		   description : "Sales",
 		   last : true,
 		   icon : "fa-gear",
 		   id : 2,
 		   childLink : [
 		      {
-		          link : "/customers",
 		          title : "Customer",
-		          description : "Sales",
+		          description : "Manage Customers",
+							sref : "customers"
 		      },
 		      {
-		          link : "/products",
 		          title : "Products",
-		          description : "Sales",
+		          description : "Manage Products",
+							sref : "products"
 		      },
 		      {
-		          link : "/users",
 		          title : "Users",
-		          description : "Sales",
+		          description : "Manage Users",
+							sref : "users"
 		      }
 		   ]
 	   }

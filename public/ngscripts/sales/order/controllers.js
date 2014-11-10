@@ -71,6 +71,7 @@ $scope.dtColumns = [
     $scope.addSales=function(){
         $scope.sales.status = "SO submitted to Warehouse";
         $scope.sales.created_on = Date.now();
+        $scope.sales.status_code = "SO_CREATED";
         $scope.sales.$save(function(){
             $state.go('salesOrder');
         });

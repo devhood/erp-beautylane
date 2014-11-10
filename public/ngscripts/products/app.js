@@ -20,5 +20,5 @@ app.config(function($stateProvider,$httpProvider){
         controller:'ProductEditController'
     });
 }).run(function($state){
-   $state.go('products');
+   
 });
