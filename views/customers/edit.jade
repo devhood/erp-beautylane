@@ -2,22 +2,22 @@
 	.portlet-title
 		.caption
 			i.fa.fa-reorder
-			| ADD CUSTOMER PROFILE
+			| EDIT CUSTOMER PROFILE
 		.tools
 			a.collapse(href="javascript:;")
 	.portlet-body.form
-		form.form-horizontal(role="form", name="add_form", ng-submit="add_form.$valid && updateCustomer()", novalidate)
+		form.form-horizontal(role="form", name="add_form", ng-submit="add_form.$valid && addCustomer()", novalidate)
 			.form-body
 				.row
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
-								input#company_name.form-control(type="text", ng-model="customer.company_name" required)
+								input#company_name.form-control(type="text", ng-model="customer.company_name" ng-minlength="0", ng-maxlength="50", required)
 								span.col-md-12.control-label	Company Name 
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
-								input#branch.form-control(type="text",  ng-model="customer.branch", required)
+								input#branch.form-control(type="text",  ng-model="customer.branch", ng-minlength="0", ng-maxlength="50", required)
 								span.col-md-12.control-label	Branch Location 
 				.row
 					br
@@ -29,40 +29,40 @@
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
-								input#website.form-control(type="text", ng-model="customer.website", required)
+								input#website.form-control(type="text", ng-model="customer.website", ng-minlength="0", ng-maxlength="30", required)
 								span.col-md-12.control-label	Website 
 				.row
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
-								input#trade_name.form-control(type="text", ng-model="customer.trade_name", required)
+								input#trade_name.form-control(type="text", ng-model="customer.trade_name", ng-minlength="0", ng-maxlength="30", required)
 								span.col-md-12.control-label	Trade Name 
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
-								input#tin.form-control(type="text",   ng-model="customer.tin" required)
+								input#tin.form-control(type="text",   ng-model="customer.tin" ng-minlength="0", ng-maxlength="20", required)
 								span.col-md-12.control-label	TIN 
 				.row
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
-								input#commission_sharing.form-control(type="text", ng-model="customer.commission_sharing", required)
+								input#commission_sharing.form-control(type="text", ng-model="customer.commission_sharing", ng-minlength="0", ng-maxlength="20", required)
 								span.col-md-12.control-label	Commission Sharing
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
-								input#sec_no.form-control(type="text",   ng-model="customer.sec_no" required)
+								input#sec_no.form-control(type="text",   ng-model="customer.sec_no" ng-minlength="0", ng-maxlength="20", required)
 								span.col-md-12.control-label	Sec Number 
 				.row
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
-								input#phone.form-control(type="text",   ng-model="customer.phone" required)
+								input#phone.form-control(type="text",   ng-model="customer.phone" ng-minlength="0", ng-maxlength="20", required)
 								span.col-md-12.control-label	Phone 
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
-								input#email.form-control(type="email",   ng-model="customer.email" required)
+								input#email.form-control(type="email",   ng-model="customer.email" ng-minlength="0", ng-maxlength="50", required)
 								span.col-md-12.control-label	Email 
 				.row
 					.col-md-6
@@ -81,12 +81,12 @@
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
-								input#credit_limit.form-control(type="text", ng-model="customer.credit_limit" required)
+								input#credit_limit.form-control(type="number", ng-model="customer.credit_limit" ng-minlength="0", ng-maxlength="10", required)
 								span.col-md-12.control-label	Credit Limit 
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left.select
-								input#transaction_limit.form-control(type="text", ng-model="customer.transaction_limit" required)
+								input#transaction_limit.form-control(type="number", ng-model="customer.transaction_limit" ng-minlength="0", ng-maxlength="1", min="1", max="3", required)
 								span.col-md-12.control-label
 									| Unpaid Transaction Limit
 				.row
@@ -98,7 +98,7 @@
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left.select
-								input#discount.form-control(type="text", ng-model="customer.discount" required)
+								input#discount.form-control(type="text", ng-model="customer.discount" ng-minlength="0", ng-maxlength="50", required)
 								span.col-md-12.control-label	Permanent Discount 
 				.row
 					.col-md-6
@@ -145,12 +145,12 @@
 							.col-md-6
 								.form-group
 									.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
-										input.form-control(type="text", ng-model="customer.shipping_address.landmark", required)
+										input.form-control(type="text", ng-model="customer.shipping_address.landmark", ng-minlength="0", ng-maxlength="70", required)
 										span.col-md-12.control-label	Floor/Unit/Building
 							.col-md-6
 								.form-group
 									.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
-										input.form-control(type="text", ng-model="customer.shipping_address.barangay", required)
+										input.form-control(type="text", ng-model="customer.shipping_address.barangay", ng-minlength="0", ng-maxlength="70", required)
 										span.col-md-12.control-label	Street/Barangay
 						.row
 							.col-md-6
@@ -198,12 +198,12 @@
 							.col-md-6
 								.form-group
 									.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
-										input.form-control(type="text", ng-model="customer.billing_address.landmark", required)
+										input.form-control(type="text", ng-model="customer.billing_address.landmark", ng-minlength="0", ng-maxlength="70", required)
 										span.col-md-12.control-label	Floor/Unit/Building
 							.col-md-6
 								.form-group
 									.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
-										input.form-control(type="text", ng-model="customer.billing_address.barangay", required)
+										input.form-control(type="text", ng-model="customer.billing_address.barangay", ng-minlength="0", ng-maxlength="70", required)
 										span.col-md-12.control-label	Street/Barangay
 						.row
 							.col-md-6
@@ -244,17 +244,17 @@
 									.col-md-4
 										.form-group
 											.col-xs-12.col-sm-12.col-md-12.col-lg-12
-												input.form-control(type="text", ng-model="customer.contact.name")
+												input.form-control(type="text", ng-minlength="0", ng-maxlength="30", ng-model="customer.contact.name")
 												span.col-md-12.control-label	Name 
 									.col-md-4
 										.form-group
 											.col-xs-12.col-sm-12.col-md-12.col-lg-12
-												input.form-control(type="text", ng-model="customer.contact.position")
+												input.form-control(type="text", ng-minlength="0", ng-maxlength="20", ng-model="customer.contact.position")
 												span.col-md-12.control-label	Position 
 									.col-md-3
 										.form-group
 											.col-xs-12.col-sm-12.col-md-12.col-lg-12
-												input.form-control(type="text", ng-model="customer.contact.phone")
+												input.form-control(type="text", ng-minlength="0", ng-maxlength="20", ng-model="customer.contact.phone")
 												span.col-md-12.control-label	Phone
 									.col-md-1
 										button.btn-sm.green.custom-right(type="button",ng-click="addContact(customer)")
@@ -289,6 +289,5 @@
 					.col-md-6
 						.col-md-offset-3.col-md-9
 							button.btn.green(type="submit") Submit
-							button.btn.default(type="button", ng-click="deleteCustomer(customer)") Delete
 							button.btn.default(type="button", ui-sref="customers") Cancel
 					.col-md-6

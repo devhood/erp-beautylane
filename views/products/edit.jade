@@ -37,26 +37,26 @@
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
-								input#name.form-control(type="text", ng-model="product.name", required)
+								input#name.form-control(type="text", ng-model="product.name", ng-minlength="0", ng-maxlength="40", required)
 								span.col-md-12.control-label Item Name
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
-								input#size.form-control(type="text", ng-model="product.size", required)
+								input#size.form-control(type="text", ng-model="product.size", ng-minlength="0", ng-maxlength="10", required)
 								span.col-md-12.control-label Size
 				.row
 					.col-md-1
 					.col-md-10
 						.form-group
 							.col-xs-12.col-sm-12.col-md-12.col-lg-12(align="center")
-								input#description.form-control(type="text", ng-model="product.description", required)
+								input#description.form-control(type="text", ng-model="product.description", ng-minlength="0", ng-maxlength="100", required)
 								span.col-md-12.control-label Description Notes
 					.col-md-1
 				.row
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
-								input#color.form-control(type="text", ng-model="product.color", required)
+								input#color.form-control(type="text", ng-model="product.color", ng-minlength="0", ng-maxlength="25", required)
 								span.col-md-12.control-label Color
 					.col-md-6
 						.form-group
@@ -94,18 +94,18 @@
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
-								input#Cost.form-control(type="text", ng-model="product.international_cost", required)
+								input#Cost.form-control(type="text", ng-model="product.international_cost", ng-minlength="0", ng-maxlength="20", required)
 								span.col-md-12.control-label International Cost
 				.row
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
-								input#retail_price.form-control(type="text",ng-model="product.retail_price", required)
+								input#retail_price.form-control(type="text",ng-model="product.retail_price", ng-minlength="0", ng-maxlength="20", required)
 								span.col-md-12.control-label Retail Price
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
-								input#professional_price.form-control(type="text", ng-model="product.professional_price", required)
+								input#professional_price.form-control(type="text", ng-model="product.professional_price", ng-minlength="0", ng-maxlength="20", required)
 								span.col-md-12.control-label Professional Price
 			.form-actions.fluid
 				.row
