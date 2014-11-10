@@ -156,7 +156,7 @@
 							.col-md-6
 								.form-group
 									.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
-										select.select2me.form-control.select2-offscreen(ng-model="customer.shipping_address.country",ng-selected="{{customer.shipping_address.country}}", ng-options="country.country as country.country for country in countries", required disabled)
+										select.select2me.form-control.select2-offscreen(ng-model="customer.shipping_address.country",ng-selected="{{customer.shipping_address.country}}", ng-options="country.country for country in countries track by country.country", required disabled)
 										span.col-md-12.control-label	Country 
 							.col-md-6
 								.form-group
@@ -209,7 +209,7 @@
 							.col-md-6
 								.form-group
 									.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
-										select.select2me.form-control.select2-offscreen(ng-model="customer.billing_address.country", ng-selected="{{customer.billing_address.country}}", ng-options="country.country as country.country for country in countries", required disabled)
+										select.select2me.form-control.select2-offscreen(ng-model="customer.billing_address.country", ng-selected="{{customer.billing_address.country}}", ng-options="country.country for country in countries track by country.country", required disabled)
 										span.col-md-12.control-label	Country 
 							.col-md-6
 								.form-group
