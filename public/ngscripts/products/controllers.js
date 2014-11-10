@@ -36,21 +36,13 @@ $scope.dtOptions.sScrollXInner = "100%";
 $scope.dtOptions.bPaginate = false;
 $scope.dtColumns = [
   DTColumnBuilder.newColumn('part_number').withTitle('Part Number'),
-  DTColumnBuilder.newColumn('supplier_code').withTitle('Supplier Code'),
-  DTColumnBuilder.newColumn('bl_code').withTitle('BL Code'),
   DTColumnBuilder.newColumn('brand').withTitle('Brand'),
   DTColumnBuilder.newColumn('name').withTitle('Item Name'),
-  DTColumnBuilder.newColumn('size').withTitle('Size'),
-  DTColumnBuilder.newColumn('color').withTitle('Color'),
   DTColumnBuilder.newColumn('payment_term').withTitle('Payment Terms'),
   DTColumnBuilder.newColumn('uom').withTitle('UOM'),
   DTColumnBuilder.newColumn('movement').withTitle('Movement'),
   DTColumnBuilder.newColumn('description').withTitle('Description'),
   DTColumnBuilder.newColumn('supplier').withTitle('Supplier'),
-  DTColumnBuilder.newColumn('currency').withTitle('Currency'),
-  DTColumnBuilder.newColumn('international_cost').withTitle('Intl Cost'),
-  DTColumnBuilder.newColumn('professional_price').withTitle('Prof Price'),
-  DTColumnBuilder.newColumn('retail_price').withTitle('Retail Price'),
   DTColumnBuilder.newColumn('status').withTitle('Status'),
   DTColumnBuilder.newColumn(null).withTitle('Actions').notSortable()
   .renderWith(function(data, type, full, meta) {
