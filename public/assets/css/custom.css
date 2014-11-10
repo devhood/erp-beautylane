@@ -32,8 +32,14 @@ textarea{
 	float: left;
 }
 .ng-invalid {
-	border-color : #FA787E
+	border-color : #FF4156
 }
 .ng-valid {
 	border-color : #78fA89
+}
+.ng-pending{
+  border-color : #3E454C
+}
+.ng-pristine{
+  border-color : #165A85
 }
