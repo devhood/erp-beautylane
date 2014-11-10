@@ -62,6 +62,8 @@ angular.module('userApp.controllers',[])
 
 
     $scope.user=User.get({id:$stateParams.id});
+    $scope.positions = Api.Position.query();
+    $scope.statuses = Api.UserStatus.query();
     
 
 }).controller('UserCreateController',function($scope,$state,$stateParams,User,Api){
