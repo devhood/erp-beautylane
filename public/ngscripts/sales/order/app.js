@@ -1,4 +1,5 @@
-var app = angular.module('salesOrderApp',['serviceApp.reference','datatables', 'ui.bootstrap','salesOrderApp.controllers','salesApp.services']);
+var app = angular.module('salesOrderApp',['serviceApp.reference','ui.router','ngResource','salesOrderApp.controllers','salesApp.services']);
+
 
 app.config(function($stateProvider,$httpProvider){
     $stateProvider.state('salesOrder',{

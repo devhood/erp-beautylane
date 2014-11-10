@@ -31,7 +31,7 @@ angular.module('customerApp.controllers',[])
 				'xls',
 		]);
 	    $scope.dtOptions.sScrollX = "100%";
-	    $scope.dtOptions.sScrollXInner = "100%";  
+	    $scope.dtOptions.sScrollXInner = "100%";
 	    $scope.dtOptions.bPaginate = false;
 	    $scope.dtColumns = [
 			DTColumnBuilder.newColumn('type').withTitle('Type'),
@@ -77,6 +77,10 @@ angular.module('customerApp.controllers',[])
     $scope.customer=new Customer();
 
     $scope.addCustomer=function(){
+			  delete $scope.customer.shipping_address.province.cities;
+				delete $scope.customer.shipping_address.city.zipcodes;
+				$scope.customer.shipping_address.province.cities = [$scope.customer.shipping_address.city];
+				$scope.customer.shipping_address.city.zipcodes = [$scope.customer.shipping_address.zipcode];
         $scope.customer.$save(function(){
             $state.go('customers');
         });
@@ -113,6 +117,10 @@ angular.module('customerApp.controllers',[])
 
 	$scope.customer=Customer.get({id:$stateParams.id});
     $scope.updateCustomer=function(){
+			 delete $scope.customer.shipping_address.province.cities;
+			 delete $scope.customer.shipping_address.city.zipcodes;
+			 $scope.customer.shipping_address.province.cities = [$scope.customer.shipping_address.city];
+			 $scope.customer.shipping_address.city.zipcodes = [$scope.customer.shipping_address.zipcode];
         $scope.customer.$update(function(){
             $state.go('customers');
         });
@@ -133,6 +141,7 @@ angular.module('customerApp.controllers',[])
     $scope.statuses = Api.CustomerStatus.query();
     $scope.geographys = Api.Geography.query();
     $scope.countries = Api.Country.query();
+		$scope.discounts = Api.Discount.query();
     $scope.copyShipping = function(customer){
     	if(customer.shipping_address && customer.shipping_address.same){
     		$scope.customer.billing_address = customer.shipping_address;
@@ -152,5 +161,5 @@ angular.module('customerApp.controllers',[])
     $scope.removeContact = function(index){
     	$scope.customer.contacts.splice(index, 1);
     }
-    
+
 });

@@ -16,97 +16,97 @@
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
 								input#part_no.form-control(type="text", ng-model="product.part_number", disabled)
-								span.col-md-12.control-label Part Number
+								span.col-md-12.help-block Part Number
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
 								input#supplier_code.form-control(type="text", ng-model="product.supplier_code", disabled)
-								span.col-md-12.control-label Supplier Code
+								span.col-md-12.help-block Supplier Code
 				.row
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
 								input#bl_code.form-control(type="text", ng-model="product.bl_code", disabled)
-								span.col-md-12.control-label BL Code
+								span.col-md-12.help-block BL Code
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
 								select#brand.select2me.form-control.select2-offscreen(ng-model="product.brand", ng-options="brand.brand as brand.brand for brand in brands", ng-selected="{{product.brand}}" ,tabindex="-1", disabled)
-								span.col-md-12.control-label Brand
+								span.col-md-12.help-block Brand
 				.row
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
 								input#name.form-control(type="text", ng-model="product.name", disabled)
-								span.col-md-12.control-label Item Name
+								span.col-md-12.help-block Item Name
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
 								input#size.form-control(type="text", ng-model="product.size", disabled)
-								span.col-md-12.control-label Size
+								span.col-md-12.help-block Size
 				.row
 					.col-md-1
 					.col-md-10
 						.form-group
 							.col-xs-12.col-sm-12.col-md-12.col-lg-12(align="center")
 								input#description.form-control(type="text", ng-model="product.description", disabled)
-								span.col-md-12.control-label Description Notes
+								span.col-md-12.help-block Description Notes
 					.col-md-1
 				.row
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
 								input#color.form-control(type="text", ng-model="product.color", disabled)
-								span.col-md-12.control-label Color
+								span.col-md-12.help-block Color
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
 								select#payment_term.select2me.form-control.select2-offscreen(ng-model="product.payment_term", tabindex="-1",ng-options="payment_term.payment_term_name as payment_term.payment_term_name for payment_term in payment_terms", ng-selected="{{product.payment_term}}", disabled)
-								span.col-md-12.control-label Payment Terms
+								span.col-md-12.help-block Payment Terms
 				.row
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
 								select#status.select2me.form-control.select2-offscreen(ng-model="product.status", tabindex="-1",ng-options="status.status as status.status for status in statuses", ng-selected="{{product.status}}", disabled)
-								span.col-md-12.control-label Status
+								span.col-md-12.help-block Status
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
 								select#uom.select2me.form-control.select2-offscreen(ng-model="product.uom", tabindex="-1",ng-options="uom.uom as uom.uom for uom in uoms", ng-selected="{{product.uom}}", disabled)
-								span.col-md-12.control-label UOM
+								span.col-md-12.help-block UOM
 				.row
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
 								select#movement.select2me.form-control.select2-offscreen(ng-model="product.movement", tabindex="-1",ng-options="movement.movement as movement.movement for movement in movements", ng-selected="{{product.movement}}", disabled)
-								span.col-md-12.control-label Movement
+								span.col-md-12.help-block Movement
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
 								select#supplier.select2me.form-control.select2-offscreen(ng-model="product.supplier", tabindex="-1",ng-options="supplier.supplier as supplier.supplier for supplier in suppliers", ng-selected="{{product.supplier}}", disabled)
-								span.col-md-12.control-label Supplier
+								span.col-md-12.help-block Supplier
 				.row
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
 								select#currency.select2me.form-control.select2-offscreen(ng-model="product.currency", tabindex="-1",ng-options="currency.currency as currency.currency for currency in currencies", ng-selected="{{product.currency}}", disabled)
-								span.col-md-12.control-label Currency
+								span.col-md-12.help-block Currency
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
 								input#Cost.form-control(type="text", ng-model="product.international_cost", disabled)
-								span.col-md-12.control-label International Cost
+								span.col-md-12.help-block International Cost
 				.row
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
 								input#retail_price.form-control(type="text",ng-model="product.retail_price", disabled)
-								span.col-md-12.control-label Retail Price
+								span.col-md-12.help-block Retail Price
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
 								input#professional_price.form-control(type="text", ng-model="product.professional_price", disabled)
-								span.col-md-12.control-label Professional Price
+								span.col-md-12.help-block Professional Price
 			.form-actions.fluid
 				.row
 					.col-md-6

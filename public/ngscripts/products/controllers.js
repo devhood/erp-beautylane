@@ -1,4 +1,4 @@
-angular.module('productApp.controllers',['ngTable'])
+angular.module('productApp.controllers',[])
 .controller('ProductListController',function($scope,$state,popupService,$window,Product, $filter,DTOptionsBuilder, DTColumnBuilder){
 
 
@@ -32,7 +32,7 @@ $scope.dtOptions = DTOptionsBuilder
     'xls',
 ]);
 $scope.dtOptions.sScrollX = "100%";
-$scope.dtOptions.sScrollXInner = "100%";  
+$scope.dtOptions.sScrollXInner = "100%";
 $scope.dtOptions.bPaginate = false;
 $scope.dtColumns = [
   DTColumnBuilder.newColumn('part_number').withTitle('Part Number'),
@@ -86,7 +86,7 @@ $scope.dtColumns = [
     $scope.movements = Api.Movement.query();
     $scope.suppliers = Api.Supplier.query();
     $scope.currencies = Api.Currency.query();
-    
+
 
 }).controller('ProductEditController',function($scope,$window,popupService,$state,$stateParams,Product, Api){
 

@@ -21,7 +21,7 @@ angular.module('serviceApp.reference',[])
                 method: 'PUT'
             }
         }),
- 
+
         SalesExecutive : $resource('/api/users?filter='+encodeURIComponent(JSON.stringify({"position":"Sales Executive"})),{id:'@_id'},{
             update: {
                 method: 'PUT'
@@ -92,6 +92,31 @@ angular.module('serviceApp.reference',[])
                 method: 'PUT'
             }
         }),
+        TransactionType : $resource('/api/transaction_types/:id',{id:'@_id'},{
+            update: {
+                method: 'PUT'
+            }
+        }),
+        Customer : $resource('/api/customers/:id',{id:'@_id'},{
+            update: {
+                method: 'PUT'
+            }
+        }),
+        Discount : $resource('/api/discounts/:id',{id:'@_id'},{
+            update: {
+                method: 'PUT'
+            }
+        }),
+        InventoryLocation : $resource('/api/inventory_location/:id',{id:'@_id'},{
+            update: {
+                method: 'PUT'
+            }
+        }),
+        Product : $resource('/api/products/:id',{id:'@_id'},{
+            update: {
+                method: 'PUT'
+            }
+        }),
     };
-    
+
 })
