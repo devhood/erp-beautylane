@@ -1,4 +1,4 @@
-var app = angular.module('purchaseApp',['ui.router','ngResource','purchaseApp.controllers','purchaseApp.services']);
+var app = angular.module('purchaseApp',['datatables','ngTable','ui.router','ngResource','purchaseApp.controllers','purchaseApp.services']);
 
 
 app.config(function($stateProvider,$httpProvider){
@@ -7,7 +7,7 @@ app.config(function($stateProvider,$httpProvider){
         templateUrl:'/purchases/list',
         controller:'PurchaseListController'
     }).state('viewPurchase',{
-       url:'/purchases/view',
+       url:'/purchases/view/:id',
        templateUrl:'purchases/view',
        controller:'PurchaseViewController'
     }).state('newPurchase',{
@@ -15,14 +15,14 @@ app.config(function($stateProvider,$httpProvider){
         templateUrl:'purchases/add',
         controller:'PurchaseCreateController'
     }).state('editPurchase',{
-        url:'/purchases/edit',
+        url:'/purchases/edit/:id',
         templateUrl:'purchases/edit',
         controller:'PurchaseEditController'
     }).state('approvePurchase',{
-        url:'/purchases/approve',
+        url:'/purchases/approve/:id',
         templateUrl:'purchases/approve',
         controller:'PurchaseApproveController'
     });
 }).run(function($state){
-   
+
 });

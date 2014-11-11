@@ -19,7 +19,7 @@ app.config(function($stateProvider,$httpProvider){
         templateUrl:'/shipments/edit',
         controller:'ShipmentEditController'
     }).state('approveShipment',{
-        url:'/shipments/approve',
+        url:'/shipments/approve/:id',
         templateUrl:'/shipments/approve',
         controller:'ShipmentApproveController'
     });
