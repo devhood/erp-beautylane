@@ -79,6 +79,7 @@ $scope.dtColumns = [
   $scope.shipping_modes = Api.ShippingMode.query();
   $scope.inventory_locations = Api.InventoryLocation.query();
   $scope.products = Api.Product.query();
+  $scope.payment_types = Api.PaymentType.query();
 
 }).controller('SalesPaymentEditController',function($scope,$filter,$window,popupService,$state,$stateParams,Sales, Api){
 
@@ -86,7 +87,7 @@ $scope.dtColumns = [
     
     $scope.updateSales=function(){
         $scope.sales.status_code = "PM_CREATED";
-        $scope.sales.status = "Payment confirmed by Accouting";
+        $scope.sales.status = "Payment confirmed by Accounting";
         $scope.sales.$update(function(){
             $state.go('salesPayment');
         });
@@ -108,8 +109,9 @@ $scope.dtColumns = [
     $scope.shipping_modes = Api.ShippingMode.query();
     $scope.inventory_locations = Api.InventoryLocation.query();
     $scope.products = Api.Product.query();
+    $scope.payment_types = Api.PaymentType.query();
     $scope.addDetail = function(sales){
-      if(sales.payment.type){
+
 
         if($scope.sales.payment_details){
           $scope.sales.payment_details.push(sales.payment);
@@ -120,7 +122,7 @@ $scope.dtColumns = [
         computeTotal($scope);
         sales.payment = {};
       }
-    }
+    
     $scope.removeDetail = function(index){
       computeTotal($scope);
       $scope.sales.payment_details.splice(index, 1);

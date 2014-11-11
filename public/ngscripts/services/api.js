@@ -117,6 +117,11 @@ angular.module('serviceApp.reference',[])
                 method: 'PUT'
             }
         }),
+        PaymentType : $resource('/api/payment_types/:id',{id:'@_id'},{
+            update: {
+                method: 'PUT'
+            }
+        }),
     };
 
 })
