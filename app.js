@@ -14,12 +14,19 @@ passport.use(new LocalStrategy(
 ));
 
 passport.serializeUser(function(user, done) {
-  done(null, user._id);
+  done(null, user);
 });
 
-passport.deserializeUser(require('./routes/api').user);
+passport.deserializeUser(function(user, done) {
+    done(null, user);
+});
 
 var app = express();
+var auth = function(req, res, next){
+  if (!req.isAuthenticated())
+    res.redirect("/login");
+  else next();
+};
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -36,31 +43,33 @@ app.use(flash());
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-app.use('/api', require('./routes/api'));
-app.use('/users', require('./routes/users'));
-app.use('/sales', require('./routes/sales'));
-app.use('/customers', require('./routes/customers'));
-app.use('/products', require('./routes/products'));
-app.use('/purchases', require('./routes/purchases'));
-app.use('/shipments', require('./routes/shipments'));
+app.use('/api',auth, require('./routes/api'));
+app.use('/users',auth, require('./routes/users'));
+app.use('/sales',auth, require('./routes/sales'));
+app.use('/customers',auth, require('./routes/customers'));
+app.use('/products',auth, require('./routes/products'));
+app.use('/purchases',auth, require('./routes/purchases'));
+app.use('/shipments',auth, require('./routes/shipments'));
 app.post('/login', passport.authenticate('local', {
     successRedirect: '/',
     failureRedirect: '/login',
     failureFlash: true })
 );
 app.get('/login',function(req,res){
-    console.log(req.session.messages);
-    res.render('dashboard/login');
+    res.render('dashboard/login',{message : req.flash('error')[0]});
 });
-app.use('/', function(req, res) {
+app.get('/loggedin', function(req, res) {
+    res.send(req.isAuthenticated() ? req.user : '0');
+});
+app.post('/logout', function(req, res){
+    req.session.destroy();
+      setTimeout(function() {
+          res.redirect("/login");
+      }, 2000);
+});
+app.use('/',auth, function(req, res) {
   res.render('dashboard/index');
 });
-
-var auth = function(req, res, next){
-  if (!req.isAuthenticated())
-    res.send(401);
-  else next();
-};
 
 
 module.exports = app;
