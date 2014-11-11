@@ -93,13 +93,13 @@
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
-								select#payment_term.select2me.form-control.select2-offscreen(ng-model="customer.payment_term", ng-options="payment_term.payment_term_name as payment_term.payment_term_name for payment_term in payment_terms", ng-selected="{{customer.payment_term}}" required)
-								span.col-md-12.control-label Payment Terms
+								select#payment_term.select2me.form-control.select2-offscreen(ng-model="customer.payment_term", ng-options="payment_term.payment_term_name for payment_term in payment_terms track by payment_term.payment_term_name", ng-selected="{{customer.payment_term}}" required)
+								span.col-md-12.help-block	Payment Terms
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left.select
-								select.select2me.form-control.select2-offscreen(ng-model="customer.discount", ng-options="discount.discount as discount.discount for discount in discounts", ng-selected="{{customer.discount}}" ,tabindex="-1")
-								span.col-md-12.control-label Permanent Discount
+								select.select2me.form-control.select2-offscreen(ng-model="customer.discount", ng-options="discount.discount for discount in discounts track by discount.discount" required disabled)
+								span.col-md-12.help-block	Permanent Discount
 				.row
 					.col-md-6
 						.form-group
@@ -115,8 +115,8 @@
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
-								select#priceTypeId.select2me.form-control.select2-offscreen(ng-model="customer.price_type", ng-options="price_type.price_type_name as price_type.price_type_name for price_type in price_types", ng-selected="{{customer.price_type}}" required)
-								span.col-md-12.control-label Price Type
+								select#priceTypeId.select2me.form-control.select2-offscreen(ng-model="customer.price_type", ng-options="price_type.price_type_name for price_type in price_types track by price_type.price_type_name", ng-selected="{{customer.price_type}}" required)
+								span.col-md-12.help-block	Price Type
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left.select

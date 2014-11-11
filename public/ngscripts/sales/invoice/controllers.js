@@ -54,7 +54,7 @@ $scope.dtColumns = [
   })
 ];
 
-}).controller('SalesOrderViewController',function($scope,$stateParams,Sales, Api){
+}).controller('SalesInvoiceViewController',function($scope,$stateParams,Sales, Api){
   $scope.sales=Sales.get({id:$stateParams.id});
   $scope.payment_terms = Api.PaymentTerm.query();
   $scope.transaction_types = Api.TransactionType.query();
@@ -67,7 +67,7 @@ $scope.dtColumns = [
   $scope.inventory_locations = Api.InventoryLocation.query();
   $scope.products = Api.Product.query();
 
-}).controller('SalesOrderCreateController',function($scope,$state,$stateParams,Sales,Api){
+}).controller('SalesInvoiceCreateController',function($scope,$state,$stateParams,Sales,Api){
 
     $scope.sales=new Sales();
 
@@ -93,8 +93,9 @@ $scope.dtColumns = [
     $scope.addItem = function(sales){
       if(sales.order.item && sales.order.quantity && sales.customer){
 
-        sales.order.price = sales.customer.price_type=="Professional" ? sales.order.item.professional_price : sales.order.item.retail_price;
-        sales.order.discount = 1-parseInt(sales.customer.discount.replace(" %",""))/100;
+        sales.order.price = sales.customer.price_type.price_type_name=="Professional" ? sales.order.item.professional_price : sales.order.item.retail_price;
+        console.log(sales.customer.discount.discount);
+        sales.order.discount = 1-parseInt(sales.customer.discount.discount.replace(" %",""))/100;
         sales.order.total = sales.order.price * sales.order.quantity * sales.order.discount;
 
         if($scope.sales.ordered_items){
@@ -120,11 +121,11 @@ $scope.dtColumns = [
 
 
 
-}).controller('SalesOrderEditController',function($scope,$window,popupService,$state,$stateParams,Sales, Api){
+}).controller('SalesInvoiceEditController',function($scope,$window,popupService,$state,$stateParams,Sales, Api){
 
     $scope.sales=Sales.get({id:$stateParams.id});
     $scope.updateSales=function(){
-      
+
         $scope.sales.$update(function(){
             $state.go('salesOrder');
         });
