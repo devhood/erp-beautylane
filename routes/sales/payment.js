@@ -4,9 +4,6 @@ var router = express.Router();
 router.get('/list', function(req, res) {
   res.render('sales/payment/list');
 });
-router.get('/add', function(req, res) {
-  res.render('sales/payment/add');
-});
 router.get('/edit', function(req, res) {
   res.render('sales/payment/edit');
 });

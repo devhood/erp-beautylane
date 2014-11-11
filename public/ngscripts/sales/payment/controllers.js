@@ -83,11 +83,10 @@ $scope.dtColumns = [
 }).controller('SalesPaymentEditController',function($scope,$filter,$window,popupService,$state,$stateParams,Sales, Api){
 
     $scope.sales=Sales.get({id:$stateParams.id});
-    console.log($scope.sales.sono);
     
     $scope.updateSales=function(){
-        $scope.sales.status_code = "DR_CREATED";
-        $scope.sales.status = "DR submitted to Finance";
+        $scope.sales.status_code = "PM_CREATED";
+        $scope.sales.status = "Payment confirmed by Accouting";
         $scope.sales.$update(function(){
             $state.go('salesPayment');
         });
@@ -95,7 +94,7 @@ $scope.dtColumns = [
     $scope.deleteSales=function(sales){
         if(popupService.showPopup('Really delete this?')){
             sales.$delete(function(){
-            $state.go('salesDelivery');
+            $state.go('salesPayment');
            });
         }
      };
@@ -109,26 +108,22 @@ $scope.dtColumns = [
     $scope.shipping_modes = Api.ShippingMode.query();
     $scope.inventory_locations = Api.InventoryLocation.query();
     $scope.products = Api.Product.query();
-    $scope.addItem = function(sales){
-      if(sales.order.item && sales.order.quantity && sales.customer){
+    $scope.addDetail = function(sales){
+      if(sales.payment.type){
 
-        sales.order.price = sales.customer.price_type=="Professional" ? sales.order.item.professional_price : sales.order.item.retail_price;
-        sales.order.discount = 1-parseInt(sales.customer.discount.replace(" %",""))/100;
-        sales.order.total = sales.order.price * sales.order.quantity * sales.order.discount;
-
-        if($scope.sales.ordered_items){
-          $scope.sales.ordered_items.push(sales.order);
+        if($scope.sales.payment_details){
+          $scope.sales.payment_details.push(sales.payment);
         }
         else{
-          $scope.sales.ordered_items = [sales.order];
+          $scope.sales.payment_details = [sales.payment];
         }
         computeTotal($scope);
-        sales.order = {};
+        sales.payment = {};
       }
     }
-    $scope.removeItem = function(index){
+    $scope.removeDetail = function(index){
       computeTotal($scope);
-      $scope.sales.ordered_items.splice(index, 1);
+      $scope.sales.payment_details.splice(index, 1);
     }
     $scope.computeVat = function(sales){
       if($scope.sales.ordered_items && sales.customer){
