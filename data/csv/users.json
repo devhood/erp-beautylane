@@ -1,0 +1,1 @@
+{ "_id" : { "$oid" : "54623ac507b0d5f016f7acd8" }, "fullname" : "Chito Cascante", "username" : "chito", "password" : "chito", "position" : "Developer", "email" : "chito@gmail.com", "phone" : "chito", "status" : "Active" }
