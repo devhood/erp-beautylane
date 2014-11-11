@@ -35,7 +35,7 @@ $scope.dtColumns = [
   DTColumnBuilder.newColumn('customer.company_name').withTitle('Customer'),
   DTColumnBuilder.newColumn('customer.sales_executive').withTitle('Sales Executive'),
   DTColumnBuilder.newColumn('shipping_mode').withTitle('Delivery Method'),
-  DTColumnBuilder.newColumn('customer.payment_term').withTitle('Payment Terms'),
+  DTColumnBuilder.newColumn('customer.payment_term.payment_term_name').withTitle('Payment Terms'),
   DTColumnBuilder.newColumn('created_on').withTitle('Created On'),
   DTColumnBuilder.newColumn('status').withTitle('Status'),
   DTColumnBuilder.newColumn(null).withTitle('Actions').notSortable()
@@ -75,6 +75,11 @@ $scope.dtColumns = [
         $scope.sales.status = "SO submitted to Warehouse";
         $scope.sales.created_on = Date.now();
         $scope.sales.status_code = "SO_CREATED";
+        $scope.sales.drno = "";
+        $scope.sales.sino = "";
+        $scope.sales.rmrno = "";
+        $scope.sales.cmno = "";
+        $scope.sales.pmno = "";
         $scope.sales.$save(function(){
             $state.go('salesOrder');
         });
@@ -93,8 +98,8 @@ $scope.dtColumns = [
     $scope.addItem = function(sales){
       if(sales.order.item && sales.order.quantity && sales.customer){
 
-        sales.order.price = sales.customer.price_type=="Professional" ? sales.order.item.professional_price : sales.order.item.retail_price;
-        sales.order.discount = 1-parseInt(sales.customer.discount.replace(" %",""))/100;
+        sales.order.price = sales.customer.price_type.price_type_name=="Professional" ? sales.order.item.professional_price : sales.order.item.retail_price;
+        sales.order.discount = 1-parseInt(sales.customer.discount.discount.replace(" %",""))/100;
         sales.order.total = sales.order.price * sales.order.quantity * sales.order.discount;
 
         if($scope.sales.ordered_items){
@@ -149,8 +154,8 @@ $scope.dtColumns = [
     $scope.addItem = function(sales){
       if(sales.order.item && sales.order.quantity && sales.customer){
 
-        sales.order.price = sales.customer.price_type=="Professional" ? sales.order.item.professional_price : sales.order.item.retail_price;
-        sales.order.discount = 1-parseInt(sales.customer.discount.replace(" %",""))/100;
+        sales.order.price = sales.customer.price_type.price_type_name=="Professional" ? sales.order.item.professional_price : sales.order.item.retail_price;
+        sales.order.discount = 1-parseInt(sales.customer.discount.discount.replace(" %",""))/100;
         sales.order.total = sales.order.price * sales.order.quantity * sales.order.discount;
 
         if($scope.sales.ordered_items){

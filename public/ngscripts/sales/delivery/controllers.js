@@ -36,7 +36,7 @@ $scope.dtColumns = [
   DTColumnBuilder.newColumn('customer.company_name').withTitle('Customer'),
   DTColumnBuilder.newColumn('customer.sales_executive').withTitle('Sales Executive'),
   DTColumnBuilder.newColumn('shipping_mode').withTitle('Delivery Method'),
-  DTColumnBuilder.newColumn('customer.payment_term').withTitle('Payment Terms'),
+  DTColumnBuilder.newColumn('customer.payment_term.payment_term_name').withTitle('Payment Terms'),
   DTColumnBuilder.newColumn('created_on').withTitle('Created On'),
   DTColumnBuilder.newColumn('status').withTitle('Status'),
   DTColumnBuilder.newColumn(null).withTitle('Actions').notSortable()
@@ -58,7 +58,7 @@ $scope.dtColumns = [
             button+='</div>';
           }
           return button;
-          
+
   })
 ];
 

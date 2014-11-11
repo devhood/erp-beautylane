@@ -75,59 +75,6 @@ $scope.dtColumns = [
   $scope.inventory_locations = Api.InventoryLocation.query();
   $scope.products = Api.Product.query();
 
-// }).controller('SalesInvoiceCreateController',function($scope,$state,$stateParams,Sales,Api){
-//
-//     $scope.sales=new Sales();
-//
-//     $scope.addSales=function(){
-//         $scope.sales.status = "SO submitted to Warehouse";
-//         $scope.sales.created_on = Date.now();
-//         $scope.sales.status_code = "SO_CREATED";
-//         $scope.sales.$save(function(){
-//             $state.go('salesOrder');
-//         });
-//     };
-//     $scope.payment_terms = Api.PaymentTerm.query();
-//     $scope.transaction_types = Api.TransactionType.query();
-//     $scope.price_types = Api.PriceType.query();
-//     $scope.customers = Api.Customer.query();
-//     $scope.discounts = Api.Discount.query();
-//     $scope.sales_executives = Api.SalesExecutive.query();
-//     $scope.order_sources = Api.OrderSource.query();
-//     $scope.shipping_modes = Api.ShippingMode.query();
-//     $scope.inventory_locations = Api.InventoryLocation.query();
-//     $scope.products = Api.Product.query();
-//
-//     $scope.addItem = function(sales){
-//       if(sales.order.item && sales.order.quantity && sales.customer){
-//
-//         sales.order.price = sales.customer.price_type=="Professional" ? sales.order.item.professional_price : sales.order.item.retail_price;
-//         sales.order.discount = 1-parseInt(sales.customer.discount.replace(" %",""))/100;
-//         sales.order.total = sales.order.price * sales.order.quantity * sales.order.discount;
-//
-//         if($scope.sales.ordered_items){
-//           $scope.sales.ordered_items.push(sales.order);
-//         }
-//         else{
-//           $scope.sales.ordered_items = [sales.order];
-//         }
-//         computeTotal($scope);
-//         sales.order = {};
-//       }
-//     }
-//     $scope.removeItem = function(index){
-//       computeTotal($scope);
-//       $scope.sales.ordered_items.splice(index, 1);
-//     }
-//     $scope.computeVat = function(sales){
-//       if($scope.sales.ordered_items && sales.customer){
-//         computeTotal($scope);
-//       }
-//     };
-
-
-
-
 }).controller('SalesInvoiceEditController',function($scope,$window,popupService,$state,$stateParams,Sales, Api){
 
     $scope.sales=Sales.get({id:$stateParams.id});
@@ -139,13 +86,6 @@ $scope.dtColumns = [
             $state.go('salesInvoice');
         });
     };
-    // $scope.deleteSales=function(sales){
-    //     if(popupService.showPopup('Really delete this?')){
-    //         sales.$delete(function(){
-    //         $state.go('salesInvoice');
-    //        });
-    //     }
-    //  };
     $scope.payment_terms = Api.PaymentTerm.query();
     $scope.transaction_types = Api.TransactionType.query();
     $scope.price_types = Api.PriceType.query();

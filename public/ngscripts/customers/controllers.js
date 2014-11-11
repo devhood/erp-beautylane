@@ -39,10 +39,10 @@ angular.module('customerApp.controllers',[])
 			DTColumnBuilder.newColumn('branch').withTitle('Branch'),
 			DTColumnBuilder.newColumn('credit_limit').withTitle('Credit Limit'),
 			DTColumnBuilder.newColumn('transaction_limit').withTitle('Transaction Limit'),
-			DTColumnBuilder.newColumn('payment_term').withTitle('Payment Terms'),
+			DTColumnBuilder.newColumn('payment_term.payment_term_name').withTitle('Payment Terms'),
 			DTColumnBuilder.newColumn('shipping_mode').withTitle('Shipping Mode'),
 			DTColumnBuilder.newColumn('sales_executive').withTitle('Sales Executive'),
-			DTColumnBuilder.newColumn('price_type').withTitle('Price Type'),
+			DTColumnBuilder.newColumn('price_type.price_type_name').withTitle('Price Type'),
 			DTColumnBuilder.newColumn('status').withTitle('Status'),
 			DTColumnBuilder.newColumn(null).withTitle('Actions').notSortable()
 			.renderWith(function(data, type, full, meta) {
@@ -70,6 +70,7 @@ angular.module('customerApp.controllers',[])
     $scope.price_types = Api.PriceType.query();
     $scope.statuses = Api.CustomerStatus.query();
     $scope.geographys = Api.Geography.query();
+		$scope.discounts = Api.Discount.query();
     $scope.countries = Api.Country.query();
 
 }).controller('CustomerCreateController',function($scope,$state,$stateParams,Customer,Api,User){
@@ -93,6 +94,7 @@ angular.module('customerApp.controllers',[])
     $scope.statuses = Api.CustomerStatus.query();
     $scope.geographys = Api.Geography.query();
     $scope.countries = Api.Country.query();
+		$scope.discounts = Api.Discount.query();
     $scope.copyShipping = function(customer){
     	if(customer.shipping_address && customer.shipping_address.same){
     		$scope.customer.billing_address = customer.shipping_address;
