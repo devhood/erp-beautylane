@@ -4,11 +4,8 @@ var router = express.Router();
 router.get('/list', function(req, res) {
   res.render('sales/delivery/list');
 });
-router.get('/add', function(req, res) {
-  res.render('sales/delivery/add');
-});
-router.get('/edit', function(req, res) {
-  res.render('sales/delivery/edit');
+router.get('/approve', function(req, res) {
+  res.render('sales/delivery/approve');
 });
 router.get('/view', function(req, res) {
   res.render('sales/delivery/view');

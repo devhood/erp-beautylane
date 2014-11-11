@@ -57,16 +57,13 @@ $scope.dtColumns = [
 
 
 
-}).controller('ShipmentViewController',function($scope,$stateParams,Shipment){
+}).controller('ShipmentViewController',function($scope,$stateParams,Shipment,Api){
     // console.log($stateParams.id);
     $scope.shipment=Shipment.get({id:$stateParams.id});
-    $scope.supplier = Api.supplier.query();
-    $scope.reference_no = Api.reference_no.query();
-    $scope.payment_terms = Api.arrival_date.query();
-    $scope.payment_terms = Api.confirmed_by.query();
-    $scope.payment_terms = Api.approved_by.query();
-    $scope.payment_terms = Api.shipment_notes.query();
-    $scope.payment_terms = Api.shipment_status.query();
+    $scope.suppliers = Api.Supplier.query();
+    $scope.statuses = Api.ShipmentStatus.query();
+    $scope.products = Api.Product.query();
+    $scope.conditions = Api.Condition.query();
 
 }).controller('ShipmentCreateController',function($scope,$state,$stateParams,Shipment, Api){
 
@@ -99,13 +96,42 @@ $scope.dtColumns = [
       $scope.shipment.shipment_items.splice(index, 1);
     };
 
-}).controller('ShipmentEditController',function($scope,$state,$stateParams,Shipment){
+}).controller('ShipmentEditController',function($scope,$state,$stateParams,Shipment, Api){
 
-    $scope.updateShipment=function(){
+    $scope.shipment=Shipment.get({id:$stateParams.id});
+    $scope.updateShipments=function(){
+        console.log($scope.shipment);
         $scope.shipment.$update(function(){
             $state.go('shipments');
         });
-    }
+    };
+    $scope.deleteShipments=function(shipments){
+      if(popupService.showPopup('Are you sure to detete this?')){
+        shipments.$delete(function(){
+          $state.go('shipments')
+        })
+      }
+    };
+
+    $scope.suppliers = Api.Supplier.query();
+    $scope.statuses = Api.ShipmentStatus.query();
+    $scope.products = Api.Product.query();
+    $scope.conditions = Api.Condition.query();
+    $scope.addItem = function(shipment){
+        console.log(shipment.item);
+        if(shipment.item.product && shipment.item.quantity && shipment.item.cost && shipment.item.expiry_date && shipment.item.condition){
+          if($scope.shipment.shipment_items){
+            $scope.shipment.shipment_items.push(shipment.item);
+          }
+          else{
+            $scope.shipment.shipment_items = [shipment.item];
+          }
+          shipment.item = {};
+        }
+    };
+    $scope.removeItem = function(index){
+      $scope.shipment.shipment_items.splice(index, 1);
+    };
 
 }).controller('ShipmentApproveController',function($scope,$state,$stateParams,Shipment){
 

@@ -42,14 +42,14 @@ $scope.dtColumns = [
   DTColumnBuilder.newColumn('status').withTitle('Status'),
   DTColumnBuilder.newColumn(null).withTitle('Actions').notSortable()
   .renderWith(function(data, type, full, meta) {
-      var button = '<div class="btn-group btn-group-xs btn-group-solid"><a href="#/sales/delivery/view/'+data._id+'", class="tooltips btn default" '+
+      var button = '<div class="btn-group btn-group-xs btn-group-solid"><a href="#/sales/delivery/approve/'+data._id+'", class="tooltips btn default" '+
         'data-container="body", data-placement="top", '+
         'data-html="true", data-original-title="View Record">' +
           '   <i class="fa fa-eye"></i>' +
           '</a>&nbsp;';
 
           if(data.status != "DR submitted to Finance"){
-            button+='<a href="#/sales/delivery/edit/'+data._id+'", class="tooltips btn default" '+
+            button+='<a href="#/sales/delivery/approve/'+data._id+'", class="tooltips btn default" '+
         'data-container="body", data-placement="top", '+
         'data-html="true", data-original-title="Edit Record">' +
           '   <i class="fa fa-edit"></i>' +
