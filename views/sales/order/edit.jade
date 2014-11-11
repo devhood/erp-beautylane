@@ -55,7 +55,7 @@
           .col-md-6
             .form-group
               .col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
-                select.select2me.form-control.select2-offscreen(ng-model="sales.customer.discount", ng-options="discount.discount as discount.discount for discount in discounts", ng-selected="{{customer.sales.discount}}" ,tabindex="-1")
+                select.select2me.form-control.select2-offscreen(ng-model="sales.customer.discount", ng-options="discount.discount as discount.discount for discount in discounts", ng-selected="{{sales.customer.discount}}" ,tabindex="-1")
                 span.col-md-12.help-block Discount
         .row(ng-show="sales.customer")
           .col-md-6

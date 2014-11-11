@@ -67,7 +67,7 @@ $scope.dtColumns = [
   $scope.inventory_locations = Api.InventoryLocation.query();
   $scope.products = Api.Product.query();
 
-}).controller('SalesOrderCreateController',function($scope,$state,$stateParams,Sales,Api){
+}).controller('SalesDeliveryCreateController',function($scope,$state,$stateParams,Sales,Api){
 
     $scope.sales=new Sales();
 
