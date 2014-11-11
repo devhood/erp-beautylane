@@ -78,9 +78,7 @@ $scope.dtColumns = [
 
 }).controller('SalesDeliveryEditController',function($scope,$filter,$window,popupService,$state,$stateParams,Sales, Api){
 
-    $scope.sales=Sales.get({id:$stateParams.id});
-    console.log($scope.sales.sono);
-    
+    $scope.sales=Sales.get({id:$stateParams.id});   
 
    // $scope.sales.delivery_date = $filter('date')($scope.sales.delivery_date, "shortDate");
     $scope.updateSales=function(){

@@ -38,6 +38,36 @@ var generateTicket = function(status_code,cb){
                cb(err);
             });
             break;
+        case "PM_CREATED":
+            db.collection("number_generator")
+            .find({type : "sales payment"}).toArray()
+            .done(function(data){
+              cb(null,data[0]);
+            })
+            .fail( function( err ) {
+               cb(err);
+            });
+            break;
+        case "RMR_CREATED":
+            db.collection("number_generator")
+            .find({type : "sales return"}).toArray()
+            .done(function(data){
+              cb(null,data[0]);
+            })
+            .fail( function( err ) {
+               cb(err);
+            });
+            break;
+        case "CM_CREATED":
+            db.collection("number_generator")
+            .find({type : "credit memo"}).toArray()
+            .done(function(data){
+              cb(null,data[0]);
+            })
+            .fail( function( err ) {
+               cb(err);
+            });
+            break;
       }
 };
 
@@ -68,6 +98,36 @@ var updateTicket = function(status_code,ticket,cb){
         case "SI_CREATED":
             db.collection("number_generator")
             .update({type : "sales invoice"}, ticket, {safe: true})
+            .done(function(data){
+              cb(null,data);
+            })
+            .fail( function( err ) {
+              cb(err);
+            });
+            break;
+        case "PM_CREATED":
+            db.collection("number_generator")
+            .update({type : "sales payment"}, ticket, {safe: true})
+            .done(function(data){
+              cb(null,data);
+            })
+            .fail( function( err ) {
+              cb(err);
+            });
+            break;
+        case "RMR_CREATED":
+            db.collection("number_generator")
+            .update({type : "sales return"}, ticket, {safe: true})
+            .done(function(data){
+              cb(null,data);
+            })
+            .fail( function( err ) {
+              cb(err);
+            });
+            break;
+        case "CM_CREATED":
+            db.collection("number_generator")
+            .update({type : "credit memo"}, ticket, {safe: true})
             .done(function(data){
               cb(null,data);
             })
