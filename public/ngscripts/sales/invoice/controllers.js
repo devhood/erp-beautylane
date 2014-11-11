@@ -1,7 +1,7 @@
 angular.module('salesInvoiceApp.controllers',[])
 .controller('SalesInvoiceListController',function($scope,$state,popupService,$window,Sales, $filter,DTOptionsBuilder, DTColumnBuilder){
 
-var query = {"status":"SO submitted to Warehouse"};
+var query = {"status":{"$in":["DR submitted to Finance","SI was Processed"]}};
 $scope.dtOptions = DTOptionsBuilder
   .fromSource("/api/sales?filter="+encodeURIComponent(JSON.stringify(query)))
   .withBootstrap()
@@ -31,6 +31,8 @@ $scope.dtOptions.sScrollX = "100%";
 $scope.dtOptions.sScrollXInner = "100%";
 $scope.dtOptions.bPaginate = false;
 $scope.dtColumns = [
+  DTColumnBuilder.newColumn('sino').withTitle('SI Number'),
+  DTColumnBuilder.newColumn('drno').withTitle('DR Number'),
   DTColumnBuilder.newColumn('sono').withTitle('SO Number'),
   DTColumnBuilder.newColumn('customer.company_name').withTitle('Customer'),
   DTColumnBuilder.newColumn('customer.sales_executive').withTitle('Sales Executive'),
@@ -40,21 +42,27 @@ $scope.dtColumns = [
   DTColumnBuilder.newColumn('status').withTitle('Status'),
   DTColumnBuilder.newColumn(null).withTitle('Actions').notSortable()
   .renderWith(function(data, type, full, meta) {
-      return '<div class="btn-group btn-group-xs btn-group-solid"><a href="#/sales/order/view/'+data._id+'", class="tooltips btn default" '+
+      var button = '<div class="btn-group btn-group-xs btn-group-solid"><a href="#/sales/invoice/view/'+data._id+'", class="tooltips btn default" '+
         'data-container="body", data-placement="top", '+
         'data-html="true", data-original-title="View Record">' +
           '   <i class="fa fa-eye"></i>' +
-          '</a>&nbsp;' +
+          '</a>&nbsp;';
 
-          '<a href="#/sales/order/edit/'+data._id+'", class="tooltips btn default" '+
+          if(data.status != "SI was Processed"){
+            button+='<a href="#/sales/invoice/edit/'+data._id+'", class="tooltips btn default" '+
         'data-container="body", data-placement="top", '+
         'data-html="true", data-original-title="Edit Record">' +
           '   <i class="fa fa-edit"></i>' +
           '</a>&nbsp;</div>';
+          }
+          else{
+            button+='</div>';
+          }
+          return button;
   })
 ];
 
-}).controller('SalesOrderViewController',function($scope,$stateParams,Sales, Api){
+}).controller('SalesInvoiceViewController',function($scope,$stateParams,Sales, Api){
   $scope.sales=Sales.get({id:$stateParams.id});
   $scope.payment_terms = Api.PaymentTerm.query();
   $scope.transaction_types = Api.TransactionType.query();
@@ -67,75 +75,77 @@ $scope.dtColumns = [
   $scope.inventory_locations = Api.InventoryLocation.query();
   $scope.products = Api.Product.query();
 
-}).controller('SalesOrderCreateController',function($scope,$state,$stateParams,Sales,Api){
-
-    $scope.sales=new Sales();
-
-    $scope.addSales=function(){
-        $scope.sales.status = "SO submitted to Warehouse";
-        $scope.sales.created_on = Date.now();
-        $scope.sales.status_code = "SO_CREATED";
-        $scope.sales.$save(function(){
-            $state.go('salesOrder');
-        });
-    };
-    $scope.payment_terms = Api.PaymentTerm.query();
-    $scope.transaction_types = Api.TransactionType.query();
-    $scope.price_types = Api.PriceType.query();
-    $scope.customers = Api.Customer.query();
-    $scope.discounts = Api.Discount.query();
-    $scope.sales_executives = Api.SalesExecutive.query();
-    $scope.order_sources = Api.OrderSource.query();
-    $scope.shipping_modes = Api.ShippingMode.query();
-    $scope.inventory_locations = Api.InventoryLocation.query();
-    $scope.products = Api.Product.query();
-
-    $scope.addItem = function(sales){
-      if(sales.order.item && sales.order.quantity && sales.customer){
-
-        sales.order.price = sales.customer.price_type=="Professional" ? sales.order.item.professional_price : sales.order.item.retail_price;
-        sales.order.discount = 1-parseInt(sales.customer.discount.replace(" %",""))/100;
-        sales.order.total = sales.order.price * sales.order.quantity * sales.order.discount;
-
-        if($scope.sales.ordered_items){
-          $scope.sales.ordered_items.push(sales.order);
-        }
-        else{
-          $scope.sales.ordered_items = [sales.order];
-        }
-        computeTotal($scope);
-        sales.order = {};
-      }
-    }
-    $scope.removeItem = function(index){
-      computeTotal($scope);
-      $scope.sales.ordered_items.splice(index, 1);
-    }
-    $scope.computeVat = function(sales){
-      if($scope.sales.ordered_items && sales.customer){
-        computeTotal($scope);
-      }
-    };
-
-
+// }).controller('SalesInvoiceCreateController',function($scope,$state,$stateParams,Sales,Api){
+//
+//     $scope.sales=new Sales();
+//
+//     $scope.addSales=function(){
+//         $scope.sales.status = "SO submitted to Warehouse";
+//         $scope.sales.created_on = Date.now();
+//         $scope.sales.status_code = "SO_CREATED";
+//         $scope.sales.$save(function(){
+//             $state.go('salesOrder');
+//         });
+//     };
+//     $scope.payment_terms = Api.PaymentTerm.query();
+//     $scope.transaction_types = Api.TransactionType.query();
+//     $scope.price_types = Api.PriceType.query();
+//     $scope.customers = Api.Customer.query();
+//     $scope.discounts = Api.Discount.query();
+//     $scope.sales_executives = Api.SalesExecutive.query();
+//     $scope.order_sources = Api.OrderSource.query();
+//     $scope.shipping_modes = Api.ShippingMode.query();
+//     $scope.inventory_locations = Api.InventoryLocation.query();
+//     $scope.products = Api.Product.query();
+//
+//     $scope.addItem = function(sales){
+//       if(sales.order.item && sales.order.quantity && sales.customer){
+//
+//         sales.order.price = sales.customer.price_type=="Professional" ? sales.order.item.professional_price : sales.order.item.retail_price;
+//         sales.order.discount = 1-parseInt(sales.customer.discount.replace(" %",""))/100;
+//         sales.order.total = sales.order.price * sales.order.quantity * sales.order.discount;
+//
+//         if($scope.sales.ordered_items){
+//           $scope.sales.ordered_items.push(sales.order);
+//         }
+//         else{
+//           $scope.sales.ordered_items = [sales.order];
+//         }
+//         computeTotal($scope);
+//         sales.order = {};
+//       }
+//     }
+//     $scope.removeItem = function(index){
+//       computeTotal($scope);
+//       $scope.sales.ordered_items.splice(index, 1);
+//     }
+//     $scope.computeVat = function(sales){
+//       if($scope.sales.ordered_items && sales.customer){
+//         computeTotal($scope);
+//       }
+//     };
 
 
-}).controller('SalesOrderEditController',function($scope,$window,popupService,$state,$stateParams,Sales, Api){
+
+
+}).controller('SalesInvoiceEditController',function($scope,$window,popupService,$state,$stateParams,Sales, Api){
 
     $scope.sales=Sales.get({id:$stateParams.id});
     $scope.updateSales=function(){
-      
+
         $scope.sales.$update(function(){
-            $state.go('salesOrder');
+          $scope.sales.status_code = "SI_CREATED";
+          $scope.sales.status = "SI was Processed";
+            $state.go('salesInvoice');
         });
     };
-    $scope.deleteSales=function(sales){
-        if(popupService.showPopup('Really delete this?')){
-            sales.$delete(function(){
-            $state.go('salesOrder');
-           });
-        }
-     };
+    // $scope.deleteSales=function(sales){
+    //     if(popupService.showPopup('Really delete this?')){
+    //         sales.$delete(function(){
+    //         $state.go('salesInvoice');
+    //        });
+    //     }
+    //  };
     $scope.payment_terms = Api.PaymentTerm.query();
     $scope.transaction_types = Api.TransactionType.query();
     $scope.price_types = Api.PriceType.query();

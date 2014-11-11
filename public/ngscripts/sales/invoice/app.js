@@ -6,21 +6,21 @@ app.config(function($stateProvider,$httpProvider){
         url:'/sales/invoice/list',
         templateUrl:'/sales/invoice/list',
         controller:'SalesInvoiceListController'
-    });
-    /*.state('viewSalesOrder',{
+    })
+    .state('viewSalesInvoice',{
        url:'/sales/order/view/:id',
        templateUrl:'/sales/order/view',
-       controller:'SalesOrderViewController'
-    }).state('newSalesOrder',{
-        url:'/sales/order/add',
-        templateUrl:'/sales/order/add',
-        controller:'SalesOrderCreateController'
-    }).state('editSalesOrder',{
-        url:'/sales/order/edit/:id',
-        templateUrl:'/sales/order/edit',
-        controller:'SalesOrderEditController'
+       controller:'SalesInvoiceViewController'
+    }).state('approveSalesInvoice',{
+        url:'/sales/invoice/approve',
+        templateUrl:'/sales/invoice/approve',
+        controller:'SalesInvoiceApproveController'
+    }).state('editSalesInvoice',{
+        url:'/sales/invoice/edit/:id',
+        templateUrl:'/sales/invoice/edit',
+        controller:'SalesInvoiceEditController'
     });
-*/
+
 }).run(function($state){
-  
+
 });
