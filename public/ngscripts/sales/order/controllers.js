@@ -54,7 +54,7 @@ $scope.dtColumns = [
   })
 ];
 
-}).controller('SalesOrderViewController',function($scope,$stateParams,Sales, Api){
+}).controller('SalesOrderViewController',function($scope,$stateParams,Sales,User, Api){
   $scope.sales=Sales.get({id:$stateParams.id});
   $scope.payment_terms = Api.PaymentTerm.query();
   $scope.transaction_types = Api.TransactionType.query();
@@ -80,6 +80,11 @@ $scope.dtColumns = [
         $scope.sales.rmrno = "";
         $scope.sales.cmno = "";
         $scope.sales.pmno = "";
+        $scope.sales.history = [];
+        $scope.sales.history.push({
+          status : $scope.sales.status,
+          createdOn : $scope.sales.created_on
+        });
         $scope.sales.$save(function(){
             $state.go('salesOrder');
         });

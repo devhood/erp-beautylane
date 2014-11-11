@@ -1,7 +1,7 @@
 angular.module('salesInvoiceApp.controllers',[])
 .controller('SalesInvoiceListController',function($scope,$state,popupService,$window,Sales, $filter,DTOptionsBuilder, DTColumnBuilder){
 
-var query = {"status":{"$in":["DR submitted to Finance","SI was Processed"]}};
+var query = {"status":{"$in":["DR submitted to Finance","SI Approved"]}};
 $scope.dtOptions = DTOptionsBuilder
   .fromSource("/api/sales?filter="+encodeURIComponent(JSON.stringify(query)))
   .withBootstrap()
@@ -48,7 +48,7 @@ $scope.dtColumns = [
           '   <i class="fa fa-eye"></i>' +
           '</a>&nbsp;';
 
-          if(data.status != "SI was Processed"){
+          if(data.status != "SI Approved"){
             button+='<a href="#/sales/invoice/edit/'+data._id+'", class="tooltips btn default" '+
         'data-container="body", data-placement="top", '+
         'data-html="true", data-original-title="Edit Record">' +
