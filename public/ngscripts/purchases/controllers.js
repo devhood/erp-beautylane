@@ -61,17 +61,13 @@ $scope.dtColumns = [
     // console.log($stateParams.id);
     $scope.purchase=Purchase.get({id:$stateParams.id});
     $scope.suppliers = Api.Supplier.query();
-    $scope.statuses = Api.PurchaseStatus.query();
     $scope.products = Api.Product.query();
-    $scope.conditions = Api.Condition.query();
 
 }).controller('PurchaseCreateController',function($scope,$state,$stateParams,Purchase, Api){
 
     $scope.purchase=new Purchase();
     $scope.suppliers = Api.Supplier.query();
-    $scope.statuses = Api.PurchaseStatus.query();
     $scope.products = Api.Product.query();
-    $scope.conditions = Api.Condition.query();
     $scope.addPurchase=function(){
       $scope.purchase.status = "Purchase Created";
       $scope.purchase.created_on = Date.now();
@@ -81,8 +77,7 @@ $scope.dtColumns = [
         });
     };
     $scope.addItem = function(purchase){
-        console.log(purchase.item);
-        if(purchase.item.product && purchase.item.quantity && purchase.item.cost && purchase.item.expiry_date && purchase.item.condition){
+        if(purchase.item.product && purchase.item.quantity && purchase.item.cost){
           if($scope.purchase.purchase_items){
             $scope.purchase.purchase_items.push(purchase.item);
           }
@@ -99,13 +94,12 @@ $scope.dtColumns = [
 }).controller('PurchaseEditController',function($scope,$state,$stateParams,Purchase, Api){
 
     $scope.purchase=Purchase.get({id:$stateParams.id});
-    $scope.updatePurchases=function(){
-        console.log($scope.purchase);
+    $scope.updatePurchase=function(){
         $scope.purchase.$update(function(){
             $state.go('purchases');
         });
     };
-    $scope.deletePurchases=function(purchases){
+    $scope.deletePurchase=function(purchases){
       if(popupService.showPopup('Are you sure to detete this?')){
         purchases.$delete(function(){
           $state.go('purchases')
@@ -114,12 +108,10 @@ $scope.dtColumns = [
     };
 
     $scope.suppliers = Api.Supplier.query();
-    $scope.statuses = Api.PurchaseStatus.query();
     $scope.products = Api.Product.query();
-    $scope.conditions = Api.Condition.query();
     $scope.addItem = function(purchase){
         console.log(purchase.item);
-        if(purchase.item.product && purchase.item.quantity && purchase.item.cost && purchase.item.expiry_date && purchase.item.condition){
+        if(purchase.item.product && purchase.item.quantity && purchase.item.cost){
           if($scope.purchase.purchase_items){
             $scope.purchase.purchase_items.push(purchase.item);
           }

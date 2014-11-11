@@ -32,30 +32,19 @@
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
-								input#referenceNo.form-control(type="text", ng-model="purchase.reference_number" , required)
-								span.col-md-12.control-label	Reference Number 
-					.col-md-6
-						.form-group
-							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
-								input#purchaseDate.form-control(type="text", ng-model="purchase.date", required)
-								span.col-md-12.control-label	Purchase Date 
-				.row
-					.col-md-6
-						.form-group
-							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
 								input#expectedArrivalDate.form-control(type="text", ng-model="purchase.arrival_date", required)
 								span.col-md-12.control-label	Expected Arrival Date 
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
-								select#purchaseStatus.select2me.form-control.select2-offscreen(ng-model="purchase.status", required)
-								span.col-md-12.control-label	Purchase Status 
+								input#referenceNo.form-control(type="text", ng-model="purchase.reference_number" , required)
+								span.col-md-12.control-label	Reference Number 
 				.row
 					.col-md-12
 						.form-group
 							.col-md-2.col-lg-2
 							.col-md-8.col-xs-12.col-sm-12.col-lg-8
-								textarea#purchaseNotes.text-area.form-control(name="purchase.notes")
+								textarea#purchaseNotes.text-area.form-control(ng-model="purchase.notes", required)
 								span.col-md-12.control-label	Special Instructions 
 							.col-md-2.col-lg-2
 				.portlet.box.grey
@@ -71,33 +60,23 @@
 											br
 											.row
 												.col-md-12
-													.col-md-3
+													.col-md-5
 														.form-group
 															.col-xs-12.col-sm-12.col-md-12.col-lg-12
 																select.select2me.form-control.select2-offscreen(ng-model="purchase.item.product", ng-options="product.name for product in products track by product.name")
 																span.col-md-12.help-block	Product
-													.col-md-2
+													.col-md-3
 														.form-group
 															.col-xs-12.col-sm-12.col-md-12.col-lg-12
 																input.form-control(type="text", ng-model="purchase.item.quantity")
 																span.col-md-12.help-block	Quantity
-													.col-md-2
+													.col-md-3
 														.form-group
 															.col-xs-12.col-sm-12.col-md-12.col-lg-12
 																input.form-control(type="text", ng-model="purchase.item.cost")
 																span.col-md-12.help-block	Cost
-													.col-md-2
-														.form-group
-															.col-xs-12.col-sm-12.col-md-12.col-lg-12
-																input.form-control(type="text", ng-model="purchase.item.expiry_date")
-																span.col-md-12.help-block	Expiry Date
-													.col-md-2
-														.form-group
-															.col-xs-12.col-sm-12.col-md-12.col-lg-12
-																select.select2me.form-control.select2-offscreen(ng-model="purchase.item.condition", ng-options="condition.condition as condition.condition for condition in conditions")
-																span.col-md-12.help-block	Condition
 													.col-md-1
-														button.btn-sm.green.custom-right(type="button",ng-click="addItem(purchases)")
+														button.btn-sm.green.custom-right(type="button",ng-click="addItem(purchase)")
 															i.fa.fa-plus
 											.form-group
 												.col-md-1
@@ -112,16 +91,12 @@
 																			th Product 
 																			th Quantity
 																			th Cost
-																			th Expiry Date
-																			th Condition
 																			th(width="5%")
 																	tbody
 																		tr(ng-repeat="purchase_item in purchase.purchase_items")
 																			td {{purchase_item.product.name}}
 																			td {{purchase_item.quantity}}
 																			td {{purchase_item.cost}}
-																			td {{purchase_item.expiry_date}}
-																			td {{purchase_item.condition}}
 																			td(width="5%")
 																				.btn-group.btn-group-xs.btn-group-solid
 																					a.tooltips.btn.default.tooltips(ng-click="removeItem($index)", data-container="body", data-placement="top", data-html="true", data-original-title="Delete Record")
