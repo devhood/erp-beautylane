@@ -10,5 +10,11 @@ var app = angular.module('erp',[
     'productApp',
     'salesOrderApp',
     'salesDeliveryApp',
-    'salesInvoiceApp'
+    'salesInvoiceApp',
+    'salesPickListApp',
+    'salesPrintApp',
+    'salesTripTicketApp',
+    'salesMemoApp',
+    'salesReturnApp',
+    'salesPaymentApp',
 ]);
