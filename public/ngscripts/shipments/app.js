@@ -24,5 +24,5 @@ app.config(function($stateProvider,$httpProvider){
         controller:'ShipmentApproveController'
     });
 }).run(function($state){
-   $state.go('shipments');
+
 });
