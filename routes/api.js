@@ -109,6 +109,7 @@ router.post('/:object', function(req, res) {
                 req.body[ticket.field] = ticket.prefix + pad(ticket.count,ticket.zero_count) + "-"+ ticket.suffix
                 updateTicket(req.body.status_code,ticket,function(err,result){});
             }
+            delete req.body.status_code;
             db.collection(req.params.object)
             .insert(req.body, {safe: true})
             .done(function(data){
@@ -159,8 +160,8 @@ router.put('/:object/:id', function(req, res) {
     if(req.params.object == "sales" && req.body.status_code){
         generateTicket(req.body.status_code,function(err,ticket){
             if(ticket){
-                req.body[ticket.field] = ticket.prefix + pad(ticket.count,ticket.zero_count) +  ticket.suffix
-                updateTicket(req.body.status_code,ticket);
+                req.body[ticket.field] = ticket.prefix + pad(ticket.count,ticket.zero_count) + "-" +  ticket.suffix
+                updateTicket(req.body.status_code,ticket,function(err,result){});
             }
             db.collection(req.params.object)
             .update(req.query.filter, req.body, {safe: true})

@@ -20,14 +20,14 @@
           .col-md-6
             .form-group
               .col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
-                input#supplier_code.form-control(type="text", ng-model="product.supplier_code", readonly)
+                input#supplier_code.form-control(type="text", ng-model="sales.sono", readonly)
                 span.col-md-12.help-block SO Number
         .row
           .col-md-1
           .col-md-10
             .form-group
               .col-xs-12.col-sm-12.col-md-12.col-lg-12(align="center")
-                select.select2me.form-control.select2-offscreen(ng-model="sales.customer", ng-options="customer.company_name for customer in customers", ng-selected="{{customer.company_name}}" ,tabindex="-1", required)
+                select.select2me.form-control.select2-offscreen(ng-model="sales.customer", ng-options="customer.company_name for customer in customers", ng-selected="{{sales.customer.company_name}}" ,tabindex="-1", required)
                 span.col-md-12.help-block Customer
           .col-md-1
         .row(ng-show="sales.customer")

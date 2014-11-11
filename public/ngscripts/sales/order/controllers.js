@@ -106,7 +106,7 @@ $scope.dtColumns = [
     }
     $scope.removeItem = function(index){
       computeTotal($scope);
-      sales.order = {};
+      $scope.sales.ordered_items.splice(index, 1);
     }
     $scope.computeVat = function(sales){
       if($scope.sales.ordered_items && sales.customer){
@@ -119,26 +119,55 @@ $scope.dtColumns = [
 
 }).controller('SalesOrderEditController',function($scope,$window,popupService,$state,$stateParams,Sales, Api){
 
-    $scope.updateProduct=function(){
-        $scope.product.$update(function(){
+    $scope.sales=Sales.get({id:$stateParams.id});
+    $scope.updateSales=function(){
+        $scope.sales.$update(function(){
             $state.go('salesOrder');
         });
     };
-    $scope.deleteProduct=function(product){
+    $scope.deleteSales=function(sales){
         if(popupService.showPopup('Really delete this?')){
-            product.$delete(function(){
+            sales.$delete(function(){
             $state.go('salesOrder');
            });
         }
      };
     $scope.payment_terms = Api.PaymentTerm.query();
-    $scope.brands = Api.Brand.query();
-    $scope.statuses = Api.ProductStatus.query();
-    $scope.uoms = Api.Uom.query();
-    $scope.movements = Api.Movement.query();
-    $scope.suppliers = Api.Supplier.query();
-    $scope.currencies = Api.Currency.query();
-    $scope.sales=Sales.get({id:$stateParams.id});
+    $scope.transaction_types = Api.TransactionType.query();
+    $scope.price_types = Api.PriceType.query();
+    $scope.customers = Api.Customer.query();
+    $scope.discounts = Api.Discount.query();
+    $scope.sales_executives = Api.SalesExecutive.query();
+    $scope.order_sources = Api.OrderSource.query();
+    $scope.shipping_modes = Api.ShippingMode.query();
+    $scope.inventory_locations = Api.InventoryLocation.query();
+    $scope.products = Api.Product.query();
+    $scope.addItem = function(sales){
+      if(sales.order.item && sales.order.quantity && sales.customer){
+
+        sales.order.price = sales.customer.price_type=="Professional" ? sales.order.item.professional_price : sales.order.item.retail_price;
+        sales.order.discount = 1-parseInt(sales.customer.discount.replace(" %",""))/100;
+        sales.order.total = sales.order.price * sales.order.quantity * sales.order.discount;
+
+        if($scope.sales.ordered_items){
+          $scope.sales.ordered_items.push(sales.order);
+        }
+        else{
+          $scope.sales.ordered_items = [sales.order];
+        }
+        computeTotal($scope);
+        sales.order = {};
+      }
+    }
+    $scope.removeItem = function(index){
+      computeTotal($scope);
+      $scope.sales.ordered_items.splice(index, 1);
+    }
+    $scope.computeVat = function(sales){
+      if($scope.sales.ordered_items && sales.customer){
+        computeTotal($scope);
+      }
+    };
 });
 
 var computeTotal = function($scope){
