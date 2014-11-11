@@ -1,0 +1,39 @@
+mongoimport --db erp-beautylane --collection positions --type csv --headerline --file data/csv/position.csv
+
+mongoimport --db erp-beautylane --collection user_status --type csv --headerline --file data/csv/user_status.csv
+
+mongoimport --db erp-beautylane --collection customer_type --type csv --headerline --file data/csv/customer_type.csv
+
+mongoimport --db erp-beautylane --collection shipping_mode --type csv --headerline --file data/csv/shipping_mode.csv
+
+mongoimport --db erp-beautylane --collection price_type --type csv --headerline --file data/csv/price_type.csv
+
+mongoimport --db erp-beautylane --collection payment_term --type csv --headerline --file data/csv/payment_term.csv
+
+mongoimport --db erp-beautylane --collection customer_status --type csv --headerline --file data/csv/customer_status.csv
+
+mongoimport --db erp-beautylane --collection geography --file data/csv/geography.json
+
+mongoimport --db erp-beautylane --collection countries --type csv --headerline --file data/csv/countries.csv
+
+mongoimport --db erp-beautylane --collection brands --type csv --headerline --file data/csv/brands.csv
+
+mongoimport --db erp-beautylane --collection product_status --type csv --headerline --file data/csv/product_status.csv
+
+mongoimport --db erp-beautylane --collection uom --type csv --headerline --file data/csv/uom.csv
+
+mongoimport --db erp-beautylane --collection movements --type csv --headerline --file data/csv/movement.csv
+
+mongoimport --db erp-beautylane --collection suppliers --type csv --headerline --file data/csv/supplier.csv
+
+mongoimport --db erp-beautylane --collection currencies --type csv --headerline --file data/csv/currencies.csv
+
+mongoimport --db erp-beautylane --collection transaction_types --type csv --headerline --file data/csv/transaction_types.csv
+
+mongoimport --db erp-beautylane --collection discounts --type csv --headerline --file data/csv/discounts.csv
+
+mongoimport --db erp-beautylane --collection order_source --type csv --headerline --file data/csv/order_source.csv
+
+mongoimport --db erp-beautylane --collection inventory_location --type csv --headerline --file
+
+mongoimport --db erp-beautylane --collection number_generator --type csv --headerline --file data/csv/nogen.csv
