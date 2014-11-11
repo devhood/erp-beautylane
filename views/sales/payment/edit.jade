@@ -218,92 +218,66 @@
               a.collapse(href="javascript:;")
           .portlet-body.form
             .form-body
-              br
-              br
               .row
                 .col-md-1
                 .col-md-10
-                  .col-md-4
+                  .col-md-3
                     .form-group
                       .col-xs-12.col-sm-12.col-md-12.col-lg-12
-                        select.select2me.form-control.select2-offscreen(ng-model="sales.payment.type", ng-options="transaction_type.transaction_type for transaction_type in transaction_types", ng-selected="{{sales.transaction_type}}")
+                        select.select2me.form-control.select2-offscreen(ng-model="sales.payment.payment_type", ng-options="payment_type.payment_type as payment_type.payment_type for payment_type in payment_types", ng-selected="{{sales.payment_type}}")
                         span.col-md-12.help-block Type
-                  .col-md-4
-                    .form-group
-                      .col-xs-12.col-sm-12.col-md-12.col-lg-12
-                        input.form-control(type="text", ng-minlength="0", ng-maxlength="20", ng-model="sales.payment.date")
-                        span.col-md-12.help-block Date
-                  .col-md-4
+                  .col-md-2(ng-show="sales.payment.payment_type=='PDC' || sales.payment.payment_type=='Check Deposit'")
                     .form-group
                       .col-xs-12.col-sm-12.col-md-12.col-lg-12
                         input.form-control(type="text", ng-minlength="0", ng-maxlength="20", ng-model="sales.payment.check_number")
                         span.col-md-12.help-block Check Number
-                .col-md-1
-              .row
-                .col-md-1
-                .col-md-10
-                  .col-md-4
+                  .col-md-2(ng-show="sales.payment.payment_type=='PDC' || sales.payment.payment_type=='Check Deposit'")
                     .form-group
                       .col-xs-12.col-sm-12.col-md-12.col-lg-12
                         input.form-control(type="text", ng-minlength="0", ng-maxlength="20", ng-model="sales.payment.check_date")
                         span.col-md-12.help-block Check Date
-                  .col-md-4
+                  .col-md-2(ng-show="sales.payment.payment_type=='PDC' || sales.payment.payment_type=='Cash Deposit' || sales.payment.payment_type=='Check Deposit'")
                     .form-group
                       .col-xs-12.col-sm-12.col-md-12.col-lg-12
                         input.form-control(type="text", ng-minlength="0", ng-maxlength="20", ng-model="sales.payment.bank")
-                        span.col-md-12.help-block Bank
-                  .col-md-4
-                    .form-group
-                      .col-xs-12.col-sm-12.col-md-12.col-lg-12
-                        input.form-control(type="text", ng-minlength="0", ng-maxlength="20", ng-model="sales.payment.branch")
-                        span.col-md-12.help-block Branch
-                  .col-md-1
-                .col-md-1
-              .row
-                .col-md-1
-                .col-md-10
-                  .col-md-4
+                        span.col-md-12.help-block Bank - Branch
+                  .col-md-2
                     .form-group
                       .col-xs-12.col-sm-12.col-md-12.col-lg-12
                         input.form-control(type="text", ng-minlength="0", ng-maxlength="20", ng-model="sales.payment.amount")
                         span.col-md-12.help-block Amount
-                  .col-md-4
+                  .col-md-2(ng-show="sales.payment.payment_type=='Cash Deposit'")
                     .form-group
                       .col-xs-12.col-sm-12.col-md-12.col-lg-12
-                        input.form-control(type="text", ng-minlength="0", ng-maxlength="20", ng-model="sales.payment.deposit")
-                        span.col-md-12.help-block Deposit
-                  .col-md-4
+                        input.form-control(type="text", ng-minlength="0", ng-maxlength="20", ng-model="sales.payment.deposit_date")
+                        span.col-md-12.help-block Deposit Date
+                  .col-md-1
                     .form-group
                       .col-xs-12.col-sm-12.col-md-12.col-lg-12
-                        button.btn-sm.green.custom-left(type="button",ng-click="addDetail(sales)")
+                        button.btn-sm.green.custom-right(type="button",ng-click="addDetail(sales)")
                           i.fa.fa-plus
                 .col-md-1
               .form-group
                 .col-md-1
                 .col-md-10
                   .row
-                    br
                     .col-md-12
                       .portlet-body.flip-scroll
                         table.table.table-bordered.table-condensed.flip-content
                           thead.flip-content.bg-grey
                             tr
                               th Type
-                              th Date
                               th Check No.
                               th Check Date
-                              th Bank
-                              th Branch
+                              th Bank - Branch
                               th Amount
                               th Deposit Date
                               th(width="5%") Action
                             tr(ng-repeat="payment_detail in sales.payment_details")
-                              td {{payment_detail.type}}
-                              td {{payment_detail.date}}
+                              td {{payment_detail.payment_type}}
                               td {{payment_detail.check_number}}
                               td {{payment_detail.check_date}}
                               td {{payment_detail.bank}}
-                              td {{payment_detail.bank_branch}}
                               td {{payment_detail.amount}}
                               td {{payment_detail.deposit_date}}
                               td(width="5%")

@@ -80,7 +80,7 @@ $scope.dtColumns = [
     $scope.sales=Sales.get({id:$stateParams.id});
     $scope.updateSales=function(){
         $scope.sales.status_code = "SI_CREATED";
-        $scope.sales.status = "SI was Processed";
+        $scope.sales.status = "SI Approved";
         $scope.sales.$update(function(){
             $state.go('salesInvoice');
         });

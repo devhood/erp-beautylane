@@ -17,4 +17,5 @@ var app = angular.module('erp',[
     'salesMemoApp',
     'salesReturnApp',
     'salesPaymentApp',
+    'shipmentApp'
 ]);

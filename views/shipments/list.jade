@@ -2,12 +2,12 @@
 	.portlet-title
 		.caption
 			i.fa.fa-edit
-			| SHIPMENTS LIST
+			| SHIPMENT LIST
 		.tools
 			a.collapse(href="javascript:;")
-	.portlet-body.flip-scroll(ng-controller="ShipmentListController")
+	.portlet-body(ng-controller="ShipmentListController")
 		.table-toolbar
 			.btn-group
-				button(ui-sref="newShipment").tooltips(data-container="body", data-placement="top", data-html="true", data-original-title="Add new Record")
+				button.tooltips(ui-sref="newShipment", data-container="body", data-placement="top", data-html="true", data-original-title="Add new Record")
 					i.fa.fa-plus
-		table#shipments_table.table.table-bordered.table-striped.table-condensed.flip-content( datatable="" dt-options="dtOptions" dt-columns="dtColumns")
+		table.table.table-bordered.table-striped( datatable="" dt-options="dtOptions" dt-columns="dtColumns")
