@@ -28,6 +28,10 @@ html.no-js(lang='en')
     .content
       form.login-form(action='/login', method='post')
         h3.form-title Login to your account
+        if message
+          .alert.alert-danger
+            button.close(data-close='alert')
+            span !{message}
         .alert.alert-danger.display-hide
           button.close(data-close='alert')
           span
