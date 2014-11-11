@@ -70,6 +70,7 @@ $scope.dtColumns = [
 }).controller('SalesOrderCreateController',function($scope,$state,$stateParams,Sales,Api){
 
     $scope.sales=new Sales();
+    $scope.sales.customer.discount = "40 %";
 
     $scope.addSales=function(){
         $scope.sales.status = "SO submitted to Warehouse";
