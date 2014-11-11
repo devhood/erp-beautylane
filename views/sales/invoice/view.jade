@@ -2,7 +2,7 @@
   .portlet-title
     .caption
       i.fa.fa-reorder
-      | SALES ORDER : {{sales.sono}}
+      | SALES INVOICE : {{sales.sino}}
     .tools
       a.collapse(href="javascript:;")
       a.config(href="#portlet-config", data-toggle="modal")
@@ -15,13 +15,24 @@
           .col-md-6
             .form-group
               .col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
-                select.select2me.form-control.select2-offscreen(ng-model="sales.transaction_type", ng-options="transaction_type.transaction_type as transaction_type.transaction_type for transaction_type in transaction_types", ng-selected="{{sales.transaction_type}}" ,tabindex="-1", disabled)
-                span.col-md-12.help-block Transaction Type
+                input.form-control(type="text", ng-model="sales.drno", readonly)
+                span.col-md-12.help-block DR Number
           .col-md-6
             .form-group
               .col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
-                input#supplier_code.form-control(type="text", ng-model="sales.sono", readonly)
+                input.form-control(type="text", ng-model="sales.sono", readonly)
                 span.col-md-12.help-block SO Number
+        .row
+          .col-md-6
+            .form-group
+              .col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
+                input.form-control(type="text", ng-model="sales.delivery_date", readonly)
+                span.col-md-12.help-block Delivery Date
+          .col-md-6
+            .form-group
+              .col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
+                select.select2me.form-control.select2-offscreen(ng-model="sales.transaction_type", ng-options="transaction_type.transaction_type as transaction_type.transaction_type for transaction_type in transaction_types", ng-selected="{{sales.transaction_type}}" ,tabindex="-1", disabled)
+                span.col-md-12.help-block Transaction Type
         .row
           .col-md-1
           .col-md-10
@@ -72,30 +83,30 @@
           .col-md-6
             .form-group
               .col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
-                select.select2me.form-control.select2-offscreen(ng-model="sales.order_source", ng-options="order_source.order_source as order_source.order_source for order_source in order_sources", ng-selected="{{sales.order_source}}" ,tabindex="-1", disabled)
+                select.select2me.form-control.select2-offscreen(ng-model="sales.order_source", ng-options="order_source.order_source as order_source.order_source for order_source in order_sources", ng-selected="{{sales.order_source}}" ,tabindex="-1", required, disabled)
                 span.col-md-12.help-block Order Source
           .col-md-6
             .form-group
               .col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
-                select.select2me.form-control.select2-offscreen(ng-model="sales.shipping_mode", ng-options="shipping_mode.shipping_mode_name as shipping_mode.shipping_mode_name for shipping_mode in shipping_modes", ng-selected="{{sales.shipping_mode}}" ,tabindex="-1", disabled)
+                select.select2me.form-control.select2-offscreen(ng-model="sales.shipping_mode", ng-options="shipping_mode.shipping_mode_name as shipping_mode.shipping_mode_name for shipping_mode in shipping_modes", ng-selected="{{sales.shipping_mode}}" ,tabindex="-1", required, disabled)
                 span.col-md-12.help-block Delivery Method
         .row
           .col-md-6
             .form-group
               .col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
-                select.select2me.form-control.select2-offscreen(ng-model="sales.inventory_location", ng-options="inventory_location.inventory_location as inventory_location.inventory_location for inventory_location in inventory_locations", ng-selected="{{sales.inventory_location}}" ,tabindex="-1", disabled)
+                select.select2me.form-control.select2-offscreen(ng-model="sales.inventory_location", ng-options="inventory_location.inventory_location as inventory_location.inventory_location for inventory_location in inventory_locations", ng-selected="{{sales.inventory_location}}" ,tabindex="-1", required, disabled)
                 span.col-md-12.help-block Inventory Location
           .col-md-6
             .form-group
               .col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
-                input.form-control(type="text", ng-model="sales.ordered_by", ng-minlength="0", ng-maxlength="25", disabled)
+                input.form-control(type="text", ng-model="sales.ordered_by", ng-minlength="0", ng-maxlength="25", required, disabled)
                 span.col-md-12.help-block Ordered By
         .row
           .col-md-1
           .col-md-10
             .form-group
               .col-xs-12.col-sm-12.col-md-12.col-lg-12(align="center")
-                input.form-control(type="text", ng-model="sales.description", ng-minlength="0", ng-maxlength="100", disabled)
+                input.form-control(type="text", ng-model="sales.description", ng-minlength="0", ng-maxlength="100", required, disabled)
                 span.col-md-12.help-block Special Instructions
           .col-md-1
         .portlet.box.grey
@@ -107,6 +118,9 @@
               a.collapse(href="javascript:;")
           .portlet-body.form
             .form-body
+              br
+              br
+              .row
               .form-group
                 .col-md-1
                 .col-md-10
@@ -180,6 +194,5 @@
         .row
           .col-md-6
             .col-md-offset-3.col-md-9
-              button.btn.green(type="button", ui-sref="editSalesOrder({id:user._id})") Edit
-              button.btn.default(type="button", ui-sref="salesOrder") Back
+              button.btn.default(type="button", ui-sref="salesInvoice") Back
           .col-md-6
