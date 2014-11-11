@@ -80,50 +80,35 @@
 											br
 											br
 											.row
-												.col-md-1
-												.col-md-10
-													.col-md-8
+												.col-md-12
+													.col-md-3
 														.form-group
 															.col-xs-12.col-sm-12.col-md-12.col-lg-12
 																select.select2me.form-control.select2-offscreen(ng-model="sales.shipments.item", ng-options="product.name for product in products", ng-selected="{{product.name}}")
 																span.col-md-12.help-block	Product
-													.col-md-4
+													.col-md-2
 														.form-group
 															.col-xs-12.col-sm-12.col-md-12.col-lg-12
 																input.form-control(type="text", ng-minlength="0", ng-maxlength="20", ng-model="sales.shipments.quantity")
 																span.col-md-12.help-block	Quantity
-													.col-md-1
-												.col-md-1
-											.row
-												.col-md-1
-												.col-md-10
-													.col-md-6
+													.col-md-2
 														.form-group
 															.col-xs-12.col-sm-12.col-md-12.col-lg-12
 																input.form-control(type="text", ng-minlength="0", ng-maxlength="20", ng-model="shipments.expiry_date")
 																span.col-md-12.help-block	Cost
-													.col-md-6
-														.form-group
-															.col-xs-12.col-sm-12.col-md-12.col-lg-12
-																select.select2me.form-control.select2-offscreen(ng-model="shipments.condition", ng-options="shipments.condition for conditions in conditions", ng-selected="{{shipments.condition}}")
-																span.col-md-12.help-block	Currency
-												.col-md-1
-											.row
-												.col-md-1
-												.col-md-10
-													.col-md-6
+													.col-md-2
 														.form-group
 															.col-xs-12.col-sm-12.col-md-12.col-lg-12
 																input.form-control(type="text", ng-minlength="0", ng-maxlength="20", ng-model="shipments.expiry_date")
 																span.col-md-12.help-block	Expiry Date
-													.col-md-6
+													.col-md-2
 														.form-group
 															.col-xs-12.col-sm-12.col-md-12.col-lg-12
 																select.select2me.form-control.select2-offscreen(ng-model="shipments.condition", ng-options="shipments.condition for conditions in conditions", ng-selected="{{shipments.condition}}")
 																span.col-md-12.help-block	Condition
+													.col-md-1
 														button.btn-sm.green.custom-right(type="button",ng-click="addItem(shipments)")
 															i.fa.fa-plus
-												.col-md-1
 											.form-group
 												.col-md-1
 												.col-md-10
@@ -137,7 +122,6 @@
 																			th Product 
 																			th Quantity
 																			th Cost
-																			th Currency
 																			th Expiry Date
 																			th Condition
 																			th(width="5%")
@@ -146,7 +130,6 @@
 																			td {{shipments_item.item.name}}
 																			td {{shipments_item.quantity}}
 																			td {{shipments_item.cost}}
-																			td {{shipments_item.currency}}
 																			td {{shipments_item.expiry_date}}
 																			td {{shipments_item.condition}}
 																			td(width="5%")

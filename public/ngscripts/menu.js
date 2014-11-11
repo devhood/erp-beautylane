@@ -90,6 +90,34 @@
 							sref : "users"
 		      }
 		   ]
-	   }
+	   },
+		{
+			link : "javascript:;",
+			title : "Shipment",
+			last : true,
+			icon : "fa-gear",
+			id : 2,
+			childLink : [
+				{
+						title : "Shipments",
+						description : "Manage Shipments",
+						sref : "shipments"
+				}
+			]
+		},
+		{
+			link : "javascript:;",
+			title : "Purchase",
+			last : true,
+			icon : "fa-gear",
+			id : 2,
+			childLink : [
+				{
+						title : "Purchase",
+						description : "Manage Purchase",
+						sref : "purchases"
+				}
+			]
+		}
 	];
 })();

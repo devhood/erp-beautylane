@@ -72,6 +72,11 @@ angular.module('serviceApp.reference',[])
                 method: 'PUT'
             }
         }),
+        ShipmentStatus : $resource('/api/shipment_status/:id',{id:'@_id'},{
+            update: {
+                method: 'PUT'
+            }
+        }),
         Uom : $resource('/api/uom/:id',{id:'@_id'},{
             update: {
                 method: 'PUT'
@@ -113,11 +118,6 @@ angular.module('serviceApp.reference',[])
             }
         }),
         Product : $resource('/api/products/:id',{id:'@_id'},{
-            update: {
-                method: 'PUT'
-            }
-        }),
-        PaymentType : $resource('/api/payment_types/:id',{id:'@_id'},{
             update: {
                 method: 'PUT'
             }
