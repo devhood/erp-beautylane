@@ -305,3 +305,36 @@ router['delete']('/:object/:id', function(req, res) {
 });
 
 module.exports = router;
+
+module.exports.login = function(username,password,cb){
+  db.collection('users')
+  .find({username:username,password:password},{}).toArray()
+  .done(function(data){
+    if(data[0]){
+      cb(null,data[0])
+    }
+    else{
+      cb(null,false,{message:"Account not found"});
+    }
+
+  })
+  .fail( function( err ) {
+    console.log(err);
+    cb(err);
+  });
+};
+module.exports.user = function(id,cb){
+  db.collection('users')
+  .find({_id:id},{}).toArray()
+  .done(function(data){
+    if(data[0]){
+      cb(null,data[0]);
+    }
+    else{
+      cb(null,false,{message : "Account not found"});
+    }
+  })
+  .fail( function( err ) {
+    cb(err);
+  });
+};

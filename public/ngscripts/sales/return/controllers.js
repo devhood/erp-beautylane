@@ -31,22 +31,26 @@ $scope.dtOptions.sScrollX = "100%";
 $scope.dtOptions.sScrollXInner = "100%";
 $scope.dtOptions.bPaginate = false;
 $scope.dtColumns = [
+  DTColumnBuilder.newColumn('rmrno').withTitle('RMR Number'),
+  DTColumnBuilder.newColumn('sino').withTitle('SI Number'),
+  DTColumnBuilder.newColumn('drno').withTitle('DR Number'),
   DTColumnBuilder.newColumn('sono').withTitle('SO Number'),
   DTColumnBuilder.newColumn('customer.company_name').withTitle('Customer'),
   DTColumnBuilder.newColumn('customer.sales_executive').withTitle('Sales Executive'),
+  DTColumnBuilder.newColumn('delivery_date').withTitle('Delivery Date'),
   DTColumnBuilder.newColumn('shipping_mode').withTitle('Delivery Method'),
-  DTColumnBuilder.newColumn('customer.payment_term').withTitle('Payment Terms'),
+  DTColumnBuilder.newColumn('customer.payment_term.payment_term_name').withTitle('Payment Terms'),
   DTColumnBuilder.newColumn('created_on').withTitle('Created On'),
   DTColumnBuilder.newColumn('status').withTitle('Status'),
   DTColumnBuilder.newColumn(null).withTitle('Actions').notSortable()
   .renderWith(function(data, type, full, meta) {
-      return '<div class="btn-group btn-group-xs btn-group-solid"><a href="#/sales/order/view/'+data._id+'", class="tooltips btn default" '+
+      return '<div class="btn-group btn-group-xs btn-group-solid"><a href="#/sales/return/view/'+data._id+'", class="tooltips btn default" '+
         'data-container="body", data-placement="top", '+
         'data-html="true", data-original-title="View Record">' +
           '   <i class="fa fa-eye"></i>' +
           '</a>&nbsp;' +
 
-          '<a href="#/sales/order/edit/'+data._id+'", class="tooltips btn default" '+
+          '<a href="#/sales/return/edit/'+data._id+'", class="tooltips btn default" '+
         'data-container="body", data-placement="top", '+
         'data-html="true", data-original-title="Edit Record">' +
           '   <i class="fa fa-edit"></i>' +
@@ -72,11 +76,11 @@ $scope.dtColumns = [
     $scope.sales=new Sales();
 
     $scope.addSales=function(){
-        $scope.sales.status = "SO submitted to Warehouse";
+        $scope.sales.status = "RMR sent to Warehouse";
         $scope.sales.created_on = Date.now();
-        $scope.sales.status_code = "SO_CREATED";
+        $scope.sales.status_code = "RMR_CREATED";
         $scope.sales.$save(function(){
-            $state.go('salesOrder');
+            $state.go('salesReturn');
         });
     };
     $scope.payment_terms = Api.PaymentTerm.query();

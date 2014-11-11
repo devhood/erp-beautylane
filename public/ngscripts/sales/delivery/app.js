@@ -11,8 +11,8 @@ app.config(function($stateProvider,$httpProvider){
        templateUrl:'/sales/delivery/view',
        controller:'SalesDeliveryViewController'
     }).state('editSalesDelivery',{
-        url:'/sales/delivery/edit/:id',
-        templateUrl:'/sales/delivery/edit',
+        url:'/sales/delivery/approve/:id',
+        templateUrl:'/sales/delivery/approve',
         controller:'SalesDeliveryEditController'
     });
 
