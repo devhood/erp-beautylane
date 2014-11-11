@@ -31,18 +31,9 @@
 								.row
 									.col-md-6
 										.form-group
-											.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
-												input#referenceNo.form-control(type="text", ng-model="shipment.reference_number" required)
-												span.col-md-12.control-label	Reference Number 
-									.col-md-6
-										.form-group
-											.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
-								.row
-									.col-md-6
-										.form-group
-											.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
-												select#shipmentStatus.select2me.form-control.select2-offscreen(ng-model="shipment.status", ng-options="status.status as status.status for status in statuses", ng-selected="{{shipment.status}}" required)
-												span.col-md-12.control-label	Status
+													.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
+														input#referenceNo.form-control(type="text", ng-model="shipment.reference_number" required)
+														span.col-md-12.control-label	Reference Number
 									.col-md-6
 										.form-group
 											.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
