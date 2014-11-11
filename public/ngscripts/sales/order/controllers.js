@@ -70,12 +70,16 @@ $scope.dtColumns = [
 }).controller('SalesOrderCreateController',function($scope,$state,$stateParams,Sales,Api){
 
     $scope.sales=new Sales();
-    $scope.sales.customer.discount = "40 %";
 
     $scope.addSales=function(){
         $scope.sales.status = "SO submitted to Warehouse";
         $scope.sales.created_on = Date.now();
         $scope.sales.status_code = "SO_CREATED";
+        $scope.sales.drno = "";
+        $scope.sales.sino = "";
+        $scope.sales.rmrno = "";
+        $scope.sales.cmno = "";
+        $scope.sales.pmno = "";
         $scope.sales.$save(function(){
             $state.go('salesOrder');
         });
