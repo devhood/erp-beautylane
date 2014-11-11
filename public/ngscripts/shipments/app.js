@@ -7,20 +7,20 @@ app.config(function($stateProvider,$httpProvider){
         templateUrl:'/shipments/list',
         controller:'ShipmentListController'
     }).state('viewShipment',{
-       url:'/shipments/view',
-       templateUrl:'shipments/view',
+       url:'/shipments/view/:id',
+       templateUrl:'/shipments/view',
        controller:'ShipmentViewController'
     }).state('newShipment',{
         url:'/shipments/add',
-        templateUrl:'shipments/add',
+        templateUrl:'/shipments/add',
         controller:'ShipmentCreateController'
     }).state('editShipment',{
-        url:'/shipments/edit',
-        templateUrl:'shipments/edit',
+        url:'/shipments/edit/:id',
+        templateUrl:'/shipments/edit',
         controller:'ShipmentEditController'
     }).state('approveShipment',{
         url:'/shipments/approve',
-        templateUrl:'shipments/approve',
+        templateUrl:'/shipments/approve',
         controller:'ShipmentApproveController'
     });
 }).run(function($state){

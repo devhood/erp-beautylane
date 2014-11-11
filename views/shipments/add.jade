@@ -9,7 +9,7 @@
 							a.reload(href="javascript:;")
 							a.remove(href="javascript:;")
 					.portlet-body.form
-						form#shipment_add.form-horizontal(action="/shipment/add", method="post")
+						form.form-horizontal(role="form", name="add_form", ng-submit="add_form.$valid && addShipment()", novalidate)
 							.form-body
 								.alert.alert-danger.display-hide
 									button.close(data-close="alert")
@@ -26,13 +26,13 @@
 									.col-md-6
 										.form-group
 											.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
-												input#shipmentNo.form-control(type="text", name="shipmentNo", readonly="readonly", value="")
+												input#shipmentNo.form-control(type="text", ng-model="shipment.shipno" disabled)
 												span.col-md-12.control-label	Shipment Number 
 								.row
 									.col-md-6
 										.form-group
 											.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
-												input#referenceNo.form-control(type="text", name="referenceNo", value="")
+												input#referenceNo.form-control(type="text", ng-model="shipment.reference_number" required)
 												span.col-md-12.control-label	Reference Number 
 									.col-md-6
 										.form-group
@@ -46,28 +46,16 @@
 									.col-md-6
 										.form-group
 											.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
-												input#arrivalDate.form-control(type="text", name="arrivalDate", value="")
+												input#arrivalDate.form-control(type="text", ng-model="shipment.arrival_date" required)
 												span.col-md-12.control-label	Arrival Date 
 								.row
 									.col-md-12
 										.form-group
 											.col-md-2.col-lg-2
 											.col-md-8.col-xs-12.col-sm-12.col-lg-8
-												textarea#shipmentNotes.text-area.form-control(name="shipmentNotes", rows="1", required="required")
+												textarea#shipmentNotes.text-area.form-control(ng-model="shipment.notes" required)
 												span.col-md-12.control-label	Special Instructions 
 											.col-md-2.col-lg-2
-								.row
-									.col-md-6
-										.form-group
-											.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
-												input#confirmedBy.form-control(type="text", name="confirmedBy", value="")
-												span.col-md-12.control-label	Confirmed By 
-									.col-md-6
-										.form-group
-											.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
-												input#approveBy.form-control(type="text", name="approveBy", value="")
-												span.col-md-12.control-label	Approved By 
-								//- shipments item ng-show="shipments.item"
 								.portlet.box.grey
 									.portlet-title
 										.caption
@@ -84,27 +72,27 @@
 													.col-md-3
 														.form-group
 															.col-xs-12.col-sm-12.col-md-12.col-lg-12
-																select.select2me.form-control.select2-offscreen(ng-model="sales.shipments.item", ng-options="product.name for product in products", ng-selected="{{product.name}}")
+																select.select2me.form-control.select2-offscreen(ng-model="shipments.item.product", ng-options="product.name for product in products track by product.name")
 																span.col-md-12.help-block	Product
 													.col-md-2
 														.form-group
 															.col-xs-12.col-sm-12.col-md-12.col-lg-12
-																input.form-control(type="text", ng-minlength="0", ng-maxlength="20", ng-model="sales.shipments.quantity")
+																input.form-control(type="text", ng-model="shipments.item.quantity")
 																span.col-md-12.help-block	Quantity
 													.col-md-2
 														.form-group
 															.col-xs-12.col-sm-12.col-md-12.col-lg-12
-																input.form-control(type="text", ng-minlength="0", ng-maxlength="20", ng-model="shipments.expiry_date")
+																input.form-control(type="text", ng-model="shipments.item.cost")
 																span.col-md-12.help-block	Cost
 													.col-md-2
 														.form-group
 															.col-xs-12.col-sm-12.col-md-12.col-lg-12
-																input.form-control(type="text", ng-minlength="0", ng-maxlength="20", ng-model="shipments.expiry_date")
+																input.form-control(type="text", ng-model="shipments.item.expiry_date")
 																span.col-md-12.help-block	Expiry Date
 													.col-md-2
 														.form-group
 															.col-xs-12.col-sm-12.col-md-12.col-lg-12
-																select.select2me.form-control.select2-offscreen(ng-model="shipments.condition", ng-options="shipments.condition for conditions in conditions", ng-selected="{{shipments.condition}}")
+																select.select2me.form-control.select2-offscreen(ng-model="shipments.item.condition", ng-options="condition.condition as condition.condition for condition in conditions")
 																span.col-md-12.help-block	Condition
 													.col-md-1
 														button.btn-sm.green.custom-right(type="button",ng-click="addItem(shipments)")
@@ -126,12 +114,12 @@
 																			th Condition
 																			th(width="5%")
 																	tbody
-																		tr(ng-repeat="shipments_item in sales.shipments_item")
-																			td {{shipments_item.item.name}}
-																			td {{shipments_item.quantity}}
-																			td {{shipments_item.cost}}
-																			td {{shipments_item.expiry_date}}
-																			td {{shipments_item.condition}}
+																		tr(ng-repeat="shipment_item in shipment.shipment_items")
+																			td {{shipment_item.product.name}}
+																			td {{shipment_item.quantity}}
+																			td {{shipment_item.cost}}
+																			td {{shipment_item.expiry_date}}
+																			td {{shipment_item.condition}}
 																			td(width="5%")
 																				.btn-group.btn-group-xs.btn-group-solid
 																					a.tooltips.btn.default.tooltips(ng-click="removeItem($index)", data-container="body", data-placement="top", data-html="true", data-original-title="Delete Record")

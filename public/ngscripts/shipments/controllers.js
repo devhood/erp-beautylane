@@ -29,24 +29,25 @@ $scope.dtOptions = DTOptionsBuilder
     'pdf',
     'xls',
 ]);
+$scope.dtOptions.sScrollX = "100%";
+$scope.dtOptions.sScrollXInner = "100%";
+$scope.dtOptions.bPaginate = false;
 $scope.dtColumns = [
-  DTColumnBuilder.newColumn('shipment_no').withTitle('Shipment No.'),
+  DTColumnBuilder.newColumn('shipno').withTitle('Shipment No.'),
   DTColumnBuilder.newColumn('supplier').withTitle('Supplier'),
-  DTColumnBuilder.newColumn('reference_no').withTitle('Reference Number'),
+  DTColumnBuilder.newColumn('reference_number').withTitle('Reference Number'),
   DTColumnBuilder.newColumn('arrival_date').withTitle('Arrival Date'),
-  DTColumnBuilder.newColumn('confirmed_by').withTitle('Confirmed By'),
-  DTColumnBuilder.newColumn('approved_by').withTitle('Approved By'),
-  DTColumnBuilder.newColumn('shipment_notes').withTitle('Shipment Notes'),
-  DTColumnBuilder.newColumn('shipment_status').withTitle('Shipment Status'),
+  DTColumnBuilder.newColumn('notes').withTitle('Shipment Notes'),
+  DTColumnBuilder.newColumn('status').withTitle('Shipment Status'),
   DTColumnBuilder.newColumn(null).withTitle('Actions').notSortable()
   .renderWith(function(data, type, full, meta) {
-      return '<div class="btn-group btn-group-xs btn-group-solid"><a href="#/sales/shipments/view/'+data._id+'", class="tooltips btn default" '+
+      return '<div class="btn-group btn-group-xs btn-group-solid"><a href="#/shipments/view/'+data._id+'", class="tooltips btn default" '+
         'data-container="body", data-placement="top", '+
         'data-html="true", data-original-title="View Record">' +
           '   <i class="fa fa-eye"></i>' +
           '</a>&nbsp;' +
 
-          '<a href="#/sales/shipments/edit/'+data._id+'", class="tooltips btn default" '+
+          '<a href="#/shipments/edit/'+data._id+'", class="tooltips btn default" '+
         'data-container="body", data-placement="top", '+
         'data-html="true", data-original-title="Edit Record">' +
           '   <i class="fa fa-edit"></i>' +
@@ -72,14 +73,31 @@ $scope.dtColumns = [
     $scope.shipment=new Shipment();
     $scope.suppliers = Api.Supplier.query();
     $scope.statuses = Api.ShipmentStatus.query();
+    $scope.products = Api.Product.query();
+    $scope.conditions = Api.Condition.query();
     $scope.addShipment=function(){
-      $scope.shipment.status = "Shipments Created";
+      $scope.shipment.status = "Shipment Created";
       $scope.shipment.created_on = Date.now();
       $scope.shipment.status_code = "SHIPMENT_CREATED";
       $scope.shipment.$save(function(){
             $state.go('shipments');
         });
-    }
+    };
+    $scope.addItem = function(shipment){
+        console.log(shipment.item);
+        if(shipment.item.product && shipment.item.quantity && shipment.item.cost && shipment.item.expiry_date && shipment.item.condition){
+          if($scope.shipment.shipment_items){
+            $scope.shipment.shipment_items.push(shipment.item);
+          }
+          else{
+            $scope.shipment.shipment_items = [shipment.item];
+          }
+          shipment.item = {};
+        }
+    };
+    $scope.removeItem = function(index){
+      $scope.shipment.shipment_items.splice(index, 1);
+    };
 
 }).controller('ShipmentEditController',function($scope,$state,$stateParams,Shipment){
 

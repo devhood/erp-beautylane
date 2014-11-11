@@ -68,6 +68,26 @@ var generateTicket = function(status_code,cb){
                cb(err);
             });
             break;
+      case "SHIPMENT_CREATED":
+                db.collection("number_generator")
+                .find({type : "shipment"}).toArray()
+                .done(function(data){
+                  cb(null,data[0]);
+                })
+                .fail( function( err ) {
+                   cb(err);
+                });
+                break;
+     case "PURCHASE_CREATED":
+            db.collection("number_generator")
+            .find({type : "purchase"}).toArray()
+            .done(function(data){
+              cb(null,data[0]);
+            })
+            .fail( function( err ) {
+               cb(err);
+            });
+            break;
       }
 };
 
@@ -135,6 +155,26 @@ var updateTicket = function(status_code,ticket,cb){
               cb(err);
             });
             break;
+      case "SHIPMENT_CREATED":
+          db.collection("number_generator")
+          .update({type : "shipment"}, ticket, {safe: true})
+          .done(function(data){
+            cb(null,data);
+          })
+          .fail( function( err ) {
+             cb(err);
+          });
+          break;
+      case "PURCHASE_CREATED":
+            db.collection("number_generator")
+            .update({type : "purchase"}, ticket, {safe: true})
+            .done(function(data){
+              cb(null,data);
+            })
+            .fail( function( err ) {
+               cb(err);
+            });
+            break;
       }
 };
 
@@ -162,7 +202,7 @@ router.get('/:object', function(req, res) {
 
 });
 router.post('/:object', function(req, res) {
-    if(req.params.object == "sales" && req.body.status_code){
+    if(((req.params.object == "sales") || (req.params.object == "purchases") || (req.params.object == "shipments"))  && req.body.status_code){
 
         generateTicket(req.body.status_code,function(err,ticket){
             if(ticket){

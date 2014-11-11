@@ -5,3 +5,5 @@ sino,"sales invoice","SI","10","2014",1
 pmno,"sales payment","PM","10","2014",1
 rmrno,"sales return","RMR","10","2014",1
 cmno,"credit memo","CM","10","2014",1
+shipno,"shipment","SHP","10","2014",1
+purno,"purchase","PUR","10","2014",1

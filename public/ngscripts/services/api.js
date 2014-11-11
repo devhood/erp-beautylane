@@ -37,6 +37,11 @@ angular.module('serviceApp.reference',[])
                 method: 'PUT'
             }
         }),
+        Condition : $resource('/api/condition/:id',{id:'@_id'},{
+            update: {
+                method: 'PUT'
+            }
+        }),
         OrderSource : $resource('/api/order_source/:id',{id:'@_id'},{
             update: {
                 method: 'PUT'
