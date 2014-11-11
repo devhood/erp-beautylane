@@ -35,6 +35,7 @@ $scope.dtColumns = [
   DTColumnBuilder.newColumn('sono').withTitle('SO Number'),
   DTColumnBuilder.newColumn('customer.company_name').withTitle('Customer'),
   DTColumnBuilder.newColumn('customer.sales_executive').withTitle('Sales Executive'),
+  DTColumnBuilder.newColumn('delivery_date').withTitle('Delivery Date'),
   DTColumnBuilder.newColumn('shipping_mode').withTitle('Delivery Method'),
   DTColumnBuilder.newColumn('customer.payment_term.payment_term_name').withTitle('Payment Terms'),
   DTColumnBuilder.newColumn('created_on').withTitle('Created On'),
@@ -75,9 +76,13 @@ $scope.dtColumns = [
   $scope.inventory_locations = Api.InventoryLocation.query();
   $scope.products = Api.Product.query();
 
-}).controller('SalesDeliveryEditController',function($scope,$window,popupService,$state,$stateParams,Sales, Api){
+}).controller('SalesDeliveryEditController',function($scope,$filter,$window,popupService,$state,$stateParams,Sales, Api){
 
     $scope.sales=Sales.get({id:$stateParams.id});
+    console.log($scope.sales.sono);
+    
+
+   // $scope.sales.delivery_date = $filter('date')($scope.sales.delivery_date, "shortDate");
     $scope.updateSales=function(){
         $scope.sales.status_code = "DR_CREATED";
         $scope.sales.status = "DR submitted to Finance";
