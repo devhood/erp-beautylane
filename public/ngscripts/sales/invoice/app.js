@@ -8,8 +8,8 @@ app.config(function($stateProvider,$httpProvider){
         controller:'SalesInvoiceListController'
     })
     .state('viewSalesInvoice',{
-       url:'/sales/order/view/:id',
-       templateUrl:'/sales/order/view',
+       url:'/sales/invoice/view/:id',
+       templateUrl:'/sales/invoice/view',
        controller:'SalesInvoiceViewController'
     }).state('approveSalesInvoice',{
         url:'/sales/invoice/approve',

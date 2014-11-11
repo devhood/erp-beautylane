@@ -1,4 +1,4 @@
 field,type,prefix,zero_count,suffix,count
 sono,"sales order","SO","10","2014",1
 drno,"delivery receipt","DR","10","2014",1
-sino,"sales invoice","SI","","10","2014",1
+sino,"sales invoice","SI","10","2014",1

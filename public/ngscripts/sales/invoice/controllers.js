@@ -37,7 +37,7 @@ $scope.dtColumns = [
   DTColumnBuilder.newColumn('customer.company_name').withTitle('Customer'),
   DTColumnBuilder.newColumn('customer.sales_executive').withTitle('Sales Executive'),
   DTColumnBuilder.newColumn('shipping_mode').withTitle('Delivery Method'),
-  DTColumnBuilder.newColumn('customer.payment_term').withTitle('Payment Terms'),
+  DTColumnBuilder.newColumn('customer.payment_term.payment_term_name').withTitle('Payment Terms'),
   DTColumnBuilder.newColumn('created_on').withTitle('Created On'),
   DTColumnBuilder.newColumn('status').withTitle('Status'),
   DTColumnBuilder.newColumn(null).withTitle('Actions').notSortable()
@@ -79,10 +79,9 @@ $scope.dtColumns = [
 
     $scope.sales=Sales.get({id:$stateParams.id});
     $scope.updateSales=function(){
-
+        $scope.sales.status_code = "SI_CREATED";
+        $scope.sales.status = "SI was Processed";
         $scope.sales.$update(function(){
-          $scope.sales.status_code = "SI_CREATED";
-          $scope.sales.status = "SI was Processed";
             $state.go('salesInvoice');
         });
     };
@@ -96,49 +95,4 @@ $scope.dtColumns = [
     $scope.shipping_modes = Api.ShippingMode.query();
     $scope.inventory_locations = Api.InventoryLocation.query();
     $scope.products = Api.Product.query();
-    $scope.addItem = function(sales){
-      if(sales.order.item && sales.order.quantity && sales.customer){
-
-        sales.order.price = sales.customer.price_type=="Professional" ? sales.order.item.professional_price : sales.order.item.retail_price;
-        sales.order.discount = 1-parseInt(sales.customer.discount.replace(" %",""))/100;
-        sales.order.total = sales.order.price * sales.order.quantity * sales.order.discount;
-
-        if($scope.sales.ordered_items){
-          $scope.sales.ordered_items.push(sales.order);
-        }
-        else{
-          $scope.sales.ordered_items = [sales.order];
-        }
-        computeTotal($scope);
-        sales.order = {};
-      }
-    }
-    $scope.removeItem = function(index){
-      computeTotal($scope);
-      $scope.sales.ordered_items.splice(index, 1);
-    }
-    $scope.computeVat = function(sales){
-      if($scope.sales.ordered_items && sales.customer){
-        computeTotal($scope);
-      }
-    };
 });
-
-var computeTotal = function($scope){
-  $scope.sales.total_vat = 0;
-  $scope.sales.discount = 0;
-  $scope.sales.total = 0;
-  $scope.sales.total_vat_exempt = 0;
-  $scope.sales.total_amount_due = 0;
-
-  for(var i=0;i<$scope.sales.ordered_items.length; i++){
-    $scope.sales.vat_percent = $scope.sales.is_vat_percent ? .11 : .12;
-    $scope.sales.total+=$scope.sales.ordered_items[i].total;
-    $scope.sales.discount+=$scope.sales.ordered_items[i].total/$scope.sales.ordered_items[i].discount - $scope.sales.ordered_items[i].total;
-    $scope.sales.total_vat+=parseFloat(( $scope.sales.ordered_items[i].total * parseFloat($scope.sales.vat_percent) ).toFixed(2));
-    if($scope.sales.is_vat_percent){
-      $scope.sales.total_vat_exempt+=parseFloat(( $scope.sales.ordered_items[i].total * parseFloat(.01) ).toFixed(2));
-    }
-  }
-  $scope.sales.total_amount_due = parseFloat($scope.sales.total) - parseFloat($scope.sales.total_vat_exempt);
-}
