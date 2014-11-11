@@ -98,7 +98,7 @@
                 input.form-control(type="text", ng-model="sales.description", ng-minlength="0", ng-maxlength="100", required)
                 span.col-md-12.help-block Special Instructions
           .col-md-1
-        .portlet.box.grey
+        .portlet.box.grey(ng-show="sales.customer")
           .portlet-title
             .caption
               i.fa.fa-reorder

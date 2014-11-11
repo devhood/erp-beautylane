@@ -55,14 +55,17 @@ $scope.dtColumns = [
 ];
 
 }).controller('SalesOrderViewController',function($scope,$stateParams,Sales, Api){
-    $scope.sales=Sales.get({id:$stateParams.id});
-    $scope.payment_terms = Api.PaymentTerm.query();
-    $scope.brands = Api.Brand.query();
-    $scope.statuses = Api.ProductStatus.query();
-    $scope.uoms = Api.Uom.query();
-    $scope.movements = Api.Movement.query();
-    $scope.suppliers = Api.Supplier.query();
-    $scope.currencies = Api.Currency.query();
+  $scope.sales=Sales.get({id:$stateParams.id});
+  $scope.payment_terms = Api.PaymentTerm.query();
+  $scope.transaction_types = Api.TransactionType.query();
+  $scope.price_types = Api.PriceType.query();
+  $scope.customers = Api.Customer.query();
+  $scope.discounts = Api.Discount.query();
+  $scope.sales_executives = Api.SalesExecutive.query();
+  $scope.order_sources = Api.OrderSource.query();
+  $scope.shipping_modes = Api.ShippingMode.query();
+  $scope.inventory_locations = Api.InventoryLocation.query();
+  $scope.products = Api.Product.query();
 
 }).controller('SalesOrderCreateController',function($scope,$state,$stateParams,Sales,Api){
 
@@ -121,6 +124,7 @@ $scope.dtColumns = [
 
     $scope.sales=Sales.get({id:$stateParams.id});
     $scope.updateSales=function(){
+      
         $scope.sales.$update(function(){
             $state.go('salesOrder');
         });
