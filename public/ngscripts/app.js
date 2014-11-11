@@ -9,4 +9,6 @@ var app = angular.module('erp',[
     'customerApp',
     'productApp',
     'salesOrderApp',
+    'salesDeliveryApp',
+    'salesInvoiceApp'
 ]);
