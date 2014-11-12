@@ -42,7 +42,7 @@ $scope.dtColumns = [
   DTColumnBuilder.newColumn('status').withTitle('Status'),
   DTColumnBuilder.newColumn(null).withTitle('Actions').notSortable()
   .renderWith(function(data, type, full, meta) {
-      var button = '<div class="btn-group btn-group-xs btn-group-solid"><a href="#/sales/delivery/approve/'+data._id+'", class="tooltips btn default" '+
+      var button = '<div class="btn-group btn-group-xs btn-group-solid"><a href="#/sales/delivery/view/'+data._id+'", class="tooltips btn default" '+
         'data-container="body", data-placement="top", '+
         'data-html="true", data-original-title="View Record">' +
           '   <i class="fa fa-eye"></i>' +
@@ -78,7 +78,7 @@ $scope.dtColumns = [
 
 }).controller('SalesDeliveryEditController',function($scope,$filter,$window,popupService,$state,$stateParams,Sales, Api){
 
-    $scope.sales=Sales.get({id:$stateParams.id});   
+    $scope.sales=Sales.get({id:$stateParams.id});
 
    // $scope.sales.delivery_date = $filter('date')($scope.sales.delivery_date, "shortDate");
     $scope.updateSales=function(){

@@ -1,8 +1,10 @@
+block title
+	title VIEW PURCHASE
 .portlet.box.grey
 	.portlet-title
 		.caption
 			i.fa.fa-reorder
-			| EDIT PURCHASE
+			| VIEW PURCHASE
 		.tools
 			a.collapse(href="javascript:;")
 			a.config(href="#portlet-config", data-toggle="modal")
@@ -22,30 +24,30 @@
 						.form-group
 							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
 								select#transactionTypeId.select2me.form-control.select2-offscreen(ng-model="purchase.supplier", ng-options="supplier.supplier as supplier.supplier for supplier in suppliers", ng-selected="{{purchase.supplier}}" required)
-								span.col-md-12.control-label	Supplier 
+								span.col-md-12.control-label	Supplier
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
 								input#purchaseNo.form-control(type="text", ng-model="purchase.purno", disabled)
-								span.col-md-12.control-label	Purchase Number 
+								span.col-md-12.control-label	Purchase Number
 				.row
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
 								input#expectedArrivalDate.form-control(type="text", ng-model="purchase.arrival_date", required)
-								span.col-md-12.control-label	Expected Arrival Date 
+								span.col-md-12.control-label	Expected Arrival Date
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
 								input#referenceNo.form-control(type="text", ng-model="purchase.reference_number" , required)
-								span.col-md-12.control-label	Reference Number 
+								span.col-md-12.control-label	Reference Number
 				.row
 					.col-md-12
 						.form-group
 							.col-md-2.col-lg-2
 							.col-md-8.col-xs-12.col-sm-12.col-lg-8
 								textarea#purchaseNotes.text-area.form-control(ng-model="purchase.notes", required)
-								span.col-md-12.control-label	Special Instructions 
+								span.col-md-12.control-label	Special Instructions
 							.col-md-2.col-lg-2
 				.portlet.box.grey
 									.portlet-title
@@ -66,7 +68,7 @@
 																table.table.table-bordered.table-condensed.flip-content
 																	thead.flip-content.bg-grey
 																		tr
-																			th Product 
+																			th Product
 																			th Quantity
 																			th Cost
 																	tbody
