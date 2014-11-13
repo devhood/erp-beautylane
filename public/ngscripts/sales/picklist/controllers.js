@@ -25,4 +25,5 @@ angular.module('salesPickListApp.controllers',[])
   $scope.dtOptions.processing =  true;
   $scope.dtOptions.bSort = false;
   $scope.dtOptions.bFilter = false;
+  $scope.dtOptions.oLanguage = {"sZeroRecords": "", "sEmptyTable": ""};
 });
