@@ -7,7 +7,23 @@ block title
       | PICK LIST
     .tools
       a.collapse(href="javascript:;")
-  .portlet-body(ng-controller="SalesOrderListController")
+  .portlet-body(ng-controller="SalesPickListController")
     .table-toolbar
       .btn-group
-    table.table.table-bordered.table-striped( datatable="" dt-options="dtOptions" dt-columns="dtColumns")
+    table.table.table-bordered.table-striped(datatable="" ,dt-options="dtOptions", dt-columns="dtColumns")
+      thead
+        tr
+          th SO Number
+          th Customer
+          th Brand
+          th Code
+          th Product
+          th Quantity
+      tbody(ng-repeat="sale in sales")
+        tr(ng-repeat="ordered_item in sale.ordered_items")
+          td {{sale.sono}}
+          td {{sale.customer.company_name}}
+          td {{ordered_item.item.name}}
+          td {{ordered_item.item.name}}
+          td {{ordered_item.item.name}}
+          td {{ordered_item.item.name}}

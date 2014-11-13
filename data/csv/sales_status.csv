@@ -1,0 +1,11 @@
+status_code,status_description
+"SALES_ORDER_CREATED"," SO submitted to Warehouse"
+"PICK_LIST_CREATED","Goods being picked and packed"
+"DELIVERY_RECEIPT_APPROVED","DR approved and submitted to Finance"
+"DELIVERY_RECEIPT_REJECTED","DR rejected and returned to Sales"
+"SALES_INVOICE_APPROVED","SI approved and submitted to Warehouse for Printing"
+"SALES_INVOICE_REJECTED","SI rejected and returned to Sales",
+"TRIP_TICKET_CREATED":"Delivery in progress",
+"TRIP_TICKET_DELIVERED":"Order Delivered, Payment pending"
+"PAYMENT_CREATED":"Payment Received and waiting for approval"
+"PAYMENT_CONFIRMED":"Transaction COMPLETE"

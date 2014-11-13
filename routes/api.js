@@ -319,7 +319,6 @@ module.exports.login = function(username,password,cb){
 
   })
   .fail( function( err ) {
-    console.log(err);
     cb(err);
   });
 };

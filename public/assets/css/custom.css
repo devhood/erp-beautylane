@@ -45,3 +45,6 @@ textarea{
 .ng-pristine{
   border-color : #165A85
 }
+.dataTables_filter {
+  float: left;
+}

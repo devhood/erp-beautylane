@@ -30,6 +30,8 @@ $scope.dtOptions = DTOptionsBuilder
 $scope.dtOptions.sScrollX = "100%";
 $scope.dtOptions.sScrollXInner = "100%";
 $scope.dtOptions.bPaginate = false;
+$scope.dtOptions.bProcessing = false;
+$scope.dtOptions.processing =  true;
 $scope.dtColumns = [
   DTColumnBuilder.newColumn('rmrno').withTitle('RMR Number'),
   DTColumnBuilder.newColumn('sino').withTitle('SI Number'),

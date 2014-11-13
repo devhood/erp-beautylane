@@ -1,7 +1,7 @@
-angular.module('salesOrderApp.controllers',[])
-.controller('SalesOrderListController',function($scope,$state,popupService,$window,Sales, $filter,DTOptionsBuilder, DTColumnBuilder){
+angular.module('salesProformaApp.controllers',[])
+.controller('SalesProformaListController',function($scope,$state,popupService,$window,Sales, $filter,DTOptionsBuilder, DTColumnBuilder){
 
-var query = {"status":"SO submitted to Warehouse"};
+var query = {"status":"PF submitted to Warehouse"};
 $scope.dtOptions = DTOptionsBuilder
   .fromSource("/api/sales?filter="+encodeURIComponent(JSON.stringify(query)))
   .withBootstrap()
@@ -42,13 +42,13 @@ $scope.dtColumns = [
   DTColumnBuilder.newColumn('status').withTitle('Status'),
   DTColumnBuilder.newColumn(null).withTitle('Actions').notSortable()
   .renderWith(function(data, type, full, meta) {
-      return '<div class="btn-group btn-group-xs btn-group-solid"><a href="#/sales/order/view/'+data._id+'", class="tooltips btn default" '+
+      return '<div class="btn-group btn-group-xs btn-group-solid"><a href="#/sales/proforma/view/'+data._id+'", class="tooltips btn default" '+
         'data-container="body", data-placement="top", '+
         'data-html="true", data-original-title="View Record">' +
           '   <i class="fa fa-eye"></i>' +
           '</a>&nbsp;' +
 
-          '<a href="#/sales/order/edit/'+data._id+'", class="tooltips btn default" '+
+          '<a href="#/sales/proforma/edit/'+data._id+'", class="tooltips btn default" '+
         'data-container="body", data-placement="top", '+
         'data-html="true", data-original-title="Edit Record">' +
           '   <i class="fa fa-edit"></i>' +
@@ -56,7 +56,7 @@ $scope.dtColumns = [
   })
 ];
 
-}).controller('SalesOrderViewController',function($scope,$stateParams,Sales,User, Api){
+}).controller('SalesProformaViewController',function($scope,$stateParams,Sales,User, Api){
   $scope.sales=Sales.get({id:$stateParams.id});
   $scope.payment_terms = Api.PaymentTerm.query();
   $scope.transaction_types = Api.TransactionType.query();
@@ -69,14 +69,14 @@ $scope.dtColumns = [
   $scope.inventory_locations = Api.InventoryLocation.query();
   $scope.products = Api.Product.query();
 
-}).controller('SalesOrderCreateController',function($scope,$state,$stateParams,Sales,Api){
+}).controller('SalesProformaCreateController',function($scope,$state,$stateParams,Sales,Api){
 
     $scope.sales=new Sales();
 
     $scope.addSales=function(){
-        $scope.sales.status = "SO submitted to Warehouse";
+        $scope.sales.status = "PF submitted to Warehouse";
         $scope.sales.created_on = Date.now();
-        $scope.sales.status_code = "SO_CREATED";
+        $scope.sales.status_code = "PF_CREATED";
         $scope.sales.drno = "";
         $scope.sales.sino = "";
         $scope.sales.rmrno = "";
@@ -88,7 +88,7 @@ $scope.dtColumns = [
           createdOn : $scope.sales.created_on
         });
         $scope.sales.$save(function(){
-            $state.go('salesOrder');
+            $state.go('salesProforma');
         });
     };
     $scope.payment_terms = Api.PaymentTerm.query();
@@ -132,19 +132,19 @@ $scope.dtColumns = [
 
 
 
-}).controller('SalesOrderEditController',function($scope,$window,popupService,$state,$stateParams,Sales, Api){
+}).controller('SalesProformaEditController',function($scope,$window,popupService,$state,$stateParams,Sales, Api){
 
     $scope.sales=Sales.get({id:$stateParams.id});
     $scope.updateSales=function(){
 
         $scope.sales.$update(function(){
-            $state.go('salesOrder');
+            $state.go('salesProforma');
         });
     };
     $scope.deleteSales=function(sales){
         if(popupService.showPopup('Really delete this?')){
             sales.$delete(function(){
-            $state.go('salesOrder');
+            $state.go('salesProforma');
            });
         }
      };
