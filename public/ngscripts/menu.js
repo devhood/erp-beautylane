@@ -21,6 +21,11 @@
 		   id : 1,
 		   childLink : [
 			      {
+			          title : "Sales Proforma Invoice",
+			          description : "Create Proforma Invoice",
+								sref : "salesProforma"
+			      },
+			      {
 			          title : "Sales Order",
 			          description : "Create Sales Order",
 								sref : "salesOrder"
