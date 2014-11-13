@@ -17,11 +17,12 @@ angular.module('salesPickListApp.controllers',[])
     .withTableTools('/vendor/datatables-tabletools/swf/copy_csv_xls_pdf.swf')
     .withTableToolsButtons([
         'pdf',
-        'xls',
     ]);
   $scope.dtOptions.sScrollX = "100%";
   $scope.dtOptions.sScrollXInner = "100%";
   $scope.dtOptions.bPaginate = false;
   $scope.dtOptions.bProcessing = false;
   $scope.dtOptions.processing =  true;
+  $scope.dtOptions.bSort = false;
+  $scope.dtOptions.bFilter = false;
 });
