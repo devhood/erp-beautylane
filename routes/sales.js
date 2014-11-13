@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 router.use('/order', require('./sales/order'));
+router.use('/proforma', require('./sales/proforma'));
 router.use('/delivery', require('./sales/delivery'));
 router.use('/invoice', require('./sales/invoice'));
 router.use('/picklist', require('./sales/picklist'));

@@ -33,7 +33,7 @@ $scope.dtOptions.bPaginate = false;
 $scope.dtOptions.bProcessing = false;
 $scope.dtOptions.processing =  true;
 $scope.dtColumns = [
-  DTColumnBuilder.newColumn('sono').withTitle('SO Number'),
+  DTColumnBuilder.newColumn('pfno').withTitle('PF Number'),
   DTColumnBuilder.newColumn('customer.company_name').withTitle('Customer'),
   DTColumnBuilder.newColumn('customer.sales_executive').withTitle('Sales Executive'),
   DTColumnBuilder.newColumn('shipping_mode').withTitle('Delivery Method'),
@@ -71,25 +71,27 @@ $scope.dtColumns = [
 
 }).controller('SalesProformaCreateController',function($scope,$state,$stateParams,Sales,Api){
 
+    console.log("chito");
     $scope.sales=new Sales();
 
     $scope.addSales=function(){
+         console.log('salesProforma');
         $scope.sales.status = "PF submitted to Warehouse";
         $scope.sales.created_on = Date.now();
-        $scope.sales.status_code = "PF_CREATED";
+        $scope.sales.status_code = "SO_CREATED";
         $scope.sales.drno = "";
         $scope.sales.sino = "";
         $scope.sales.rmrno = "";
         $scope.sales.cmno = "";
         $scope.sales.pmno = "";
-        $scope.sales.history = [];
-        $scope.sales.history.push({
-          status : $scope.sales.status,
-          createdOn : $scope.sales.created_on
-        });
+        try{
         $scope.sales.$save(function(){
+            console.log('salesProforma');
             $state.go('salesProforma');
         });
+      }catch(e){
+        console.log(e);
+      }
     };
     $scope.payment_terms = Api.PaymentTerm.query();
     $scope.transaction_types = Api.TransactionType.query();

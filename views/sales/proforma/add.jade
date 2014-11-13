@@ -17,22 +17,13 @@ block title
           .col-md-6
             .form-group
               .col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
-          .col-md-6
-            .form-group
-              .col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
-                input#supplier_code.form-control(type="text", ng-model="sales.pfno", readonly)
-                span.col-md-12.help-block PF Number
-        .row
-          .col-md-6
-            .form-group
-              .col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
                 select.select2me.form-control.select2-offscreen(ng-model="sales.transaction_type", ng-options="transaction_type.transaction_type as transaction_type.transaction_type for transaction_type in transaction_types", ng-selected="{{sales.transaction_type}}" ,tabindex="-1", required)
                 span.col-md-12.help-block Transaction Type
           .col-md-6
             .form-group
               .col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
-                input#supplier_code.form-control(type="text", ng-model="sales.sono", readonly)
-                span.col-md-12.help-block SO Number
+                input#supplier_code.form-control(type="text", ng-model="sales.pfno", readonly)
+                span.col-md-12.help-block PF Number
         .row
           .col-md-1
           .col-md-10
@@ -216,5 +207,5 @@ block title
           .col-md-6
             .col-md-offset-3.col-md-9
               button.btn.green(type="submit") Approve &amp; Send
-              button.btn.default(type="button", ui-sref="salesOrder") Cancel
+              button.btn.default(type="button", ui-sref="salesProforma") Cancel
           .col-md-6
