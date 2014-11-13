@@ -131,7 +131,12 @@ angular.module('serviceApp.reference',[])
             update: {
                 method: 'PUT'
             }
-        })
+        }),
+        PickList : $resource('/api/sales?filter='+encodeURIComponent(JSON.stringify({"status":"SO submitted to Warehouse"})),{id:'@_id'},{
+            update: {
+                method: 'PUT'
+            }
+        }),
     };
 
 })
