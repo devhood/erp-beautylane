@@ -17,13 +17,35 @@ block title
           .col-md-6
             .form-group
               .col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
-                select.select2me.form-control.select2-offscreen(ng-model="sales.transaction_type", ng-options="transaction_type.transaction_type as transaction_type.transaction_type for transaction_type in transaction_types", ng-selected="{{sales.transaction_type}}" ,tabindex="-1", required)
-                span.col-md-12.help-block Transaction Type
+                input#supplier_code.form-control(type="text", ng-model="sales.rmrno", readonly)
+                span.col-md-12.help-block RMR Number
+          .col-md-6
+            .form-group
+              .col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
+                input#supplier_code.form-control(type="text", ng-model="sales.sino", readonly)
+                span.col-md-12.help-block SI Number
+        .row
+          .col-md-6
+            .form-group
+              .col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
+                input#supplier_code.form-control(type="text", ng-model="sales.drno", readonly)
+                span.col-md-12.help-block DR Number
           .col-md-6
             .form-group
               .col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
                 input#supplier_code.form-control(type="text", ng-model="sales.sono", readonly)
                 span.col-md-12.help-block SO Number
+        .row
+          .col-md-6
+            .form-group
+              .col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
+                select.select2me.form-control.select2-offscreen(ng-model="sales.transaction_type", ng-options="transaction_type.transaction_type as transaction_type.transaction_type for transaction_type in transaction_types", ng-selected="{{sales.transaction_type}}" ,tabindex="-1", required)
+                span.col-md-12.help-block Transaction Type
+          .col-md-6
+            .form-group
+              .col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
+                input#supplier_code.form-control(type="text", ng-model="sales.delivery_date", readonly)
+                span.col-md-12.help-block Delivery Date
         .row
           .col-md-1
           .col-md-10
@@ -52,12 +74,12 @@ block title
           .col-md-6
             .form-group
               .col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
-                select.select2me.form-control.select2-offscreen(ng-model="sales.customer.price_type", ng-options="price_type.price_type_name as price_type.price_type_name for price_type in price_types", ng-selected="{{sales.customer.price_type}}" ,tabindex="-1", disabled)
+                select.select2me.form-control.select2-offscreen(ng-model="sales.customer.price_type", ng-options="price_type.price_type_name for price_type in price_types track by price_type.price_type_name", ng-selected="{{sales.customer.price_type}}" ,tabindex="-1", disabled)
                 span.col-md-12.help-block Price Type
           .col-md-6
             .form-group
               .col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
-                select.select2me.form-control.select2-offscreen(ng-model="sales.customer.discount", ng-options="discount.discount as discount.discount for discount in discounts", ng-selected="{{customer.sales.discount}}" ,tabindex="-1", disabled)
+                select.select2me.form-control.select2-offscreen(ng-model="sales.customer.discount", ng-options="discount.discount for discount in discounts track by discount.discount", ng-selected="{{sales.customer.discount}}" ,disabled)
                 span.col-md-12.help-block Discount
         .row(ng-show="sales.customer")
           .col-md-6
@@ -68,7 +90,7 @@ block title
           .col-md-6
             .form-group
               .col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
-                select.select2me.form-control.select2-offscreen(ng-model="sales.customer.payment_term", ng-options="payment_term.payment_term_name as payment_term.payment_term_name for payment_term in payment_terms", ng-selected="{{customer.sales.payment_term}}" ,tabindex="-1", disabled)
+                select.select2me.form-control.select2-offscreen(ng-model="sales.customer.payment_term", ng-options="payment_term.payment_term_name as payment_term.payment_term_name for payment_term in payment_terms track by payment_term.payment_term_name", ng-selected="{{customer.sales.payment_term}}" ,tabindex="-1", disabled)
                 span.col-md-12.help-block Payment Terms
         .row
           .col-md-6
@@ -114,16 +136,21 @@ block title
               .row
                 .col-md-1
                 .col-md-10
-                  .col-md-7
+                  .col-md-4
                     .form-group
                       .col-xs-12.col-sm-12.col-md-12.col-lg-12
                         select.select2me.form-control.select2-offscreen(ng-model="sales.order.item", ng-options="product.name for product in products", ng-selected="{{product.name}}")
                         span.col-md-12.help-block	Product
-                  .col-md-4
+                  .col-md-3
                     .form-group
                       .col-xs-12.col-sm-12.col-md-12.col-lg-12
                         input.form-control(type="text", ng-minlength="0", ng-maxlength="20", ng-model="sales.order.quantity")
-                        span.col-md-12.help-block	Quantity
+                        span.col-md-12.help-block	Quantity Return
+                  .col-md-4
+                    .form-group
+                      .col-xs-12.col-sm-12.col-md-12.col-lg-12
+                        select.select2me.form-control.select2-offscreen(ng-model="sales.order.condition", ng-options="condition.condition for condition in conditions", ng-selected="{{sales.condition}}")
+                        span.col-md-12.help-block Condition
                   .col-md-1
                     button.btn-sm.green.custom-right(type="button",ng-click="addItem(sales)")
                       i.fa.fa-plus
@@ -138,10 +165,11 @@ block title
                         table.table.table-bordered.table-condensed.flip-content
                           thead.flip-content.bg-grey
                             tr
-                              th Product Order
-                              th Quantity
-                              th Unit Price
+                              th Product
+                              th Quantity Return
+                              th Price
                               th Total
+                              th Condition
                               th(width="5%") Action
                           tbody
                             tr(ng-repeat="ordered_item in sales.ordered_items")
@@ -149,6 +177,7 @@ block title
                               td {{ordered_item.quantity}}
                               td {{ordered_item.price}}
                               td {{ordered_item.total}}
+                              td {{ordered_item.condition.condition}}
                               td(width="5%")
                                 .btn-group.btn-group-xs.btn-group-solid
                                   a.tooltips.btn.default.tooltips(ng-click="removeItem($index)", data-container="body", data-placement="top", data-html="true", data-original-title="Delete Record")
@@ -207,5 +236,5 @@ block title
           .col-md-6
             .col-md-offset-3.col-md-9
               button.btn.green(type="submit") Approve &amp; Send
-              button.btn.default(type="button", ui-sref="salesOrder") Cancel
+              button.btn.default(type="button", ui-sref="salesReturn") Cancel
           .col-md-6
