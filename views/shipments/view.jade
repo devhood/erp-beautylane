@@ -8,7 +8,7 @@ block title
 						.tools
 							a.collapse(href="javascript:;")
 					.portlet-body.form
-						form.form-horizontal(role="form", name="add_form", ng-submit="add_form.$valid && updateShipments()", novalidate)
+						form.form-horizontal(role="form", name="add_form", novalidate)
 							.form-body
 								.alert.alert-danger.display-hide
 									button.close(data-close="alert")
@@ -86,6 +86,6 @@ block title
 								.row
 									.col-xs-10.col-sm-10.col-md-11.col-lg-11
 										.custom-right
-											button.btn.green(type="button", ui-sref="editShipment({id:shipment._id})") Edit
+											//-button.btn.green(type="button", ui-sref="editShipment({id:shipment._id})") Edit
 											button.btn.default(type="button", ui-sref="shipments") Back
 									.col-md-6
