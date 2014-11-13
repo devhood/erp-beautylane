@@ -34,19 +34,19 @@ block title
 									.col-md-6
 										.form-group
 													.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-right
-														input#referenceNo.form-control(type="text", ng-model="shipment.reference_number" required)
+														input#referenceNo.form-control(type="text", ng-model="shipment.reference_number" disabled)
 														span.col-md-12.control-label	Reference Number
 									.col-md-6
 										.form-group
 											.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
-												input#arrivalDate.form-control(type="text", ng-model="shipment.arrival_date" required)
+												input#arrivalDate.form-control(type="text", ng-model="shipment.arrival_date" disabled)
 												span.col-md-12.control-label	Arrival Date 
 								.row
 									.col-md-12
 										.form-group
 											.col-md-2.col-lg-2
 											.col-md-8.col-xs-12.col-sm-12.col-lg-8
-												textarea#shipmentNotes.text-area.form-control(ng-model="shipment.notes" required)
+												textarea#shipmentNotes.text-area.form-control(ng-model="shipment.notes")
 												span.col-md-12.control-label	Special Instructions 
 											.col-md-2.col-lg-2
 								.portlet.box.grey

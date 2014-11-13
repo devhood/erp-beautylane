@@ -8,6 +8,7 @@ var app = angular.module('erp',[
     'userApp',
     'customerApp',
     'productApp',
+    'salesProformaApp',
     'salesOrderApp',
     'salesDeliveryApp',
     'salesInvoiceApp',
@@ -18,7 +19,8 @@ var app = angular.module('erp',[
     'salesReturnApp',
     'salesPaymentApp',
     'shipmentApp',
-    'purchaseApp'
+    'purchaseApp',
+    'ui.utils'
 ]).config(function($locationProvider, $httpProvider) {
 
    var checkLoggedin = function($q, $timeout, $http, $location, $rootScope){

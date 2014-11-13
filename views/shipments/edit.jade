@@ -36,7 +36,7 @@ block title
 									.col-md-6
 										.form-group
 											.col-xs-12.col-sm-12.col-md-8.col-lg-8.custom-left
-												input#arrivalDate.form-control(type="text", ng-model="shipment.arrival_date" required)
+												input#arrivalDate.form-control(type="text", ng-model="shipment.arrival_date", datepicker-popup="{{format}}" required)
 												span.col-md-12.control-label	Arrival Date
 								.row
 									.col-md-12
@@ -77,7 +77,7 @@ block title
 													.col-md-2
 														.form-group
 															.col-xs-12.col-sm-12.col-md-12.col-lg-12
-																input.form-control(type="text", ng-model="shipments.item.expiry_date")
+																input.form-control(type="text", ng-model="shipments.item.expiry_date", datepicker-popup="{{format}}")
 																span.col-md-12.help-block	Expiry Date
 													.col-md-2
 														.form-group
