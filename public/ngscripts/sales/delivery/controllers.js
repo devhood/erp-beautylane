@@ -1,7 +1,7 @@
 angular.module('salesDeliveryApp.controllers',[])
 .controller('SalesDeliveryListController',function($scope,$state,popupService,$window,Sales, $filter,DTOptionsBuilder, DTColumnBuilder){
 
-var query = {"status":{"$in":["SO submitted to Warehouse","DR submitted to Finance"]}};
+var query = {"status":{"$in":["PF submitted to Warehouse","SO submitted to Warehouse","DR submitted to Finance"]}};
 $scope.dtOptions = DTOptionsBuilder
   .fromSource("/api/sales?filter="+encodeURIComponent(JSON.stringify(query)))
   .withBootstrap()

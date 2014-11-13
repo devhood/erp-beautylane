@@ -261,7 +261,7 @@ router.put('/:object/:id', function(req, res) {
     req.query.filter._id = id;
     if(req.params.object == "sales" && req.body.status_code){
         generateTicket(req.body.status_code,function(err,ticket){
-            if(ticket){
+            if(ticket && !req.body[ticket.field]){
                 req.body[ticket.field] = ticket.prefix + pad(ticket.count,ticket.zero_count) + "-" +  ticket.suffix
                 updateTicket(req.body.status_code,ticket,function(err,result){
                   delete req.body.status_code;
