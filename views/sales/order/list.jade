@@ -10,6 +10,4 @@ block title
   .portlet-body(ng-controller="SalesOrderListController")
     .table-toolbar
       .btn-group
-        button.tooltips(ui-sref="newSalesOrder", data-container="body", data-placement="top", data-html="true", data-original-title="Add new Record")
-          i.fa.fa-plus
-    table.table.table-bordered.table-striped( datatable="" dt-options="dtOptions")
+    table.table.table-bordered.table-striped( datatable="" dt-options="dtOptions" dt-columns="dtColumns")
