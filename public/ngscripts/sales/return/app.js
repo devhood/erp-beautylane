@@ -11,8 +11,8 @@ app.config(function($stateProvider,$httpProvider){
        templateUrl:'/sales/return/view',
        controller:'SalesReturnViewController'
     }).state('newSalesReturn',{
-        url:'/sales/return/add',
-        templateUrl:'/sales/return/add',
+        url:'/sales/return/approve/:id',
+        templateUrl:'/sales/return/approve',
         controller:'SalesReturnCreateController'
     }).state('editSalesReturn',{
         url:'/sales/return/edit/:id',

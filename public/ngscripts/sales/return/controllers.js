@@ -59,8 +59,15 @@ $scope.dtColumns = [
           '   <i class="fa fa-edit"></i>' +
           '</a>&nbsp;</div>';
           }
+          else if(data.status != "RMR approved and submitted to Finance"){
+           button+='<a href="#/sales/return/approve/'+data._id+'", class="tooltips btn default" '+
+        'data-container="body", data-placement="top", '+
+        'data-html="true", data-original-title="Edit Record">' +
+          '   <i class="fa fa-edit"></i>' +
+          '</a>&nbsp;</div>';
+          }
           else{
-            button+='</div>';
+            buttom+='</div>';
           }
           return button;
 
@@ -82,10 +89,57 @@ $scope.dtColumns = [
   $scope.conditions = Api.Condition.query();
 
 }).controller('SalesReturnCreateController',function($scope,$state,$stateParams,Sales,Api){
+$scope.sales=Sales.get({id:$stateParams.id});
+    $scope.updateSales=function(){
+        delete $scope.sales.status_code;
+        $scope.sales.status = "RMR approved and submitted to Finance";
+        $scope.sales.$update(function(){
+            $state.go('salesReturn');
+        });
+    };
+    $scope.deleteSales=function(sales){
+        if(popupService.showPopup('Really delete this?')){
+            sales.$delete(function(){
+            $state.go('salesReturn');
+           });
+        }
+     };
+    $scope.payment_terms = Api.PaymentTerm.query();
+    $scope.transaction_types = Api.TransactionType.query();
+    $scope.price_types = Api.PriceType.query();
+    $scope.customers = Api.Customer.query();
+    $scope.discounts = Api.Discount.query();
+    $scope.sales_executives = Api.SalesExecutive.query();
+    $scope.order_sources = Api.OrderSource.query();
+    $scope.shipping_modes = Api.ShippingMode.query();
+    $scope.inventory_locations = Api.InventoryLocation.query();
+    $scope.products = Api.Product.query();
+    $scope.conditions = Api.Condition.query();
 
-    
+    $scope.addItem = function(sales){
 
+      if(sales.returned.item && sales.returned.quantity && sales.returned.condition.condition && sales.customer){
+ 
+        sales.returned.price = sales.customer.price_type=="Professional" ? sales.returned.item.professional_price : sales.returned.item.retail_price;
+        sales.returned.return_discount = 1-parseInt(sales.customer.discount.discount.replace(" %",""))/100;
+        sales.returned.return_total = sales.returned.price * sales.returned.quantity * sales.returned.return_discount;
 
+        if($scope.sales.returned_items){
+          $scope.sales.returned_items.push(sales.returned);
+        }
+        else{
+          $scope.sales.returned_items = [sales.returned];
+        }
+
+        computeTotalReturnItems($scope);
+        sales.returned = {};
+      }
+    }
+    $scope.removeItem = function(index){
+      computeTotalReturnItems($scope);
+      $scope.sales.returned_items.splice(index, 1);
+    }
+   
 }).controller('SalesReturnEditController',function($scope,$window,popupService,$state,$stateParams,Sales, Api){
 
     $scope.sales=Sales.get({id:$stateParams.id});

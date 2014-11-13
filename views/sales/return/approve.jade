@@ -1,17 +1,17 @@
 block title
-  title VIEW SALES RETURN
+  title APPROVE SALES RETURN
 .portlet.box.grey
   .portlet-title
     .caption
       i.fa.fa-reorder
-      | VIEW SALES RETURN
+      | APPROVE SALES RETURN
     .tools
       a.collapse(href="javascript:;")
       a.config(href="#portlet-config", data-toggle="modal")
       a.reload(href="javascript:;")
       a.remove(href="javascript:;")
   .portlet-body.form
-    form.form-horizontal(role="form", name="add_form", novalidate)
+    form.form-horizontal(role="form", name="add_form", ng-submit="add_form.$valid && updateSales()", novalidate)
       .form-body
         .row
           .col-md-6
@@ -161,6 +161,30 @@ block title
               a.collapse(href="javascript:;")
           .portlet-body.form
             .form-body
+              br
+              br
+              .row
+                .col-md-1
+                .col-md-10
+                  .col-md-4
+                    .form-group
+                      .col-xs-12.col-sm-12.col-md-12.col-lg-12
+                        select.select2me.form-control.select2-offscreen(ng-model="sales.returned.item", ng-options="product.name for product in products", ng-selected="{{product.name}}")
+                        span.col-md-12.help-block Product
+                  .col-md-3
+                    .form-group
+                      .col-xs-12.col-sm-12.col-md-12.col-lg-12
+                        input.form-control(type="text", ng-minlength="0", ng-maxlength="20", ng-model="sales.returned.quantity")
+                        span.col-md-12.help-block Quantity Return
+                  .col-md-4
+                    .form-group
+                      .col-xs-12.col-sm-12.col-md-12.col-lg-12
+                        select.select2me.form-control.select2-offscreen(ng-model="sales.returned.condition", ng-options="condition.condition for condition in conditions", ng-selected="{{sales.condition}}")
+                        span.col-md-12.help-block Condition
+                  .col-md-1
+                    button.btn-sm.green.custom-right(type="button",ng-click="addItem(sales)")
+                      i.fa.fa-plus
+                .col-md-1
               .form-group
                 .col-md-1
                 .col-md-10
@@ -250,5 +274,6 @@ block title
         .row
           .col-md-6
             .col-md-offset-3.col-md-9
+              button.btn.green(type="submit") Approve &amp; Send
               button.btn.default(type="button", ui-sref="salesReturn") Cancel
           .col-md-6

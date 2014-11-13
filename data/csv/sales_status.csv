@@ -5,6 +5,10 @@ status_code,status_description
 "DELIVERY_RECEIPT_REJECTED","DR rejected and returned to Sales"
 "SALES_INVOICE_APPROVED","SI approved and submitted to Warehouse for Printing"
 "SALES_INVOICE_REJECTED","SI rejected and returned to Sales",
+"RETURN_MERCHANDISE_RECEIPT_CREATED","RMR submitted to Warehouse"
+"RETURN_MERCHANDISE_RECEIPT_APPROVED","RMR approved and submitted to Finance"
+"RETURN_MERCHANDISE_RECEIPT_REJECTED","RMR rejected and returned to Sales"
+"CREDIT_MEMO_APPROVED", "Credit Memo approved"
 "TRIP_TICKET_CREATED":"Delivery in progress",
 "TRIP_TICKET_DELIVERED":"Order Delivered, Payment pending"
 "PAYMENT_CREATED":"Payment Received and waiting for approval"
