@@ -1,7 +1,7 @@
 angular.module('salesReturnApp.controllers',[])
 .controller('SalesReturnListController',function($scope,$state,popupService,$window,Sales, $filter,DTOptionsBuilder, DTColumnBuilder){
 
-var query = {"status":"SO submitted to Warehouse"};
+var query = {"status":"Order delivered"};
 $scope.dtOptions = DTOptionsBuilder
   .fromSource("/api/sales?filter="+encodeURIComponent(JSON.stringify(query)))
   .withBootstrap()
@@ -30,6 +30,8 @@ $scope.dtOptions = DTOptionsBuilder
 $scope.dtOptions.sScrollX = "100%";
 $scope.dtOptions.sScrollXInner = "100%";
 $scope.dtOptions.bPaginate = false;
+$scope.dtOptions.bProcessing = false;
+$scope.dtOptions.processing =  true;
 $scope.dtColumns = [
   DTColumnBuilder.newColumn('rmrno').withTitle('RMR Number'),
   DTColumnBuilder.newColumn('sino').withTitle('SI Number'),

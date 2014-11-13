@@ -35,7 +35,6 @@ $scope.dtColumns = [
   DTColumnBuilder.newColumn('sono').withTitle('SO Number'),
   DTColumnBuilder.newColumn('customer.company_name').withTitle('Customer'),
   DTColumnBuilder.newColumn('customer.sales_executive').withTitle('Sales Executive'),
-  DTColumnBuilder.newColumn('delivery_date').withTitle('Delivery Date'),
   DTColumnBuilder.newColumn('shipping_mode').withTitle('Delivery Method'),
   DTColumnBuilder.newColumn('customer.payment_term.payment_term_name').withTitle('Payment Terms'),
   DTColumnBuilder.newColumn('created_on').withTitle('Created On'),

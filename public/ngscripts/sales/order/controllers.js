@@ -30,6 +30,8 @@ $scope.dtOptions = DTOptionsBuilder
 $scope.dtOptions.sScrollX = "100%";
 $scope.dtOptions.sScrollXInner = "100%";
 $scope.dtOptions.bPaginate = false;
+$scope.dtOptions.bProcessing = false;
+$scope.dtOptions.processing =  true;
 $scope.dtColumns = [
   DTColumnBuilder.newColumn('sono').withTitle('SO Number'),
   DTColumnBuilder.newColumn('customer.company_name').withTitle('Customer'),

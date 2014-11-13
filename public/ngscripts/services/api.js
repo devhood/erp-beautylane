@@ -127,6 +127,11 @@ angular.module('serviceApp.reference',[])
                 method: 'PUT'
             }
         }),
+        SalesStatus : $resource('/api/sales_status/:id',{id:'@_id'},{
+            update: {
+                method: 'PUT'
+            }
+        })
     };
 
 })
