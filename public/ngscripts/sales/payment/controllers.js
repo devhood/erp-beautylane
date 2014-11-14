@@ -1,7 +1,7 @@
 angular.module('salesPaymentApp.controllers',[])
 .controller('SalesPaymentListController',function($scope,$state,popupService,$window,Sales, $filter,DTOptionsBuilder, DTColumnBuilder){
 
-var query = {"status":{"$in":["SI Approved","Payment Received","Payment confirmed by Accounting"]}};
+var query = {"status":{"$in":["SI Approved","Credit Memo approved","Payment Received and waiting for approval"]}};
 $scope.dtOptions = DTOptionsBuilder
   .fromSource("/api/sales?filter="+encodeURIComponent(JSON.stringify(query)))
   .withBootstrap()
@@ -46,20 +46,26 @@ $scope.dtColumns = [
   DTColumnBuilder.newColumn('status').withTitle('Status'),
   DTColumnBuilder.newColumn(null).withTitle('Actions').notSortable()
   .renderWith(function(data, type, full, meta) {
-      var button = '<div class="btn-group btn-group-xs btn-group-solid"><a href="#/sales/approve/view/'+data._id+'", class="tooltips btn default" '+
+      var button = '<div class="btn-group btn-group-xs btn-group-solid"><a href="#/sales/payment/view/'+data._id+'", class="tooltips btn default" '+
         'data-container="body", data-placement="top", '+
         'data-html="true", data-original-title="View Record">' +
           '   <i class="fa fa-eye"></i>' +
           '</a>&nbsp;';
 
-          if(data.status != "Payment confirmed by Accounting"){
-            button+='<a href="#/sales/payment/approve/'+data._id+'", class="tooltips btn default" '+
+          if(data.status == "SI Approved" || data.status == "Credit Memo approved"){
+            button+='<a href="#/sales/payment/edit/'+data._id+'", class="tooltips btn default" '+
         'data-container="body", data-placement="top", '+
         'data-html="true", data-original-title="Edit Record">' +
           '   <i class="fa fa-edit"></i>' +
           '</a>&nbsp;</div>';
           }
-          else{
+          else if(data.status == "Payment Received and waiting for approval"){
+            button+='<a href="#/sales/payment/approve/'+data._id+'", class="tooltips btn default" '+
+        'data-container="body", data-placement="top", '+
+        'data-html="true", data-original-title="Edit Record">' +
+          '   <i class="fa fa-edit"></i>' +
+          '</a>&nbsp;</div>';
+          }else{
             button+='</div>';
           }
           return button;
@@ -81,13 +87,27 @@ $scope.dtColumns = [
   $scope.products = Api.Product.query();
   $scope.payment_types = Api.PaymentType.query();
 
+}).controller('SalesPaymentCreateController',function($scope,$filter,$window,popupService,$state,$stateParams,Sales, Api){
+  $scope.sales=Sales.get({id:$stateParams.id});
+  $scope.payment_terms = Api.PaymentTerm.query();
+  $scope.transaction_types = Api.TransactionType.query();
+  $scope.price_types = Api.PriceType.query();
+  $scope.customers = Api.Customer.query();
+  $scope.discounts = Api.Discount.query();
+  $scope.sales_executives = Api.SalesExecutive.query();
+  $scope.order_sources = Api.OrderSource.query();
+  $scope.shipping_modes = Api.ShippingMode.query();
+  $scope.inventory_locations = Api.InventoryLocation.query();
+  $scope.products = Api.Product.query();
+  $scope.payment_types = Api.PaymentType.query();
+
 }).controller('SalesPaymentEditController',function($scope,$filter,$window,popupService,$state,$stateParams,Sales, Api){
 
     $scope.sales=Sales.get({id:$stateParams.id});
     
     $scope.updateSales=function(){
         $scope.sales.status_code = "PM_CREATED";
-        $scope.sales.status = "Payment confirmed by Accounting";
+        $scope.sales.status = "Payment Received and waiting for approval";
         $scope.sales.$update(function(){
             $state.go('salesPayment');
         });

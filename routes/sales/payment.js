@@ -7,6 +7,9 @@ router.get('/list', function(req, res) {
 router.get('/approve', function(req, res) {
   res.render('sales/payment/approve');
 });
+router.get('/edit', function(req, res) {
+  res.render('sales/payment/edit');
+});
 router.get('/view', function(req, res) {
   res.render('sales/payment/view');
 });

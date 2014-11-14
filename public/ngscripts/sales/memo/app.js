@@ -6,22 +6,20 @@ app.config(function($stateProvider,$httpProvider){
         url:'/sales/memo/list',
         templateUrl:'/sales/memo/list',
         controller:'SalesMemoListController'
+    }).state('viewSalesMemo',{
+       url:'/sales/memo/view/:id',
+       templateUrl:'/sales/memo/view',
+       controller:'SalesMemoViewController'
+    }).state('newSalesMemo',{
+        url:'/sales/memo/add',
+        templateUrl:'/sales/memo/add',
+        controller:'SalesMemoCreateController'
+    }).state('editSalesMemo',{
+        url:'/sales/memo/edit/:id',
+        templateUrl:'/sales/memo/edit',
+        controller:'SalesMemoEditController'
     });
-/*
-    .state('viewSalesOrder',{
-       url:'/sales/order/view/:id',
-       templateUrl:'/sales/order/view',
-       controller:'SalesOrderViewController'
-    }).state('newSalesOrder',{
-        url:'/sales/order/add',
-        templateUrl:'/sales/order/add',
-        controller:'SalesOrderCreateController'
-    }).state('editSalesOrder',{
-        url:'/sales/order/edit/:id',
-        templateUrl:'/sales/order/edit',
-        controller:'SalesOrderEditController'
-    });
-*/
+
 }).run(function($state){
 
 });

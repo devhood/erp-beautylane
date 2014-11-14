@@ -10,6 +10,10 @@ app.config(function($stateProvider,$httpProvider){
        url:'/sales/payment/view/:id',
        templateUrl:'/sales/payment/view',
        controller:'SalesPaymentViewController'
+    }).state('newSalesPayment',{
+        url:'/sales/order/edit/:id',
+        templateUrl:'/sales/payment/edit',
+        controller:'SalesPaymentCreateController'
     }).state('editSalesPayment',{
         url:'/sales/payment/approve/:id',
         templateUrl:'/sales/payment/approve',

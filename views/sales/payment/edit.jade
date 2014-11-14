@@ -226,32 +226,32 @@ block title
                   .col-md-3
                     .form-group
                       .col-xs-12.col-sm-12.col-md-12.col-lg-12
-                        select.select2me.form-control.select2-offscreen(ng-model="sales.payment.payment_type", ng-options="payment_type.payment_type as payment_type.payment_type for payment_type in payment_types", ng-selected="{{sales.payment_type}}")
+                        select.select2me.form-control.select2-offscreen(ng-model="sales.payment.payment_type", ng-options="payment_type.payment_type as payment_type.payment_type for payment_type in payment_types", ng-selected="{{sales.payment_type}}", required)
                         span.col-md-12.help-block Type
                   .col-md-2(ng-show="sales.payment.payment_type=='PDC' || sales.payment.payment_type=='Check Deposit'")
                     .form-group
                       .col-xs-12.col-sm-12.col-md-12.col-lg-12
-                        input.form-control(type="text", ng-minlength="0", ng-maxlength="20", ng-model="sales.payment.check_number")
+                        input.form-control(type="text", ng-minlength="0", ng-maxlength="20", ng-model="sales.payment.check_number", required)
                         span.col-md-12.help-block Check Number
                   .col-md-2(ng-show="sales.payment.payment_type=='PDC' || sales.payment.payment_type=='Check Deposit'")
                     .form-group
                       .col-xs-12.col-sm-12.col-md-12.col-lg-12
-                        input.form-control(type="text", ng-minlength="0", ng-maxlength="20", ng-model="sales.payment.check_date")
+                        input.form-control(type="text", ng-minlength="0", ng-maxlength="20", ng-model="sales.payment.check_date", required)
                         span.col-md-12.help-block Check Date
                   .col-md-2(ng-show="sales.payment.payment_type=='PDC' || sales.payment.payment_type=='Cash Deposit' || sales.payment.payment_type=='Check Deposit'")
                     .form-group
                       .col-xs-12.col-sm-12.col-md-12.col-lg-12
-                        input.form-control(type="text", ng-minlength="0", ng-maxlength="20", ng-model="sales.payment.bank")
+                        input.form-control(type="text", ng-minlength="0", ng-maxlength="20", ng-model="sales.payment.bank", required)
                         span.col-md-12.help-block Bank - Branch
                   .col-md-2
                     .form-group
                       .col-xs-12.col-sm-12.col-md-12.col-lg-12
-                        input.form-control(type="text", ng-minlength="0", ng-maxlength="20", ng-model="sales.payment.amount")
+                        input.form-control(type="text", ng-minlength="0", ng-maxlength="20", ng-model="sales.payment.amount", required)
                         span.col-md-12.help-block Amount
                   .col-md-2(ng-show="sales.payment.payment_type=='Cash Deposit'")
                     .form-group
                       .col-xs-12.col-sm-12.col-md-12.col-lg-12
-                        input.form-control(type="text", ng-minlength="0", ng-maxlength="20", ng-model="sales.payment.deposit_date")
+                        input.form-control(type="text", ng-minlength="0", ng-maxlength="20", ng-model="sales.payment.deposit_date", required)
                         span.col-md-12.help-block Deposit Date
                   .col-md-1
                     .form-group
@@ -287,6 +287,17 @@ block title
                                   a.tooltips.btn.default.tooltips(ng-click="removeDetail($index)", data-container="body", data-placement="top", data-html="true", data-original-title="Delete Record")
                                     i.fa.fa-trash-o
                 .col-md-1
+        .row
+          .col-md-6
+            .form-group
+              .col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
+                input.form-control(type="text", ng-model="sales.orno")
+                span.col-md-12.help-block OR Number
+          .col-md-6
+            .form-group
+              .col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
+                input.form-control(type="text", ng-model="sales.prno")
+                span.col-md-12.help-block PR Number
       .form-actions.fluid
         .row
           .col-md-6
