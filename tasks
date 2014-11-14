@@ -1,0 +1,77 @@
+Beautylane presentation 11-14-14
+Concern: invoice number to be screen by BIR; need to sync the system;
+
+Schedule: printer to be borrowed next week;  return within Sunday 4pm;
+
+
+Note:
+-Customer List-
+@To be removed in customer list
+@Type, shipping mode, price type
+@Icon for view: magnifying glass :: used folder-open
+@Branch location is select .applytoall
+@Tin is not required
+Commission sharing should be auto completed with %
+
+Website, simple text .applytoall
+@Remove pdf/excel options in list view .applytoall
+Print screen should be disabled .applytoall
+Use as billing is "same as billing" .applytoall
+@Payment term, 15 or 30 only
+@Permanent  discount, wont reach 50 +made 1-30%
+@Sec no is alphanumeric
+@Contact person: Put back email, no landline
+
++@branch.branch_name database needs to be imported
++@discount  database needs to be imported
++@payment term  database needs to be imported
++@transaction_type needs to be imported
+
+
+-Product-
+@Pno -part number
+Pno + item name
+Photo upload
+@Uom is piece, set, display, product package
+Supplier profile .to be made, 1 supplier could have several brand
+Cost should have .00 and peso/dollar sign .applytoall
+
+-Product list -
+check@Arrangement: Bl product code , brand, item name, siZe, color
+@Remove part number
+Supplier should be one line only  +@text-overflow is not working in custom.css
+
+Create product browser
+Scenario: compare other product that is out of stock for suggesting another item
+
+-Sales order-
+@Transaction type is ...
+@Consignment  to employee
+@Consignment to professional customer
+@Professional
+@Retail
+…
+Computation :
+Vatable sales is exclusive of tax
+Vat exempt is withholding tax
+Column heading of total in ordered item is Subtotal .applytoall
+SO number is running number .so++ .applytoall
+Pick list must have date + time
+
+Proforma process -
+Create prof
+Bring pro forma to client
+Acctng received pro forma
+Warehouse received pro-forma
+Warehouse prepare trip ticket
+
+ Scenario: pro forma created and transact again: possible only if order is less than or equal
+Scenario: delivery failed : sales settled another delivery date and warehouse create new trip ticket. Special instruction is created.
+Scenario:
+
+
+legends:
+ @ = issue fixed,
++@ = issue fixed with needed
+.{text} = syntax
+.applytoall = need to apply to all modules
