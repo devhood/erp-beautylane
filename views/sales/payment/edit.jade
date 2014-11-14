@@ -1,10 +1,10 @@
 block title
-  title APPROVE PAYMENT : {{sales.pmno}}
+  title ADD PAYMENT
 .portlet.box.grey
   .portlet-title
     .caption
       i.fa.fa-reorder
-      | APPROVE PAYMENT : {{sales.pmno}}
+      | ADD PAYMENT
     .tools
       a.collapse(href="javascript:;")
       a.config(href="#portlet-config", data-toggle="modal")
@@ -62,7 +62,7 @@ block title
           .col-md-10
             .form-group
               .col-xs-12.col-sm-12.col-md-12.col-lg-12(align="center")
-                select.select2me.form-control.select2-offscreen(ng-model="sales.customer", ng-options="customer.company_name for customer in customers", ng-selected="{{sales.customer.company_name}}" ,tabindex="-1", disabled)
+                select.select2me.form-control.select2-offscreen(ng-model="sales.customer.company_name", ng-options="customer.company_name as customer.company_name for customer in customers", ng-selected="{{sales.customer.company_name}}" ,tabindex="-1", disabled)
                 span.col-md-12.help-block Customer
           .col-md-1
         .row(ng-show="sales.customer")
@@ -85,12 +85,12 @@ block title
           .col-md-6
             .form-group
               .col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
-                select.select2me.form-control.select2-offscreen(ng-model="sales.customer.price_type", ng-options="price_type.price_type_name as price_type.price_type_name for price_type in price_types", ng-selected="{{sales.customer.price_type}}" ,tabindex="-1", disabled)
+                select.select2me.form-control.select2-offscreen(ng-model="sales.customer.price_type", ng-options="price_type.price_type_name for price_type in price_types track by price_type.price_type_name", ng-selected="{{sales.customer.price_type}}" ,tabindex="-1", disabled)
                 span.col-md-12.help-block Price Type
           .col-md-6
             .form-group
               .col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
-                select.select2me.form-control.select2-offscreen(ng-model="sales.customer.discount", ng-options="discount.discount as discount.discount for discount in discounts", ng-selected="{{customer.sales.discount}}" ,tabindex="-1", disabled)
+                select.select2me.form-control.select2-offscreen(ng-model="sales.customer.discount", ng-options="discount.discount for discount in discounts track by discount.discount", ng-selected="{{sales.customer.discount}}" ,disabled)
                 span.col-md-12.help-block Discount
         .row(ng-show="sales.customer")
           .col-md-6
@@ -101,7 +101,7 @@ block title
           .col-md-6
             .form-group
               .col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
-                select.select2me.form-control.select2-offscreen(ng-model="sales.customer.payment_term", ng-options="payment_term.payment_term_name as payment_term.payment_term_name for payment_term in payment_terms", ng-selected="{{customer.sales.payment_term}}" ,tabindex="-1", disabled)
+                 select.select2me.form-control.select2-offscreen(ng-model="sales.customer.payment_term", ng-options="payment_term.payment_term_name as payment_term.payment_term_name for payment_term in payment_terms track by payment_term.payment_term_name", ng-selected="{{customer.sales.payment_term}}" ,tabindex="-1", disabled)
                 span.col-md-12.help-block Payment Terms
         .row
           .col-md-6
@@ -226,32 +226,32 @@ block title
                   .col-md-3
                     .form-group
                       .col-xs-12.col-sm-12.col-md-12.col-lg-12
-                        select.select2me.form-control.select2-offscreen(ng-model="sales.payment.payment_type", ng-options="payment_type.payment_type as payment_type.payment_type for payment_type in payment_types", ng-selected="{{sales.payment_type}}", required)
+                        select.select2me.form-control.select2-offscreen(ng-model="sales.payment.payment_type", ng-options="payment_type.payment_type as payment_type.payment_type for payment_type in payment_types", ng-selected="{{sales.payment_type}}")
                         span.col-md-12.help-block Type
                   .col-md-2(ng-show="sales.payment.payment_type=='PDC' || sales.payment.payment_type=='Check Deposit'")
                     .form-group
                       .col-xs-12.col-sm-12.col-md-12.col-lg-12
-                        input.form-control(type="text", ng-minlength="0", ng-maxlength="20", ng-model="sales.payment.check_number", required)
+                        input.form-control(type="text", ng-minlength="0", ng-maxlength="20", ng-model="sales.payment.check_number")
                         span.col-md-12.help-block Check Number
                   .col-md-2(ng-show="sales.payment.payment_type=='PDC' || sales.payment.payment_type=='Check Deposit'")
                     .form-group
                       .col-xs-12.col-sm-12.col-md-12.col-lg-12
-                        input.form-control(type="text", ng-minlength="0", ng-maxlength="20", ng-model="sales.payment.check_date", required)
+                        input.form-control(type="text", ng-minlength="0", ng-maxlength="20", ng-model="sales.payment.check_date")
                         span.col-md-12.help-block Check Date
                   .col-md-2(ng-show="sales.payment.payment_type=='PDC' || sales.payment.payment_type=='Cash Deposit' || sales.payment.payment_type=='Check Deposit'")
                     .form-group
                       .col-xs-12.col-sm-12.col-md-12.col-lg-12
-                        input.form-control(type="text", ng-minlength="0", ng-maxlength="20", ng-model="sales.payment.bank", required)
+                        input.form-control(type="text", ng-minlength="0", ng-maxlength="20", ng-model="sales.payment.bank")
                         span.col-md-12.help-block Bank - Branch
                   .col-md-2
                     .form-group
                       .col-xs-12.col-sm-12.col-md-12.col-lg-12
-                        input.form-control(type="text", ng-minlength="0", ng-maxlength="20", ng-model="sales.payment.amount", required)
+                        input.form-control(type="text", ng-minlength="0", ng-maxlength="20", ng-model="sales.payment.amount")
                         span.col-md-12.help-block Amount
                   .col-md-2(ng-show="sales.payment.payment_type=='Cash Deposit'")
                     .form-group
                       .col-xs-12.col-sm-12.col-md-12.col-lg-12
-                        input.form-control(type="text", ng-minlength="0", ng-maxlength="20", ng-model="sales.payment.deposit_date", required)
+                        input.form-control(type="text", ng-minlength="0", ng-maxlength="20", ng-model="sales.payment.deposit_date")
                         span.col-md-12.help-block Deposit Date
                   .col-md-1
                     .form-group
@@ -302,6 +302,6 @@ block title
         .row
           .col-md-6
             .col-md-offset-3.col-md-9
-              button.btn.green(type="submit") Approve &amp; Send
+              button.btn.green(type="submit") Submit
               button.btn.default(type="button", ui-sref="salesPayment") Cancel
           .col-md-6

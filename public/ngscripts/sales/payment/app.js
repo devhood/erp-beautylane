@@ -11,7 +11,7 @@ app.config(function($stateProvider,$httpProvider){
        templateUrl:'/sales/payment/view',
        controller:'SalesPaymentViewController'
     }).state('newSalesPayment',{
-        url:'/sales/order/edit/:id',
+        url:'/sales/payment/edit/:id',
         templateUrl:'/sales/payment/edit',
         controller:'SalesPaymentCreateController'
     }).state('editSalesPayment',{

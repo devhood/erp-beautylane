@@ -89,25 +89,61 @@ $scope.dtColumns = [
 
 }).controller('SalesPaymentCreateController',function($scope,$filter,$window,popupService,$state,$stateParams,Sales, Api){
   $scope.sales=Sales.get({id:$stateParams.id});
-  $scope.payment_terms = Api.PaymentTerm.query();
-  $scope.transaction_types = Api.TransactionType.query();
-  $scope.price_types = Api.PriceType.query();
-  $scope.customers = Api.Customer.query();
-  $scope.discounts = Api.Discount.query();
-  $scope.sales_executives = Api.SalesExecutive.query();
-  $scope.order_sources = Api.OrderSource.query();
-  $scope.shipping_modes = Api.ShippingMode.query();
-  $scope.inventory_locations = Api.InventoryLocation.query();
-  $scope.products = Api.Product.query();
-  $scope.payment_types = Api.PaymentType.query();
-
-}).controller('SalesPaymentEditController',function($scope,$filter,$window,popupService,$state,$stateParams,Sales, Api){
-
-    $scope.sales=Sales.get({id:$stateParams.id});
     
     $scope.updateSales=function(){
         $scope.sales.status_code = "PM_CREATED";
         $scope.sales.status = "Payment Received and waiting for approval";
+        $scope.sales.$update(function(){
+            $state.go('salesPayment');
+        });
+    };
+    $scope.deleteSales=function(sales){
+        if(popupService.showPopup('Really delete this?')){
+            sales.$delete(function(){
+            $state.go('salesPayment');
+           });
+        }
+     };
+    $scope.payment_terms = Api.PaymentTerm.query();
+    $scope.transaction_types = Api.TransactionType.query();
+    $scope.price_types = Api.PriceType.query();
+    $scope.customers = Api.Customer.query();
+    $scope.discounts = Api.Discount.query();
+    $scope.sales_executives = Api.SalesExecutive.query();
+    $scope.order_sources = Api.OrderSource.query();
+    $scope.shipping_modes = Api.ShippingMode.query();
+    $scope.inventory_locations = Api.InventoryLocation.query();
+    $scope.products = Api.Product.query();
+    $scope.payment_types = Api.PaymentType.query();
+    $scope.addDetail = function(sales){
+
+
+        if($scope.sales.payment_details){
+          $scope.sales.payment_details.push(sales.payment);
+        }
+        else{
+          $scope.sales.payment_details = [sales.payment];
+        }
+        computeTotal($scope);
+        sales.payment = {};
+      }
+    
+    $scope.removeDetail = function(index){
+      computeTotal($scope);
+      $scope.sales.payment_details.splice(index, 1);
+    }
+    $scope.computeVat = function(sales){
+      if($scope.sales.ordered_items && sales.customer){
+        computeTotal($scope);
+      }
+    };
+}).controller('SalesPaymentEditController',function($scope,$filter,$window,popupService,$state,$stateParams,Sales, Api){
+
+    $scope.sales=Sales.get({id:$stateParams.id});
+    
+    $scope.updateSales2=function(){
+        delete $scope.sales.status_code;
+        $scope.sales.status = "Transaction COMPLETE";
         $scope.sales.$update(function(){
             $state.go('salesPayment');
         });
