@@ -35,9 +35,12 @@ $scope.dtOptions.sScrollX = "100%";
 $scope.dtOptions.sScrollXInner = "100%";
 $scope.dtOptions.bPaginate = false;
 $scope.dtColumns = [
-  DTColumnBuilder.newColumn('part_number').withTitle('Part Number'),
+  // DTColumnBuilder.newColumn('part_number').withTitle('Part Number'),
+  DTColumnBuilder.newColumn('product_code').withTitle('BL Product Code'),
   DTColumnBuilder.newColumn('brand').withTitle('Brand'),
   DTColumnBuilder.newColumn('name').withTitle('Item Name'),
+  DTColumnBuilder.newColumn('size').withTitle('Size'),
+  DTColumnBuilder.newColumn('color').withTitle('Color'),
   DTColumnBuilder.newColumn('payment_term').withTitle('Payment Terms'),
   DTColumnBuilder.newColumn('uom').withTitle('UOM'),
   DTColumnBuilder.newColumn('movement').withTitle('Movement'),

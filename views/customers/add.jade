@@ -19,8 +19,8 @@ block title
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
-								input#branch.form-control(type="text",  ng-model="customer.branch", ng-minlength="0", ng-maxlength="50", required)
-								span.col-md-12.help-block	Branch Location
+								select.select2me.form-control.select2-offscreen(ng-model="customer.branch", ng-options="branch.branch_name as branch.branch_name for branch in branches", ng-selected="{{customer.branch}}" ,tabindex="-1", required)
+									span.col-md-12.help-block	Branch Location
 				.row
 					.col-md-6
 						.form-group
@@ -41,7 +41,7 @@ block title
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
-								input#tin.form-control(type="text",   ng-model="customer.tin" ng-minlength="0", ng-maxlength="20", ui-mask="9999-9999-9999-9999", required)
+								input#tin.form-control(type="text",   ng-model="customer.tin" ng-minlength="0", ng-maxlength="20", ui-mask="9999-9999-9999-9999")
 								span.col-md-12.help-block	TIN
 				.row
 					.col-md-6
@@ -255,8 +255,8 @@ block title
 									.col-md-3
 										.form-group
 											.col-xs-12.col-sm-12.col-md-12.col-lg-12
-												input.form-control(type="number", ng-minlength="0", ng-maxlength="20", ng-model="customer.contact.phone")
-												span.col-md-12.help-block	Phone
+												input.form-control(type="email", ng-minlength="0", ng-maxlength="30", ng-model="customer.contact.email")
+												span.col-md-12.help-block	Email
 									.col-md-1
 										button.btn-sm.green.custom-right(type="button",ng-click="addContact(customer)")
 											i.fa.fa-plus

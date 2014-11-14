@@ -34,15 +34,15 @@ angular.module('customerApp.controllers',[])
 	    $scope.dtOptions.sScrollXInner = "100%";
 	    $scope.dtOptions.bPaginate = false;
 	    $scope.dtColumns = [
-			DTColumnBuilder.newColumn('type').withTitle('Type'),
+			// DTColumnBuilder.newColumn('type').withTitle('Type'),
 			DTColumnBuilder.newColumn('company_name').withTitle('Company Name'),
-			DTColumnBuilder.newColumn('branch').withTitle('Branch'),
+			DTColumnBuilder.newColumn('branch.branch_name').withTitle('Branch'),
 			DTColumnBuilder.newColumn('credit_limit').withTitle('Credit Limit'),
 			DTColumnBuilder.newColumn('transaction_limit').withTitle('Transaction Limit'),
 			DTColumnBuilder.newColumn('payment_term.payment_term_name').withTitle('Payment Terms'),
-			DTColumnBuilder.newColumn('shipping_mode').withTitle('Shipping Mode'),
+			// DTColumnBuilder.newColumn('shipping_mode').withTitle('Shipping Mode'),
 			DTColumnBuilder.newColumn('sales_executive').withTitle('Sales Executive'),
-			DTColumnBuilder.newColumn('price_type.price_type_name').withTitle('Price Type'),
+			// DTColumnBuilder.newColumn('price_type.price_type_name').withTitle('Price Type'),
 			DTColumnBuilder.newColumn('status').withTitle('Status'),
 			DTColumnBuilder.newColumn(null).withTitle('Actions').notSortable()
 			.renderWith(function(data, type, full, meta) {

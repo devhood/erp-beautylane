@@ -48,3 +48,8 @@ textarea{
 .dataTables_filter {
   float: left;
 }
+
+td {
+  /*overflow: hidden;*/
+  text-overflow: ellipsis;
+}
