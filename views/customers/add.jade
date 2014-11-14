@@ -30,7 +30,7 @@ block title
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
-								input#website.form-control(type="url", ng-model="customer.website", ng-minlength="0", ng-maxlength="30",  ui-mask="http://www.*************************" required)
+								input#website.form-control(type="url", ng-model="customer.website", ng-minlength="0", ng-maxlength="30",  required)
 								span.col-md-12.help-block	Website
 				.row
 					.col-md-6
@@ -41,13 +41,13 @@ block title
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
-								input#tin.form-control(type="text",   ng-model="customer.tin" ng-minlength="0", ng-maxlength="20", required)
+								input#tin.form-control(type="text",   ng-model="customer.tin" ng-minlength="0", ng-maxlength="20", ui-mask="9999-9999-9999-9999", required)
 								span.col-md-12.help-block	TIN
 				.row
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
-								input#commission_sharing.form-control(type="text", ng-model="customer.commission_sharing", ng-minlength="0", ng-maxlength="20", required)
+								input#commission_sharing.form-control(type="text", ng-model="customer.commission_sharing", ng-minlength="0", ng-maxlength="20",  max="50", ui-mask="99%" required)
 								span.col-md-12.help-block	Commission Sharing
 					.col-md-6
 						.form-group
@@ -58,7 +58,7 @@ block title
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
-								input#phone.form-control(type="text",   ng-model="customer.phone" ng-minlength="0", ng-maxlength="20", required)
+								input#phone.form-control(type="number",   ng-model="customer.phone" ng-minlength="0", ng-maxlength="20", required)
 								span.col-md-12.help-block	Phone
 					.col-md-6
 						.form-group
@@ -255,7 +255,7 @@ block title
 									.col-md-3
 										.form-group
 											.col-xs-12.col-sm-12.col-md-12.col-lg-12
-												input.form-control(type="text", ng-minlength="0", ng-maxlength="20", ng-model="customer.contact.phone")
+												input.form-control(type="number", ng-minlength="0", ng-maxlength="20", ng-model="customer.contact.phone")
 												span.col-md-12.help-block	Phone
 									.col-md-1
 										button.btn-sm.green.custom-right(type="button",ng-click="addContact(customer)")

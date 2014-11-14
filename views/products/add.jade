@@ -96,18 +96,18 @@ block title
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
-								input#Cost.form-control(type="text", ng-model="product.international_cost", ng-minlength="0", ng-maxlength="20", required)
+								input#Cost.form-control(type="number", ng-model="product.international_cost", ng-minlength="0", ng-maxlength="20", required)
 								span.col-md-12.help-block International Cost
 				.row
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
-								input#retail_price.form-control(type="text",ng-model="product.retail_price", ng-minlength="0", ng-maxlength="20", required)
+								input#retail_price.form-control(type="number",ng-model="product.retail_price", ng-minlength="0", ng-maxlength="20", required)
 								span.col-md-12.help-block Retail Price
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
-								input#professional_price.form-control(type="text", ng-model="product.professional_price", ng-minlength="0", ng-maxlength="20", required)
+								input#professional_price.form-control(type="number", ng-model="product.professional_price", ng-minlength="0", ng-maxlength="20", required)
 								span.col-md-12.help-block Professional Price
 			.form-actions.fluid
 				.row
