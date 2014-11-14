@@ -88,6 +88,16 @@ var generateTicket = function(status_code,cb){
                cb(err);
             });
             break;
+     case "PF_CREATED":
+            db.collection("number_generator")
+            .find({type : "proforma invoice"}).toArray()
+            .done(function(data){
+              cb(null,data[0]);
+            })
+            .fail( function( err ) {
+               cb(err);
+            });
+            break;
       }
 };
 
@@ -175,6 +185,16 @@ var updateTicket = function(status_code,ticket,cb){
                cb(err);
             });
             break;
+      case "PF_CREATED":
+            db.collection("number_generator")
+            .update({type : "proforma invoice"}, ticket, {safe: true})
+            .done(function(data){
+              cb(null,data);
+            })
+            .fail( function( err ) {
+               cb(err);
+            });
+            break;
       }
 };
 
@@ -194,10 +214,10 @@ router.get('/:object', function(req, res) {
     .sort(req.query.sorting).skip(req.query.page || 0)
     .limit(req.query.rows || 0).toArray()
     .done(function(data){
-    	res.status(200).json(data);
+      res.status(200).json(data);
     })
     .fail( function( err ) {
-    	 res.status(400).json(err);
+       res.status(400).json(err);
     });
 
 });
@@ -245,10 +265,10 @@ router.get('/:object/:id', function(req, res) {
     .sort(req.query.sorting || {}).skip(req.query.page || 0)
     .limit(req.query.rows || 0).toArray()
     .done(function(data){
-    	res.status(200).json(data[0]);
+      res.status(200).json(data[0]);
     })
     .fail( function( err ) {
-    	res.status(400).json(err);
+      res.status(400).json(err);
     });
 });
 router.put('/:object/:id', function(req, res) {
@@ -261,7 +281,7 @@ router.put('/:object/:id', function(req, res) {
     req.query.filter._id = id;
     if(req.params.object == "sales" && req.body.status_code){
         generateTicket(req.body.status_code,function(err,ticket){
-            if(ticket && !req.body[ticket.field]){
+            if(ticket){
                 req.body[ticket.field] = ticket.prefix + pad(ticket.count,ticket.zero_count) + "-" +  ticket.suffix
                 updateTicket(req.body.status_code,ticket,function(err,result){
                   delete req.body.status_code;
@@ -297,10 +317,10 @@ router['delete']('/:object/:id', function(req, res) {
     db.collection(req.params.object)
     .remove(req.query.filter, {safe: true})
     .done(function(data){
-    	res.status(200).json(data);
+      res.status(200).json(data);
     })
     .fail( function( err ) {
-    	res.status(400).json(err);
+      res.status(400).json(err);
     });
 });
 

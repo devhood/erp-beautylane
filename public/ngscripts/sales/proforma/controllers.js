@@ -78,7 +78,7 @@ $scope.dtColumns = [
          console.log('salesProforma');
         $scope.sales.status = "PF submitted to Warehouse";
         $scope.sales.created_on = Date.now();
-        $scope.sales.status_code = "SO_CREATED";
+        $scope.sales.status_code = "PF_CREATED";
         $scope.sales.drno = "";
         $scope.sales.sino = "";
         $scope.sales.rmrno = "";
