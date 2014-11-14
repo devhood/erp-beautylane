@@ -137,6 +137,11 @@ angular.module('serviceApp.reference',[])
                 method: 'PUT'
             }
         }),
+        PaymentType : $resource('/api/payment_types/:id',{id:'@_id'},{
+            update: {
+                method: 'PUT'
+            }
+        }),
         PickList : $resource('/api/sales?filter='+encodeURIComponent(JSON.stringify({"status":"SO submitted to Warehouse"})),{id:'@_id'},{
             update: {
                 method: 'PUT'

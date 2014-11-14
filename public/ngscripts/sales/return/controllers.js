@@ -1,7 +1,7 @@
 angular.module('salesReturnApp.controllers',[])
 .controller('SalesReturnListController',function($scope,$state,popupService,$window,Sales, $filter,DTOptionsBuilder, DTColumnBuilder){
 
-var query = {"status":{"$in":["SI Approved","RMR sent to Warehouse"]}};
+var query = {"status":{"$in":["SI Approved","RMR sent to Warehouse","RMR approved and submitted to Finance"]}};
 $scope.dtOptions = DTOptionsBuilder
   .fromSource("/api/sales?filter="+encodeURIComponent(JSON.stringify(query)))
   .withBootstrap()
@@ -52,22 +52,22 @@ $scope.dtColumns = [
           '   <i class="fa fa-eye"></i>' +
           '</a>&nbsp;';
 
-          if(data.status != "RMR sent to Warehouse"){
+          if(data.sino && data.status == "SI Approved"){
             button+='<a href="#/sales/return/edit/'+data._id+'", class="tooltips btn default" '+
         'data-container="body", data-placement="top", '+
         'data-html="true", data-original-title="Edit Record">' +
           '   <i class="fa fa-edit"></i>' +
           '</a>&nbsp;</div>';
           }
-          else if(data.status != "RMR approved and submitted to Finance"){
-           button+='<a href="#/sales/return/approve/'+data._id+'", class="tooltips btn default" '+
+          else if(data.status == "RMR sent to Warehouse"){
+            button+='<a href="#/sales/return/approve/'+data._id+'", class="tooltips btn default" '+
         'data-container="body", data-placement="top", '+
         'data-html="true", data-original-title="Edit Record">' +
           '   <i class="fa fa-edit"></i>' +
           '</a>&nbsp;</div>';
           }
-          else{
-            buttom+='</div>';
+          else if(data.status == "RMR approved and submitted to Finance"){
+            button+='</div>';
           }
           return button;
 

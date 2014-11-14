@@ -1,10 +1,10 @@
 block title
-  title VIEW SALES RETURN
+  title VIEW CREDIT MEMO
 .portlet.box.grey
   .portlet-title
     .caption
       i.fa.fa-reorder
-      | APPROVE CREDIT MEMO
+      | VIEW CREDIT MEMO
     .tools
       a.collapse(href="javascript:;")
       a.config(href="#portlet-config", data-toggle="modal")
@@ -21,18 +21,18 @@ block title
                 span.col-md-12.help-block CM Number
           .col-md-6
             .form-group
-              .col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
+              .col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
                 input.form-control(type="text", ng-model="sales.rmrno", readonly)
                 span.col-md-12.help-block RMR Number
         .row
           .col-md-6
             .form-group
-              .col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
+              .col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
                 input.form-control(type="text", ng-model="sales.sino", readonly)
                 span.col-md-12.help-block SI Number
           .col-md-6
             .form-group
-              .col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
+              .col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
                 input.form-control(type="text", ng-model="sales.drno", readonly)
                 span.col-md-12.help-block DR Number
         .row
@@ -176,7 +176,6 @@ block title
                               th Price
                               th Total
                               th Condition
-                              th(width="5%") Action
                           tbody
                             tr(ng-repeat="returned_item in sales.returned_items")
                               td {{returned_item.item.name}}
@@ -184,10 +183,6 @@ block title
                               td {{returned_item.price}}
                               td {{returned_item.return_total}}
                               td {{returned_item.condition.condition}}
-                              td(width="5%")
-                                .btn-group.btn-group-xs.btn-group-solid
-                                  a.tooltips.btn.default.tooltips(ng-click="removeItem($index)", data-container="body", data-placement="top", data-html="true", data-original-title="Delete Record")
-                                    i.fa.fa-trash-o
                 .col-md-1
         .row
           .col-md-6
@@ -250,13 +245,5 @@ block title
         .row
           .col-md-6
             .col-md-offset-3.col-md-9
-              button.btn.default(type="button", ui-sref="salesReturn") Cancel
-          .col-md-6
-
-      .form-actions.fluid
-        .row
-          .col-md-6
-            .col-md-offset-3.col-md-9
-              button.btn.green(type="submit") Edit
-              button.btn.default(type="button", ui-sref="salesOrder") Back
+              button.btn.default(type="button", ui-sref="salesMemo") Back
           .col-md-6
