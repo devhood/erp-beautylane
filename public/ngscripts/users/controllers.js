@@ -24,13 +24,7 @@ angular.module('userApp.controllers',[])
 
     // Add ColVis compatibility
     .withColVis()
-    .withColVisOption("buttonText","Columns")
-    // Add Table tools compatibility
-    .withTableTools('/vendor/datatables-tabletools/swf/copy_csv_xls_pdf.swf')
-    .withTableToolsButtons([
-        'pdf',
-        'xls',
-    ]);
+    .withColVisOption("buttonText","Columns");
 
     $scope.dtOptions.sScrollX = "100%";
     $scope.dtOptions.sScrollXInner = "100%";
@@ -47,7 +41,7 @@ angular.module('userApp.controllers',[])
 	        return '<div class="btn-group btn-group-xs btn-group-solid"><a href="#/users/view/'+data._id+'", ui-sref="editUser" class="tooltips btn default" '+
 	        	'data-container="body", data-placement="top", '+
 	        	'data-html="true", data-original-title="View Record">' +
-	            '   <i class="fa fa-eye"></i>' +
+	            '   <i class="fa fa-folder-open"></i>' +
 	            '</a>&nbsp;' +
 
 	            '<a href="#/users/edit/'+data._id+'", ui-sref="editUser" class="tooltips btn default" '+
@@ -64,7 +58,7 @@ angular.module('userApp.controllers',[])
     $scope.user=User.get({id:$stateParams.id});
     $scope.positions = Api.Position.query();
     $scope.statuses = Api.UserStatus.query();
-    
+
 
 }).controller('UserCreateController',function($scope,$state,$stateParams,User,Api){
 
@@ -75,8 +69,8 @@ angular.module('userApp.controllers',[])
             $state.go('users');
         });
     }
-   
- 	
+
+
     $scope.positions = Api.Position.query();
     $scope.statuses = Api.UserStatus.query();
 
@@ -96,7 +90,7 @@ angular.module('userApp.controllers',[])
   	      });
   	   }
   	};
-  	
+
   	$scope.user=User.get({id:$stateParams.id});
     $scope.positions = Api.Position.query();
     $scope.statuses = Api.UserStatus.query();

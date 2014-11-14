@@ -21,12 +21,7 @@ $scope.dtOptions = DTOptionsBuilder
       }
   })
   .withColVis()
-  .withColVisOption("buttonText","Columns")
-  .withTableTools('/vendor/datatables-tabletools/swf/copy_csv_xls_pdf.swf')
-  .withTableToolsButtons([
-      'pdf',
-      'xls',
-  ]);
+  .withColVisOption("buttonText","Columns");
 $scope.dtOptions.sScrollX = "100%";
 $scope.dtOptions.sScrollXInner = "100%";
 $scope.dtOptions.bPaginate = false;
@@ -49,7 +44,7 @@ $scope.dtColumns = [
        var button = '<div class="btn-group btn-group-xs btn-group-solid"><a href="#/sales/return/view/'+data._id+'", class="tooltips btn default" '+
         'data-container="body", data-placement="top", '+
         'data-html="true", data-original-title="View Record">' +
-          '   <i class="fa fa-eye"></i>' +
+          '   <i class="fa fa-folder-open"></i>' +
           '</a>&nbsp;';
 
           if(data.sino && data.status == "SI Approved"){
@@ -119,7 +114,7 @@ $scope.sales=Sales.get({id:$stateParams.id});
     $scope.addItem = function(sales){
 
       if(sales.returned.item && sales.returned.quantity && sales.returned.condition.condition && sales.customer){
- 
+
         sales.returned.price = sales.customer.price_type=="Professional" ? sales.returned.item.professional_price : sales.returned.item.retail_price;
         sales.returned.return_discount = 1-parseInt(sales.customer.discount.discount.replace(" %",""))/100;
         sales.returned.return_total = sales.returned.price * sales.returned.quantity * sales.returned.return_discount;
@@ -139,7 +134,7 @@ $scope.sales=Sales.get({id:$stateParams.id});
       computeTotalReturnItems($scope);
       $scope.sales.returned_items.splice(index, 1);
     }
-   
+
 }).controller('SalesReturnEditController',function($scope,$window,popupService,$state,$stateParams,Sales, Api){
 
     $scope.sales=Sales.get({id:$stateParams.id});
@@ -172,7 +167,7 @@ $scope.sales=Sales.get({id:$stateParams.id});
     $scope.addItem = function(sales){
 
       if(sales.returned.item && sales.returned.quantity && sales.returned.condition.condition && sales.customer){
- 
+
         sales.returned.price = sales.customer.price_type=="Professional" ? sales.returned.item.professional_price : sales.returned.item.retail_price;
         sales.returned.return_discount = 1-parseInt(sales.customer.discount.discount.replace(" %",""))/100;
         sales.returned.return_total = sales.returned.price * sales.returned.quantity * sales.returned.return_discount;
@@ -192,18 +187,18 @@ $scope.sales=Sales.get({id:$stateParams.id});
       computeTotalReturnItems($scope);
       $scope.sales.returned_items.splice(index, 1);
     }
-   
+
 });
 
 
 var computeTotalReturnItems = function($scope){
- 
+
   $scope.sales.return_total_vat = 0;
   $scope.sales.return_discount = 0;
   $scope.sales.return_total = 0;
   $scope.sales.return_total_vat_exempt = 0;
   $scope.sales.return_total_amount_due = 0;
- 
+
   for(var i=0;i<$scope.sales.returned_items.length; i++){
     $scope.sales.return_vat_percent = $scope.sales.is_vat_percent ? .11 : .12;
     $scope.sales.return_total+=$scope.sales.returned_items[i].return_total;
@@ -212,7 +207,7 @@ var computeTotalReturnItems = function($scope){
     if($scope.sales.is_vat_percent){
       $scope.sales.return_total_vat_exempt+=parseFloat(( $scope.sales.returned_items[i].return_total * parseFloat(.01) ).toFixed(2));
     }
-   
+
   }
   $scope.sales.return_total_amount_due = parseFloat($scope.sales.return_total) - parseFloat($scope.sales.return_total_vat_exempt);
   console.log($scope.sales.total_amount_due);

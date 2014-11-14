@@ -21,12 +21,7 @@ $scope.dtOptions = DTOptionsBuilder
       }
   })
   .withColVis()
-  .withColVisOption("buttonText","Columns")
-  .withTableTools('/vendor/datatables-tabletools/swf/copy_csv_xls_pdf.swf')
-  .withTableToolsButtons([
-      'pdf',
-      'xls',
-  ]);
+  .withColVisOption("buttonText","Columns");
 $scope.dtOptions.sScrollX = "100%";
 $scope.dtOptions.sScrollXInner = "100%";
 $scope.dtOptions.bPaginate = false;
@@ -45,7 +40,7 @@ $scope.dtColumns = [
       return '<div class="btn-group btn-group-xs btn-group-solid"><a href="#/sales/order/view/'+data._id+'", class="tooltips btn default" '+
         'data-container="body", data-placement="top", '+
         'data-html="true", data-original-title="View Record">' +
-          '   <i class="fa fa-eye"></i>' +
+          '   <i class="fa fa-folder-open"></i>' +
           '</a>&nbsp;' +
 
           '<a href="#/sales/order/edit/'+data._id+'", class="tooltips btn default" '+

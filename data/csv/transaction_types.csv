@@ -1,3 +1,7 @@
 transaction_type
 "Normal Sales"
 "Consignment"
+"Consignment to employee"
+"Consignment to professional customer"
+"Professional"
+"Retail"

@@ -24,13 +24,7 @@ $scope.dtOptions = DTOptionsBuilder
 
 // Add ColVis compatibility
 .withColVis()
-.withColVisOption("buttonText","Columns")
-// Add Table tools compatibility
-.withTableTools('/vendor/datatables-tabletools/swf/copy_csv_xls_pdf.swf')
-.withTableToolsButtons([
-    'pdf',
-    'xls',
-]);
+.withColVisOption("buttonText","Columns");
 $scope.dtOptions.sScrollX = "100%";
 $scope.dtOptions.sScrollXInner = "100%";
 $scope.dtOptions.bPaginate = false;
@@ -52,7 +46,7 @@ $scope.dtColumns = [
       return '<div class="btn-group btn-group-xs btn-group-solid"><a href="#/products/view/'+data._id+'", ui-sref="editProduct" class="tooltips btn default" '+
         'data-container="body", data-placement="top", '+
         'data-html="true", data-original-title="View Record">' +
-          '   <i class="fa fa-eye"></i>' +
+          '   <i class="fa fa-folder-open"></i>' +
           '</a>&nbsp;' +
 
           '<a href="#/products/edit/'+data._id+'", ui-sref="editProduct" class="tooltips btn default" '+

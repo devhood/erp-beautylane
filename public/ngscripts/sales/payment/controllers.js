@@ -21,12 +21,7 @@ $scope.dtOptions = DTOptionsBuilder
       }
   })
   .withColVis()
-  .withColVisOption("buttonText","Columns")
-  .withTableTools('/vendor/datatables-tabletools/swf/copy_csv_xls_pdf.swf')
-  .withTableToolsButtons([
-      'pdf',
-      'xls',
-  ]);
+  .withColVisOption("buttonText","Columns");
 $scope.dtOptions.sScrollX = "100%";
 $scope.dtOptions.sScrollXInner = "100%";
 $scope.dtOptions.bPaginate = false;
@@ -49,7 +44,7 @@ $scope.dtColumns = [
       var button = '<div class="btn-group btn-group-xs btn-group-solid"><a href="#/sales/payment/view/'+data._id+'", class="tooltips btn default" '+
         'data-container="body", data-placement="top", '+
         'data-html="true", data-original-title="View Record">' +
-          '   <i class="fa fa-eye"></i>' +
+          '   <i class="fa fa-folder-open"></i>' +
           '</a>&nbsp;';
 
           if(data.status == "SI Approved" || data.status == "Credit Memo approved"){
@@ -89,7 +84,7 @@ $scope.dtColumns = [
 
 }).controller('SalesPaymentCreateController',function($scope,$filter,$window,popupService,$state,$stateParams,Sales, Api){
   $scope.sales=Sales.get({id:$stateParams.id});
-    
+
     $scope.updateSales=function(){
         $scope.sales.status_code = "PM_CREATED";
         $scope.sales.status = "Payment Received and waiting for approval";
@@ -127,7 +122,7 @@ $scope.dtColumns = [
         computeTotal($scope);
         sales.payment = {};
       }
-    
+
     $scope.removeDetail = function(index){
       computeTotal($scope);
       $scope.sales.payment_details.splice(index, 1);
@@ -140,7 +135,7 @@ $scope.dtColumns = [
 }).controller('SalesPaymentEditController',function($scope,$filter,$window,popupService,$state,$stateParams,Sales, Api){
 
     $scope.sales=Sales.get({id:$stateParams.id});
-    
+
     $scope.updateSales2=function(){
         delete $scope.sales.status_code;
         $scope.sales.status = "Transaction COMPLETE";
@@ -178,7 +173,7 @@ $scope.dtColumns = [
         computeTotal($scope);
         sales.payment = {};
       }
-    
+
     $scope.removeDetail = function(index){
       computeTotal($scope);
       $scope.sales.payment_details.splice(index, 1);
