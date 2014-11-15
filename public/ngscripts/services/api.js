@@ -142,11 +142,18 @@ angular.module('serviceApp.reference',[])
                 method: 'PUT'
             }
         }),
-        PickList : $resource('/api/sales?filter='+encodeURIComponent(JSON.stringify({"status":"SO submitted to Warehouse"})),{id:'@_id'},{
+        PickList : function(inventory_location){
+          return $resource('/api/sales?filter='+encodeURIComponent(JSON.stringify({"inventory_location":inventory_location,"status":"SO submitted to Warehouse"})),{id:'@_id'},{
+              update: {
+                  method: 'PUT'
+              }
+          });
+        },
+        Packing : $resource('/api/packing/:id',{id:'@_id'},{
             update: {
                 method: 'PUT'
             }
         }),
-    };
+      }
 
-})
+});

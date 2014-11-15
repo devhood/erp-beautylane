@@ -6,6 +6,10 @@ app.config(function($stateProvider,$httpProvider){
         url:'/sales/picklist/list',
         templateUrl:'/sales/picklist/list',
         controller:'SalesPickListController'
+      }).state('newPicklist',{
+        url:'/sales/picklist/add',
+        templateUrl:'/sales/picklist/add',
+        controller:'SalesPickListCreateController'
     });
 }).run(function($state){
 
