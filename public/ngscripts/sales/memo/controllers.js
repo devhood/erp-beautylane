@@ -1,7 +1,7 @@
 angular.module('salesMemoApp.controllers',[])
 .controller('SalesMemoListController',function($scope,$state,popupService,$window,Sales, $filter,DTOptionsBuilder, DTColumnBuilder){
 
-var query = {"status":{"$in":["Credit Memo approved","RMR approved and submitted to Finance"]}};
+var query = {"status_code":{"$in":["CREDIT_MEMO_CREATED","RMR_APPROVED"]}};
 $scope.dtOptions = DTOptionsBuilder
   .fromSource("/api/sales?filter="+encodeURIComponent(JSON.stringify(query)))
   .withBootstrap()

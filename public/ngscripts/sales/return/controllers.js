@@ -1,7 +1,7 @@
 angular.module('salesReturnApp.controllers',[])
 .controller('SalesReturnListController',function($scope,$state,popupService,$window,Sales, $filter,DTOptionsBuilder, DTColumnBuilder){
 
-var query = {"status":{"$in":["SI Approved","RMR sent to Warehouse","RMR approved and submitted to Finance"]}};
+var query = {"status_code":{"$in":["SALES_INVOICE_CREATED","RMR_CREATED","RMR_APPROVED"]}};
 $scope.dtOptions = DTOptionsBuilder
   .fromSource("/api/sales?filter="+encodeURIComponent(JSON.stringify(query)))
   .withBootstrap()

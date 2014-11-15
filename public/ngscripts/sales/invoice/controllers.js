@@ -1,7 +1,7 @@
 angular.module('salesInvoiceApp.controllers',[])
 .controller('SalesInvoiceListController',function($scope,$state,popupService,$window,Sales, $filter,DTOptionsBuilder, DTColumnBuilder){
 
-var query = {"status":{"$in":["DR submitted to Finance","SI Approved"]}};
+var query = {"status_code":{"$in":["SALES_INVOICE_CREATED","DELIVERY_RECEIPT_APPROVED"]}};
 $scope.dtOptions = DTOptionsBuilder
   .fromSource("/api/sales?filter="+encodeURIComponent(JSON.stringify(query)))
   .withBootstrap()

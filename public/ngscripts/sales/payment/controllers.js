@@ -1,7 +1,7 @@
 angular.module('salesPaymentApp.controllers',[])
 .controller('SalesPaymentListController',function($scope,$state,popupService,$window,Sales, $filter,DTOptionsBuilder, DTColumnBuilder){
 
-var query = {"status":{"$in":["SI Approved","Credit Memo approved","Payment Received and waiting for approval"]}};
+var query = {"status_code":{"$in":["PAYMENT_CREATED","PAYMENT_APPROVED"]}};
 $scope.dtOptions = DTOptionsBuilder
   .fromSource("/api/sales?filter="+encodeURIComponent(JSON.stringify(query)))
   .withBootstrap()
