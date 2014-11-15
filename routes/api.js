@@ -8,7 +8,7 @@ var db = mongoq(config.mongo_url);
 
 var generateTicket = function(status_code,cb){
       switch(status_code) {
-        case "SO_CREATED":
+        case "SALES_ORDER_CREATED":
             db.collection("number_generator")
             .find({type : "sales order"}).toArray()
             .done(function(data){
@@ -18,7 +18,7 @@ var generateTicket = function(status_code,cb){
                cb(err);
             });
             break;
-        case "DR_CREATED":
+        case "DELIVERY_RECEIPT_CREATED":
             db.collection("number_generator")
             .find({type : "delivery receipt"}).toArray()
             .done(function(data){
@@ -28,7 +28,7 @@ var generateTicket = function(status_code,cb){
                cb(err);
             });
             break;
-        case "SI_CREATED":
+        case "SALES_INVOICE_CREATED":
             db.collection("number_generator")
             .find({type : "sales invoice"}).toArray()
             .done(function(data){
@@ -38,7 +38,7 @@ var generateTicket = function(status_code,cb){
                cb(err);
             });
             break;
-        case "PM_CREATED":
+        case "PAYMENT_CREATED":
             db.collection("number_generator")
             .find({type : "sales payment"}).toArray()
             .done(function(data){
@@ -58,7 +58,7 @@ var generateTicket = function(status_code,cb){
                cb(err);
             });
             break;
-        case "CM_CREATED":
+        case "CREDIT_MEMO_CREATED":
             db.collection("number_generator")
             .find({type : "credit memo"}).toArray()
             .done(function(data){
@@ -88,7 +88,7 @@ var generateTicket = function(status_code,cb){
                cb(err);
             });
             break;
-     case "PF_CREATED":
+     case "PRO_FORMA_INVOICE_CREATED":
             db.collection("number_generator")
             .find({type : "proforma invoice"}).toArray()
             .done(function(data){
@@ -115,7 +115,7 @@ var updateTicket = function(status_code,ticket,cb){
       delete ticket._id;
       ticket.count+=1;
       switch(status_code) {
-        case "SO_CREATED":
+        case "SALES_ORDER_CREATED":
             db.collection("number_generator")
             .update({type : "sales order"}, ticket, {safe: true})
             .done(function(data){
@@ -125,7 +125,7 @@ var updateTicket = function(status_code,ticket,cb){
               cb(err);
             });
             break;
-        case "DR_CREATED":
+        case "DELIVERY_RECEIPT_CREATED":
             db.collection("number_generator")
             .update({type : "delivery receipt"}, ticket, {safe: true})
             .done(function(data){
@@ -135,7 +135,7 @@ var updateTicket = function(status_code,ticket,cb){
               cb(err);
             });
             break;
-        case "SI_CREATED":
+        case "SALES_INVOICE_CREATED":
             db.collection("number_generator")
             .update({type : "sales invoice"}, ticket, {safe: true})
             .done(function(data){
@@ -145,7 +145,7 @@ var updateTicket = function(status_code,ticket,cb){
               cb(err);
             });
             break;
-        case "PM_CREATED":
+        case "PAYMENT_CREATED":
             db.collection("number_generator")
             .update({type : "sales payment"}, ticket, {safe: true})
             .done(function(data){
@@ -165,7 +165,7 @@ var updateTicket = function(status_code,ticket,cb){
               cb(err);
             });
             break;
-        case "CM_CREATED":
+        case "CREDIT_MEMO_CREATED":
             db.collection("number_generator")
             .update({type : "credit memo"}, ticket, {safe: true})
             .done(function(data){
