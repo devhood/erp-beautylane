@@ -29,7 +29,6 @@ $scope.dtOptions.bProcessing = false;
 $scope.dtOptions.processing =  true;
 $scope.dtColumns = [
   DTColumnBuilder.newColumn('adjno').withTitle('Adjustment No.'),
-  DTColumnBuilder.newColumn('customer.company_name').withTitle('Customer'),
   DTColumnBuilder.newColumn('transaction_type').withTitle('Adjustment Transaction'),
   DTColumnBuilder.newColumn('inventory_location').withTitle('Inventory Location'),
   DTColumnBuilder.newColumn('status').withTitle('Adjustment Status'),
