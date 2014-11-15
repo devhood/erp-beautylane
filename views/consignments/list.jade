@@ -1,15 +1,15 @@
 block title
-  title SALES ORDER LIST
+  title CONSIGNMENT LIST
 .portlet.box.grey
   .portlet-title
     .caption
       i.fa.fa-edit
-      | SALES ORDER LIST
+      | CONSIGNMENT LIST
     .tools
       a.collapse(href="javascript:;")
-  .portlet-body(ng-controller="SalesOrderListController")
+  .portlet-body(ng-controller="ConsignmentListController")
     .table-toolbar
       .btn-group
-        button.tooltips(ui-sref="newSalesOrder", data-container="body", data-placement="top", data-html="true", data-original-title="Add new Record")
+        button.tooltips(ui-sref="newConsignment", data-container="body", data-placement="top", data-html="true", data-original-title="Add new Record")
           i.fa.fa-plus
     table.table.table-bordered.table-striped( datatable="" dt-options="dtOptions" dt-columns="dtColumns")

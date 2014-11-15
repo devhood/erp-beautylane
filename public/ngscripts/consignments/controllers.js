@@ -1,37 +1,32 @@
 angular.module('consignmentApp.controllers',[])
 .controller('ConsignmentListController',function($scope,$state,popupService,$window,Consignment, $filter, DTColumnBuilder, DTOptionsBuilder){
 
+var query = {"status_code":{"$in":["CONSIGNMENT_CREATED","CONSIGNMENT_APPROVED"]}};
 $scope.dtOptions = DTOptionsBuilder
-.fromSource('/api/consignments')
-// Add Bootstrap compatibility
-.withBootstrap()
-.withBootstrapOptions({
-    TableTools: {
-        classes: {
-            container: 'btn-group',
-            buttons: {
-                normal: 'btn default'
-            }
-        }
-    },
-  ColVis: {
-        classes: {
-            masterButton: 'btn default'
-        }
-    }
-})
-
-// Add ColVis compatibility
-.withColVis()
-// Add Table tools compatibility
-.withTableTools('/vendor/datatables-tabletools/swf/copy_csv_xls_pdf.swf')
-.withTableToolsButtons([
-    'pdf',
-    'xls',
-]);
+  .fromSource("/api/consignments?filter="+encodeURIComponent(JSON.stringify(query)))
+  .withBootstrap()
+  .withBootstrapOptions({
+      TableTools: {
+          classes: {
+              container: 'btn-group',
+              buttons: {
+                  normal: 'btn default'
+              }
+          }
+      },
+    ColVis: {
+          classes: {
+              masterButton: 'btn default'
+          }
+      }
+  })
+  .withColVis()
+  .withColVisOption("buttonText","Columns");
 $scope.dtOptions.sScrollX = "100%";
 $scope.dtOptions.sScrollXInner = "100%";
 $scope.dtOptions.bPaginate = false;
+$scope.dtOptions.bProcessing = false;
+$scope.dtOptions.processing =  true;
 $scope.dtColumns = [
   DTColumnBuilder.newColumn('cono').withTitle('Consignment No.'),
   DTColumnBuilder.newColumn('customer.company_name').withTitle('Customer'),
@@ -56,8 +51,7 @@ $scope.dtColumns = [
 
 
 
-}).controller('ConsignmentViewController',function($scope,$stateParams,Consignment,Api){
-    // console.log($stateParams.id);
+}).controller('ConsignmentViewController',function($scope,$stateParams,Consignment,User,Api){
     $scope.consignment=Consignment.get({id:$stateParams.id});
     $scope.inventory_locations = Api.InventoryLocation.query();
     $scope.customers = Api.Customer.query();
@@ -95,6 +89,8 @@ $scope.dtColumns = [
 
     $scope.consignment=Consignment.get({id:$stateParams.id});
     $scope.updateConsignment=function(){
+      $scope.consignment.status = "CO Approved";
+      $scope.consignment.status_code = "CONSIGNMENT_APPROVED";
         $scope.consignment.$update(function(){
             $state.go('consignments');
         });
@@ -126,17 +122,4 @@ $scope.dtColumns = [
       $scope.consignment.consignment_items.splice(index, 1);
     };
 
-}).controller('ConsignmentApproveController',function($scope,$state,$stateParams,Consignment){
-
-    $scope.updateConsignment=function(){
-        $scope.consignment.$update(function(){
-            $state.go('consignments');
-        });
-    };
-
-    $scope.loadConsignment=function(){
-        $scope.consignment=Consignment.get({id:$stateParams.id});
-    };
-
-    $scope.loadConsignment();
 });

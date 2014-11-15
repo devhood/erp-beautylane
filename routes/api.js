@@ -98,6 +98,16 @@ var generateTicket = function(status_code,cb){
                cb(err);
             });
             break;
+    case "CONSIGNMENT_CREATED":
+            db.collection("number_generator")
+            .find({type : "consignment"}).toArray()
+            .done(function(data){
+              cb(null,data[0]);
+            })
+            .fail( function( err ) {
+               cb(err);
+            });
+            break;
       }
 };
 
@@ -195,6 +205,16 @@ var updateTicket = function(status_code,ticket,cb){
                cb(err);
             });
             break;
+      case "CONSIGNMENT_CREATED":
+            db.collection("number_generator")
+            .update({type : "consignment"}, ticket, {safe: true})
+            .done(function(data){
+              cb(null,data);
+            })
+            .fail( function( err ) {
+               cb(err);
+            });
+            break;
       }
 };
 
@@ -222,16 +242,16 @@ router.get('/:object', function(req, res) {
 
 });
 router.post('/:object', function(req, res) {
-    if(((req.params.object == "sales") || (req.params.object == "purchases") || (req.params.object == "shipments"))  && req.body.status_code){
+    if(req.body.status_code){
 
         generateTicket(req.body.status_code,function(err,ticket){
             if(ticket){
                 req.body[ticket.field] = ticket.prefix + pad(ticket.count,ticket.zero_count) + "-"+ ticket.suffix
                 updateTicket(req.body.status_code,ticket,function(err,result){
-                  delete req.body.status_code;
+                //  delete req.body.status_code;
                 });
             }
-            delete req.body.status_code;
+           // delete req.body.status_code;
             db.collection(req.params.object)
             .insert(req.body, {safe: true})
             .done(function(data){
@@ -281,13 +301,13 @@ router.put('/:object/:id', function(req, res) {
     req.query.filter._id = id;
     if(req.params.object == "sales" && req.body.status_code){
         generateTicket(req.body.status_code,function(err,ticket){
-            if(ticket){
+            if(ticket && !req.body[ticket.field]){
                 req.body[ticket.field] = ticket.prefix + pad(ticket.count,ticket.zero_count) + "-" +  ticket.suffix
                 updateTicket(req.body.status_code,ticket,function(err,result){
-                  delete req.body.status_code;
+                  //delete req.body.status_code;
                 });
             }
-            delete req.body.status_code;
+           // delete req.body.status_code;
             db.collection(req.params.object)
             .update(req.query.filter, req.body, {safe: true})
             .done(function(data){
