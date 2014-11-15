@@ -62,9 +62,9 @@ $scope.dtColumns = [
         });
     };
 
-  $scope.removeItem = function(index){
-    $scope.packin.sales.splice(index, 1);
-  }
+  // $scope.removeItem = function(index){
+  //   $scope.packin.sales.splice(index, 1);
+  // }
 
 
 
