@@ -108,6 +108,16 @@ var generateTicket = function(status_code,cb){
                cb(err);
             });
             break;
+    case "ADJUSTMENT_CREATED":
+            db.collection("number_generator")
+            .find({type : "adjustment"}).toArray()
+            .done(function(data){
+              cb(null,data[0]);
+            })
+            .fail( function( err ) {
+               cb(err);
+            });
+            break;
       }
 };
 
@@ -208,6 +218,16 @@ var updateTicket = function(status_code,ticket,cb){
       case "CONSIGNMENT_CREATED":
             db.collection("number_generator")
             .update({type : "consignment"}, ticket, {safe: true})
+            .done(function(data){
+              cb(null,data);
+            })
+            .fail( function( err ) {
+               cb(err);
+            });
+            break;
+      case "ADJUSTMENT_CREATED":
+            db.collection("number_generator")
+            .update({type : "adjustment"}, ticket, {safe: true})
             .done(function(data){
               cb(null,data);
             })

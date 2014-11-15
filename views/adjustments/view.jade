@@ -1,0 +1,77 @@
+block title
+  title VIEW ADJUSTMENT
+.portlet.box.grey
+  .portlet-title
+    .caption
+      i.fa.fa-reorder
+      | VIEW ADJUSTMENT : {{adjustment.cono}}
+    .tools
+      a.collapse(href="javascript:;")
+      a.config(href="#portlet-config", data-toggle="modal")
+      a.reload(href="javascript:;")
+      a.remove(href="javascript:;")
+  .portlet-body.form
+    form.form-horizontal(role="form", name="add_form", novalidate)
+      .form-body
+        .row
+          .col-md-6
+            .form-group
+              .col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
+                select.select2me.form-control.select2-offscreen(ng-model="adjustment.transaction_type", disabled)
+                  option(value="In") In
+                  option(value="Out") Out
+                span.col-md-12.help-block Transaction Type
+          .col-md-6
+            .form-group
+              .col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
+                input#supplier_code.form-control(type="text", ng-model="adjustment.adjno", readonly)
+                span.col-md-12.help-block ADJ Number
+        .row
+          .col-md-6
+            .form-group
+              .col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
+                select.select2me.form-control.select2-offscreen(ng-model="adjustment.inventory_location", ng-options="inventory_location.inventory_location as inventory_location.inventory_location for inventory_location in inventory_locations", ng-selected="{{adjustment.inventory_location}}" ,tabindex="-1", disabled)
+                span.col-md-12.help-block Inventory Location
+          .col-md-6
+            .form-group
+              .col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
+        .row
+          .col-md-1
+          .col-md-10
+            .form-group
+              .col-xs-12.col-sm-12.col-md-12.col-lg-12(align="center")
+                input.form-control(type="text", ng-model="adjustment.description", ng-minlength="0", ng-maxlength="100", disabled)
+                span.col-md-12.help-block Special Instructions
+          .col-md-1
+        .portlet.box.grey
+          .portlet-title
+            .caption
+              i.fa.fa-reorder
+              | CONSIGNED ITEMS
+            .tools
+              a.collapse(href="javascript:;")
+          .portlet-body.form
+            .form-body
+              .form-group
+                .col-md-1
+                .col-md-10
+                  .row
+                    br
+                    .col-md-12
+                      .portlet-body.flip-scroll
+                        table.table.table-bordered.table-condensed.flip-content
+                          thead.flip-content.bg-grey
+                            tr
+                              th Product
+                              th Quantity
+                          tbody
+                            tr(ng-repeat="consigned_item in adjustment.consigned_items")
+                              td {{consigned_item.item.name}}
+                              td {{consigned_item.quantity}}
+                .col-md-1
+      .form-actions.fluid
+        .row
+          .col-md-6
+            .col-md-offset-3.col-md-9
+              button.btn.default(type="button", ui-sref="adjustments") Cancel
+          .col-md-6

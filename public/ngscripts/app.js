@@ -21,6 +21,7 @@ var app = angular.module('erp',[
     'shipmentApp',
     'purchaseApp',
     'consignmentApp',
+    'adjustmentApp',
     'ui.utils'
 ]).config(function($locationProvider, $httpProvider) {
 

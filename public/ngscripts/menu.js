@@ -123,6 +123,20 @@
 						}
 					]
 				},
+				{
+					link : "javascript:;",
+					title : "Adjustment",
+					last : true,
+					icon : "fa-flash",
+					id : 2,
+					childLink : [
+						{
+								title : "Adjustment",
+								description : "Adjustment",
+								sref : "adjustments"
+						}
+					]
+				},
 			   {
 				   link : "javascript:;",
 				   title : "Admin",
