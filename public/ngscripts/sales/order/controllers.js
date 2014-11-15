@@ -1,7 +1,7 @@
 angular.module('salesOrderApp.controllers',[])
 .controller('SalesOrderListController',function($scope,$state,popupService,$window,Sales, $filter,DTOptionsBuilder, DTColumnBuilder){
 
-var query = {"status":"SO submitted to Warehouse"};
+var query = {"status_code":"SALES_INVOICE_CREATED"};
 $scope.dtOptions = DTOptionsBuilder
   .fromSource("/api/sales?filter="+encodeURIComponent(JSON.stringify(query)))
   .withBootstrap()

@@ -1,7 +1,7 @@
 angular.module('salesProformaApp.controllers',[])
 .controller('SalesProformaListController',function($scope,$state,popupService,$window,Sales, $filter,DTOptionsBuilder, DTColumnBuilder){
 
-var query = {"status":"PF submitted to Warehouse"};
+var query = {"status_code":"PRO_FORMA_INVOICE CREATED"};
 $scope.dtOptions = DTOptionsBuilder
   .fromSource("/api/sales?filter="+encodeURIComponent(JSON.stringify(query)))
   .withBootstrap()
