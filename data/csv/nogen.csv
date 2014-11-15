@@ -8,3 +8,6 @@ cmno,"credit memo","CM","10","2014",1
 shipno,"shipment","SHP","10","2014",1
 purno,"purchase","PUR","10","2014",1
 pfno,"proforma invoice","PF","10","2014",1
+cono,"consignment","CO","10","2014",1
+tripno,"trip ticket","TRP","10","2014",1
+pckno,"pick list","PCK","10","2014",1
