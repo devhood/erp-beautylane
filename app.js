@@ -50,6 +50,7 @@ app.use('/customers',auth, require('./routes/customers'));
 app.use('/products',auth, require('./routes/products'));
 app.use('/purchases',auth, require('./routes/purchases'));
 app.use('/shipments',auth, require('./routes/shipments'));
+app.use('/consignments',auth, require('./routes/consignments'));
 app.post('/login', passport.authenticate('local', {
     successRedirect: '/',
     failureRedirect: '/login',

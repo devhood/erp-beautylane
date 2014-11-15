@@ -20,6 +20,7 @@ var app = angular.module('erp',[
     'salesPaymentApp',
     'shipmentApp',
     'purchaseApp',
+    'consignmentApp',
     'ui.utils'
 ]).config(function($locationProvider, $httpProvider) {
 
