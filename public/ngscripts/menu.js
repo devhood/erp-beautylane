@@ -21,11 +21,6 @@
 		   id : 1,
 		   childLink : [
 			      {
-			          title : "Proforma Invoice",
-			          description : "Create Proforma Invoice",
-								sref : "salesProforma"
-			      },
-			      {
 			          title : "Sales Order",
 			          description : "Create Sales Order",
 								sref : "salesOrder"
@@ -34,7 +29,12 @@
 			          title : "Return Merchandise",
 			          description : "Return Sales Item",
 								sref : "salesReturn"
-			      }
+			      },
+						{
+								title : "Proforma Invoice",
+								description : "Create Proforma Invoice",
+								sref : "salesProforma"
+						}
 			   ]
 		   },
 			 {
