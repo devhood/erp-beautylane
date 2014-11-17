@@ -17,35 +17,50 @@ block title
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
+								input#bl_code.form-control(type="text", ng-model="product.bl_code", required)
+								span.col-md-12.help-block BL Code
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
+								select#brand.select2me.form-control.select2-offscreen(ng-model="product.brand", ng-options="brand.brand as brand.brand for brand in brands", ng-selected="{{product.brand}}" ,tabindex="-1", required)
+								span.col-md-12.help-block Brand
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
+								input#name.form-control(type="text", ng-model="product.name", ng-minlength="0", ng-maxlength="40", required)
+								span.col-md-12.help-block Item Name
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
+								input#size.form-control(type="text", ng-model="product.size", ng-minlength="0", ng-maxlength="10", required)
+								span.col-md-12.help-block Size
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
+								input#color.form-control(type="text", ng-model="product.color", ng-minlength="0", ng-maxlength="25", required)
+								span.col-md-12.help-block Color
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
+								select#uom.select2me.form-control.select2-offscreen(ng-model="product.uom", tabindex="-1",ng-options="uom.uom as uom.uom for uom in uoms", ng-selected="{{product.uom}}", required)
+								span.col-md-12.help-block UOM
+					.col-md-6
+						.form-group
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
+								.fileinput.fileinput-new(data-provides="fileinput")
+									.fileinput-new.thumbnail(style="width: 400px; height: 300px;")
+										img(src="http://www.placehold.it/400x300/EFEFEF/AAAAAA&text=no+image", alt="")
+									.fileinput-preview.fileinput-exists.thumbnail(style="max-width: 200px; max-height: 150px;")
+									div.col-md-12(style="text-align:center")
+										span.btn.default.btn-file
+											span.fileinput-new
+												| Upload Photo
+											span.fileinput-exists
+												| Change
+											input(type="file", name="...")
+										a.btn.default.fileinput-exists(href="#", data-dismiss="fileinput")
+												| Remove
+				.row
+					.col-md-6
+						.form-group
+							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
 								input#part_no.form-control(type="text", ng-model="product.part_number", required)
 								span.col-md-12.help-block Part Number
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
-								input#supplier_code.form-control(type="text", ng-model="product.supplier_code", required)
-								span.col-md-12.help-block Supplier Code
-				.row
-					.col-md-6
-						.form-group
-							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
-								input#bl_code.form-control(type="text", ng-model="product.bl_code", required)
-								span.col-md-12.help-block BL Code
-					.col-md-6
-						.form-group
-							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
-								select#brand.select2me.form-control.select2-offscreen(ng-model="product.brand", ng-options="brand.brand as brand.brand for brand in brands", ng-selected="{{product.brand}}" ,tabindex="-1", required)
-								span.col-md-12.help-block Brand
-				.row
-					.col-md-6
-						.form-group
-							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
-								input#name.form-control(type="text", ng-model="product.name", ng-minlength="0", ng-maxlength="40", required)
-								span.col-md-12.help-block Item Name
-					.col-md-6
-						.form-group
-							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
-								input#size.form-control(type="text", ng-model="product.size", ng-minlength="0", ng-maxlength="10", required)
-								span.col-md-12.help-block Size
+								select#payment_term.select2me.form-control.select2-offscreen(ng-model="product.payment_term", tabindex="-1",ng-options="payment_term.payment_term_name as payment_term.payment_term_name for payment_term in payment_terms", ng-selected="{{product.payment_term}}", required)
+								span.col-md-12.help-block Payment Terms
 				.row
 					.col-md-1
 					.col-md-10
@@ -58,24 +73,13 @@ block title
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
-								input#color.form-control(type="text", ng-model="product.color", ng-minlength="0", ng-maxlength="25", required)
-								span.col-md-12.help-block Color
-					.col-md-6
-						.form-group
-							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
-								select#payment_term.select2me.form-control.select2-offscreen(ng-model="product.payment_term", tabindex="-1",ng-options="payment_term.payment_term_name as payment_term.payment_term_name for payment_term in payment_terms", ng-selected="{{product.payment_term}}", required)
-								span.col-md-12.help-block Payment Terms
-				.row
-					.col-md-6
-						.form-group
-							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-right
 								select#status.select2me.form-control.select2-offscreen(ng-model="product.status", tabindex="-1",ng-options="status.status as status.status for status in statuses", ng-selected="{{product.status}}", required)
 								span.col-md-12.help-block Status
 					.col-md-6
 						.form-group
 							.col-xs-12.col-sm-12.col-md-10.col-lg-10.custom-left
-								select#uom.select2me.form-control.select2-offscreen(ng-model="product.uom", tabindex="-1",ng-options="uom.uom as uom.uom for uom in uoms", ng-selected="{{product.uom}}", required)
-								span.col-md-12.help-block UOM
+								input#supplier_code.form-control(type="text", ng-model="product.supplier_code", required)
+								span.col-md-12.help-block Supplier Code
 				.row
 					.col-md-6
 						.form-group

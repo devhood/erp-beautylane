@@ -7,242 +7,33 @@ config = require('../config.local.js');
 var db = mongoq(config.mongo_url);
 
 var generateTicket = function(status_code,cb){
-      switch(status_code) {
-        case "SALES_ORDER_CREATED":
-            db.collection("number_generator")
-            .find({type : "sales order"}).toArray()
-            .done(function(data){
-              cb(null,data[0]);
-            })
-            .fail( function( err ) {
-               cb(err);
-            });
-            break;
-        case "DELIVERY_RECEIPT_CREATED":
-            db.collection("number_generator")
-            .find({type : "delivery receipt"}).toArray()
-            .done(function(data){
-              cb(null,data[0]);
-            })
-            .fail( function( err ) {
-               cb(err);
-            });
-            break;
-        case "SALES_INVOICE_CREATED":
-            db.collection("number_generator")
-            .find({type : "sales invoice"}).toArray()
-            .done(function(data){
-              cb(null,data[0]);
-            })
-            .fail( function( err ) {
-               cb(err);
-            });
-            break;
-        case "PAYMENT_CREATED":
-            db.collection("number_generator")
-            .find({type : "sales payment"}).toArray()
-            .done(function(data){
-              cb(null,data[0]);
-            })
-            .fail( function( err ) {
-               cb(err);
-            });
-            break;
-        case "RMR_CREATED":
-            db.collection("number_generator")
-            .find({type : "sales return"}).toArray()
-            .done(function(data){
-              cb(null,data[0]);
-            })
-            .fail( function( err ) {
-               cb(err);
-            });
-            break;
-        case "CREDIT_MEMO_CREATED":
-            db.collection("number_generator")
-            .find({type : "credit memo"}).toArray()
-            .done(function(data){
-              cb(null,data[0]);
-            })
-            .fail( function( err ) {
-               cb(err);
-            });
-            break;
-      case "SHIPMENT_CREATED":
-                db.collection("number_generator")
-                .find({type : "shipment"}).toArray()
-                .done(function(data){
-                  cb(null,data[0]);
-                })
-                .fail( function( err ) {
-                   cb(err);
-                });
-                break;
-     case "PURCHASE_CREATED":
-            db.collection("number_generator")
-            .find({type : "purchase"}).toArray()
-            .done(function(data){
-              cb(null,data[0]);
-            })
-            .fail( function( err ) {
-               cb(err);
-            });
-            break;
-     case "PRO_FORMA_INVOICE_CREATED":
-            db.collection("number_generator")
-            .find({type : "proforma invoice"}).toArray()
-            .done(function(data){
-              cb(null,data[0]);
-            })
-            .fail( function( err ) {
-               cb(err);
-            });
-            break;
-    case "CONSIGNMENT_CREATED":
-            db.collection("number_generator")
-            .find({type : "consignment"}).toArray()
-            .done(function(data){
-              cb(null,data[0]);
-            })
-            .fail( function( err ) {
-               cb(err);
-            });
-            break;
-    case "ADJUSTMENT_CREATED":
-            db.collection("number_generator")
-            .find({type : "adjustment"}).toArray()
-            .done(function(data){
-              cb(null,data[0]);
-            })
-            .fail( function( err ) {
-               cb(err);
-            });
-            break;
-      }
+  if(status_code){
+      db.collection("number_generator")
+      .find({status_code : status_code}).toArray()
+      .done(function(data){
+        cb(null,data[0]);
+      })
+      .fail( function( err ) {
+         cb(err);
+      });
+  }
+  else{
+    cb(null,null);
+  }
 };
 
-var updateTicket = function(status_code,ticket,cb){
-      delete ticket._id;
-      ticket.count+=1;
-      switch(status_code) {
-        case "SALES_ORDER_CREATED":
-            db.collection("number_generator")
-            .update({type : "sales order"}, ticket, {safe: true})
-            .done(function(data){
-              cb(null,data);
-            })
-            .fail( function( err ) {
-              cb(err);
-            });
-            break;
-        case "DELIVERY_RECEIPT_CREATED":
-            db.collection("number_generator")
-            .update({type : "delivery receipt"}, ticket, {safe: true})
-            .done(function(data){
-              cb(null,data);
-            })
-            .fail( function( err ) {
-              cb(err);
-            });
-            break;
-        case "SALES_INVOICE_CREATED":
-            db.collection("number_generator")
-            .update({type : "sales invoice"}, ticket, {safe: true})
-            .done(function(data){
-              cb(null,data);
-            })
-            .fail( function( err ) {
-              cb(err);
-            });
-            break;
-        case "PAYMENT_CREATED":
-            db.collection("number_generator")
-            .update({type : "sales payment"}, ticket, {safe: true})
-            .done(function(data){
-              cb(null,data);
-            })
-            .fail( function( err ) {
-              cb(err);
-            });
-            break;
-        case "RMR_CREATED":
-            db.collection("number_generator")
-            .update({type : "sales return"}, ticket, {safe: true})
-            .done(function(data){
-              cb(null,data);
-            })
-            .fail( function( err ) {
-              cb(err);
-            });
-            break;
-        case "CREDIT_MEMO_CREATED":
-            db.collection("number_generator")
-            .update({type : "credit memo"}, ticket, {safe: true})
-            .done(function(data){
-              cb(null,data);
-            })
-            .fail( function( err ) {
-              cb(err);
-            });
-            break;
-      case "SHIPMENT_CREATED":
-          db.collection("number_generator")
-          .update({type : "shipment"}, ticket, {safe: true})
-          .done(function(data){
-            cb(null,data);
-          })
-          .fail( function( err ) {
-             cb(err);
-          });
-          break;
-      case "PURCHASE_CREATED":
-            db.collection("number_generator")
-            .update({type : "purchase"}, ticket, {safe: true})
-            .done(function(data){
-              cb(null,data);
-            })
-            .fail( function( err ) {
-               cb(err);
-            });
-            break;
-      case "PF_CREATED":
-            db.collection("number_generator")
-            .update({type : "proforma invoice"}, ticket, {safe: true})
-            .done(function(data){
-              cb(null,data);
-            })
-            .fail( function( err ) {
-               cb(err);
-            });
-            break;
-      case "CONSIGNMENT_CREATED":
-            db.collection("number_generator")
-            .update({type : "consignment"}, ticket, {safe: true})
-            .done(function(data){
-              cb(null,data);
-            })
-            .fail( function( err ) {
-               cb(err);
-            });
-            break;
-      case "ADJUSTMENT_CREATED":
-            db.collection("number_generator")
-            .update({type : "adjustment"}, ticket, {safe: true})
-            .done(function(data){
-              cb(null,data);
-            })
-            .fail( function( err ) {
-               cb(err);
-            });
-            break;
-      }
+var updateTicket = function(ticket,cb){
+    delete ticket._id;
+    ticket.count+=1;
+    db.collection("number_generator")
+    .update({status_code : ticket.status_code}, ticket, {safe: true})
+    .done(function(data){
+      cb(null,data);
+    })
+    .fail( function( err ) {
+      cb(err);
+    });
 };
-
-var pad = function(n, width, z) {
-  z = z || '0';
-  n = n + '';
-  return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
-}
 
 router.get('/:object', function(req, res) {
     req.query.filter = JSON.parse(req.query.filter || '{}');
@@ -263,15 +54,11 @@ router.get('/:object', function(req, res) {
 });
 router.post('/:object', function(req, res) {
     if(req.body.status_code){
-
         generateTicket(req.body.status_code,function(err,ticket){
             if(ticket){
-                req.body[ticket.field] = ticket.prefix + pad(ticket.count,ticket.zero_count) + "-"+ ticket.suffix
-                updateTicket(req.body.status_code,ticket,function(err,result){
-                //  delete req.body.status_code;
-                });
+                req.body[ticket.field] = ticket.prefix + ticket.count + "-"+ ticket.suffix
+                updateTicket(ticket,function(err,result){});
             }
-           // delete req.body.status_code;
             db.collection(req.params.object)
             .insert(req.body, {safe: true})
             .done(function(data){
@@ -322,12 +109,9 @@ router.put('/:object/:id', function(req, res) {
     if(req.params.object == "sales" && req.body.status_code){
         generateTicket(req.body.status_code,function(err,ticket){
             if(ticket && !req.body[ticket.field]){
-                req.body[ticket.field] = ticket.prefix + pad(ticket.count,ticket.zero_count) + "-" +  ticket.suffix
-                updateTicket(req.body.status_code,ticket,function(err,result){
-                  //delete req.body.status_code;
-                });
+                req.body[ticket.field] = ticket.prefix + ticket.count + "-" +  ticket.suffix
+                updateTicket(ticket,function(err,result){});
             }
-           // delete req.body.status_code;
             db.collection(req.params.object)
             .update(req.query.filter, req.body, {safe: true})
             .done(function(data){

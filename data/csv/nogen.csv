@@ -1,13 +1,13 @@
-field,type,prefix,zero_count,suffix,count
-sono,"sales order","SO","10","2014",1
-drno,"delivery receipt","DR","10","2014",1
-sino,"sales invoice","SI","10","2014",1
-pmno,"sales payment","PM","10","2014",1
-rmrno,"sales return","RMR","10","2014",1
-cmno,"credit memo","CM","10","2014",1
-shipno,"shipment","SHP","10","2014",1
-purno,"purchase","PUR","10","2014",1
-pfno,"proforma invoice","PF","10","2014",1
-cono,"consignment","CO","10","2014",1
-tripno,"trip ticket","TRP","10","2014",1
-pckno,"pick list","PCK","10","2014",1
+field,status_code,prefix,suffix,count
+sono,"SALES_ORDER_CREATED","SO","2014","1"
+drno,"DELIVERY_RECEIPT_APPROVED","DR","2014","1"
+sino,"SALES_INVOICE_APPROVED","SI","2014","1"
+pmno,"PAYMENT_CREATED","PYMT","2014","1"
+rmrno,"RETURN_CREATED","RMR","2014","1"
+cmno,"MEMO_APPROVED","CRDT","2014","1"
+shipno,"SHIPMENT_CREATED","SHIP","2014","1"
+purno,"PURCHASE_CREATED","PR","2014","1"
+pfno,"PROFORMA_CREATED","PRFM","2014","1"
+cono,"CONSIGNMENT_CREATED","CSMT","2014","1"
+tripno,"TRIP_TICKET_CREATED","TRIP","2014","1"
+pckno,"PACKING_CREATED","PACK","2014","1"

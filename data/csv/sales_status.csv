@@ -1,30 +1,33 @@
 status_code,status_description
-"SALES_ORDER_CREATED"," SO submitted to Warehouse"
-SALES_ORDER_REVISED
-"PICK_LIST_CREATED","Goods being picked and packed"
-"DELIVERY_RECEIPT_APPROVED","DR approved and submitted to Finance"
-"DELIVERY_RECEIPT_REJECTED","DR rejected and returned to Sales"
-"SALES_INVOICE_APPROVED","SI approved and submitted to Warehouse for Printing"
-"SALES_INVOICE_REJECTED","SI rejected and returned to Sales",
-"RETURN_MERCHANDISE_RECEIPT_CREATED","RMR submitted to Warehouse"
-"RETURN_MERCHANDISE_RECEIPT_APPROVED","RMR approved and submitted to Finance"
-"RETURN_MERCHANDISE_RECEIPT_REJECTED","RMR rejected and returned to Sales"
-"CREDIT_MEMO_APPROVED", "Credit Memo approved"
-"TRIP_TICKET_CREATED":"Delivery in progress",
-"TRIP_TICKET_DELIVERED":"Order Delivered, Payment pending"
-"PAYMENT_CREATED":"Payment Received and waiting for approval"
-"PAYMENT_CONFIRMED":"Transaction COMPLETE"
-
-
-PROFORMA_INVOICE_CREATED
-PROFORMA_INVOICE_APPROVED
-PROFORMA_INVOICE_REVISED
-PAYMENT_CREATED
-PAYMENT_UPDATE
-PICK_LIST_CREATED
-DELIVERRY_RECEIPT_APPROVED
-DELIVERY_RECEIPT_REJECTED
-TRIP_TICKET_CREATED
-TRIP_TICKET_FAILED
-  PROFORMA_INVOICE_UPDATED
-TRIP_TICKET_DELIVERED
+SALES_ORDER_CREATE,"Sales-Order submitted"
+SALES_ORDER_REVISED,"Sales-Order revised"
+PACKING_CREATED,"Warehouse-Order under preparation"
+DELIVERY_RECEIPT_APPROVED,"Warehouse-DR approved"
+DELIVERY_RECEIPT_REJECTED,"Warehouse-DR rejected"
+SALES_INVOICE_APPROVED,"Accounting-SI approved"
+SALES_INVOICE_REJECTED,"Accounting-SI rejected"
+TRIP_TICKET_CREATED:"Warehouse-Delivery in progress",
+TRIP_TICKET_DELIVERED:"Warehouse-Order delivered",
+TRIP_TICKET_FAILED:"Warehouse-Delivery failed",
+SALES_ORDER_SCHEDULE_UPDATED,"Sales-Delivery Schedule updated"
+RETURN_CREATED,"Sales-Return submitted"
+RETURN_APPROVED,"Warehouse-Return approved"
+RETURN_CANCEL,"Warehouse-Return cancelled"
+MEMO_APPROVED,"Accounting-Credit Memo Approved"
+MEMO_REJECTED,"Accounting-Credit Memo Rejected"
+PAYMENT_CREATED:"Accounting-Payment received"
+PAYMENT_UPDATED:"Accounting-Payment updated"
+PAYMENT_CONFIRMED:"TRANSACTION COMPLETE"
+PROFORMA_INVOICE_CREATED,"Sales-Pro Forma submitted"
+PROFORMA_INVOICE_APPROVED,"Accounting-Pro Forma approved"
+PROFORMA_INVOICE_REJECTED,"Accounting-Pro Forma rejected"
+PROFORMA_INVOICE_REVISED,"Sales-Pro Forma revised"
+PAYMENT_CREATED:"Accounting-Payment received"
+PAYMENT_UPDATED:"Accounting-Payment updated"
+PACKING_CREATED,"Warehouse-Order under preparation"
+DELIVERY_RECEIPT_APPROVED,"Warehouse-DR approved"
+DELIVERY_RECEIPT_REJECTED,"Warehouse-DR rejected"
+TRIP_TICKET_CREATED:"Warehouse-Delivery in progress",
+TRIP_TICKET_FAILED:"Warehouse-Delivery failed",
+PROFORMA_INVOICE_SCHEDULE_UPDATED,"Sales-Delivery Schedule updated"
+TRIP_TICKET_DELIVERED:"TRANSACTION COMPLETE",
