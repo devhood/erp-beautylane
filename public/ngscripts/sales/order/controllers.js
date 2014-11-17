@@ -69,9 +69,10 @@ $scope.dtColumns = [
     $scope.sales=new Sales();
 
     $scope.addSales=function(){
+        console.log("chito");
         $scope.sales.status = "SO submitted to Warehouse";
         $scope.sales.created_on = Date.now();
-        $scope.sales.status_code = "SO_CREATED";
+        $scope.sales.status_code = "SALES_ORDER_CREATED";
         $scope.sales.pfno = "";
         $scope.sales.drno = "";
         $scope.sales.sino = "";
@@ -83,7 +84,9 @@ $scope.dtColumns = [
           status : $scope.sales.status,
           createdOn : $scope.sales.created_on
         });
+        console.log("chito");
         $scope.sales.$save(function(){
+            console.log("chito");
             $state.go('salesOrder');
         });
     };
@@ -181,22 +184,3 @@ $scope.dtColumns = [
       }
     };
 });
-
-var computeTotal = function($scope){
-  $scope.sales.total_vat = 0;
-  $scope.sales.discount = 0;
-  $scope.sales.total = 0;
-  $scope.sales.total_vat_exempt = 0;
-  $scope.sales.total_amount_due = 0;
-
-  for(var i=0;i<$scope.sales.ordered_items.length; i++){
-    $scope.sales.vat_percent = $scope.sales.is_vat_percent ? .11 : .12;
-    $scope.sales.total+=$scope.sales.ordered_items[i].total;
-    $scope.sales.discount+=$scope.sales.ordered_items[i].total/$scope.sales.ordered_items[i].discount - $scope.sales.ordered_items[i].total;
-    $scope.sales.total_vat+=parseFloat(( $scope.sales.ordered_items[i].total * parseFloat($scope.sales.vat_percent) ).toFixed(2));
-    if($scope.sales.is_vat_percent){
-      $scope.sales.total_vat_exempt+=parseFloat(( $scope.sales.ordered_items[i].total * parseFloat(.01) ).toFixed(2));
-    }
-  }
-  $scope.sales.total_amount_due = parseFloat($scope.sales.total) - parseFloat($scope.sales.total_vat_exempt);
-}
